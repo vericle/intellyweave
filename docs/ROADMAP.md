@@ -7,7 +7,7 @@ IntellyWeave is an **OSINT (Open-Source Intelligence) analysis platform** design
 ### Blueprint Origins
 
 The platform originated from requirements to:
-- Process declassified CIA documents and historical archives
+- Process declassified intelligence documents and historical archives
 - Extract entities (persons, organizations, locations, events, cryptonyms)
 - Visualize intelligence relationships geographically and through network graphs
 - Employ multi-agent debate systems for complex analytical decisions
@@ -101,7 +101,6 @@ The platform originated from requirements to:
 
 **Specialized Intelligence Agents**:
 - **Query Extractor** (`query_extractor.py`) - Extracts and enriches entities from queries using GLiNER + LLM
-  - 40+ successful executions logged in production
   - DSPy signatures for entity contextualization
   - Automatic Weaviate filter generation from query entities
 
@@ -338,7 +337,7 @@ Use LLMs to create self-contained propositions and intelligently combine them. M
 ### Current Stack
 
 - **Backend**: Python 3.11+ with FastAPI
-- **Vector DB**: Weaviate with basic vector search
+- **Vector DB**: Weaviate with vector search
 - **Entity Extraction**: GLiNER multi-v2.1
 - **LLM Orchestration**: DSPy
 - **Frontend**: Next.js 15 with TypeScript
