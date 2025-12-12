@@ -98,3 +98,5 @@ frontend/scripts/fetch-books.js
 /data/*.txt
 /examples/multimedia
 
+!/docs/**/*png
+/examples/multimedia/gamefications
