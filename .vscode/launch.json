@@ -1,0 +1,44 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{"name":"Python Debugger: Attach using Process Id","type":"debugpy","request":"attach","processId":"${command:pickProcess}"},
+		{
+			"name": "Python CLI Debug",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "elysia.api.cli",
+			"args": ["start", "--port", "8000", "--host", "localhost", "--reload", "false"],
+			"python": "${workspaceFolder}/backend/.venv/bin/python",
+			"cwd": "${workspaceFolder}/backend",
+			"console": "integratedTerminal",
+			"envFile": "${workspaceFolder}/backend/.env",
+			"env": {
+				"NODE_ENV": "development",
+				"NEXTJS_DEV_URL": "http://localhost:3000"
+			}
+		},
+		{
+			"name": "Next.js Frontend Debug",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}/frontend",
+			"runtimeExecutable": "pnpm",
+			"runtimeArgs": ["dev"],
+			"console": "integratedTerminal",
+			"env": {
+				"NODE_ENV": "development",
+				"NEXTJS_DEV_URL": "http://localhost:3000"
+			}
+		}
+	],
+	"compounds": [
+		{
+			"name": "Debug: Full Elysia Development",
+			"configurations": ["Python CLI Debug", "Next.js Frontend Debug"],
+			"presentation": {
+				"group": "full-stack",
+				"order": 1
+			}
+		}
+	]
+}

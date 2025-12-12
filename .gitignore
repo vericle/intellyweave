@@ -96,3 +96,6 @@ examples/books-list.md
 frontend/scripts/fetch-books.js
 /backend/resources.txt
 docker-compose-dot-ai.yaml
+.env.docker
+REPO-GAPS.MD
+/docs/outdated/*

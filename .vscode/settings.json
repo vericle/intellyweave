@@ -1,0 +1,100 @@
+{
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/.next": true,
+		"**/dist": true,
+		"**/out": true,
+		"**/.deepeval": true,
+		"**/.mypy_cache": true,
+		"**/pytest_cache": true,
+		"**/__pycache__": true,
+		"**/backend/elysia/api/static": true,
+		"**/.venv": true
+	},
+	"editor.inlayHints.enabled": "on",
+	"editor.inlayHints.fontFamily": "Consolas",
+	"editor.inlayHints.fontSize": 9,
+	"editor.inlayHints.padding": true,
+	"markdownlint.config": {
+		"ol": false,
+		"single-h1": false
+	},
+	"evenBetterToml.formatter.allowedBlankLines": 2,
+	"evenBetterToml.formatter.columnWidth": 180,
+	"evenBetterToml.schema.enabled": false,
+	"python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/bin/python",
+	"python.testing.cwd": "${workspaceFolder}/backend",
+	"python.testing.unittestEnabled": false,
+	"python.testing.pytestEnabled": true,
+	"python.terminal.activateEnvironment": true,
+	"python.envFile": "${workspaceFolder}/backend/.env",
+	"python.analysis.extraPaths": ["${workspaceFolder}/backend"],
+	"python.analysis.typeCheckingMode": "basic",
+	"python.analysis.diagnosticMode": "workspace",
+	"python.analysis.autoImportCompletions": true,
+	"python.analysis.indexing": true,
+	"python.analysis.inlayHints.functionReturnTypes": true,
+	"python.analysis.inlayHints.variableTypes": true,
+	"mypy-type-checker.interpreter": [
+		"${workspaceFolder}/backend/.venv/bin/python"
+	],
+	"mypy-type-checker.path": ["${workspaceFolder}/backend/.venv/bin/mypy"],
+	"mypy-type-checker.args": [
+		"--config-file=${workspaceFolder}/backend/pyproject.toml"
+	],
+	"mypy-type-checker.importStrategy": "fromEnvironment",
+	"mypy-type-checker.reportingScope": "workspace",
+	"mypy-type-checker.cwd": "${workspaceFolder}/backend",
+	"mypy.dmypyExecutable": "${workspaceFolder}/backend/.venv/bin/dmypy",
+	"ruff.path": ["${workspaceFolder}/backend/.venv/bin/ruff"],
+	"ruff.interpreter": ["${workspaceFolder}/backend/.venv/bin/python"],
+	"ruff.configurationPreference": "filesystemFirst",
+	"ruff.cwd": "${workspaceFolder}/backend",
+	"[python]": {
+		"editor.defaultFormatter": "charliermarsh.ruff",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.ruff": "explicit",
+			"source.organizeImports.ruff": "explicit"
+		},
+		"editor.rulers": [88]
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports.biome": "explicit"
+		},
+		"editor.rulers": [80]
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports.biome": "explicit"
+		},
+		"editor.rulers": [80]
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports.biome": "explicit"
+		},
+		"editor.rulers": [80]
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome",
+		"editor.formatOnSave": false,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports.biome": "explicit"
+		},
+		"editor.rulers": [80]
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
+}

@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "steoates.autoimport",
+        "biomejs.biome",
+        "naumovs.color-highlight",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "mylesmurphy.prettify-ts",
+        "yoavbls.pretty-ts-errors",
+        "stylelint.vscode-stylelint",
+        "bradlc.vscode-tailwindcss",
+        "heybourn.headwind"
+    ]
+}

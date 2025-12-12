@@ -1,0 +1,25 @@
+# ============================================================
+# Gitleaks Configuration
+# ============================================================
+# Custom rules to detect sensitive information patterns
+# that should not be committed to the repository.
+#
+# Reference: https://github.com/gitleaks/gitleaks
+
+################################################################################
+# CUSTOM RULES
+################################################################################
+
+[[rules]]
+id = "ingeborg-detection"
+description = "Detects the string 'Ingeborg' for privacy protection of intelligence agent"
+regex = '''(?i)ingeborg'''
+keywords = ["ingeborg"]
+secretGroup = 0
+entropy = 0.0
+
+[[rules.allowlists]]
+description = "Minimal allowlist - actual exclusions handled by .git/info/exclude"
+paths = [
+  "^NEVER_MATCH_THIS_PATH$"
+]

@@ -1,0 +1,61 @@
+# ============================================================
+# Pre-Commit Configuration
+# ============================================================
+# This configuration file defines hooks that run before commits.
+# Hooks prevent committing secrets, broken code, and other issues.
+#
+# Installation:
+#   1. Ensure pre-commit is installed: pip install pre-commit
+#   2. Install the git hook: pre-commit install
+#   3. (Optional) Run all hooks on all files: pre-commit run --all-files
+#
+# Reference: https://pre-commit.com/
+
+repos:
+  # ============================================================
+  # Custom Hooks
+  # ============================================================
+
+  # ============================================================
+  # Gitleaks: Secret Detection
+  # ============================================================
+  # Detects and prevents committing secrets like API keys, tokens,
+  # and credentials to the repository.
+  #
+  # Configuration:
+  # - Scans only staged files (most performant)
+  # - Uses built-in gitleaks detection rules
+  # - References .gitleaksignore for false positive allowlist
+  # - Blocks commits if secrets are detected (exit code 1)
+  # ============================================================
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.0
+    hooks:
+      - id: gitleaks
+        name: Gitleaks - Detect Secrets
+        description: Scans staged files for hardcoded secrets and prevents committing them
+        entry: gitleaks protect --verbose --exit-code 1 --staged --config .gitleaks.toml --report-path temp/gitleaks-report.json
+        language: system
+        stages: [pre-commit]
+        pass_filenames: false
+        always_run: true
+
+  # ============================================================
+  # Local Hook: Parse Gitleaks Findings
+  # ============================================================
+  # Automatically adds files with detected secrets to .git/info/exclude
+  # to prevent future accidental commits of sensitive files.
+  #
+  # This runs after Gitleaks if findings are present.
+  # Uses bash/shell to avoid virtual environment dependencies.
+  # ============================================================
+  - repo: local
+    hooks:
+      - id: parse-gitleaks-findings
+        name: Parse Gitleaks & Auto-Exclude Files
+        description: Adds files with detected secrets to .git/info/exclude
+        entry: bash scripts/gitleaks-exclude.sh
+        language: system
+        stages: [pre-commit]
+        pass_filenames: false
+        always_run: true

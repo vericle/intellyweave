@@ -222,42 +222,98 @@ The multi-agent system debates your query from multiple perspectives, synthesize
 Get IntellyWeave running in minutes:
 
 ```bash
-# 1. Initial setup (installs dependencies)
+# 1. Start local Weaviate (vector database)
+docker compose up -d weaviate
+
+# 2. Initial setup (installs Python & Node dependencies)
 scripts/setup.sh
 
-# 2. Configure your API keys and database
+# 3. Configure your API keys
+cp backend/.env.example backend/.env
 nano backend/.env
-# Required: WEAVIATE_URL, WEAVIATE_API_KEY, OPENAI_API_KEY
-# Optional: ANTHROPIC_API_KEY, GOOGLE_API_KEY, etc.
+# Required: At least one LLM provider key (OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.)
+# Weaviate: Already configured for local instance by default
 
-# 3. Launch IntellyWeave
+# 4. Launch IntellyWeave
 cd backend
 source .venv/bin/activate
 elysia start
 
-# 4. Access the application
+# 5. Access the application
 # Open browser to http://localhost:8000
+```
+
+> **Note**: First startup downloads a SpaCy language model (~11MB). This is normal.
+
+### Optional: Enable Entity Extraction (GLiNER)
+
+IntellyWeave's OSINT entity extraction (persons, organizations, locations, events, dates, laws, cryptonyms) requires the GLiNER model. This is an optional feature that adds ~150MB of dependencies.
+
+```bash
+cd backend
+source .venv/bin/activate
+
+# 1. Install CPU-only PyTorch first (smaller download, sufficient for NER)
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# 2. Install GLiNER dependency
+pip install -e ".[ner]"
+```
+
+> **Note**: On first document upload after enabling GLiNER, the model (~500MB) will be downloaded from HuggingFace. This only happens once.
+
+**What to expect when uploading documents with GLiNER enabled:**
+
+```bash
+INFO  Loading GLiNER model 'urchade/gliner_multi-v2.1' for entity extraction...
+INFO  GLiNER model initialized successfully
+INFO  NER extracted entities summary: {'organization': 5, 'location': 10, 'date': 8, 'person': 3}
+INFO  NER extracted entity values: {'organization': ['Ministry of...'], 'location': ['Rio de Janeiro', ...], ...}
 ```
 
 ---
 
 ## Configuration
 
-Customize IntellyWeave to your needs by editing `backend/.env`:
+### Setting Up Environment Files
 
-### Core Configuration
+IntellyWeave requires two environment files:
+
+1. **Backend** (`backend/.env`): API keys and Weaviate configuration
+2. **Frontend** (`frontend/.env.local`): Mapbox token for geospatial features
 
 ```bash
-# Weaviate Vector Database
-WEAVIATE_URL=http://localhost:8080
-WEAVIATE_API_KEY=your-weaviate-key
+# Copy the templates
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env.local
 
-# Or use Weaviate Cloud
-WCD_URL=https://your-cluster.weaviate.cloud
-WCD_API_KEY=your-wcd-key
+# Edit with your API keys
+nano backend/.env
+nano frontend/.env.local
 ```
 
-### AI Provider Keys
+### Backend Configuration (`backend/.env`)
+
+**Weaviate Connection:**
+
+```bash
+# Option 1: Local Weaviate (default, uses docker-compose.yaml)
+WEAVIATE_IS_LOCAL=True
+LOCAL_WEAVIATE_PORT=8080
+LOCAL_WEAVIATE_GRPC_PORT=50051
+
+# Option 2: Weaviate Cloud
+WCD_URL=https://your-cluster.weaviate.cloud
+WCD_API_KEY=your-wcd-key
+
+# Option 3: Custom Weaviate Instance
+WEAVIATE_IS_CUSTOM=True
+CUSTOM_HTTP_HOST=your.weaviate.host
+CUSTOM_HTTP_PORT=443
+CUSTOM_HTTP_SECURE=True
+```
+
+**AI Provider Keys:**
 
 ```bash
 # Required (at least one)
@@ -270,7 +326,7 @@ COHERE_API_KEY=your-cohere-key
 OPENROUTER_API_KEY=your-openrouter-key
 ```
 
-### Model Selection
+**Model Selection:**
 
 ```bash
 # Choose your preferred models
@@ -282,7 +338,7 @@ BASE_MODEL=gpt-5-mini
 COMPLEX_MODEL=gpt-5
 ```
 
-### GPT-5 Advanced Settings
+**GPT-5 Advanced Settings:**
 
 ```bash
 # Reasoning effort (how much thinking time to allocate)
@@ -292,13 +348,22 @@ GPT5_REASONING_EFFORT=medium        # minimal, low, medium, high
 GPT5_TEXT_VERBOSITY=low             # low, medium, high
 ```
 
+### Frontend Configuration (`frontend/.env.local`)
+
+**Mapbox Token** (required for geospatial visualization):
+
+```bash
+# Get your free token at: https://account.mapbox.com/access-tokens/
+NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=pk.your-mapbox-token-here
+```
+
 ---
 
 ## Technical Architecture
 
 ### Backend Stack
 
-- **Framework**: Python 3.11+ with FastAPI
+- **Framework**: Python 3.12 with FastAPI
 - **Vector Database**: Weaviate for semantic search
 - **Entity Extraction**: GLiNER multi-v2.1 (zero-shot NER)
 - **LLM Orchestration**: DSPy for flexible AI interactions
@@ -307,7 +372,7 @@ GPT5_TEXT_VERBOSITY=low             # low, medium, high
 
 ### Frontend Stack
 
-- **Framework**: Next.js 14 with TypeScript
+- **Framework**: Next.js 15 with TypeScript
 - **UI Library**: React 18
 - **Styling**: Tailwind CSS with custom configuration
 - **Components**: Radix UI primitives
@@ -332,7 +397,39 @@ GPT5_TEXT_VERBOSITY=low             # low, medium, high
 
 ## Development Modes
 
-### Backend Development (Hot Reload)
+### Full Development Environment (Recommended)
+
+Start both frontend and backend servers simultaneously with a single command:
+
+```bash
+scripts/dev.sh
+```
+
+**What to expect:**
+
+```bash
+🚀 Starting Elysia Development Environment
+✓ Environment configured for development
+  - NODE_ENV=development
+  - NEXTJS_DEV_URL=http://localhost:3000
+
+✓ Frontend server started
+   ▲ Next.js 15.x (Turbopack)
+   - Local: http://localhost:3000
+   ✓ Ready in ~1-2s
+
+✓ Backend server started
+   INFO: Uvicorn running on http://localhost:8000
+
+🎉 Development servers are running!
+Frontend: http://localhost:3000
+Backend API: http://localhost:8000
+Health check: http://localhost:8000/api/health
+
+Press Ctrl+C to stop both servers
+```
+
+### Manual Backend Development (Hot Reload)
 
 ```bash
 cd backend
@@ -340,12 +437,14 @@ source .venv/bin/activate
 elysia start                        # Runs on http://localhost:8000
 ```
 
-### Frontend Development (Hot Reload)
+### Manual Frontend Development (Hot Reload)
 
 ```bash
 cd frontend
 pnpm run dev                        # Runs on http://localhost:3000
 ```
+
+> **Note**: When running frontend and backend separately, you need two terminal windows.
 
 ### Production Deployment
 
@@ -362,10 +461,10 @@ elysia start                        # Full app at http://localhost:8000
 
 ### Software Requirements
 
-- **Python**: 3.11 or 3.12 (required)
+- **Python**: 3.12 (required)
 - **Node.js**: 18 or higher (required)
-- **pnpm**: Package manager for frontend
-- **Weaviate**: Vector database instance (local, cloud, or custom)
+- **pnpm**: Package manager for frontend (`npm install -g pnpm`)
+- **Docker**: For local Weaviate instance (recommended)
 
 ### Recommended Hardware
 
@@ -375,9 +474,13 @@ elysia start                        # Full app at http://localhost:8000
 
 ### Weaviate Options
 
-1. **Weaviate Cloud**: Managed cloud instance (easiest)
-2. **Local Docker**: Self-hosted with Docker Compose
-3. **Custom Instance**: Self-managed Weaviate deployment
+| Option | Setup | Best For |
+|--------|-------|----------|
+| **Local Docker** | `docker compose up -d weaviate` | Development, testing |
+| **Weaviate Cloud** | [console.weaviate.cloud](https://console.weaviate.cloud) | Production, managed |
+| **Custom Instance** | Self-managed deployment | Enterprise, air-gapped |
+
+> **Tip**: The included `docker-compose.yaml` provides a pre-configured local Weaviate instance.
 
 ---
 
@@ -402,6 +505,18 @@ IntellyWeave extends and enhances open-source projects:
 - Document processing patterns
 - Multi-agent orchestration
 - Custom agent framework
+
+### Technical Divergences from Upstream
+
+IntellyWeave makes the following changes from upstream Elysia:
+
+| Component | Upstream | IntellyWeave |
+|-----------|----------|--------------|
+| Package manager | npm | **pnpm** (faster, more efficient) |
+| Geospatial | Not included | **Mapbox GL** for entity mapping |
+| Entity extraction | Not included | **GLiNER** for OSINT entities |
+| Pipeline watchdog | Not included | **Docker service** for auto-ingestion |
+| Local Weaviate | Manual setup | **docker-compose.yaml** included |
 
 ---
 
