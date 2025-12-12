@@ -67,9 +67,11 @@ flowchart TB
 
 ### How to Upload
 
-1. Open IntellyWeave at `http://localhost:8000`
-2. Click the **Upload** button in the document panel
-3. Select one or more files
+1. Open IntellyWeave:
+   - **Development mode**: `http://localhost:3000`
+   - **Production mode**: `http://localhost:8000`
+2. Navigate to the **Documents** tab
+3. Click **Upload** and select one or more files
 4. Wait for processing to complete
 
 ### Processing Pipeline

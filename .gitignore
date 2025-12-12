@@ -89,14 +89,13 @@ stubs
 /backend/data
 .testdata/*
 /examples/*.html
-examples/sources/books/*
 !/examples/sources/books/index.yaml
 examples/books-list.md
 frontend/scripts/fetch-books.js
 /backend/resources.txt
 
 /data/*.txt
-/examples/multimedia
+
 
 !/docs/**/*png
 /examples/multimedia/gamefications

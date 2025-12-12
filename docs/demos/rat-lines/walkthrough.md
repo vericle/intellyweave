@@ -10,7 +10,9 @@ This walkthrough puts you in the role of an intelligence analyst investigating t
 
 ### Prerequisites
 
-1. IntellyWeave running at `http://localhost:8000`
+1. IntellyWeave running:
+   - **Development**: Frontend at `http://localhost:3000`, API at `http://localhost:8000`
+   - **Production**: Full app at `http://localhost:8000`
 2. Documents uploaded from `examples/cleaned/`
 3. Processing complete
 

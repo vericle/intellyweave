@@ -185,16 +185,37 @@ The question remains open.
 
 ### Quick Start
 
+**Option 1: Web UI Upload**
+
 ```bash
-# 1. Navigate to IntellyWeave
+# Development mode
+open http://localhost:3000
+
+# Production mode (backend serves frontend)
 open http://localhost:8000
-
-# 2. Upload documents from examples/cleaned/
-
-# 3. Wait for processing (watch console for entity extraction)
-
-# 4. Start asking questions
 ```
+
+1. Navigate to the **Documents** tab
+2. Click **Upload** and select files from `examples/cleaned/`
+3. Wait for processing (watch console for entity extraction confirmation)
+4. Start asking questions in the chat
+
+**Option 2: Pipeline Watchdog (Automated)**
+
+For batch ingestion, use the automated pipeline:
+
+```bash
+# Copy documents to watched directory
+cp examples/cleaned/*.txt backend/pipeline/input_files/ratlines/
+
+# Start the watchdog
+docker compose up -d pipeline-watchdog
+
+# Monitor ingestion
+docker compose logs -f pipeline-watchdog
+```
+
+See [Document Processing Guide](../../guides/document-processing/) for detailed pipeline setup.
 
 ---
 

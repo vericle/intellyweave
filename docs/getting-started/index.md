@@ -102,7 +102,10 @@ INFO:     Started reloader process
 
 ### 6. Access Application
 
-Open your browser to **http://localhost:8000**
+Open IntellyWeave in your browser:
+
+- **Production mode** (after `scripts/build.sh`): **http://localhost:8000**
+- **Development mode** (run `cd frontend && pnpm run dev` separately): **http://localhost:3000**
 
 ## What's Next
 

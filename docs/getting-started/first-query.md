@@ -19,7 +19,7 @@ This guide walks you through:
 
 ## Prerequisites
 
-- IntellyWeave running at http://localhost:8000
+- IntellyWeave backend running (API at http://localhost:8000)
 - At least one document to upload (PDF, TXT, or DOCX)
 - LLM provider configured and working
 
@@ -37,7 +37,10 @@ curl http://localhost:8000/api/health
 
 ## Step 1: Access the Application
 
-Open your browser to **http://localhost:8000**
+Open IntellyWeave in your browser:
+
+- **Development mode** (running `pnpm run dev`): **http://localhost:3000**
+- **Production mode** (running `elysia start` after `scripts/build.sh`): **http://localhost:8000**
 
 You'll see the IntellyWeave interface with:
 
