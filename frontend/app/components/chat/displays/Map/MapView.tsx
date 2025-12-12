@@ -276,7 +276,7 @@ const MapView: React.FC<MapViewProps> = ({ locations, selectedLocationId }) => {
 		try {
 			mapRef.current = new mapboxgl.Map({
 				container: container,
-				style: "mapbox://styles/eudaimoniatech/cmhup5zgs003g01sa7pi84kvj", // Updated to new 3D Enhanced style
+				style: process.env.NEXT_PUBLIC_MAPBOX_STYLE_URL || "",
 				center: [
 					validSelectedLocation.longitude,
 					validSelectedLocation.latitude,
@@ -315,7 +315,6 @@ const MapView: React.FC<MapViewProps> = ({ locations, selectedLocationId }) => {
 			if (!isMounted || !mapRef.current) return;
 
 			// Enable 3D terrain with DEM source
-			// See: https://github.com/eudaimoniatech/intellyweave/issues/22
 			// Add Mapbox terrain DEM source if not already present in the style
 			if (!mapRef.current.getSource("mapbox-dem")) {
 				mapRef.current.addSource("mapbox-dem", {

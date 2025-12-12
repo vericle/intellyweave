@@ -522,7 +522,9 @@ IntellyWeave makes the following changes from upstream Elysia:
 
 ## License
 
-MIT License - Built on open-source Weaviate Elysia projects.
+BSD 3-Clause License - Built on open-source [Weaviate Elysia](https://github.com/weaviate/elysia) projects.
+
+See [LICENSE](LICENSE) for details. Frontend components retain their original MIT license from upstream.
 
 ---
 

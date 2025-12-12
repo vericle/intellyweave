@@ -1,16 +1,16 @@
 // pages/index.js
 
-import type React from "react";
-import { useEffect, useRef, useContext } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import type React from "react";
+import { useContext, useEffect, useRef } from "react";
 import * as THREE from "three";
-import vertex from "./vertex.glsl";
-import fragment from "./fragment.glsl";
-import { useGlobeSettings } from "@/hooks/useGlobeSettings";
 import { ToastContext } from "@/app/components/contexts/ToastContext";
-import { type GlobeSettings, DEFAULT_GLOBE_SETTINGS } from "./globeConfig";
+import { useGlobeSettings } from "@/hooks/useGlobeSettings";
+import fragment from "./fragment.glsl";
 import GlobeControlsPanel from "./GlobeControlsPanel";
+import { type GlobeSettings, DEFAULT_GLOBE_SETTINGS } from "./globeConfig";
+import vertex from "./vertex.glsl";
 
 function BasicSphere({
   debug,
@@ -265,7 +265,7 @@ export default function AbstractSphereScene({
 
   // Skip rendering in development mode to prevent WebGL context exhaustion
   // Hot reloading in dev constantly recreates contexts, causing GPU resource leaks
-  // See: https://github.com/eudaimoniatech/intellyweave/issues/21
+  // See: https://github.com/vericle/intellyweave/issues/21
   if (process.env.NODE_ENV === "development" && !debug) {
     return null;
   }

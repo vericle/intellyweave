@@ -1,5 +1,5 @@
-import { test as setup } from '@playwright/test';
 import path from 'node:path';
+import { test as setup } from '@playwright/test';
 
 /**
  * Authentication Setup for Playwright Tests
@@ -30,7 +30,7 @@ setup('configure application settings', async ({ page }) => {
       }),
       'mapbox.eventData:ZXVkYWltb25pYXRlY2g=': JSON.stringify({
         lastSuccess: 1763507563098,
-        tokenU: 'eudaimoniatech'
+        tokenU: 'vericle'
       }),
       'device_id': '6411455e37173aa73261b786be979cfa',
       'mapbox.eventData.uuidTimestamp:ZXVkYWltb25pYXRlY2g=': '1763485142374',
