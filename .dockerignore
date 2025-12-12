@@ -1,0 +1,72 @@
+# Python cache (match anywhere in directory tree)
+**/__pycache__
+**/__pycache__/
+**/.mypy_cache
+**/.mypy_cache/
+**/.pytest_cache
+**/.pytest_cache/
+__pycache__/
+.mypy_cache/
+.claude/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments (match anywhere in directory tree)
+**/.venv
+**/.venv/
+**/venv
+**/venv/
+**/env
+**/env/
+**/ENV
+**/ENV/
+.venv
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data directories (large, not needed in build)
+app/volumes/
+volumes/
+collections/
+legacy/
+temp/
+reports/
+
+# Model caches (if any)
+**/.cache
+**/.cache/
+**/models
+**/models/
+**/*.pt
+**/*.bin
+**/*.safetensors
