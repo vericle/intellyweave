@@ -53,7 +53,7 @@ IntellyWeave democratizes intelligence analysis by making professional-grade OSI
 
 ### Out of Scope
 
-- Legal case analysis (that's [Spectre's](https://github.com/weaviate/elysia) domain)
+- Legal case analysis (that's [Spectre's](https://github.com/Siddharth-Khattar/specter-backend) domain)
 - Real-time surveillance or monitoring
 - Automated decision-making without human review
 
@@ -228,6 +228,7 @@ IntellyWeave is built on:
 
 - **[Weaviate Elysia](https://github.com/weaviate/elysia)** — Agentic AI framework with decision tree architecture
 - **[Weaviate](https://weaviate.io/)** — Vector database for semantic search
+- **[Spectre](https://github.com/Siddharth-Khattar/specter-backend)** — Agentic Legal AI system (based on Elysia)
 - **[GLiNER](https://github.com/urchade/GLiNER)** — Zero-shot named entity recognition
 - **[Mapbox GL](https://www.mapbox.com/)** — Interactive 3D mapping
 - **[vis-network](https://visjs.github.io/vis-network/docs/network/)** — Network graph visualization
