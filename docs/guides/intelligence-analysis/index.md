@@ -6,8 +6,14 @@
 
 The Intelligence Orchestrator coordinates six specialized AI agents to perform comprehensive intelligence analysis:
 
-```
-Query → Entity Extraction → Relationship Mapping → Geospatial Analysis → Network Analysis → Pattern Detection → Synthesis
+```mermaid
+flowchart LR
+    A[Query] --> B[Entity Extraction]
+    B --> C[Relationship Mapping]
+    C --> D[Geospatial Analysis]
+    D --> E[Network Analysis]
+    E --> F[Pattern Detection]
+    F --> G[Synthesis]
 ```
 
 Unlike simple document search, this system:

@@ -6,18 +6,23 @@
 
 The Intelligence Orchestrator executes six sequential phases, each handled by a specialized agent:
 
-```
-Phase 1: Entity Extraction
-    ↓
-Phase 2: Relationship Mapping
-    ↓
-Phase 3: Geospatial Analysis
-    ↓
-Phase 4: Network Analysis
-    ↓
-Phase 5: Pattern Detection
-    ↓
-Phase 6: Synthesis
+```mermaid
+flowchart TB
+    P1[Phase 1: Entity Extraction]
+    P2[Phase 2: Relationship Mapping]
+    P3[Phase 3: Geospatial Analysis]
+    P4[Phase 4: Network Analysis]
+    P5[Phase 5: Pattern Detection]
+    P6[Phase 6: Synthesis]
+
+    P1 --> P2 --> P3 --> P4 --> P5 --> P6
+
+    style P1 fill:#22c55e,color:#fff
+    style P2 fill:#f97316,color:#fff
+    style P3 fill:#3b82f6,color:#fff
+    style P4 fill:#6366f1,color:#fff
+    style P5 fill:#ec4899,color:#fff
+    style P6 fill:#a855f7,color:#fff
 ```
 
 Each phase builds on the previous, creating a comprehensive intelligence picture.
@@ -104,7 +109,7 @@ class ExtractorAgent:
 **Color:** Orange
 **Icon:** Map
 
-### Purpose
+### Goal
 
 Establish connections between extracted entities based on document co-occurrences, institutional affiliations, and contextual relationships.
 
@@ -117,7 +122,7 @@ Establish connections between extracted entities based on document co-occurrence
 | **Organization-to-Organization** | Partnership, coordination | Vatican ↔ CIC |
 | **Geographic Pattern** | Routing, corridors | Rome → Genoa |
 
-### Output Structure
+### Relationship Output
 
 ```typescript
 {
@@ -154,7 +159,7 @@ Establish connections between extracted entities based on document co-occurrence
 **Color:** Blue
 **Icon:** Globe
 
-### Purpose
+### Objective
 
 Analyze geographic patterns and generate map-ready location data with routes and weights.
 
@@ -165,7 +170,7 @@ Analyze geographic patterns and generate map-ready location data with routes and
 - Generate route paths between locations
 - Identify geographic corridors and patterns
 
-### Output Structure
+### Location Output
 
 ```typescript
 {
@@ -218,7 +223,7 @@ const geospatialLocations = useMemo<MapPayload[]>(() => {
 **Color:** Indigo
 **Icon:** Graph
 
-### Purpose
+### Function
 
 Apply graph theory algorithms to understand network structure, identify key nodes, and detect clusters.
 
@@ -231,7 +236,7 @@ Apply graph theory algorithms to understand network structure, identify key node
 | **Influence pathway tracing** | Map how influence flows |
 | **Link prediction** | Suggest possible undocumented connections |
 
-### Output Structure
+### Network Output
 
 ```typescript
 {
@@ -261,7 +266,7 @@ Apply graph theory algorithms to understand network structure, identify key node
 **Color:** Pink
 **Icon:** Sparkle
 
-### Purpose
+### Mission
 
 Identify recurring patterns and anomalies across institutional, behavioral, geographic, and temporal dimensions.
 
@@ -275,7 +280,7 @@ Identify recurring patterns and anomalies across institutional, behavioral, geog
 | **Operational** | Process patterns | Multi-layered documentation system |
 | **Temporal** | Time-based patterns | 17-year operational persistence |
 
-### Output Structure
+### Pattern Output
 
 ```typescript
 {
@@ -305,7 +310,7 @@ Identify recurring patterns and anomalies across institutional, behavioral, geog
 **Color:** Purple
 **Icon:** Brain
 
-### Purpose
+### Role
 
 Integrate findings from all previous phases into a comprehensive intelligence assessment with strategic implications and recommended follow-up actions.
 
@@ -318,7 +323,7 @@ Integrate findings from all previous phases into a comprehensive intelligence as
 5. **Pattern implications** - Apply Phase 5 insights
 6. **Strategic assessment** - Higher-level conclusions
 
-### Output Structure
+### Assessment Output
 
 ```typescript
 {
