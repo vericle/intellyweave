@@ -84,8 +84,7 @@ frontend/playwright-report/
 stubs
 *.png
 
-.claudekit
-/scripts/ocr-postprocess.sh
+
 .specify
 /backend/data
 .testdata/*
@@ -95,7 +94,5 @@ examples/sources/books/*
 examples/books-list.md
 frontend/scripts/fetch-books.js
 /backend/resources.txt
+
 docker-compose-dot-ai.yaml
-.env.docker
-REPO-GAPS.MD
-/docs/outdated/*

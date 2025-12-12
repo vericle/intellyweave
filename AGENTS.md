@@ -1,15 +1,6 @@
 # AGENTS.md
 
-## ⚠️ MANDATORY TASK COMPLETION CHECKLIST ⚠️
-
-**🔴 BEFORE MARKING ANY TASK/SUBTASK AS COMPLETE:**
-
-□ **AGENTS.md Updated**: Update this file if new features/commands/structure added
-
-**❌ TASK IS NOT COMPLETE IF:**
-- New code has unused function/methods/classes/types/objects/properties
-
-## PERMANENT INSTRUCTIONS
+## ⚠️ MANDATORY PERMANENT INSTRUCTIONS  ⚠️ ##
 
 **CRITICAL DEVELOPMENT RULES - NEVER OVERRIDE:**
 
@@ -29,7 +20,6 @@
 5. **Review Generated Content**: When using MCP servers or AI tools that generate templates/boilerplate:
    - **Critically review** all generated content before writing to files
    - **Adapt to reality** - remove aspirational language that doesn't match actual state
-   - **Never blindly copy** template text (e.g., don't write "used worldwide" when there's 1 adopter)
 
 6. **Verify Before Writing Config Files**: Before writing configuration files (renovate.json, workflow files, etc.):
    - Fetch reference examples from authoritative sources using `gh api`
@@ -37,9 +27,7 @@
    - Ask user about specific preferences (schedules, assignees, exemptions)
 
 **Note:** The following files are symlinks to this AGENTS.md:
-- `AGENTS.md` - Claude Code
-- `GEMINI.md` - Gemini CLI
-- `.github/copilot-instructions.md` - GitHub Copilot
+- `CLAUDE.md` - Claude Code
 
 ---
 
