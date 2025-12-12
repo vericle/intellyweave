@@ -1,8 +1,43 @@
 # Contributing Guide
 
-This document covers how to contribute to this private Elysia fork and how to contribute changes back to the upstream Weaviate repositories.
+This document covers how to contribute to IntellyWeave and how to contribute changes back to the upstream Weaviate repositories.
 
-## Working on This Private Fork
+## Repository Structure: Subtrees vs IntellyWeave
+
+IntellyWeave uses **git subtrees** to track upstream Weaviate repositories:
+
+- **backend/** ← Tracks [weaviate/elysia](https://github.com/weaviate/elysia)
+- **frontend/** ← Tracks [weaviate/elysia-frontend](https://github.com/weaviate/elysia-frontend)
+
+### Contributing to IntellyWeave (This Repository)
+
+When contributing to **IntellyWeave itself**:
+
+- **Issues**: Use [IntellyWeave issue templates](https://github.com/vericle/intellyweave/issues/new/choose)
+- **Pull Requests**: Follow [IntellyWeave PR template](https://github.com/vericle/intellyweave/blob/main/.github/PULL_REQUEST_TEMPLATE.md)
+- **Governance**: See root-level files ([CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [SECURITY.md](SECURITY.md), etc.)
+
+### Contributing to Upstream (Weaviate Elysia)
+
+If you want to contribute changes **back to Weaviate's Elysia project**:
+
+1. **Backend changes** → Submit to [weaviate/elysia](https://github.com/weaviate/elysia)
+   - Follow their [Contributing Guidelines](https://github.com/weaviate/elysia/blob/main/CONTRIBUTING.md)
+   - Use their issue templates and agree to their CLA
+
+2. **Frontend changes** → Submit to [weaviate/elysia-frontend](https://github.com/weaviate/elysia-frontend)
+
+3. **IntellyWeave-specific features** → Submit here (vericle/intellyweave)
+
+### Note on Governance Files
+
+IntellyWeave uses **root-level governance files** (`.github/`, `CONTRIBUTING.md`, etc.) for this repository. Upstream governance files from `backend/` and `frontend/` subdirectories have been intentionally removed to avoid confusion about where to report issues or submit PRs.
+
+The `.gitattributes` file ensures these removed files don't reappear during upstream syncs. See [Understanding Subtree Management](#understanding-subtree-management) below for technical details.
+
+---
+
+## Working on IntellyWeave
 
 ### Creating Features
 
@@ -271,6 +306,67 @@ When contributing upstream, follow Weaviate's code of conduct and contribution g
 - Write clear, documented code
 - Include tests for new features
 - Follow existing code style
+
+## Understanding Subtree Management
+
+### Why Remove Upstream Governance Files?
+
+When using git subtrees, upstream repositories (`backend/`, `frontend/`) include their own governance files:
+
+- Issue templates pointing to upstream repositories
+- PR templates referencing upstream contributing guidelines
+- CONTRIBUTING.md files with upstream maintainer contacts
+- Workflows designed for upstream CI/CD pipelines
+
+**These create confusion** because contributors see multiple sets of templates and guidelines, and might submit issues to the wrong repository.
+
+### How `.gitattributes` Prevents Re-appearance
+
+The `.gitattributes` file uses the `merge=ours` strategy for specific files:
+
+```gitattributes
+backend/.github/ISSUE_TEMPLATE/** merge=ours
+backend/.github/pull_request_template.md merge=ours
+backend/CONTRIBUTING.md merge=ours
+```
+
+**What this means:**
+- During `git subtree pull`, Git sees upstream changes to these files
+- The `merge=ours` strategy tells Git to **always prefer our version** (deleted)
+- Upstream changes to governance files are automatically ignored
+- Our deletions persist across all future syncs
+
+### What Gets Kept from Upstream
+
+**Backend workflows** (`.github/workflows/`) are **kept** because they provide functional value:
+
+- `docs.yml` - Generates MkDocs documentation
+- `run_pytest.yml` - Runs backend tests
+- `pypi-release.yml` - Safe to keep (only runs for `weaviate` org due to conditional check)
+- `frontend_release.yml` - Auto-updates from upstream frontend
+
+**README files** are **kept** because they document the subtree components and provide valuable technical information about Elysia itself.
+
+### Testing the `.gitattributes` Configuration
+
+After the next upstream sync, verify that deleted files stay deleted:
+
+```bash
+# Sync with upstream
+git fetch upstream-backend main
+git subtree pull --prefix=backend upstream-backend main --squash
+
+# Verify governance files are still deleted
+ls backend/.github/ISSUE_TEMPLATE/  # Should not exist
+ls backend/CONTRIBUTING.md          # Should not exist
+
+# Verify workflows are still present
+ls backend/.github/workflows/       # Should exist with kept workflows
+```
+
+If any governance files reappear, check that `.gitattributes` patterns are correct and the merge strategy is properly configured.
+
+---
 
 ## Questions?
 

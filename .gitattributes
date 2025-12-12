@@ -1,0 +1,15 @@
+# Git Subtree Merge Strategy
+# Prevent upstream governance files from being merged during subtree pulls
+# See: https://git-scm.com/docs/gitattributes#_defining_a_custom_merge_driver
+
+# Backend governance - use "ours" strategy (keep our deletions)
+backend/.github/ISSUE_TEMPLATE/** merge=ours
+backend/.github/pull_request_template.md merge=ours
+backend/CONTRIBUTING.md merge=ours
+
+# Frontend governance - use "ours" strategy
+frontend/.github/workflows/notify-backend.yml merge=ours
+
+# Note: backend/.github/workflows/ files are kept because they provide
+# functional CI/CD capabilities (docs, pytest, etc.) that benefit IntellyWeave.
+# The pypi-release.yml workflow safely no-ops due to org check.
