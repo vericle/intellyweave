@@ -803,7 +803,7 @@ Always document custom modifications and consider contributing valuable changes 
 | Port 8000 in use | `lsof -i :8000` then `kill -9 <PID>` |
 | Build fails | Check Python 3.12 and Node 18+ |
 | Frontend can't connect | Ensure backend runs on port 8000 |
-| Merge conflicts during sync | See [docs/syncing.md](docs/syncing.md) |
+| Merge conflicts during sync | See [docs/contributing/upstream-syncing.md](docs/contributing/upstream-syncing.md) |
 | Python venv issues | Delete `.venv` and re-run `scripts/setup.sh` |
 | pnpm   install fails | Delete `node_modules` and `package-lock.json`, re-run |
 | Tests fail with missing env | Copy `.env.example` to `.env` and configure API keys |

@@ -67,13 +67,13 @@ pnpm run build
 
 3. **Document custom modifications**
 
-Track your changes in `docs/custom-changes.md` for future reference:
+Mark custom modifications in code with `# CUSTOM:` comments:
 
-- What was changed
-- Why it was changed
-- Potential upstream impact
+```python
+# CUSTOM: Added support for GLiNER entity extraction
+```
 
-5. **Commit and push**
+4. **Commit and push**
 
 ```bash
 git add .
@@ -137,7 +137,7 @@ If conflicts occur during upstream sync:
 5. Stage resolved files: `git add <file>`
 6. Complete merge: `git commit`
 
-See [docs/syncing.md](docs/syncing.md) for detailed conflict resolution strategies.
+See [docs/contributing/upstream-syncing.md](docs/contributing/upstream-syncing.md) for detailed conflict resolution strategies.
 
 ## Contributing Back to Upstream
 

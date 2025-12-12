@@ -1,0 +1,33 @@
+services:
+  # DevOps AI Toolkit MCP Server
+  dot-ai:
+    image: ghcr.io/vfarcic/dot-ai:latest
+    container_name: dot-ai
+    network_mode: "host"
+    environment:
+      ANTHROPIC_API_KEY: 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
+      OPENAI_API_KEY: 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
+      QDRANT_URL: http://localhost:6333
+    volumes:
+      - /home/vero/.kube/config:/root/.kube/config:ro
+    depends_on:
+      - qdrant
+
+  # Qdrant Vector Database
+  qdrant:
+    image: ${QDRANT_IMAGE:-qdrant/qdrant:latest}
+    container_name: ${QDRANT_NAME:-qdrant}
+    ports:
+      - "${QDRANT_PORT:-6333}:6333"
+    volumes:
+      - qdrant_data_new:/qdrant/storage
+    networks:
+      - dot-ai-network-new
+
+volumes:
+  qdrant_data_new:
+    name: qdrant_data_new
+
+networks:
+  dot-ai-network-new:
+    name: dot-ai-network-new

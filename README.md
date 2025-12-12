@@ -486,10 +486,51 @@ elysia start                        # Full app at http://localhost:8000
 
 ## Documentation
 
-- **[Development Roadmap](docs/roadmap.md)** - Feature roadmap and planned enhancements
-- **[Upstream Sync Guide](docs/syncing.md)** - Keep up-to-date with Weaviate
-- **[Contributing Guide](CONTRIBUTING.md)** - Join the development
-- **[CLAUDE.md](CLAUDE.md)** - AI assistant guidance for this codebase
+### Getting Started
+
+| Guide | Description |
+|-------|-------------|
+| [Quick Start](docs/getting-started/index.md) | 5-minute setup guide |
+| [Installation](docs/getting-started/installation.md) | Detailed installation options |
+| [First Query](docs/getting-started/first-query.md) | Your first document analysis |
+
+### Feature Guides
+
+| Guide | Description |
+|-------|-------------|
+| [Entity Extraction](docs/guides/entity-extraction/index.md) | GLiNER entity extraction (7 types) |
+| [Geospatial Mapping](docs/guides/geospatial-mapping/index.md) | Mapbox 3D visualization |
+| [Network Analysis](docs/guides/network-analysis/index.md) | vis-network relationship graphs |
+| [Visualization](docs/guides/visualization/index.md) | Tables, charts, aggregations |
+| [Courthouse Debate](docs/guides/courthouse-debate/index.md) | Adversarial multi-agent system |
+| [Intelligence Analysis](docs/guides/intelligence-analysis/index.md) | 6-phase orchestrator |
+| [Agents](docs/guides/agents/index.md) | Domain routing and custom agents |
+
+### Reference & Architecture
+
+| Document | Description |
+|----------|-------------|
+| [Architecture Overview](docs/architecture/index.md) | System design and data flow |
+| [API Reference](docs/reference/api-endpoints.md) | REST API endpoints |
+| [Environment Variables](docs/reference/environment-variables.md) | Configuration options |
+| [CLI Commands](docs/reference/cli-commands.md) | Command-line interface |
+
+### Contributing
+
+| Guide | Description |
+|-------|-------------|
+| [Contributing Guide](CONTRIBUTING.md) | How to contribute |
+| [Development Setup](docs/contributing/development-setup.md) | Dev environment setup |
+| [Testing](docs/contributing/testing.md) | Running and writing tests |
+| [Upstream Syncing](docs/contributing/upstream-syncing.md) | Sync with Weaviate |
+
+### Governance
+
+| Document | Description |
+|----------|-------------|
+| [ROADMAP](docs/ROADMAP.md) | Feature roadmap |
+| [GOVERNANCE](docs/GOVERNANCE.md) | Decision-making process |
+| [MAINTAINERS](docs/MAINTAINERS.md) | Current maintainers |
 
 ---
 

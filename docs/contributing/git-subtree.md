@@ -70,8 +70,8 @@ frontend/.github/workflows/notify-backend.yml merge=ours
 
 Updated documentation in:
 
-- `/home/vero/projects/vericle/intellyweave/CONTRIBUTING.md` - New section explaining repository structure
-- `/home/vero/projects/vericle/intellyweave/docs/syncing.md` - Comprehensive guide on governance file management
+- [CONTRIBUTING.md](../../CONTRIBUTING.md) - New section explaining repository structure
+- [upstream-syncing.md](upstream-syncing.md) - Comprehensive guide on governance file management
 
 ## What Gets Kept vs Removed
 
@@ -240,8 +240,8 @@ git ls-files backend/.github/
 - [Git Attributes Documentation](https://git-scm.com/docs/gitattributes)
 - [Git Merge Strategies](https://git-scm.com/docs/git-merge#_merge_strategies)
 - [Git Subtree Command](https://git-scm.com/docs/git-subtree)
-- [IntellyWeave Contributing Guide](/home/vero/projects/vericle/intellyweave/CONTRIBUTING.md)
-- [IntellyWeave Syncing Guide](/home/vero/projects/vericle/intellyweave/docs/syncing.md)
+- [IntellyWeave Contributing Guide](../../CONTRIBUTING.md)
+- [IntellyWeave Syncing Guide](upstream-syncing.md)
 
 ## Summary
 
