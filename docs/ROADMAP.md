@@ -189,7 +189,7 @@ docker compose logs -f pipeline-watchdog
 **Goal**: 40-60% improvement in retrieval precision
 **Milestone**: [Phase 1: Enhanced Retrieval](https://github.com/vericle/intellyweave/milestone/1)
 
-#### [#10 Hybrid Search for Intelligence Queries](https://github.com/vericle/intellyweave/issues/10)
+#### [#1 Hybrid Search for Intelligence Queries](https://github.com/vericle/intellyweave/issues/1)
 
 **Priority**: High
 **Labels**: `retrieval`, `weaviate`
@@ -198,16 +198,16 @@ Combine semantic vector search with keyword matching to handle specialized intel
 
 **Impact**: Precision improvement for specialized terminology queries
 
-#### [#11 Query Entity Extraction](https://github.com/vericle/intellyweave/issues/11)
+#### ✅ Query Entity Extraction (Implemented)
 
-**Priority**: High
-**Labels**: `retrieval`, `gliner`
+**Status**: ✅ Fully implemented and operational
+**Location**: `backend/elysia/agents/query_extractor.py`
 
 Apply GLiNER to user queries before search execution. Automatically extract entities from natural language queries and use them as Weaviate filters, dramatically improving result relevance.
 
 **Impact**: Intelligent query understanding and filtering
 
-#### [#12 AutoCut Relevance Filtering](https://github.com/vericle/intellyweave/issues/12)
+#### [#2 AutoCut Relevance Filtering](https://github.com/vericle/intellyweave/issues/2)
 
 **Priority**: High
 **Labels**: `rag`, `weaviate`
@@ -216,7 +216,7 @@ Analyze similarity score distributions to automatically exclude low-relevance re
 
 **Impact**: Reduced hallucinations, higher answer quality
 
-#### [#13 Entity-Based Metadata Filtering](https://github.com/vericle/intellyweave/issues/13)
+#### [#3 Entity-Based Metadata Filtering](https://github.com/vericle/intellyweave/issues/3)
 
 **Priority**: Medium
 **Labels**: `retrieval`, `weaviate`, `gliner`
@@ -229,11 +229,11 @@ Leverage extracted entity metadata for pre-search filtering. Enable users to nar
 
 ### Phase 2: Advanced RAG (Medium Priority)
 
-**Timeline**: 2-4 weeks after Phase 1
+**Timeline**: After Phase 1
 **Goal**: Better handling of complex intelligence queries
 **Milestone**: [Phase 2: Advanced RAG](https://github.com/vericle/intellyweave/milestone/2)
 
-#### [#14 Semantic Chunking](https://github.com/vericle/intellyweave/issues/14)
+#### [#4 Semantic Chunking](https://github.com/vericle/intellyweave/issues/4)
 
 **Priority**: Medium
 **Labels**: `chunking`, `elysia`
@@ -242,7 +242,7 @@ Replace fixed-size chunking with semantic boundary detection using sentence embe
 
 **Impact**: Improved retrieval quality for nuanced documents
 
-#### [#15 Cross-Encoder Reranking](https://github.com/vericle/intellyweave/issues/15)
+#### [#5 Cross-Encoder Reranking](https://github.com/vericle/intellyweave/issues/5)
 
 **Priority**: Medium
 **Labels**: `rag`, `llm`
@@ -251,7 +251,7 @@ Implement over-fetching with cross-encoder pairwise relevance assessment. Rerank
 
 **Impact**: Significantly improved result ordering
 
-#### [#16 Query Rewriting](https://github.com/vericle/intellyweave/issues/16)
+#### [#6 Query Rewriting](https://github.com/vericle/intellyweave/issues/6)
 
 **Priority**: Medium
 **Labels**: `retrieval`, `llm`
@@ -264,11 +264,11 @@ Transform conversational queries into database-optimized formats. Extract key te
 
 ### Phase 3: Cloud Agents & Advanced Features (Low Priority)
 
-**Timeline**: Long-term (3-6 months)
+**Timeline**: Long-term
 **Goal**: Scalable data augmentation and personalization
 **Milestone**: [Phase 3: Cloud Agents & Advanced](https://github.com/vericle/intellyweave/milestone/3)
 
-#### [#17 Transformation Agent Integration](https://github.com/vericle/intellyweave/issues/17)
+#### [#7 Transformation Agent Integration](https://github.com/vericle/intellyweave/issues/7)
 
 **Priority**: Low
 **Labels**: `enhancement`, `weaviate`
@@ -279,7 +279,7 @@ Integrate Weaviate Cloud Transformation Agent for automatic property generation.
 **Status**: Technical preview (not production-ready)
 **Impact**: Scalable automated data enrichment
 
-#### [#18 Personalization Agent](https://github.com/vericle/intellyweave/issues/18)
+#### [#8 Personalization Agent](https://github.com/vericle/intellyweave/issues/8)
 
 **Priority**: Low
 **Labels**: `enhancement`, `weaviate`
@@ -290,7 +290,7 @@ User-specific intelligence recommendations based on preferences, regions of inte
 **Status**: Technical preview (not production-ready)
 **Impact**: Personalized intelligence focus areas
 
-#### [#19 Fine-Tuned Embeddings](https://github.com/vericle/intellyweave/issues/19)
+#### [#9 Fine-Tuned Embeddings](https://github.com/vericle/intellyweave/issues/9)
 
 **Priority**: Low
 **Labels**: `enhancement`, `llm`
@@ -300,8 +300,9 @@ Train domain-specific embeddings on intelligence and historical corpus. Improve 
 **Requirements**: Significant domain corpus, training infrastructure
 **Impact**: Superior semantic search for specialized terminology
 
-#### [#20 LLM-Based Chunking](https://github.com/vericle/intellyweave/issues/20)
+#### ✅ LLM-Based Chunking (Implemented)
 
+**Status**: ✅ Implemented
 **Priority**: Low
 **Labels**: `chunking`, `llm`
 
@@ -319,16 +320,16 @@ Use LLMs to create self-contained propositions and intelligently combine them. M
 | Blueprint Feature | Status | Related Issues |
 |-------------------|--------|----------------|
 | **OSINT Platform** | ✅ Implemented | Core architecture |
-| **GLiNER Entity Extraction** | ✅ Implemented | Enhancement: [#11](https://github.com/vericle/intellyweave/issues/11), [#13](https://github.com/vericle/intellyweave/issues/13) |
+| **GLiNER Entity Extraction** | ✅ Implemented | Enhancement: [#3](https://github.com/vericle/intellyweave/issues/3) |
 | **Multi-Agent Debate** | ✅ Implemented | Courthouse system |
 | **Geospatial Mapping** | ✅ Implemented | Mapbox integration |
 | **Network Visualization** | ✅ Implemented | vis-network graphs |
-| **Document Processing** | ✅ Implemented | Enhancement: [#14](https://github.com/vericle/intellyweave/issues/14), [#20](https://github.com/vericle/intellyweave/issues/20) |
-| **Advanced RAG** | 🔄 In Progress | [#10](https://github.com/vericle/intellyweave/issues/10)-[#16](https://github.com/vericle/intellyweave/issues/16) |
-| **Hybrid Search** | 📋 Planned | [#10](https://github.com/vericle/intellyweave/issues/10) |
-| **Query Intelligence** | 📋 Planned | [#11](https://github.com/vericle/intellyweave/issues/11), [#16](https://github.com/vericle/intellyweave/issues/16) |
-| **Result Optimization** | 📋 Planned | [#12](https://github.com/vericle/intellyweave/issues/12), [#15](https://github.com/vericle/intellyweave/issues/15) |
-| **Cloud Agents** | 📋 Future | [#17](https://github.com/vericle/intellyweave/issues/17), [#18](https://github.com/vericle/intellyweave/issues/18) |
+| **Document Processing** | ✅ Implemented | Enhancement: [#4](https://github.com/vericle/intellyweave/issues/4) |
+| **Advanced RAG** | 🔄 In Progress | [#1](https://github.com/vericle/intellyweave/issues/1)-[#6](https://github.com/vericle/intellyweave/issues/6) |
+| **Hybrid Search** | 📋 Planned | [#1](https://github.com/vericle/intellyweave/issues/1) |
+| **Query Intelligence** | ✅ Implemented | Query extractor operational |
+| **Result Optimization** | 📋 Planned | [#2](https://github.com/vericle/intellyweave/issues/2), [#5](https://github.com/vericle/intellyweave/issues/5) |
+| **Cloud Agents** | 📋 Future | [#7](https://github.com/vericle/intellyweave/issues/7), [#8](https://github.com/vericle/intellyweave/issues/8) |
 
 ---
 
@@ -346,7 +347,7 @@ Use LLMs to create self-contained propositions and intelligently combine them. M
 ### Phase 1 Additions
 
 - Hybrid search (vector + keyword)
-- Query entity extraction pipeline
+- ✅ Query entity extraction pipeline (implemented)
 - Automatic relevance cutoff
 - Enhanced metadata filtering
 
@@ -360,41 +361,39 @@ Use LLMs to create self-contained propositions and intelligently combine them. M
 
 - Weaviate Cloud Agents (Transformation, Personalization)
 - Custom trained embeddings
-- LLM-based document analysis
+- ✅ LLM-based document analysis (implemented)
 
 ---
 
 ## Development Priorities
 
-### Immediate Focus (Weeks 1-2)
+### Immediate Focus
 
-1. Implement hybrid search ([#10](https://github.com/vericle/intellyweave/issues/10))
-2. Add query entity extraction ([#11](https://github.com/vericle/intellyweave/issues/11))
-3. Deploy AutoCut filtering ([#12](https://github.com/vericle/intellyweave/issues/12))
+1. Implement hybrid search ([#1](https://github.com/vericle/intellyweave/issues/1))
+2. Deploy AutoCut filtering ([#2](https://github.com/vericle/intellyweave/issues/2))
 
 **Rationale**: Quick wins with immediate impact on precision
 
-### Short-Term (Weeks 3-6)
+### Short-Term
 
-4. Entity-based filtering UI ([#13](https://github.com/vericle/intellyweave/issues/13))
-5. Semantic chunking implementation ([#14](https://github.com/vericle/intellyweave/issues/14))
-6. Cross-encoder reranking ([#15](https://github.com/vericle/intellyweave/issues/15))
+3. Entity-based filtering UI ([#3](https://github.com/vericle/intellyweave/issues/3))
+4. Semantic chunking implementation ([#4](https://github.com/vericle/intellyweave/issues/4))
+5. Cross-encoder reranking ([#5](https://github.com/vericle/intellyweave/issues/5))
 
 **Rationale**: Foundation for advanced RAG capabilities
 
-### Medium-Term (Months 2-3)
+### Medium-Term
 
-7. Query rewriting system ([#16](https://github.com/vericle/intellyweave/issues/16))
-8. Performance optimization and testing
-9. User feedback integration
+6. Query rewriting system ([#6](https://github.com/vericle/intellyweave/issues/6))
+7. Performance optimization and testing
+8. User feedback integration
 
 **Rationale**: Complete advanced RAG implementation
 
-### Long-Term (Months 4-6)
+### Long-Term
 
-10. Cloud agent evaluation and integration ([#17](https://github.com/vericle/intellyweave/issues/17), [#18](https://github.com/vericle/intellyweave/issues/18))
-11. Domain-specific embedding research ([#19](https://github.com/vericle/intellyweave/issues/19))
-12. LLM chunking for premium documents ([#20](https://github.com/vericle/intellyweave/issues/20))
+9. Cloud agent evaluation and integration ([#7](https://github.com/vericle/intellyweave/issues/7), [#8](https://github.com/vericle/intellyweave/issues/8))
+10. Domain-specific embedding research ([#9](https://github.com/vericle/intellyweave/issues/9))
 
 **Rationale**: Advanced features after core optimizations proven
 

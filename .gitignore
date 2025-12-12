@@ -96,3 +96,4 @@ frontend/scripts/fetch-books.js
 /backend/resources.txt
 
 docker-compose-dot-ai.yaml
+/data/*.txt
