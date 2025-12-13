@@ -98,6 +98,12 @@ sequenceDiagram
 
 ### Visual Presentation
 
+#### Document Library Grid
+
+![Document Library](images/document-library-grid.png)
+
+*Document Library showing 8 uploaded documents in a grid layout. Each card displays: filename, type badge (Text), preview excerpt, file size, chunk count, upload timestamp, and "View Details" button. The page includes search, refresh, upload controls, and type filtering.*
+
 #### Document Menu
 
 ![Document Menu](images/05_document_menu_callout.png)
