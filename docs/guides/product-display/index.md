@@ -29,7 +29,7 @@ The ProductDisplay component renders product cards in a paginated horizontal gri
 
 ## Product List View
 
-![Book List Grid](images/book-list-grid.png)
+![Book List Grid](images/book-list-grid.jpg)
 
 *ProductDisplay showing intelligence history books in a 6-item grid with covers, titles, authors, page counts, and star ratings. Pagination shows "1-6 of 9" with navigation arrows.*
 
@@ -47,7 +47,7 @@ The ProductDisplay component renders product cards in a paginated horizontal gri
 
 ## Pagination
 
-![Book Pagination](images/book-pagination.png)
+![Book Pagination](images/book-pagination.jpg)
 
 *ProductDisplay showing page 2 (7-9 of 9) with remaining books including NKVD/KGB history title.*
 
