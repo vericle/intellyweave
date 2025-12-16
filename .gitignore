@@ -102,3 +102,9 @@ frontend/scripts/fetch-books.js
 /examples/multimedia/images/screenshots/investigate-and-learn
 /examples/multimedia/images/screenshots
 /examples/multimedia/images/screenshots/*.md
+!/backend/.env
+/data/*.md
+
+NEWSLEAK_EVOLUTION_ADDENDUM.md
+PROJECT_NARRATIVE.md
+/docs/demos/ingeborg-investigation
