@@ -387,37 +387,37 @@ The Ingeborg investigation demanded capabilities that no single tool provided:
 
 IntellyWeave emerged as a verticalization of Weaviate's Elysia framework, incorporating patterns from Spectre (a legal AI system) and lessons learned from the Newsleak revival:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    WEAVIATE ELYSIA                          │
-│              (Generic Agentic RAG Framework)                │
-│   • Decision tree orchestration                             │
-│   • Weaviate vector database integration                    │
-│   • Document chunking & retrieval                           │
-│   • Multi-provider LLM support                              │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ inherits
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                      SPECTRE                                │
-│                 (Legal AI System)                           │
-│   • Document upload pipeline patterns                       │
-│   • Custom agent creation framework                         │
-│   • Domain routing architecture                             │
-│   • Courthouse debate orchestrator                          │
-│   • GPT-5 integration with reasoning controls               │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ adapts patterns
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    INTELLYWEAVE                             │
-│    (Intelligence, Research & Investigative Platform)        │
-│   • GLiNER entity extraction (7 intelligence types)         │
-│   • Geospatial intelligence (Mapbox 3D)                     │
-│   • Network relationship analysis (vis-network)             │
-│   • 6-phase intelligence analysis orchestrator              │
-│   • Intelligence-specific agent roles                       │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Elysia["WEAVIATE ELYSIA<br/>Generic Agentic RAG Framework"]
+        E1["• Decision tree orchestration"]
+        E2["• Weaviate vector database integration"]
+        E3["• Document chunking & retrieval"]
+        E4["• Multi-provider LLM support"]
+    end
+
+    subgraph Spectre["SPECTRE<br/>Legal AI System"]
+        S1["• Document upload pipeline patterns"]
+        S2["• Custom agent creation framework"]
+        S3["• Domain routing architecture"]
+        S4["• Courthouse debate orchestrator"]
+        S5["• GPT-5 integration with reasoning controls"]
+    end
+
+    subgraph IntellyWeave["INTELLYWEAVE<br/>Intelligence Platform"]
+        I1["• GLiNER entity extraction (7 types)"]
+        I2["• Geospatial intelligence (Mapbox 3D)"]
+        I3["• Network relationship analysis (vis-network)"]
+        I4["• 6-phase intelligence analysis orchestrator"]
+        I5["• Intelligence-specific agent roles"]
+    end
+
+    Elysia -->|inherits| Spectre
+    Spectre -->|adapts patterns| IntellyWeave
+
+    style Elysia fill:#3b82f6,color:#fff
+    style Spectre fill:#8b5cf6,color:#fff
+    style IntellyWeave fill:#10b981,color:#fff
 ```
 
 ### Seven Entity Types for Intelligence Work
@@ -559,6 +559,10 @@ Follow the step-by-step investigative methodology that built IntellyWeave, from 
 **[Platform Evolution →](platform-evolution.md)**
 
 A detailed technical history of the three generations of investigative software, from Hamburg's original new/s/leak through the 2022 revival, 2024 modernization, and 2025 IntellyWeave release.
+
+**[From Newsleak to IntellyWeave →](evolution.md)**
+
+The seven-year journey from Hamburg's original new/s/leak platform to IntellyWeave, told through the lens of the Ingeborg investigation—how each platform limitation drove the next evolution.
 
 ---
 

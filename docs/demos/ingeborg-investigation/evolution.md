@@ -1,6 +1,6 @@
 # From Newsleak to IntellyWeave: A Platform Evolution Through the Lens of Cold War Investigation
 
-![Newsleak Platform Interface](examples/multimedia/images/screenshots/newsleak-investigation-images/newsleak_ui_ww2_demo.jpg)
+![Newsleak Platform Interface](images/01-newsleak-entity-network.jpg)
 *The original new/s/leak platform interface showing entity network visualization on World War II documents*
 
 > **An Addendum to PROJECT_NARRATIVE.md**
@@ -15,14 +15,14 @@ In August 1950, Ingeborg Louzek, a 23-year-old Austrian woman working as an agen
 
 But the official narrative contained inconsistencies. Documents from the Arolsen Archives revealed International Refugee Organization records for an "Ingeborg Novak" married to "Weniamin Nowak"—the alias of Soviet defector Veniamin Kolesnikov. A Brazilian passport surfaced showing "Ingeborg Novak Bucek" entering São Paulo on August 11, 1954, under the same legal provision used by known ratline escapees. AI biometric analysis of photographs taken twenty years apart showed high probability of identity match.
 
-![Brazilian Immigration Document](examples/multimedia/images/screenshots/newsleak-investigation-images/passport_brazil_front.jpg)
+![Brazilian Immigration Document](images/03-brazilian-passport.jpg)
 *Brazilian immigration document for "Ingeborg Novak Bucek," issued July 21, 1954—three and a half years after her reported execution in Moscow*
 
 The investigation required processing documents in German, English, Russian, and Portuguese. It demanded extracting entities—persons, organizations, locations, dates, cryptonyms—from declassified CIA files, Soviet SMERSH documents, Austrian newspaper archives, and I.R.O. refugee records. It needed geospatial tracking from Vienna through Baden to Moscow to Brazil. It required relationship mapping between the CIC, SMERSH, the Ludwig Boltzmann Institute researchers, and the shadowy figures of the post-war ratlines.
 
 No single tool could do this. The investigation pushed the limits of every platform available—and ultimately drove the development of IntellyWeave.
 
-![Ingeborg Louzek - Face Mosaic Across Time](examples/multimedia/images/screenshots/newsleak-investigation-images/ingeborg_face_mosaic.jpg)
+![Ingeborg Louzek - Face Mosaic Across Time](images/02-ingeborg-through-time.jpg)
 *Ingeborg Louzek at different ages: childhood portrait (top left), teenage photo (top right), young adult (bottom left), and the controversial beach photograph (bottom right). The investigation required comparing these images across a 20-year span*
 
 This is the story of that evolution, told through four phases of platform development, each shaped by the demands of real investigative work.
@@ -81,7 +81,7 @@ The integration required careful mapping. DeepPavlov's entity labels followed th
 
 With DeepPavlov in place, the SMERSH documents became accessible. Names like Veniamin Kolesnikov could be extracted from Russian trial transcripts. Soviet military units like "Army Unit No. 32750" could be identified. The investigation finally had visibility into both sides of the Iron Curtain.
 
-![IRO Family Registration Card](examples/multimedia/images/screenshots/newsleak-investigation-images/iro_nowak_family_card.jpeg)
+![IRO Family Registration Card](images/05-iro-family-card.jpg)
 *International Refugee Organization card showing the Nowak family: Weniamin (born 25.10.17, USSR), Ingeborg née Louzek (born 4.VII.27), and their son Hans (born 17.III.48). Note: "Left for unknown" — the family vanished from the DP camp system*
 
 ### The Ingeborg Collection
@@ -174,7 +174,7 @@ The backend includes an LLM-enhanced location normalization pipeline that resolv
 
 Mapbox GL 3.16 powers the frontend visualization, with 3D globe projection showing the full geographic scope of intelligence networks. Heatmap layers reveal entity density. Route visualization traces movement patterns—Vienna to Baden to Moscow to Brazil. DEM terrain with 1.5x exaggeration shows the physical landscape across which Cold War operations unfolded.
 
-![Investigation Timeline - Subway View](examples/multimedia/images/screenshots/newsleak-investigation-images/timeline_subway_view.png)
+![Investigation Timeline - Subway View](images/08-timeline-subway-view.png)
 *Aeon Timeline's "Subway" visualization tracking the complex web of relationships: CIC agents, Soviet traitors, KGB operatives, and the Benno Blum Gang—all converging around Operation CounterSnatch*
 
 ### Multi-Agent Reasoning
@@ -255,7 +255,7 @@ Demo highlight: Show how the PatternAgent identifies the 3.6-year gap between re
 
 Upload a Russian-language document—one of the SMERSH interrogation protocols. Watch IntellyWeave process it: GLiNER extracts Cyrillic entities, the LLM translates and contextualizes, the entities are linked to their counterparts in English and German documents.
 
-![Transkribus OCR Processing](examples/multimedia/images/screenshots/newsleak-investigation-images/transkribus_iro_ocr.png)
+![Transkribus OCR Processing](images/10-transkribus-ocr.png)
 *Transkribus AI-powered OCR extracting handwritten text from an I.R.O. index card: "NOWAK Weniamin 25.10.17 U.D.S.S.R. Lg WELS / INGEBORG geb. LOUZEK 4.VII.27 / HANS 17.III.48" — the crucial document linking the two identities*
 
 Demo highlight: Show how "Ингеборга Лузек" in Russian resolves to "Ingeborg Louzek" in German and English, enabling cross-language entity linking that the original Newsleak could never achieve.
@@ -276,7 +276,7 @@ The PatternAgent flags the temporal anomaly and notes the use of ratline-associa
 
 The SynthesizerAgent produces a comprehensive assessment: the evidence suggests that the official Soviet account of Ingeborg's execution may be incomplete, and documentary evidence points to possible survival and escape through established ratline networks.
 
-![AI Biometric Facial Comparison](examples/multimedia/images/screenshots/newsleak-investigation-images/biometric_face_compare.jpg)
+![AI Biometric Facial Comparison](images/04-biometric-comparison.jpg)
 *AI biometric analysis comparing Ingeborg Louzek at age 12 (left) with the Brazilian passport photo of "Ingeborg Novak Bucek" (right). Facial landmark mapping reveals structural consistencies in eye spacing, nasal bridge, and jawline despite the 14-year age difference*
 
 Demo highlight: Show the WebSocket streaming as each phase completes, with the final synthesis appearing as a structured assessment with confidence scores and source citations.
@@ -297,7 +297,7 @@ IntellyWeave is the culmination of this journey: a platform built not in abstrac
 
 ## Appendix: Key Sources for the Ingeborg Investigation
 
-![Arolsen Archives Index Card](examples/multimedia/images/screenshots/newsleak-investigation-images/iro_ingeborg_index.jpeg)
+![Arolsen Archives Index Card](images/06-arolsen-index-card.jpg)
 *Arolsen Archives index card: "LOUZEK verh. NOWAK, Ingeborg geb. 4.7.1927" with cross-reference "Siehe: NOWAK, Weniamin geb. 25.10.1917" — the archival link proving the marriage*
 
 **Archives Consulted**:
@@ -308,10 +308,10 @@ IntellyWeave is the culmination of this journey: a platform built not in abstrac
 - Ludwig Boltzmann Institut für Kriegsfolgenforschung, Graz
 - International Refugee Organization records
 
-![Buchenwald Concentration Camp Record](examples/multimedia/images/screenshots/newsleak-investigation-images/buchenwald_antonin_card.jpeg)
+![Buchenwald Concentration Camp Record](images/07-buchenwald-prisoner-card.jpg)
 *Buchenwald concentration camp card for Antonin Louzek (Ingeborg's father): Czech postal worker, political prisoner #16417, imprisoned August 20, 1943. This family trauma may explain Ingeborg's recruitment by the CIC*
 
-![Ratline Comparison - Stangl Passport](examples/multimedia/images/screenshots/newsleak-investigation-images/stangl_passport_ratline.jpg)
+![Ratline Comparison - Stangl Passport](images/09-ratline-comparison-stangl.jpg)
 *For comparison: Brazilian immigration document for Paul Stangl, Nazi war criminal who escaped via the Vatican ratlines. Note the identical document format and "Decreto-Lei n. 7967 of 1945" provision used for both entries*
 
 **Academic Sources**:
@@ -328,4 +328,14 @@ IntellyWeave is the culmination of this journey: a platform built not in abstrac
 
 ---
 
-*This addendum documents the platform evolution that led to IntellyWeave. For the full project narrative including technical architecture and vision, see PROJECT_NARRATIVE.md.*
+## Continue the Journey
+
+**[← Back to Overview](index.md)**
+
+**[Platform Evolution →](platform-evolution.md)**
+
+**[The Walkthrough →](walkthrough.md)**
+
+---
+
+*This addendum documents the platform evolution that led to IntellyWeave. For the full project narrative including technical architecture and vision, see [PROJECT_NARRATIVE.md](../../../PROJECT_NARRATIVE.md).*

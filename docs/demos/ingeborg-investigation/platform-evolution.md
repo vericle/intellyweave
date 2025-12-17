@@ -149,17 +149,25 @@ The original new/s/leak required manual document processing—running command-li
 
 The architecture now ran two Docker Compose stacks:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                 HOOVER INGESTION PIPELINE                    │
-│  Documents → Tika → Snoop → RabbitMQ → Elasticsearch 6.2.4  │
-└─────────────────────────────┬───────────────────────────────┘
-                              │ reads from
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│                 NEW/S/LEAK ANALYSIS PLATFORM                 │
-│  Java/UIMA → DeepPavlov → PostgreSQL → Elasticsearch 2.4.6  │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Hoover["HOOVER INGESTION PIPELINE"]
+        H1["Documents"] --> H2["Tika"]
+        H2 --> H3["Snoop"]
+        H3 --> H4["RabbitMQ"]
+        H4 --> H5["Elasticsearch 6.2.4"]
+    end
+
+    subgraph Newsleak["NEW/S/LEAK ANALYSIS PLATFORM"]
+        N1["Java/UIMA"] --> N2["DeepPavlov"]
+        N2 --> N3["PostgreSQL"]
+        N3 --> N4["Elasticsearch 2.4.6"]
+    end
+
+    Hoover -->|reads from| Newsleak
+
+    style Hoover fill:#3b82f6,color:#fff
+    style Newsleak fill:#8b5cf6,color:#fff
 ```
 
 The dual Elasticsearch architecture was a pragmatic compromise. Hoover required ES 6.x for modern features. The legacy Newsleak Java preprocessing JAR was compiled against ES 2.4.x APIs. Upgrading would have required weeks of refactoring.
@@ -396,43 +404,49 @@ IntellyWeave finally addresses the gap that existed since original Newsleak: **g
 
 ## Evolution Summary
 
-```
-2016-2018: ORIGINAL NEWSLEAK
-├── Hamburg University + Der Spiegel + TU Darmstadt
-├── Java/UIMA + Epic NER + Heideltime
-├── Scala/Play + AngularJS + PostgreSQL
-├── Elasticsearch 2.4.6
-├── 3 entity types (PER, ORG, LOC)
-└── LIMITATION: No Cyrillic, no semantic search
+```mermaid
+flowchart TB
+    subgraph Original["2016-2018: ORIGINAL NEWSLEAK"]
+        O1["Hamburg University + Der Spiegel + TU Darmstadt"]
+        O2["Java/UIMA + Epic NER + Heideltime"]
+        O3["Scala/Play + AngularJS + PostgreSQL"]
+        O4["Elasticsearch 2.4.6 • 3 entity types"]
+        O5["❌ No Cyrillic, no semantic search"]
+    end
 
-          ↓ Dormant 2018-2022 ↓
+    subgraph Revival["2022-2023: REVIVAL"]
+        R1["DeepPavlov BERT for Cyrillic"]
+        R2["Hoover integration for ingestion"]
+        R3["Docker containerization"]
+        R4["18 OntoNotes entity types"]
+        R5["❌ Still keyword-only search"]
+    end
 
-2022-2023: REVIVAL
-├── DeepPavlov BERT for Cyrillic
-├── Hoover integration for ingestion
-├── Docker containerization
-├── 18 OntoNotes entity types
-└── LIMITATION: Still keyword-only search
+    subgraph Modern["2024: MODERNIZATION"]
+        M1["Python watchdog replaces Hoover"]
+        M2["Weaviate adds vector search"]
+        M3["GLiNER enables zero-shot NER"]
+        M4["Unstructured API for parsing"]
+        M5["❌ No multi-agent reasoning"]
+    end
 
-          ↓
+    subgraph IW["2025: INTELLYWEAVE"]
+        I1["Complete Python/FastAPI rewrite"]
+        I2["Elysia framework foundation"]
+        I3["7 intelligence-specific entity types"]
+        I4["6-phase intelligence orchestrator"]
+        I5["Mapbox 3D + vis-network"]
+        I6["✅ Production-ready platform"]
+    end
 
-2024: MODERNIZATION
-├── Python watchdog replaces Hoover
-├── Weaviate adds vector search
-├── GLiNER enables zero-shot NER
-├── Unstructured API for parsing
-└── LIMITATION: No multi-agent reasoning
+    Original -->|"Dormant 2018-2022"| Revival
+    Revival --> Modern
+    Modern --> IW
 
-          ↓
-
-2025: INTELLYWEAVE
-├── Complete Python/FastAPI rewrite
-├── Elysia framework foundation
-├── 7 intelligence-specific entity types
-├── 6-phase intelligence orchestrator
-├── Mapbox 3D geospatial
-├── vis-network relationship graphs
-└── Production-ready platform
+    style Original fill:#6b7280,color:#fff
+    style Revival fill:#3b82f6,color:#fff
+    style Modern fill:#8b5cf6,color:#fff
+    style IW fill:#10b981,color:#fff
 ```
 
 ---

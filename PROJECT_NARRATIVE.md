@@ -270,37 +270,37 @@ This represents the "due diligence" use case—where researchers need to quickly
 
 ### Foundation: Three-Layer Inheritance
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    WEAVIATE ELYSIA                          │
-│              (Generic Agentic RAG Framework)                │
-│   • Decision tree orchestration                             │
-│   • Weaviate vector database integration                    │
-│   • Document chunking & retrieval                           │
-│   • Multi-provider LLM support                              │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ inherits
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                      SPECTRE                                │
-│                 (Legal AI System)                           │
-│   • Document upload pipeline patterns                       │
-│   • Custom agent creation framework                         │
-│   • Domain routing architecture                             │
-│   • Courthouse debate orchestrator (multi-agent reasoning)  │
-│   • GPT-5 integration with reasoning controls               │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ adapts patterns
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    INTELLYWEAVE                             │
-│    (Intelligence, Research & Investigative Platform)        │
-│   • GLiNER entity extraction (7 intelligence types)         │
-│   • Geospatial intelligence (Mapbox 3D)                     │
-│   • Network relationship analysis (vis-network)             │
-│   • 6-phase intelligence analysis orchestrator              │
-│   • Intelligence-specific agent roles                       │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Elysia["WEAVIATE ELYSIA<br/>Generic Agentic RAG Framework"]
+        E1["• Decision tree orchestration"]
+        E2["• Weaviate vector database integration"]
+        E3["• Document chunking & retrieval"]
+        E4["• Multi-provider LLM support"]
+    end
+
+    subgraph Spectre["SPECTRE<br/>Legal AI System"]
+        S1["• Document upload pipeline patterns"]
+        S2["• Custom agent creation framework"]
+        S3["• Domain routing architecture"]
+        S4["• Courthouse debate orchestrator"]
+        S5["• GPT-5 integration with reasoning controls"]
+    end
+
+    subgraph IntellyWeave["INTELLYWEAVE<br/>Intelligence Platform"]
+        I1["• GLiNER entity extraction (7 types)"]
+        I2["• Geospatial intelligence (Mapbox 3D)"]
+        I3["• Network relationship analysis (vis-network)"]
+        I4["• 6-phase intelligence analysis orchestrator"]
+        I5["• Intelligence-specific agent roles"]
+    end
+
+    Elysia -->|inherits| Spectre
+    Spectre -->|adapts patterns| IntellyWeave
+
+    style Elysia fill:#3b82f6,color:#fff
+    style Spectre fill:#8b5cf6,color:#fff
+    style IntellyWeave fill:#10b981,color:#fff
 ```
 
 **Spectre's Contribution**: Spectre, a legal AI system built on Elysia, provided battle-tested patterns that IntellyWeave adapted for intelligence work. The Courthouse debate orchestrator—originally designed for legal case analysis with defense, prosecution, and judge agents—was reimagined as IntellyWeave's six-phase intelligence orchestrator. The document upload pipeline, custom agent framework, and GPT-5 reasoning controls were inherited directly.
@@ -389,22 +389,21 @@ physics: {
 
 ### Document Processing Pipeline
 
-```
-Upload → Validate → Parse (PDF/TXT/MD/DOCX/HTML/EML/MBOX)
-    ↓
-OCR Detection → Artifact Cleanup (if needed)
-    ↓
-Content Validation (max 1M chars)
-    ↓
-Entity Extraction (GLiNER per-chunk)
-    ↓
-Chunking (384 tokens, 64-token overlap)
-    ↓
-Vectorization (OpenAI text-embedding-3-small)
-    ↓
-Store (Weaviate with bidirectional references)
-    ↓
-Preprocessing (LLM summary, field mappings)
+```mermaid
+flowchart TB
+    Upload["Upload"] --> Validate["Validate"]
+    Validate --> Parse["Parse<br/>PDF/TXT/MD/DOCX/HTML/EML/MBOX"]
+    Parse --> OCR["OCR Detection<br/>Artifact Cleanup"]
+    OCR --> ContentVal["Content Validation<br/>max 1M chars"]
+    ContentVal --> Extract["Entity Extraction<br/>GLiNER per-chunk"]
+    Extract --> Chunk["Chunking<br/>384 tokens, 64-token overlap"]
+    Chunk --> Vector["Vectorization<br/>OpenAI text-embedding-3-small"]
+    Vector --> Store["Store<br/>Weaviate with bidirectional refs"]
+    Store --> Preprocess["Preprocessing<br/>LLM summary, field mappings"]
+
+    style Upload fill:#3b82f6,color:#fff
+    style Extract fill:#10b981,color:#fff
+    style Store fill:#8b5cf6,color:#fff
 ```
 
 **Ingestion Methods**:
