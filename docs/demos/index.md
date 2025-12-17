@@ -21,6 +21,43 @@ Each demo tells a story. You're not just learning software — you're conducting
 
 ## Available Demos
 
+### IntellyWeave Evolution: Platform Story
+
+**[Explore the Demo](intellyweave-evolution/)** | The platform evolution story
+
+| Aspect | Details |
+|--------|---------|
+| **Focus** | Seven-year journey from Newsleak to IntellyWeave |
+| **Content** | Platform history, architecture, use cases |
+| **Key topics** | Hamburg origins, Cyrillic problem, vector search, multi-agent reasoning |
+
+**What you'll discover:**
+- How real investigative needs drove each platform evolution
+- The three-layer inheritance architecture (Elysia → Spectre → IntellyWeave)
+- Target users and use case examples
+- Technical capabilities with links to feature guides
+
+---
+
+### Ingeborg Investigation: A Cold War Mystery
+
+**[Explore the Demo](ingeborg-investigation/)** | The human story
+
+| Aspect | Details |
+|--------|---------|
+| **Focus** | Cold War espionage investigation that drove platform development |
+| **Documents** | Declassified CIA files, SMERSH records, I.R.O. archives |
+| **Era** | 1950-1954 |
+| **Key entities** | Ingeborg Louzek, Veniamin Kolesnikov, CIC, SMERSH, Arolsen Archives |
+
+**What you'll discover:**
+- A real investigation into a missing Austrian intelligence agent
+- How the investigation pushed each platform generation to its limits
+- The investigative methodology using SPARQL, Cyrillic NER, biometric analysis
+- Documentary evidence that challenges the official Soviet narrative
+
+---
+
 ### Nazi Rat Lines: Uncovering Post-War Escape Networks
 
 [![Rat Lines Demo](rat-lines/images/header.png)](rat-lines/)

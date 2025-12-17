@@ -556,13 +556,13 @@ And the "ingeborg" document collection remains the platform's constant test case
 
 Follow the step-by-step investigative methodology that built IntellyWeave, from SPARQL queries against Austrian newspaper archives to AI-powered biometric analysis.
 
-**[Platform Evolution →](platform-evolution.md)**
+**[IntellyWeave Evolution →](../intellyweave-evolution/)**
 
-A detailed technical history of the three generations of investigative software, from Hamburg's original new/s/leak through the 2022 revival, 2024 modernization, and 2025 IntellyWeave release.
+The platform story: seven years of development from Hamburg's new/s/leak to IntellyWeave, including architecture, capabilities, and use cases.
 
-**[From Newsleak to IntellyWeave →](evolution.md)**
+**[Platform History →](../intellyweave-evolution/platform-history.md)**
 
-The seven-year journey from Hamburg's original new/s/leak platform to IntellyWeave, told through the lens of the Ingeborg investigation—how each platform limitation drove the next evolution.
+A detailed technical history of the four generations of investigative software, from Hamburg's original new/s/leak through the 2022 revival, 2024 modernization, and 2025 IntellyWeave release.
 
 ---
 

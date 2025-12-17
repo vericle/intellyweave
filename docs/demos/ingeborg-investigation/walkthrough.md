@@ -287,4 +287,4 @@ IntellyWeave's capabilities were forged in this investigation. When you upload y
 
 *This walkthrough documents actual investigative techniques used in the Ingeborg investigation.*
 
-**[← Back to Overview](index.md)** | **[Platform Evolution →](platform-evolution.md)**
+**[← Back to Overview](index.md)** | **[Platform History →](../intellyweave-evolution/platform-history.md)**
