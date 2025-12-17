@@ -2,6 +2,9 @@
 
 **Democratizing Intelligence Analysis Through AI-Powered Document Investigation**
 
+![IntellyWeave Document Library](images/document-library.png)
+*The Document Library interface with rat line investigation documents—upload, search, analyze.*
+
 ---
 
 ## Overview
@@ -63,6 +66,9 @@ Professional link analysis and intelligence-gathering platform. Its "Transforms"
 ### Newsleak
 
 Open-source investigative journalism software developed by University of Hamburg in cooperation with Der Spiegel and TU Darmstadt, funded by the Volkswagen Foundation.
+
+![Newsleak Entity Network](images/newsleak-entity-network.jpg)
+*The original Newsleak interface analyzing WWII documents—entity network graph with Hitler, Stalin, Churchill, and other historical figures.*
 
 **Key Features** (2016-2018):
 - Multilingual entity extraction (40+ languages)
@@ -135,6 +141,23 @@ Elysia is Weaviate's open-source **agentic platform designed to use tools in a d
 - Document processing pipeline
 - Custom agents framework
 
+### Intelligence Analysis in Action
+
+The six-phase intelligence orchestrator processes document collections through specialized agents:
+
+![Entity Extractor Analysis](images/entity-extractor-analysis.png)
+*The Entity Extractor identifies Alois Hudal as a key Vatican facilitator of Nazi escape routes—with 92% confidence and follow-up suggestions.*
+
+![Geospatial and Network Analysis](images/geospatial-network-analysis.png)
+*Geospatial Analyst identifies Vatican City as the institutional core of the escape network; Network Analyst maps 12 relationship patterns.*
+
+### Investigation Task Management
+
+Analysis generates prioritized follow-up tasks for deeper investigation:
+
+![Investigation Tasks](images/investigation-tasks.png)
+*Seven follow-up investigation tasks extracted from intelligence analysis—color-coded by originating agent, prioritized for action.*
+
 > For feature documentation, see the [Guides](../../guides/).
 
 ---
@@ -147,10 +170,15 @@ Elysia is Weaviate's open-source **agentic platform designed to use tools in a d
 - [Use Cases](use-cases.md) - Target users and example workflows
 
 ### Related Demos
+
+[![Timeline Subway View](images/timeline-subway-view.png)](../ingeborg-investigation/)
+*Aeon Timeline's "subway view" mapping the Ingeborg investigation—the Cold War mystery that drove platform development.*
+
 - [Ingeborg Investigation](../ingeborg-investigation/) - Real Cold War investigation that drove platform development
 - [Rat Lines Demo](../rat-lines/) - Nazi escape routes analysis
 
 ### Feature Guides
+
 - [Entity Extraction](../../guides/entity-extraction/) - GLiNER entity extraction
 - [Intelligence Analysis](../../guides/intelligence-analysis/) - Six-phase orchestrator
 - [Geospatial Mapping](../../guides/geospatial-mapping/) - Mapbox visualization
