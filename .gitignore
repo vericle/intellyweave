@@ -105,6 +105,3 @@ frontend/scripts/fetch-books.js
 !/backend/.env
 /data/*.md
 
-NEWSLEAK_EVOLUTION_ADDENDUM.md
-PROJECT_NARRATIVE.md
-/docs/demos/ingeborg-investigation
