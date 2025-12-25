@@ -105,3 +105,10 @@ frontend/scripts/fetch-books.js
 !/backend/.env
 /data/*.md
 
+# !/examples/sources/ingeborg/podcast/.md
+!/examples/sources/ingeborg/piano-narrativo-podcast.md
+/examples/sources/ingeborg/
+backend/scripts/youtube_transcript_extractor.py
+
+
+/examples/multimedia/podcast/*.mp3
