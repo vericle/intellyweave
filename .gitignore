@@ -111,4 +111,17 @@ frontend/scripts/fetch-books.js
 backend/scripts/youtube_transcript_extractor.py
 
 
-/examples/multimedia/podcast/*.mp3
+/examples/multimedia/audio/*Eleven*.mp3
+/examples/multimedia/audio/*eleven*.mp3
+
+examples/multimedia/audio/ep01/ep01-01-ElevenLabs_2025-12-25T05_23_42_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep01/ep01-02-ElevenLabs_2025-12-25T05_31_05_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep01/ep01-03-ElevenLabs_2025-12-25T05_37_56_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep01/ep01-04-ElevenLabs_2025-12-25T05_43_25_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep02/ep02-01-ElevenLabs_2025-12-25T09_15_35_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep02/ep02-02-ElevenLabs_2025-12-25T09_21_34_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep02/ep02-03-ElevenLabs_2025-12-25T09_29_02_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep02/ep02-04-ElevenLabs_2025-12-25T09_35_00_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep03/01_ElevenLabs_2025-12-25T11_14_44_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep03/02_ElevenLabs_2025-12-25T11_14_44_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+examples/multimedia/audio/ep03/03_ElevenLabs_2025-12-25T11_14_44_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3

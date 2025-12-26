@@ -130,7 +130,7 @@ Ogni episodio alterna tra le tre timeline con pattern ricorrenti:
 
 ---
 
-### EPISODIO 3: "Il Partigiano"
+### EPISODIO 3: "Il teatro delle ombre"
 
 **Focus Narrativo**: Il background familiare del protagonista
 

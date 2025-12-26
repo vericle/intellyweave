@@ -30,7 +30,7 @@ Per capire dobbiamo tornare indietro. Sempre a Vienna ma quattro anni prima.
 
 Vienna è una città ferita. Le bombe hanno lasciato il segno. Interi quartieri sono macerie. Ma la gente ricostruisce. Sopravvive. Cerca di tornare alla normalità.
 
-Ingeborg ha diciannove anni. È nata qui. Suo padre è un impiegato postale di origine ceca. Sua madre è viennese. Anche lei di orgine Ceca. Vivono a Margaretenstraße. Nel quinto distretto.
+Ingeborg ha diciannove anni. È nata qui. Suo padre è un impiegato postale di origine ceca. Sua madre è viennese. Anche lei di origine ceca. Vivono a Margaretenstraße. Nel quinto distretto.
 
 Ingeborg lavora come domestica. Guadagna poco. Ma è giovane. Ha tutta la vita davanti.
 
@@ -258,7 +258,7 @@ Il 21 ottobre 1950. Due mesi dopo l'arresto.
 
 Un tribunale militare sovietico si riunisce a Baden. Il Tribunale MT 28990.
 
-Ingeborg Novak viene processata. L'accusa è spionaggio. Articolo 17-58-6 del codice penale sovietico. Spionaggio per conto degli Stati Uniti d'America.
+Ingeborg viene processata. L'accusa è spionaggio. Articolo 17-58-6 del codice penale sovietico. Spionaggio per conto degli Stati Uniti d'America.
 
 Il processo dura poco. La sentenza arriva in fretta.
 
@@ -294,7 +294,7 @@ Il 9 gennaio 1951.
 
 Mosca.
 
-Ingeborg Novak viene fucilata. Ha ventitré anni e sei mesi.
+Ingeborg viene fucilata. Ha ventitré anni e sei mesi.
 
 Il suo corpo viene cremato. Le ceneri vengono sepolte in una fossa comune. Al cimitero Donskoe.
 
@@ -328,7 +328,7 @@ E qualcos'altro.
 
 Il 2 ottobre 2001 la Procura Militare Generale della Federazione Russa emette un documento.
 
-Ingeborg Novak viene riabilitata.
+Ingeborg Loucek viene riabilitata.
 
 Cinquant'anni dopo la sua morte i russi ammettono che non era colpevole. Che il processo era stato ingiusto. Che la condanna era stata un errore.
 
@@ -348,7 +348,7 @@ Qualcosa che non si spiega con la versione ufficiale.
 
 ---
 
-Chi era davvero Ingeborg Novak?
+Chi era davvero Ingeborg?
 
 Una ragazza ingenua trascinata negli intrighi della Guerra Fredda? Una vittima dell'amore? Una pedina sacrificata?
 

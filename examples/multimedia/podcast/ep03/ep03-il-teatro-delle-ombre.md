@@ -1,8 +1,8 @@
-# Episodio 3: Il Partigiano
+# Episodio 3: Il teatro delle ombre
 
 ---
 
-È il 19 gennaio 1943. České Budějovice. Boemia meridionale.
+È l'agosto 1943. České Budějovice. Boemia meridionale.
 
 Un uomo viene portato via. Ha trentanove anni. Si chiama Antonin Louzek. È un impiegato postale.
 
@@ -146,7 +146,7 @@ E un'altra è appena iniziata.
 
 ---
 
-Settant'anni dopo. Un'uomo sta cercando dei documenti.
+Settant'anni dopo. Un uomo sta cercando dei documenti.
 
 L'uomo è il nipote di Ingeborg, e ha giurato al padre che avrebbe trovato Ingeborg viva o morta.
 
@@ -156,7 +156,7 @@ Di quella storia sua nonna non voleva mai parlare. E provarci portava sempre all
 
 "Non dovete parlare con anima viva. Qui ci ammazzano tutti".
 
-L'uomo è anche un'analista. è un esperto di elaborazione di grandi moli di dati e di linguistica computazionale con più di 20 anni di esperienza. 
+L'uomo è anche un analista. È un esperto di elaborazione di grandi moli di dati e di linguistica computazionale con più di vent'anni di esperienza. 
 
 Per trovare Ingeborg parte da Antonin.
 
@@ -180,7 +180,7 @@ Antonin non è suo nonno. Ma il primo marito della madre di Ingeborg.
 
 Antonin viene liberato dal controspionaggio americano. Nell'aprile 1945.
 
-Due anni dopo sua figlia Ingeborg organizza l'evasione di un'ufficiale sovietico da un carcere militare di massima sicurezza. Un carcere dal quale nessuno poteva fuggire. Poi viene reclutata dal CIC per lo stesso tipo di operazioni.
+Due anni dopo sua figlia Ingeborg organizza l'evasione di un ufficiale sovietico da un carcere militare di massima sicurezza. Un carcere dal quale nessuno poteva fuggire. Poi viene reclutata dal CIC per lo stesso tipo di operazioni.
 
 Due anni.
 
@@ -202,7 +202,7 @@ Ma torniamo ad Antonin.
 
 È stato nei campi. Ha visto l'orrore. È sopravvissuto.
 
-Qualcuno lo ha liberato. Qualcuno ha firmato i sui documenti. Qualcuno del Controspionaggio militare americano.
+Qualcuno lo ha liberato. Qualcuno ha firmato i suoi documenti. Qualcuno del Controspionaggio militare americano.
 
 Due anni dopo quella firma sua figlia lavora per la stessa organizzazione.
 
@@ -214,7 +214,7 @@ Non ha prove. Non ha certezze. Ha solo domande.
 
 Antonin era solo un impiegato postale che raccoglieva soldi per la resistenza? O c'era qualcos'altro?
 
-Quel capitano del CIC che firmò la sua liberazione aveva sauputo qualcosa dai servizi inglesi?
+Quel capitano del CIC che firmò la sua liberazione aveva saputo qualcosa dai servizi inglesi?
 
 Sapeva qualcosa che ancora oggi è sepolto negli archivi di Kew Gardens?
 
@@ -232,7 +232,7 @@ L'analista non ci è ancora andato.
 
 Ma ha trovato qualcos'altro.
 
-Ha trovato il nome dell'uomo che reclutò Ingeborg. Si chiamava Aleksandr Achtyrskij. Era un ucraino. Un ex ufficiale dell'Armata Rossa passato passato con i tedeschi. Poi con gli americani.
+Ha trovato il nome dell'uomo che reclutò Ingeborg. Si chiamava Aleksandr Achtyrskij. Era un ucraino. Un ex ufficiale dell'Armata Rossa passato con i tedeschi. Poi con gli americani.
 
 Achtyrskij lavorava per il CIC. Era il presidente del Comitato degli Emigrati Bianchi a Wels. Lo stesso campo profughi dove vivevano Ingeborg e Kolesnikov.
 

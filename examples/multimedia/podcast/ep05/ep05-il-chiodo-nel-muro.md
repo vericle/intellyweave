@@ -20,7 +20,7 @@ Adesso lo fa.
 
 ---
 
-Quel dettaglio che è sempre stato lì. Visibile a tutti. Ignorato da tutti diventa il chiodo nel muro.
+Quel dettaglio che è sempre stato lì. Visibile a tutti. Ignorato da tutti, diventa il chiodo nel muro.
 
 Ma teniamolo lì fermo per un momento. Perché per capire cosa ha appena visto dobbiamo tornare indietro.
 
@@ -54,7 +54,7 @@ Sappiamo che faceva parte di un sistema. Lo stesso sistema che aveva il suo quar
 
 A Baden c'era la sede dello SMERSH. Il controspionaggio militare sovietico. Smert Shpionam. Morte alle Spie. Il nome l'aveva scelto Stalin in persona.
 
-A Baden le celle di interrogatorio erano al piano superiore. Gli uffici degli investigatori. I prigionieri venivano portati nei sotterranei.
+A Baden gli uffici degli investigatori erano al piano superiore. I prigionieri venivano portati nei sotterranei. Le celle per gli interrogatori.
 
 La prigione di Baden era primitiva ma costruita con cura. In un ex sanatorio. Con un seminterrato. Le celle erano di dimensioni diverse ma sempre sovraffollate. Più persone di quante ne potessero contenere.
 
@@ -96,7 +96,7 @@ Una ragazza di vent'anni. Figlia di un ex detenuto di Buchenwald. Senza formazio
 
 Questa ragazza riesce a far evadere un prigioniero da un carcere militare sovietico di massima sicurezza.
 
-Un carcere da cui nessun altro è mai evaso. Ne prima, ne dopo.
+Un carcere da cui nessun altro è mai evaso. Né prima, né dopo.
 
 E non solo. Gli procura anche documenti falsi. Documenti che gli permettono di attraversare una linea di demarcazione sul fiume Enz controllata da pattuglie armate. Di raggiungere una zona di occupazione straniera. Di ottenere una nuova identità.
 
@@ -116,11 +116,11 @@ I documenti non lo dicono. Il libro dell'Istituto Boltzmann non lo rivela. I ver
 
 Chi era quel fidanzato americano?
 
-Di che grado era? Per quale agenazia o ufficio lavorava? Come poteva procurare documenti falsi?
+Di che grado era? Per quale agenzia o ufficio lavorava? Come poteva procurare documenti falsi?
 
 E soprattutto. Come faceva Ingeborg a sapere chi contattare?
 
-Una ragazza di vent'anni. Nel 1947. Non ha telefono. Non ha automobile. Non reti di relazioni importanti.
+Una ragazza di vent'anni. Nel 1947. Non ha telefono. Non ha automobile. Nessuna rete di relazioni importanti.
 
 Vive con sua madre. Lavora come domestica. Guadagna cento scellini al mese.
 
