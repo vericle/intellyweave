@@ -548,33 +548,13 @@
 
 [storytelling tone] Lo sappiamo già. [documentary style] La pena di morte abolita nel 1947. [pause] Venne reintrodotta nel 1950.
 
-[storytelling tone] Ma non per tutti.
+[storytelling tone] Ma anche dopo il 1950 non tutti furono fucilati. [pause] Alcuni ebbero la pena commutata in venti o venticinque anni.
 
 [silence]
 
-[documentary style] Johanna Tscharnutter. [pause] Stesse accuse di Ingeborg. [pause] Articolo 58-lb e 58-6. [pause] Condannata nel 1948.
+[storytelling tone] Ingeborg ed Engelmann no.
 
-[storytelling tone] La sentenza? [pause] Quindici anni.
-
-[dramatic pause] Non la morte.
-
-[silence]
-
-[documentary style] Margarethe Ottillinger. [pause] Funzionaria del ministero. [pause] Rapita dai sovietici. [pause] Accusata di spionaggio.
-
-[storytelling tone] La sentenza? [pause] Venticinque anni.
-
-[dramatic pause] Non la morte.
-
-[silence]
-
-[storytelling tone] Ingeborg ed Engelmann furono fucilati.
-
-[storytelling tone] Entrambi con accuse leggere rispetto all'entità della pena.
-
-[storytelling tone] Con le stesse accuse altri furono mandati ai lavori forzati.
-
-[storytelling tone] Non furono fucilati.
+[dramatic pause] Furono fucilati.
 
 [silence]
 

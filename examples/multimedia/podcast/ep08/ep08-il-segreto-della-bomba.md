@@ -548,33 +548,13 @@ Lo studio di Andreas Hilger lo conferma. "Tod den Spionen". Morte alle spie.
 
 Lo sappiamo già. La pena di morte abolita nel 1947. Venne reintrodotta nel 1950.
 
-Ma non per tutti.
+Ma anche dopo il 1950 non tutti furono fucilati. Alcuni ebbero la pena commutata in venti o venticinque anni.
 
 ---
 
-Johanna Tscharnutter. Stesse accuse di Ingeborg. Articolo 58-lb e 58-6. Condannata nel 1948.
+Ingeborg ed Engelmann no.
 
-La sentenza? Quindici anni.
-
-Non la morte.
-
----
-
-Margarethe Ottillinger. Funzionaria del ministero. Rapita dai sovietici. Accusata di spionaggio.
-
-La sentenza? Venticinque anni.
-
-Non la morte.
-
----
-
-Ingeborg ed Engelmann furono fucilati.
-
-Entrambi con accuse leggere rispetto all'entità della pena.
-
-Con le stesse accuse altri furono mandati ai lavori forzati.
-
-Non furono fucilati.
+Furono fucilati.
 
 ---
 

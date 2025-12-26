@@ -535,7 +535,7 @@ Dal 1950 quasi tutti i condannati a morte venivano trasportati segretamente a Mo
 
 Le famiglie non venivano informate.
 
-Ricevevano solo una comunicazione. "Condannato a dieci anni di lavori forzati. Deceduto entro dieci giorni dalla detenzione."
+Ricevevano comunicazioni standardizzate. E false. Condanne a anni di lavori forzati. Morte per malattia. Date fittizie.
 
 ---
 

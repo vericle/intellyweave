@@ -535,7 +535,7 @@
 
 [storytelling tone] Le famiglie non venivano informate.
 
-[storytelling tone] Ricevevano solo una comunicazione. [whispers] "Condannato a dieci anni di lavori forzati. Deceduto entro dieci giorni dalla detenzione."
+[storytelling tone] Ricevevano comunicazioni standardizzate. [pause] E false. [documentary style] Condanne a anni di lavori forzati. [pause] Morte per malattia. [pause] Date fittizie.
 
 [silence]
 
