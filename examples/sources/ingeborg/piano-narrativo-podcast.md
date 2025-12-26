@@ -174,13 +174,13 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 ---
 
-### EPISODIO 7: "La Linea dei Topi"
+### EPISODIO 7: "La Ratline"
 
 **Focus Narrativo**: APPROFONDIMENTO Rat Lines (introdotte in ep06)
 
 **Timeline Primaria**: Storia umana - le rotte, i metodi, le persone
 
-**Timeline Secondaria**: Investigazione - documentazione e rotte verso Ingeborg
+**Timeline Secondaria**: Investigazione - documentazione e rotte
 
 **Contenuti da Approfondire** (ep06 ha introdotto, qui si approfondisce):
 - **James V. Milano**: Chi era, come operava, il suo libro
@@ -223,11 +223,6 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 - Digressione storica: La bomba atomica sovietica 1949, lo shock occidentale
 - Montaggio parallelo: Mentre a New York cade la rete, a Vienna cade Ingeborg
 - Climax: "Due continenti. Due operazioni. Lo stesso giorno. La stessa ora."
-
-**Fonti da Analizzare**:
-- Documentazione storica spionaggio atomico
-- Archivi FBI (arresti agosto 1950)
-- Investigation report (timeline comparata)
 
 **Collegamento con ep06**: Callback a "Abbiamo già incontrato Broda, Engelmann..."
 
