@@ -19,107 +19,22 @@ Multi-layer appeal:
 
 ---
 
-## Guida Stilistica - Tecniche Carlo Lucarelli
-
-### Modello "Spirale Narrativa"
-
-Ogni episodio alterna tra le tre timeline con pattern ricorrenti:
-
-```
-[Presente investigativo]
-    ↓
-"Torniamo indietro..." [Flashback storico]
-    ↓
-"Ma per capire questa storia dobbiamo fermarci un momento..." [Digressione tecnica/contestuale]
-    ↓
-[Ritorno al presente con nuova scoperta]
-    ↓
-[Climax + Cliffhanger]
-```
-
-### Tecniche Narrative Obbligatorie
-
-1. **Freeze Frame**
-   - Sospendere l'azione mid-scene per creare tensione
-   - **Massimo 2-3 per episodio**
-   - **VARIARE LE FORMULE** - Non usare sempre "Dove siamo adesso?"
-   - Formule accettate:
-     - Domanda: "Dove siamo adesso?"
-     - Imperativo: "Fermiamoci qui."
-     - Sospensione: "Teniamo questa scena sospesa."
-     - Attesa: "Ma aspettiamo un momento."
-     - Scena diretta: [nessun freeze esplicito, solo cambio scena]
-     - Ritorno: "Ma fermiamoci ancora."
-
-2. **Digressioni Contestuali**
-   - "Torniamo alla Guerra Fredda..."
-   - "Ma cos'era il CIC?"
-   - "Cosa sono i database vettoriali?"
-   - Brevi (2-3 paragrafi max), poi ritorno alla storia
-
-3. **Climax Asciutti**
-   - Scoperte raccontate in 2-3 frasi brutali
-   - ZERO retorica, ZERO buildup
-   - Pura rivelazione fattuale con massimo impatto
-
-4. **Montaggio Parallelo**
-   - Alternare timeline senza transizioni esplicite
-   - "Mentre l'AI legge i documenti, torniamo a Vienna..."
-   - Creare connessioni implicite
-
-5. **Ritmo Variabile**
-   - Sezioni lunghe e lente per costruire contesto
-   - Accelerazione improvvisa per rivelazioni
-   - Pause strategiche prima del climax
-
----
-
 ## Struttura Ricorrente di Ogni Episodio
 
 ### Template Compositivo
 
-1. **Cold Open**: Scena drammatica senza spiegazioni
-2. **Atto I**: Focus su una timeline primaria
-3. **Transizione con freeze frame**: "Lasciamoli lì..."
-4. **Digressione**: Contesto storico/tecnico necessario
-5. **Atto II**: Timeline secondaria che si collega alla prima
-6. **Atto III**: Convergenza delle timeline + nuova informazione
-7. **Climax asciutto**: Rivelazione in 2-3 frasi
-8. **Cliffhanger**: Domanda aperta che lancia episodio successivo
+1. **Cold Open**: Scena drammatica
+2. **Atto I**: Timeline primaria
+3. **Digressione**: Contesto storico/tecnico
+4. **Atto II**: Timeline secondaria
+5. **Atto III**: Convergenza + rivelazione
+6. **Cliffhanger**: Domanda aperta
 
 ### Proporzioni Narrative
 
 - **70%**: Narrazione fattuale basata su documenti
 - **20%**: Digressioni contestuali (storiche, tecniche, biografiche)
 - **10%**: Domande aperte, incongruenze, ipotesi
-
----
-
-## Coerenza Inter-Episodio
-
-### Regola Anti-Ridondanza
-
-Prima di scrivere un nuovo episodio, verificare cosa è già stato detto negli episodi precedenti.
-
-| Se già trattato... | Allora... |
-|-------------------|-----------|
-| Concetto spiegato in dettaglio | **SINTETIZZA** + richiamo ("La conosciamo già") |
-| Personaggio introdotto | **RICHIAMA** brevemente ("Abbiamo già incontrato...") |
-| Scena già narrata | **RIFORMULA** con angolazione diversa |
-| Fatto storico citato | **OMETTI** o usa "Ricordate...?" |
-
-### Formule di Richiamo
-
-- "La conosciamo già." / "Come abbiamo visto." / "Lo sappiamo."
-- "Abbiamo già incontrato..." / "Ricordate...?"
-- "Sappiamo già come finisce."
-
-### Eccezioni
-
-Ripetizioni stilistiche OK se:
-- Creano suspense narrativa
-- Sono riformulate con angolazione diversa
-- Servono come "ritornello" tematico
 
 ---
 
@@ -133,7 +48,7 @@ Ripetizioni stilistiche OK se:
 
 **Timeline Secondaria**: Investigazione moderna (scoperta delle incongruenze)
 
-**Tecniche Lucarelli**:
+**Scene Chiave**:
 - Cold open: La scena dell'arresto (dettagli atmosferici, zero spiegazioni)
 - Freeze frame: Sospendere il protagonista nel momento dell'arresto
 - Digressione: Il contesto geopolitico del dopoguerra
@@ -153,7 +68,7 @@ Ripetizioni stilistiche OK se:
 
 **Timeline Secondaria**: Evoluzione tecnologica (limitazioni degli strumenti disponibili)
 
-**Tecniche Lucarelli**:
+**Scene Chiave**:
 - Cold open: L'analista di fronte a documenti incomprensibili
 - Digressione tecnica: Come funzionavano gli strumenti di analisi testuale disponibili
 - Digressione storica: L'organizzazione dei servizi segreti citati nei documenti
@@ -173,7 +88,7 @@ Ripetizioni stilistiche OK se:
 
 **Timeline Secondaria**: Investigazione (scoperta dei documenti di liberazione)
 
-**Tecniche Lucarelli**:
+**Scene Chiave**:
 - Cold open: La scena dell'arresto del padre
 - Freeze frame: Il momento della liberazione
 - Digressione: La resistenza ceca e l'attento al "boia di praga" Reinhard Heydrich e i servizi inglesi del SOE (Special Operations Executive)
@@ -188,23 +103,22 @@ Ripetizioni stilistiche OK se:
 
 ---
 
-### EPISODIO 4: "L'Intelligenza che Impara"
+### EPISODIO 4: "L'Incontro"
 
-**Focus Narrativo**: La svolta tecnologica che permette l'indagine
+**Focus Narrativo**: IBRIDO - L'AI trova pattern mentre la storia rivela relazioni e rapporti
 
-**Timeline Primaria**: Evoluzione tecnologica (sviluppo di NER multilingue con supporto per le lingue dell'Est Europa)
+**Timeline Primaria**: Storia umana (sviluppo della relazione Ingeborg-Kolesnikov)
 
-**Timeline Secondaria**: Storia umana (incontro tra i protagonisti)
+**Timeline Secondaria**: Evoluzione tecnologica (Entity Extraction, Relationship Mapping, Network Analysis e Pattern Detection che trova l'anomalia delle richieste di grazia simili)
 
-**Tecniche Lucarelli**:
-- Cold open: Il momento in cui i documenti diventano leggibili
-- Digressione tecnica: Cos'è un transformer, cos'è BERT
-- Montaggio parallelo: Mentre l'AI legge documenti, torniamo alla storia umana
-- Climax: La prima rivelazione dai documenti processati
+**Concetto chiave**: Colmare il gap narrativo tra ep03 (il padre) e ep05 (il chiodo nel muro). L'analista usa l'AI per cercare pattern nel reclutamento.
 
-**Domande per l'Utente**:
-- Quanto dettaglio tecnico su architetture transformer?
-- Bilanciamento tra spiegazione AI e avanzamento storia umana?
+
+**Elementi Narrativi**:
+- L'incontro era casuale? O era già un'operazione?
+- Lo sviluppo della relazione nei mesi successivi
+- Pattern trovati dall'AI → reclutamenti cic, fisherwomen e richieste di grazia troppo simili
+- Setup per ep05: il chiodo che emergerà
 
 ---
 
@@ -219,7 +133,7 @@ Ripetizioni stilistiche OK se:
 **Concetto chiave**: Il chiodo nel muro è il momento in cui l’indagine non scopre nulla di nuovo, ma vede finalmente ciò che era sempre stato sotto gli occhi.
 Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diventa irreversibile.
 
-**Tecniche Lucarelli**:
+**Scene Chiave**:
 - Freeze frame: Il momento dell'irruzione
 - Digressione: Il funzionamento delle zone di occupazione
 - Digressione: Le prigioni militari del dopoguerra
@@ -231,122 +145,159 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 ---
 
-### EPISODIO 6: "Storie e Sistemi Complessi"
+### EPISODIO 6: "Storie e Sistemi Complessi" ✅ SCRITTO
 
-**Focus Narrativo**: L'infrastruttura tecnologica per processare documenti
+**Focus Narrativo**: I quattro archi storici che convergono su Ingeborg
 
-**Timeline Primaria**: Evoluzione tecnologica (pipeline di document ingestion)
+**Timeline Primaria**: Storia umana - quattro sistemi paralleli nella Vienna del dopoguerra
 
-**Timeline Secondaria**: Storia umana (vita nel campo profughi, nuove identità)
+**Timeline Secondaria**: Investigazione - come tutto converge sul 12 agosto 1950
 
-**Tecniche Lucarelli**:
-- Digressione tecnica: Document processing pipeline
-- Montaggio parallelo: Mentre il sistema processa documenti, scopriamo nuovi nomi, organizzazioni, luoghi, date ed eventi
-- Digressione storica: I rapimenti, le bande criminali di vienna e i rapporti con i servizi sovietici (Benn Blum), Karl  U-Boat il sommergibilista tedesco che viveva a casa della madre di ingerborg, Dr. Broda, gli arresti di spie sovietiche negli stati uniti nei gironi prima e dopo l'arresto di ingeborg e le date ssospette. il mistero della bomba. 
-- Climax: La scomparsa improvvisa registrata nei documenti ufficiali
+**I Quattro Archi** (tutti INTRODOTTI in questo episodio, da approfondire nei successivi):
+1. **Benno Blum Gang** - Rapimenti per i sovietici, Counter-Snatch, Karandashov/Mokhow
+2. **Rat Lines** - Milano, Draganovic, i 17 disertori, rotte verso Sud America
+3. **Spie Atomiche** - Broda/Eric, Tudor Hart, Engelmann
+4. **Convergenza** - 11-12 agosto 1950: arresti FBI + arresto Ingeborg
 
+**Scene Chiave**:
+- 14 parti strutturate
+- Freeze frame variati: "Fermiamoci qui", "Teniamo questa scena sospesa", "Ma aspettiamo un momento"
+- Callback anti-ridondanza: "Vienna. La conosciamo già.", "Ricordate suo padre?"
+- Climax: "Il sistema si stava chiudendo. Su di lei."
 
-**Domande per l'Utente**:
-- Quanto spazio dare all'architettura tecnica vs storia umana?
-- Il pubblico è interessato ai dettagli di orchestrazione container?
+**Personaggi Introdotti**:
+- Karandashov, Mokhow, Benno Blum, Fischel
+- James V. Milano, Draganovic, i 17 (Abraham/Achtyrskij)
+- Trudi (fisherwoman), Broda, Engelmann
+
+**Nota**: Episodio già scritto (~940 righe). Rat Lines e spie atomiche sono INTRODOTTE, non esaurite - verranno approfondite in ep07-08.
 
 ---
 
-### EPISODIO 7: "Vie di Fuga"
+### EPISODIO 7: "La Linea dei Topi"
 
-**Focus Narrativo**: Le reti clandestine del dopoguerra
+**Focus Narrativo**: APPROFONDIMENTO Rat Lines (introdotte in ep06)
 
-**Timeline Primaria**: Storia umana (scomparsa e possibili rotte)
+**Timeline Primaria**: Storia umana - le rotte, i metodi, le persone
 
-**Timeline Secondaria**: Investigazione (documentazione sulle reti di esfiltrazione)
+**Timeline Secondaria**: Investigazione - documentazione e rotte verso Ingeborg
 
-**Tecniche Lucarelli**:
+**Contenuti da Approfondire** (ep06 ha introdotto, qui si approfondisce):
+- **James V. Milano**: Chi era, come operava, il suo libro
+- **Krunoslav Draganovic**: Il prete croato, la rete vaticana, i visti
+- **Le rotte**: Vienna → Roma → Genova → Sud America (dettagli)
+- **Ilha das Flores**: Il centro di smistamento brasiliano
+- **"Left for unknown"**: Cosa significava nei documenti
+
+**Scene Chiave**:
 - Digressione storica: Le operazioni di esfiltrazione del dopoguerra
-- Digressione etica: L'uso delle stesse rotte da parte di diversi gruppi
-- Montaggio parallelo: Rotte documentate vs movimento dei protagonisti
-- Climax: L'impossibilità temporale tra versione ufficiale e documenti alternativi
+- Digressione etica: Le stesse rotte usate da nazisti e disertori sovietici
+- Montaggio parallelo: Rotte documentate vs possibile movimento di Ingeborg
+- Climax: "Qualcuno percorse quella rotta. E aveva il suo nome."
 
 **Fonti da Analizzare**:
-- Investigation report (sezione Rat Lines, bibliografia di James Milano, Ilha das Flores)
-- Documenti declassificati CIA su operazioni di esfiltrazione
-- Documenti storici e libri Rat Lines
+- Investigation report (sezione Rat Lines, Ilha das Flores)
+- "Soldiers, Spies, and the Rat Line" - James V. Milano
+- Documenti declassificati CIA
+- Documenti brasiliani
 
-**Domande per l'Utente**:
-- Quanto approfondire l'aspetto etico delle operazioni?
-- Nominare esplicitamente altri casi storici simili?
+**Collegamento con ep06**: Callback a "Abbiamo già incontrato Milano, Draganovic, i diciassette..."
 
 ---
 
-### EPISODIO 8: "Cercare Significati"
+### EPISODIO 8: "Il Segreto della Bomba"
 
-**Focus Narrativo**: Dalla ricerca keyword alla ricerca semantica
+**Focus Narrativo**: APPROFONDIMENTO Spie atomiche (introdotte in ep06)
 
-**Timeline Primaria**: Evoluzione tecnologica (vector databases)
+**Timeline Primaria**: Storia umana - la rete dello spionaggio atomico sovietico
 
-**Timeline Secondaria**: Storia umana (processo e condanna)
+**Timeline Secondaria**: Investigazione - la connessione con le date dell'arresto di Ingeborg
 
-**Tecniche Lucarelli**:
-- Digressione tecnica: Differenza tra keyword e semantic search
-- Digressione storica: L'improvvisa reintroduzione della pena di morte in unione sovietica nel 1950, il funzionamento dei tribunali militari sovietici e le interferenze dell'NKVD e dello SMERSH
-- Climax: L'anomalia temporale irrisolvibile tra documenti
+**Contenuti da Approfondire** (ep06 ha introdotto, qui si approfondisce):
+- **Engelbert Broda / Eric**: La sua storia completa, dal 1938 a Cambridge
+- **Edith Tudor Hart**: La reclutatrice, Kim Philby, la rete
+- **Karl Engelmann**: Lo studente che spiava Broda, fucilato nel 1952
+- **La connessione 11-12 agosto 1950**: Arresti FBI + arresto Ingeborg - coincidenza?
+
+**Scene Chiave**:
+- Digressione storica: La bomba atomica sovietica 1949, lo shock occidentale
+- Montaggio parallelo: Mentre a New York cade la rete, a Vienna cade Ingeborg
+- Climax: "Due continenti. Due operazioni. Lo stesso giorno. La stessa ora."
 
 **Fonti da Analizzare**:
-- Platform history (Weaviate integration, textmining modernization)
-- I grafi di relazioni estratti dai documenti
-- Investigation report (processo, sentenza, anomalie)
+- Documentazione storica spionaggio atomico
+- Archivi FBI (arresti agosto 1950)
+- Investigation report (timeline comparata)
 
-**Domande per l'Utente**:
-- Quanto dettaglio su embeddings e similarity search?
-- Enfatizzare le anomalie procedurali del processo?
+**Collegamento con ep06**: Callback a "Abbiamo già incontrato Broda, Engelmann..."
+
+**Nota**: Questo episodio prepara ep09 (sistema penale) mostrando il contesto di paranoia che portò alla condanna.
 
 ---
 
-### EPISODIO 9: "Il Documento"
+### EPISODIO 9: "L'Articolo 58"
+
+**Focus Narrativo**: Il sistema penale sovietico + COURTHOUSE DEBATE integrato
+
+**Timeline Primaria**: Investigazione - analisi della proporzionalità della condanna
+
+**Timeline Secondaria**: Storia umana - il processo, la sentenza, la richiesta di grazia
+
+**Contenuti Nuovi** (materiale dal documento "Il sistema penale sovietico"):
+- **Abolizione pena di morte**: 26 maggio 1947 - perché proprio allora?
+- **Reintroduzione**: 1950 - tempismo sospetto, proprio quando Ingeborg viene arrestata
+- **Articolo 58**: Cosa prevedeva esattamente, spionaggio a favore di potenza straniera
+- **Statistiche**: 2.943 condanne a morte tedeschi (132 donne), Donskoe, fosse comuni
+- **Famiglie mai informate**: Il silenzio imposto, "ci ammazzano tutti"
+
+**Integrazione Courthouse Debate** (narrativizzato):
+- L'analista formula la domanda a IntellyWeave: "La condanna era proporzionata?"
+- **Defense**: Presenta evidenze pro-condanna (Art. 58, spionaggio confermato, contesto Guerra Fredda)
+- **Prosecution**: Sfida con incongruenze (tempismo, altre condanne simili con pene minori, riabilitazione 2001)
+- **Judge**: Sintetizza - "Il sistema non può dare certezze. Ma può mostrare le domande giuste."
+
+**Scene Chiave**:
+- Digressione storica: Il funzionamento dei tribunali militari sovietici
+- Digressione tecnica: Come funziona il Courthouse Debate (breve)
+- Montaggio parallelo: Il dibattito AI vs la richiesta di grazia di Ingeborg (11 pagine)
+- Climax: "La riabilitazione del 2001 dice che non era colpevole. Ma chi la giudicò pensava di sì."
+
+**Fonti da Analizzare**:
+- "Il sistema penale sovietico nell'URSS e nella SBZ/GDR" (documento fonte)
+- Investigation report (processo, sentenza, richiesta grazia)
+- Documentazione riabilitazione 2001
+
+**Nota**: Questo episodio è il cuore dell'analisi critica - usa la capability Courthouse di IntellyWeave per strutturare il dibattito sulla giustizia.
+
+---
+
+### EPISODIO 10: "Il Documento Brasiliano"
 
 **Focus Narrativo**: La scoperta che contraddice la versione ufficiale
 
-**Timeline Primaria**: Investigazione (scoperta documento contraddittorio)
+**Timeline Primaria**: Investigazione - scoperta e analisi del passaporto brasiliano
 
-**Timeline Secondaria**: Storia umana (possibile sopravvivenza e nuova vita)
+**Timeline Secondaria**: Storia umana - possibile sopravvivenza e nuova vita
 
-**Tecniche Lucarelli**:
+**Contenuti**:
+- **Il passaporto**: Una foto, un nome diverso, una data diversa
+- **"Left for unknown"**: Cosa significa questa annotazione nei documenti?
+- **Ilha das Flores**: Il centro di smistamento brasiliano (collegamento con ep07)
+- **La legislazione brasiliana**: "Permiso permanente especial" - come funzionava
+- **Le identità multiple**: Pratica comune nelle operazioni di intelligence
+
+**Scene Chiave**:
 - Cold open: Il momento della scoperta del documento
 - Freeze frame: L'analista di fronte alla contraddizione
 - Digressione: Le identità multiple nelle operazioni intelligence
-- Digressione: La legislazione che permetteva l'immigrazione
-- Climax: La domanda - stessa persona o identità rubata?
+- Climax: "Stessa persona? O identità rubata?"
 
 **Fonti da Analizzare**:
 - Investigation report (passaporto brasiliano, analisi documento)
-- Decreto brasiliano "Permiso permanente especial" (l'anomala legislazione immigrazione)
+- Decreto brasiliano "Permiso permanente especial"
+- Documentazione Ilha das Flores
 
-**Domande per l'Utente**:
-- Quanto spazio dare all'analisi del documento vs implicazioni narrative?
-- Esplicitare confronto con altri casi simili?
-
----
-
-### EPISODIO 10: "Riconoscere Senza conoscere"
-
-**Focus Narrativo**: Il concetto di zero-shot learning applicato all'indagine
-
-**Timeline Primaria**: Evoluzione tecnologica (capacità di riconoscere qualsiasi entità)
-
-**Timeline Secondaria**: Investigazione (estrazione automatica di entità dai documenti)
-
-**Tecniche Lucarelli**:
-- Digressione tecnica: Cos'è lo zero-shot learning
-- Montaggio parallelo: L'AI che estrae entità mentre ricostruiamo timeline
-- Climax: L'anomalia temporale rilevata automaticamente dall'AI
-
-**Fonti da Analizzare**:
-- Platform history (GLiNER integration)
-- IntellyWeave documentation (entity types)
-- Investigation report (entità rilevanti nel caso)
-
-**Domande per l'Utente**:
-- Quanto approfondire la teoria del machine learning?
-- Mostrare esempi concreti di entity extraction?
+**Collegamento con ep07**: Callback alle Rat Lines - "Ricordate le rotte che abbiamo visto? Una di quelle portava qui."
 
 ---
 
@@ -354,22 +305,31 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 **Focus Narrativo**: L'analisi biometrica come prova scientifica
 
-**Timeline Primaria**: Investigazione (analisi biometrica delle foto)
+**Timeline Primaria**: Investigazione - analisi biometrica delle foto
 
-**Timeline Secondaria**: Storia umana (progression temporale del protagonista)
+**Timeline Secondaria**: Storia umana - progression temporale, giovane vs anziana
 
-**Tecniche Lucarelli**:
-- Digressione scientifica: Biometria facciale, stabilità dei landmark points
-- Digressione scientifica: Biometria auricolare e dentale
-- Climax: Il risultato dell'analisi AI - alta probabilità di match
+**Status**: ✅ ANALISI GIÀ EFFETTUATA - risultati disponibili
+
+**Contenuti**:
+- **Biometria facciale**: Landmark points stabili nel tempo
+- **Biometria auricolare**: La forma dell'orecchio come identificatore
+- **Biometria dentale**: Struttura dentale visibile nelle foto
+- **Il confronto**: Foto giovane (Vienna 1950) vs foto anziana (Brasile?)
+- **Il risultato**: Alta probabilità di match - cosa significa?
+
+**Scene Chiave**:
+- Digressione scientifica: Come funziona il facial recognition
+- Digressione scientifica: Perché alcuni tratti sono "immutabili"
+- Montaggio parallelo: Le due foto side-by-side mentre l'AI le analizza
+- Climax: "Il sistema vede qualcosa. Ma vedere non significa sapere."
 
 **Fonti da Analizzare**:
 - Investigation report (analisi biometrica, foto disponibili)
+- Risultati dell'analisi già effettuata
 - Documentazione scientifica biometria
 
-**Domande per l'Utente**:
-- Quanto dettaglio tecnico su algoritmi di facial recognition?
-- Enfatizzare la certezza scientifica o i margini di errore?
+**Nota**: L'utente ha già i risultati dell'analisi biometrica. Questo episodio li narrativizza.
 
 ---
 
@@ -381,7 +341,7 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 **Timeline Secondaria**: Investigazione (sintesi automatica di tutte le evidenze)
 
-**Tecniche Lucarelli**:
+**Scene Chiave**:
 - Digressione tecnica: Orchestrazione multi-agente, decision trees
 - Montaggio parallelo: I diversi agent che analizzano aspetti diversi
 - Climax: Le conclusioni dell'AI - anomalia irrisolta, evidenza insufficiente
@@ -405,7 +365,7 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 **Timeline Secondaria**: Storia umana (ricostruzione possibili movimenti)
 
-**Tecniche Lucarelli**:
+**Scene Chiave**:
 - Digressione tecnica: Geospatial intelligence, visualizzazione 3D
 - Digressione storica: Le rotte documentate di altre operazioni simili
 - Montaggio parallelo: Punti sulla mappa vs eventi storici
@@ -430,7 +390,7 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 **Timeline Secondaria**: Riflessione metodologica (limiti dell'AI e della ricerca)
 
-**Tecniche Lucarelli**:
+**Scene Chiave**:
 - Elenco dicotomico: Cosa sappiamo CON CERTEZZA vs cosa NON sappiamo
 - Il bias dell'analista e quello dell'AI. Smontare le proprie tesi a vicenda (il concetto di Satan ebraico "l'avvocato del diavolo")
 - Digressione: I documenti esistenti ma non accessibili
@@ -453,13 +413,13 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 **Timeline Primaria**: Convergenza di tutte e tre le timeline
 
-**Tecniche Lucarelli**:
+**Scene Chiave**:
 - Recap strutturato delle scoperte principali
 - Presentazione delle teorie alternative (morte vs sopravvivenza)
 - NO risoluzione definitiva - il mistero resta aperto
 - Chiusura poetica che ritorna all'immagine iniziale
 
-**Tecniche Narrative Finali**:
+**Scene Finali**:
 - Montaggio parallelo delle tre journey complete
 - Climax multipli: Uno per teoria A, uno per teoria B, uno per incertezza epistemologica
 - Freeze frame finale: Il protagonista nel momento dell'arresto - non sappiamo cosa venne dopo
@@ -491,3 +451,6 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 **Episodi chiave**: 1, 3, 6, 9, 11, 14, 15
 **Focus**: Le scoperte, le incongruenze, i limiti, le domande aperte
+
+---
+
