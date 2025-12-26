@@ -206,7 +206,7 @@ Digiti "Ingeborg". Trovi tutti i documenti dove compare la parola "Ingeborg".
 
 Ma un'indagine non funziona così.
 
-Un investigatore non sa sempre quale parola cercare. A volte cerca concetti. Cerca pattern. Cerca idee.
+Un analista non sa sempre quale parola cercare. A volte cerca concetti. Cerca pattern. Cerca idee.
 
 "Mostrami documenti che parlano di fughe clandestine."
 

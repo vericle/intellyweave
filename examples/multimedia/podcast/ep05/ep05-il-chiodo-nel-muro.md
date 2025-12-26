@@ -104,7 +104,7 @@ Tutto questo tramite contatti personali. Una compagna di scuola. Un fidanzato am
 
 ---
 
-È qui che l'investigatore si ferma.
+È qui che l'analista si ferma.
 
 È qui che vede il chiodo nel muro.
 
@@ -128,7 +128,7 @@ Ma riesce a organizzare l'evasione di un prigioniero sovietico da un carcere di 
 
 ---
 
-L'investigatore rilegge i documenti.
+L'analista rilegge i documenti.
 
 Cerca una risposta. Una spiegazione. Una logica.
 
@@ -148,7 +148,7 @@ Quando un agente viene reclutato ufficialmente per fare qualcosa che stava già 
 
 Ma è solo un'ipotesi.
 
-L'investigatore non ha prove. Solo domande.
+L'analista non ha prove. Solo domande.
 
 ---
 
@@ -164,7 +164,7 @@ Poi viene reclutata dal CIC.
 
 ---
 
-L'investigatore guarda i documenti.
+L'analista guarda i documenti.
 
 Li ha letti e riletti cento volte. Ma non aveva mai visto l'enormità delle incongruenze.
 
@@ -178,7 +178,7 @@ No. Non lo era affatto.
 
 ---
 
-L'investigatore chiude il fascicolo.
+L'analista chiude il fascicolo.
 
 Ha trovato il chiodo nel muro. Il dettaglio che era sempre stato lì. Visibile a tutti. Ignorato da tutti.
 
@@ -204,7 +204,7 @@ La seconda. Una giovane agente del controspionaggio americano viene incaricata d
 
 I documenti non dicono quale versione sia vera.
 
-Ma l'investigatore sa quale sia la più probabile.
+Ma l'analista sa quale sia la più probabile.
 
 ---
 
@@ -212,7 +212,7 @@ C'è ancora una domanda.
 
 Se Ingeborg era un'agente fin dall'inizio chi l'ha reclutata?
 
-L'investigatore cerca la risposta. E la trova in un nome.
+L'analista cerca la risposta. E la trova in un nome.
 
 Antonin Louzek. Padre di Ingeborg. Impiegato postale cecoslovacco. Arrestato dalla Gestapo nell'agosto 1943. Per azioni antinaziste. Per raccolta illegale di denaro.
 
@@ -226,7 +226,7 @@ CIC.
 
 ---
 
-L'investigatore guarda quella firma.
+L'analista guarda quella firma.
 
 Il padre di Ingeborg. Liberato da un ufficiale del controspionaggio americano. Nel 1945.
 
@@ -240,7 +240,7 @@ Coincidenza?
 
 ---
 
-L'investigatore spegne lo schermo. Ma non riesce a dormire.
+L'analista spegne lo schermo. Ma non riesce a dormire.
 
 Ha visto il chiodo nel muro. Non può più ignorarlo.
 

@@ -105,7 +105,7 @@
 [storytelling tone] newsleak cerca per parole chiave. [pause] Tu digiti una stringa. [pause] Il sistema trova quella stringa.
 [storytelling tone] Digiti "Ingeborg". [pause] Trovi tutti i documenti dove compare la parola "Ingeborg".
 [storytelling tone] Ma un'indagine non funziona così.
-[storytelling tone] Un investigatore non sa sempre quale parola cercare. [pause] A volte cerca concetti. [pause] Cerca pattern. [pause] Cerca idee.
+[storytelling tone] Un analista non sa sempre quale parola cercare. [pause] A volte cerca concetti. [pause] Cerca pattern. [pause] Cerca idee.
 [storytelling tone] "Mostrami documenti che parlano di fughe clandestine."
 [storytelling tone] "Mostrami documenti su operazioni di esfiltrazione."
 [storytelling tone] "Mostrami connessioni tra zone di occupazione e servizi segreti."

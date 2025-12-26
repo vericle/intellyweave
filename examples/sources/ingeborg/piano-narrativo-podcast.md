@@ -40,9 +40,16 @@ Ogni episodio alterna tra le tre timeline con pattern ricorrenti:
 ### Tecniche Narrative Obbligatorie
 
 1. **Freeze Frame**
-   - "Dove sono i personaggi in questo momento? Lasciamoli lì, fermi..."
    - Sospendere l'azione mid-scene per creare tensione
-   - Usare massimo 2 volte per episodio
+   - **Massimo 2-3 per episodio**
+   - **VARIARE LE FORMULE** - Non usare sempre "Dove siamo adesso?"
+   - Formule accettate:
+     - Domanda: "Dove siamo adesso?"
+     - Imperativo: "Fermiamoci qui."
+     - Sospensione: "Teniamo questa scena sospesa."
+     - Attesa: "Ma aspettiamo un momento."
+     - Scena diretta: [nessun freeze esplicito, solo cambio scena]
+     - Ritorno: "Ma fermiamoci ancora."
 
 2. **Digressioni Contestuali**
    - "Torniamo alla Guerra Fredda..."
@@ -85,6 +92,34 @@ Ogni episodio alterna tra le tre timeline con pattern ricorrenti:
 - **70%**: Narrazione fattuale basata su documenti
 - **20%**: Digressioni contestuali (storiche, tecniche, biografiche)
 - **10%**: Domande aperte, incongruenze, ipotesi
+
+---
+
+## Coerenza Inter-Episodio
+
+### Regola Anti-Ridondanza
+
+Prima di scrivere un nuovo episodio, verificare cosa è già stato detto negli episodi precedenti.
+
+| Se già trattato... | Allora... |
+|-------------------|-----------|
+| Concetto spiegato in dettaglio | **SINTETIZZA** + richiamo ("La conosciamo già") |
+| Personaggio introdotto | **RICHIAMA** brevemente ("Abbiamo già incontrato...") |
+| Scena già narrata | **RIFORMULA** con angolazione diversa |
+| Fatto storico citato | **OMETTI** o usa "Ricordate...?" |
+
+### Formule di Richiamo
+
+- "La conosciamo già." / "Come abbiamo visto." / "Lo sappiamo."
+- "Abbiamo già incontrato..." / "Ricordate...?"
+- "Sappiamo già come finisce."
+
+### Eccezioni
+
+Ripetizioni stilistiche OK se:
+- Creano suspense narrativa
+- Sono riformulate con angolazione diversa
+- Servono come "ritornello" tematico
 
 ---
 
@@ -207,8 +242,9 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 **Tecniche Lucarelli**:
 - Digressione tecnica: Document processing pipeline
 - Montaggio parallelo: Mentre il sistema processa documenti, scopriamo nuovi nomi, organizzazioni, luoghi, date ed eventi
-- Digressione storica: L'organizzazione internazionale per i rifugiati
+- Digressione storica: I rapimenti, le bande criminali di vienna e i rapporti con i servizi sovietici (Benn Blum), Karl  U-Boat il sommergibilista tedesco che viveva a casa della madre di ingerborg, Dr. Broda, gli arresti di spie sovietiche negli stati uniti nei gironi prima e dopo l'arresto di ingeborg e le date ssospette. il mistero della bomba. 
 - Climax: La scomparsa improvvisa registrata nei documenti ufficiali
+
 
 **Domande per l'Utente**:
 - Quanto spazio dare all'architettura tecnica vs storia umana?

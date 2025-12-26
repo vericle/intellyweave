@@ -103,7 +103,7 @@
 
 [silence]
 
-[storytelling tone] È qui che l'investigatore si ferma.
+[storytelling tone] È qui che l'analista si ferma.
 
 [dramatic pause] È qui che vede il chiodo nel muro.
 
@@ -127,7 +127,7 @@
 
 [silence]
 
-[storytelling tone] L'investigatore rilegge i documenti.
+[storytelling tone] L'analista rilegge i documenti.
 
 [storytelling tone] Cerca una risposta. [pause] Una spiegazione. [pause] Una logica.
 
@@ -147,7 +147,7 @@
 
 [storytelling tone] Ma è solo un'ipotesi.
 
-[storytelling tone] L'investigatore non ha prove. [pause] Solo domande.
+[storytelling tone] L'analista non ha prove. [pause] Solo domande.
 
 [silence]
 
@@ -166,7 +166,7 @@
 
 [silence]
 
-[storytelling tone] L'investigatore guarda i documenti.
+[storytelling tone] L'analista guarda i documenti.
 
 [storytelling tone] Li ha letti e riletti cento volte. [pause] Ma non aveva mai visto l'enormità delle incongruenze.
 
@@ -180,7 +180,7 @@
 
 [silence]
 
-[storytelling tone] L'investigatore chiude il fascicolo.
+[storytelling tone] L'analista chiude il fascicolo.
 
 [storytelling tone] Ha trovato il chiodo nel muro. [pause] Il dettaglio che era sempre stato lì. [pause] Visibile a tutti. [pause] Ignorato da tutti.
 
@@ -206,7 +206,7 @@
 
 [storytelling tone] I documenti non dicono quale versione sia vera.
 
-[storytelling tone] Ma l'investigatore sa quale sia la più probabile.
+[storytelling tone] Ma l'analista sa quale sia la più probabile.
 
 [silence]
 
@@ -214,7 +214,7 @@
 
 [storytelling tone] Se Ingeborg era un'agente fin dall'inizio chi l'ha reclutata?
 
-[storytelling tone] L'investigatore cerca la risposta. [pause] E la trova in un nome.
+[storytelling tone] L'analista cerca la risposta. [pause] E la trova in un nome.
 
 [documentary style] Antonin Louzek. [pause] Padre di Ingeborg. [pause] Impiegato postale cecoslovacco. [pause] Arrestato dalla Gestapo nell'agosto 1943. [pause] Per azioni antinaziste. [pause] Per raccolta illegale di denaro.
 
@@ -228,7 +228,7 @@
 
 [silence]
 
-[storytelling tone] L'investigatore guarda quella firma.
+[storytelling tone] L'analista guarda quella firma.
 
 [storytelling tone] Il padre di Ingeborg. [pause] Liberato da un ufficiale del controspionaggio americano. [documentary style] Nel 1945.
 
@@ -242,7 +242,7 @@
 
 [silence]
 
-[storytelling tone] L'investigatore spegne lo schermo. [pause] Ma non riesce a dormire.
+[storytelling tone] L'analista spegne lo schermo. [pause] Ma non riesce a dormire.
 
 [storytelling tone] Ha visto il chiodo nel muro. [dramatic pause] Non può più ignorarlo.
 
