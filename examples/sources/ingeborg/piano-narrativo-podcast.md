@@ -304,7 +304,6 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 **Timeline Secondaria**: Storia umana - progression temporale, giovane vs anziana
 
-**Status**: ✅ ANALISI GIÀ EFFETTUATA - risultati disponibili
 
 **Contenuti**:
 - **Biometria facciale**: Landmark points stabili nel tempo
@@ -319,12 +318,6 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 - Montaggio parallelo: Le due foto side-by-side mentre l'AI le analizza
 - Climax: "Il sistema vede qualcosa. Ma vedere non significa sapere."
 
-**Fonti da Analizzare**:
-- Investigation report (analisi biometrica, foto disponibili)
-- Risultati dell'analisi già effettuata
-- Documentazione scientifica biometria
-
-**Nota**: L'utente ha già i risultati dell'analisi biometrica. Questo episodio li narrativizza.
 
 ---
 
