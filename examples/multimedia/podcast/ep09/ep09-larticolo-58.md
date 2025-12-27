@@ -292,17 +292,17 @@ Tre agenti. Difesa. Accusa. Giudice.
 
 ---
 
-La domanda è questa. La condanna di Ingeborg era proporzionata?
+La domanda è questa. In base ai dati prosopografici la condanna a morte di Ingeborg era sproporzionata rispetto a casi simili?
 
 ---
 
-La difesa presenta le sue ragioni.
+Il sistema analizza i documenti. Genera una prima risposta.
 
-L'Articolo 58-6 era applicabile. Lo spionaggio era confermato. Il reclutamento da parte del CIC era documentato. Nel contesto della Guerra Fredda le misure severe erano giustificate.
+I dati suggeriscono una severità anomala. Altre donne con accuse simili ricevettero pene diverse.
 
 ---
 
-L'accusa sfida questa posizione.
+La difesa sostiene questa posizione.
 
 C'è un caso che lo dimostra.
 
@@ -328,11 +328,17 @@ Non automatismo. Discrezionalità.
 
 ---
 
-Perché Ingeborg sì e Valdevit no?
+E poi c'è la riabilitazione del 2001. La Federazione Russa ha riconosciuto che la condanna era ingiusta.
 
 ---
 
-E poi c'è la riabilitazione del 2001. La Federazione Russa ha riconosciuto che la condanna era ingiusta.
+L'accusa sfida questa posizione.
+
+L'Articolo 58-6 era applicabile. Lo spionaggio era confermato. Il reclutamento da parte del CIC era documentato. Nel contesto della Guerra Fredda le misure severe erano giustificate.
+
+---
+
+Perché Ingeborg sì e Valdevit no?
 
 ---
 
