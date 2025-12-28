@@ -98,6 +98,7 @@ frontend/scripts/fetch-books.js
 
 
 !/docs/**/*png
+!examples/sources/ingeborg/Achtyrskij_Lyon_Network_Analysis_Report.md
 /examples/multimedia/gamefications
 /examples/multimedia/images/screenshots/investigate-and-learn
 /examples/multimedia/images/screenshots
@@ -144,3 +145,19 @@ examples/multimedia/audio/ep06/01_11_ElevenLabs_2025-12-26T09_51_17_Jimmy - Plum
 examples/multimedia/audio/ep06/01_14_ElevenLabs_2025-12-26T09_51_17_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3 (1).mp3
 examples/multimedia/audio/ep06/01_14_ElevenLabs_2025-12-26T09_51_17_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
 /examples/multimedia/podcast/ep09/*.mp3
+
+examples/multimedia/podcast/ep08/08_01_02_ElevenLabs_2025-12-28T11_09_38_Jimmy - Plummy, Theatrical and Lively_pvc_sp106_s50_sb100_v3.mp3
+data/Achtyrskij_Lyon_Network_Analysis_Report.pdf
+data/conversations/2025-12--15-llm-models-benchmarks_2.txt
+data/conversations/2025-12-12-fix-devops-docs-issues-1.txt
+data/conversations/2025-12-12-fix-devops-docs-issues-2.txt
+data/conversations/2025-12-12-fix-devops-docs-issues-3.txt
+data/conversations/2025-12-12-fix-devops-docs-issues-4.txt
+data/conversations/2025-12-12-fix-devops-docs-issues-5.txt
+data/conversations/2025-12-12-fix-devops-docs-issues-6.txt
+data/conversations/2025-12-12-fix-devops-docs-issues-7.txt
+data/conversations/2025-12-13-caveat-the-messages-below-were-generated-by-the-u.txt
+data/conversations/2025-12-14-llm-models-benchmarks.txt
+data/conversations/2025-12-15-analyze-the-readme-and-all-the-documentation-of-th.txt
+data/conversations/2025-12-15-httpsgithubcomuhh-ltnewsleak-use-the-github_2.txt
+data/conversations/2025-12-15-httpsgithubcomuhh-ltnewsleak-use-the-github.txt

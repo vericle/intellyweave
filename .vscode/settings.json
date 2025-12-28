@@ -51,7 +51,7 @@
 	"ruff.configurationPreference": "filesystemFirst",
 	"ruff.cwd": "${workspaceFolder}/backend",
 	"[python]": {
-		"editor.defaultFormatter": "charliermarsh.ruff",
+		"editor.defaultFormatter": "ms-python.black-formatter",
 		"editor.formatOnSave": true,
 		"editor.codeActionsOnSave": {
 			"source.fixAll.ruff": "explicit",
