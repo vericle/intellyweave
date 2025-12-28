@@ -114,19 +114,18 @@ Questa è la versione ufficiale.
 
 ---
 
-E poi c’è il documento brasiliano.
+E poi c'è il documento brasiliano.
 
 Un passaporto.
 
-Nome: Ingeborg Novak Bucek.
+Nome: Ingeborg Novak.
 Nata a Vienna.
-Data: 26 giugno 1932.
-Genitori: Josef Novak e Sophie Bauer.
+Data di nascita diversa da quella ufficiale.
 
 Data di emissione: 21 luglio 1954.
 Ingresso in Brasile: 11 agosto 1954.
 
-Tre anni e mezzo dopo l’esecuzione.
+Tre anni e mezzo dopo l'esecuzione.
 
 Il documento esiste.
 È autentico.
@@ -367,25 +366,50 @@ O qualcuno parlerà.
 
 ---
 
-L’analista apre un nuovo file.
+L'analista apre un nuovo file.
 
 Scrive:
 **Prossimi passi.**
 
 ---
 
-L’orologio segna tardi.
+Ma c'è qualcosa che può fare.
 
-Domani si ricomincia.
-
----
-
-Quando manca una prova non è detto che manchi la verità.
-Spesso manca solo il documento giusto.
+Il passaporto ha una foto.
+I documenti sovietici hanno una foto.
+L'archivio di famiglia ha altre foto.
 
 ---
 
-L’indagine continua.
+L'analista sa cosa sono i punti immutabili.
+
+I landmark del volto che non cambiano con l'età.
+La forma dell'orecchio.
+L'arco di cupido.
+La struttura dentale.
+
+---
+
+Se è la stessa persona i punti corrisponderanno.
+Se non è la stessa persona non corrisponderanno.
+
+La macchina può misurarli.
+Confrontarli.
+Calcolare probabilità.
+
+---
+
+L'analista apre il modulo di analisi biometrica.
+
+Carica la prima foto.
+
+---
+
+L'orologio segna tardi.
+
+Ma domani avrà una risposta.
+
+O almeno una probabilità.
 
 ---
 

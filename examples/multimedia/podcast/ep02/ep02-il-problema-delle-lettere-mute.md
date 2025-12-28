@@ -278,7 +278,7 @@ Ci sono decine di schede degli Arolsen Archives. L'archivio internazionale sulla
 
 Ci sono una ventina di libri. Stalins letzte Opfer. SMERSH: Stalin's Secret Weapon. The Red Army in Austria. America's Secret Army. The Ratline. E molti altri. Tutti analizzati. Tutti annotati.
 
-Ci sono passaporti brasiliani. Decreti di immigrazione. Permessi di soggiorno.
+Ci sono documenti sudamericani. Schede di immigrazione. Registri di porti.
 
 Migliaia di pagine. Quattro lingue. Tedesco. Russo. Portoghese. Inglese.
 
@@ -312,7 +312,7 @@ C'è una scomparsa improvvisa. "left for unknown", "Partito per ignoto." Destina
 
 C'è un arresto nel 1950. Una condanna a morte. Un'esecuzione a Mosca.
 
-E ci sono documenti brasiliani. Un passaporto. Una foto. Un nome diverso. Una data diversa.
+E ci sono tracce che portano altrove. In altri paesi. In altri archivi. Tracce che il sistema deve ancora esplorare.
 
 ---
 

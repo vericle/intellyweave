@@ -448,21 +448,17 @@ Potevi entrare in Brasile. Senza domande.
 
 ---
 
-La moglie dell'analista trova un altro documento. Forse il più importante di tutti. Una scheda dell'Archivio Arolsen.
+L'analista continua a cercare. Trova riferimenti a centinaia di persone che passarono per Ilha das Flores.
 
-Nome: Ingeborg Novak Bucek.
-Nata: Vienna, 26 giugno 1932.
-Nazionalità: Austriaca.
-Stato civile: Sposata.
-Entrata in Brasile: 11 agosto 1954.
-Base legale: Articolo 10, Decreto-Lei Nº 7.967.
-Tipo di visto: Permiso Permanente Especial.
+Tedeschi. Austriaci. Ucraini. Polacchi.
+
+Alcuni con nomi veri. Alcuni con identità false.
 
 ---
 
-L'analista si ferma.
+La Rat Line non lasciava tracce chiare. Era progettata così.
 
-Il nome è familiare. La data di nascita è sbagliata. Ma il resto...
+Chi entrava dall'altra parte usciva come qualcun altro.
 
 ---
 
@@ -638,7 +634,7 @@ Due settimane prima dell'arresto di Ingeborg.
 
 ---
 
-## PARTE UNDICESIMA: I DOCUMENTI
+## PARTE UNDICESIMA: LE DOMANDE
 
 ---
 
@@ -648,103 +644,79 @@ L'analista sta cercando qualcos'altro.
 
 ---
 
-Ha trovato un documento. Un passaporto brasiliano.
+La Rat Line esisteva. È documentata. Milano l'ha descritta nel suo libro.
 
-Nome: Ingeborg Novak Bucek.
-Nata: Vienna, 26 giugno 1932.
-Entrata in Brasile: 11 agosto 1954.
+Draganovic procurava i visti. Le navi partivano. Le persone scomparivano.
 
 ---
 
-La data di nascita è diversa. Ingeborg era nata il 26 giugno 1927. Non 1932.
+Ma c'è una domanda che il sistema non può ancora rispondere.
 
-Cinque anni di differenza.
-
----
-
-Ma il resto corrisponde. Vienna. Il nome Ingeborg. Il cognome Novak.
-
-Novak era il cognome che Kolesnikov usava nel campo di Wels. Weniamin Nowak.
+Chi altro potrebbe aver usato quella rotta?
 
 ---
 
-L'analista confronta le foto. Usa algoritmi di riconoscimento facciale.
+I documenti dell'IRO mostrano decine di "Left for unknown" tra il 1949 e il 1952.
 
-Le sopracciglia. La forma degli occhi. La curva del naso. L'arco di cupido.
+Persone che sparirono dai campi. Destinazione sconosciuta.
 
-C'è somiglianza.
-
----
-
-Analizza i denti. La rotazione degli incisivi laterali. La forma degli incisivi centrali.
-
-C'è corrispondenza.
+Alcune usarono la Rat Line. Altre no. Altre non si sa.
 
 ---
 
-Analizza le orecchie. La curvatura dell'elice. L'attaccatura del lobo.
+L'analista guarda la mappa. La linea che collega Vienna al Brasile.
 
-Alta probabilità di match.
+È una possibilità. Niente di più.
 
----
-
-L'analista si ferma. Guarda i numeri.
-
-Non sono prove. Sono solo indizi. Correlazioni. Possibilità.
-
-Ma sono abbastanza per una domanda.
+Ma le possibilità meritano indagini.
 
 ---
 
-Se questa è la stessa persona allora Ingeborg non morì nel gennaio 1951.
-
-Arrivò in Brasile nell'agosto 1954.
-
-Con una nuova identità. Con un nuovo nome. Con una nuova vita.
+## PARTE DODICESIMA: LE DOMANDE APERTE
 
 ---
 
-Ma come?
+Fermiamoci qui. Una rete. Una rotta. Migliaia di scomparsi.
 
 ---
 
-## PARTE DODICESIMA: L'IPOTESI
+La Rat Line funzionò per anni. Dal 1947 al 1952. Forse oltre.
+
+Milano racconta di diciassette operazioni confermate. Ma ce ne furono molte altre.
+
+Disertori sovietici. Criminali di guerra. Rifugiati. Spie.
 
 ---
 
-Fermiamoci qui. Un documento. Una foto. Un'ipotesi.
+Chi passò per quella rotta?
+
+L'analista non può saperlo con certezza. Non ha accesso a tutti i documenti.
+
+Alcuni sono ancora classificati. Altri sono andati perduti. Altri non furono mai scritti.
 
 ---
 
-Non ci sono prove. Solo indizi.
+Ma la domanda resta.
 
-Un passaporto con il nome sbagliato. Una foto che somiglia. Un cognome che corrisponde.
+Se la Rat Line esisteva. Se funzionava. Se portava persone da Vienna al Brasile.
 
----
-
-Forse è una coincidenza. Forse è un'altra Ingeborg. Forse i documenti mentono.
-
-O forse no.
+Chi altro potrebbe averla usata?
 
 ---
 
-Forse Ingeborg usò la Rat Line. Forse Draganovic le procurò i documenti. Forse arrivò a Ilha das Flores nel 1954.
+L'analista guarda la mappa sullo schermo. La linea che attraversa l'Europa. L'Atlantico. Il Sud America.
 
-Forse la fucilazione non avvenne mai.
-
-Forse tutto quello che sappiamo è falso.
+Una via di fuga. Per chi aveva le connessioni giuste.
 
 ---
 
-L'analista non può saperlo. Non ha prove.
+Ma c'è un'altra domanda. Più scomoda.
 
-Ha solo una mappa. Una rete. Una linea che collega Vienna al Brasile.
+Che fine fece Abraham? L'ipotesi dice che tornò in Austria. Che fu catturato. Che testimoniò.
 
-E un nome che appare alla fine.
+Ma l'ipotesi ha delle falle. Delle incongruenze.
 
----
-
-Ingeborg Novak Bucek.
+Il sistema le ha notate. Ma non sa ancora cosa significhino.
 
 ---
 
@@ -780,7 +752,9 @@ L'analista spegne lo schermo.
 
 Sa che non ha finito. Sa che ci sono altre domande.
 
-Chi era veramente Ingeborg Novak Bucek? Come era arrivata in Brasile? Cosa era successo dopo?
+Sulla Rat Line. Su Abraham. Sulle incongruenze che il sistema ha trovato.
+
+Ma quelle risposte richiederanno strumenti nuovi. Archivi più profondi.
 
 ---
 
