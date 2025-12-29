@@ -379,6 +379,9 @@ existed" — Jaustamerhist study, citing multiple biographers"
 
 ### EPISODIO 13: "La Scoperta"
 
+Attenzione altamente speculativo e attaccabile dal punto di vista academico usare con cautela ed evitare disclosue sul full name del passaparto
+usare "Ingeborg Novak" non nominare Buchek ne i parenti. Rischio azioni legali e querele.
+
 **Focus Narrativo**: La ricostruzione geospaziale culmina in un colpo di scena - il sistema trova il passaporto brasiliano
 
 **Timeline Primaria**: Investigazione (mappatura geospaziale + analisi overnight)
@@ -417,6 +420,9 @@ existed" — Jaustamerhist study, citing multiple biographers"
 
 ### EPISODIO 14: "Punti Immutabili"
 
+Attenzione altamente speculativo e attaccabile dal punto di vista academico usare con cautela ed evitare disclosue sul full name del passaparto
+usare "Ingeborg Novak" non nominare Buchek ne i parenti. Rischio azioni legali e querele.
+
 **Focus Narrativo**: L'analisi biometrica del passaporto - la donna nel documento è Ingeborg?
 
 **Timeline Primaria**: Investigazione (analisi biometrica come prova scientifica)
@@ -442,7 +448,7 @@ existed" — Jaustamerhist study, citing multiple biographers"
 
 ---
 
-### EPISODIO 15: "La Chavruta dell’Attrito"
+### EPISODIO 15: "La Chavruta dell’Attrito" (Il concetto di Satan come Equazione di Verifica)
 
 **Focus Narrativo**: Cosa si può sapere e cosa resta irraggiungibile
 
