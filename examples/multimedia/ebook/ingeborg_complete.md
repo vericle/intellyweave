@@ -1,4 +1,84 @@
-# Episodio 1: L'Arresto
+# Prologo
+
+---
+
+Questo libro racconta un'indagine.
+
+Non un romanzo. Non una ricostruzione immaginaria. Un'indagine vera, condotta su documenti veri, con strumenti reali.
+
+---
+
+Il punto di partenza è un caso irrisolto della Guerra Fredda.
+
+Una donna austriaca di ventitré anni, arrestata a Vienna nell'agosto del 1950. Processata da un tribunale militare sovietico. Condannata a morte per spionaggio. Fucilata a Mosca nel gennaio del 1951.
+
+Il suo nome era Ingeborg Loucek. Alias Ingeborg Novak. Alias Ingeborg Bucek.
+
+Forse.
+
+---
+
+Per decenni la sua storia è rimasta sepolta. Nessuno sapeva cosa le fosse successo. La famiglia non sapeva. Gli storici non sapevano.
+
+Poi nel 2009 il Cremlino ha declassificato gli archivi dello SMERSH. Il controspionaggio militare sovietico. I ricercatori hanno trovato il suo fascicolo.
+
+Ma quello che hanno trovato non tornava.
+
+Date che si contraddicevano. Versioni incompatibili. Dettagli impossibili.
+
+---
+
+Chi conduce questa indagine è il nipote di Ingeborg.
+
+È un analista. Un architetto software. Specializzato in big data, linguistica computazionale e machine learning. Ha più di vent'anni di esperienza.
+
+Ha giurato al padre morente che avrebbe trovato la verità.
+
+---
+
+Le fonti di questa indagine sono pubbliche e verificabili.
+
+Gli archivi declassificati dello SMERSH e dell'NKVD. I documenti del Counter Intelligence Corps americano. I fascicoli dell'Istituto Ludwig Boltzmann di Graz. Gli Arolsen Archives sulla persecuzione nazista. I registri consolari brasiliani. Le inchieste parlamentari britanniche. Decine di libri. Centinaia di articoli di giornale. Migliaia di pagine in quattro lingue.
+
+Tutto verificato. Tutto incrociato. Tutto citabile.
+
+---
+
+L'indagine usa strumenti di intelligenza artificiale.
+
+Modelli di linguaggio per l'estrazione automatica di entità. Database vettoriali per la ricerca semantica. Analisi di rete per mappare le connessioni. Biometria per il confronto delle fotografie.
+
+Ma l'intelligenza artificiale non è il soggetto di questo libro. Non è l'autorità. Non è la risposta.
+
+È uno strumento. Come un microscopio. Come un archivio digitalizzato. Come una lente d'ingrandimento.
+
+Gli strumenti non pensano. Non giudicano. Non decidono.
+
+L'analista pensa. L'analista giudica. L'analista decide.
+
+E sbaglia. E corregge. E continua.
+
+---
+
+Quello che emerge da questa indagine non è una risposta definitiva.
+
+È una serie di domande. Di anomalie. Di tracce che portano in direzioni inaspettate.
+
+È la ricostruzione di una rete clandestina che operava nell'Europa del dopoguerra. Di operazioni che attraversavano le linee di demarcazione. Di vite spezzate e di vite salvate.
+
+E di una donna che forse è morta a Mosca nel 1951.
+
+O forse no.
+
+---
+
+Questa è la sua storia.
+
+---
+
+# Parte I: La Scomparsa
+
+## Capitolo 1: L'Arresto
 
 ---
 
@@ -366,13 +446,7 @@ Ma forse. Forse non è finita come pensiamo.
 
 ---
 
-*Fine Episodio 1*
-
-
-
----
-
-# Episodio 2: Il Problema delle Lettere Mute
+## Capitolo 2: Il Problema delle Lettere Mute
 
 ---
 
@@ -712,12 +786,7 @@ Sa come integrarla nel sistema.
 
 ---
 
-*Fine Episodio 2*
-
-
----
-
-# Episodio 3: Il teatro delle ombre
+## Capitolo 3: Il Teatro delle Ombre
 
 ---
 
@@ -1015,13 +1084,9 @@ Comincia con suo padre.
 
 ---
 
-*Fine Episodio 3*
+# Parte II: Il Sistema
 
-
-
----
-
-# Episodio 4: L'Incontro
+## Capitolo 4: L'Incontro
 
 ---
 
@@ -1043,7 +1108,7 @@ Il sistema comincia a processare.
 
 ---
 
-## PARTE PRIMA: LA MACCHINA
+**La Macchina**
 
 ---
 
@@ -1109,7 +1174,7 @@ Perché quello che il sistema sta per trovare cambia tutto.
 
 ---
 
-## PARTE SECONDA: I DOCUMENTI CHE PARLANO
+**I Documenti che Parlano**
 
 ---
 
@@ -1165,7 +1230,7 @@ Ma c'è un secondo pattern. Più inquietante.
 
 ---
 
-## PARTE TERZA: L'ANOMALIA
+**L'Anomalia**
 
 ---
 
@@ -1257,13 +1322,13 @@ Il sistema non lo sa. Segnala solo l'anomalia.
 
 ---
 
-## PARTE QUARTA: LA PESCATRICE
+**La Pescatrice**
 
 ---
 
 Torniamo a Vienna. Aprile 1946.
 
-L'abbiamo già vista questa scena. In un altro episodio. Il Continental Cabaret. Una ragazza di diciannove anni. Un ufficiale sovietico.
+L'abbiamo già vista questa scena. Il Continental Cabaret. Una ragazza di diciannove anni. Un ufficiale sovietico.
 
 Ma non l'abbiamo guardata abbastanza da vicino.
 
@@ -1345,7 +1410,7 @@ Era un'operazione.
 
 ---
 
-## PARTE QUINTA: IL RECLUTAMENTO
+**Il Reclutamento**
 
 ---
 
@@ -1435,7 +1500,7 @@ Il sistema non può provarlo. Ma lo segnala come ipotesi.
 
 ---
 
-## PARTE SESTA: IL PADRE
+**Il Padre**
 
 ---
 
@@ -1520,7 +1585,7 @@ Il 1946.
 
 ---
 
-## PARTE SETTIMA: IL SISTEMA PENALE
+**Il Sistema Penale**
 
 ---
 
@@ -1570,7 +1635,7 @@ Per decenni non seppe nulla. Rispondeva sempre allo stesso modo alle domande.
 
 ---
 
-## PARTE OTTAVA: LA DOMANDA
+**La Domanda**
 
 ---
 
@@ -1610,12 +1675,7 @@ C'è un dettaglio nell'evasione che deve essere approfondito.
 
 ---
 
-*Fine Episodio 4*
-
-
----
-
-# Episodio 5: Il Chiodo nel Muro
+## Capitolo 5: Il Chiodo nel Muro
 
 ---
 
@@ -1871,13 +1931,9 @@ Ma cosa?
 
 ---
 
-*Fine Episodio 5*
+# Parte III: Le Reti
 
-
-
----
-
-# Episodio 6: Storie e Sistemi Complessi
+## Capitolo 6: Storie e Sistemi Complessi
 
 ---
 
@@ -1909,7 +1965,7 @@ Per capirlo dobbiamo tornare indietro. A Vienna. Alla fine del 1948.
 
 ---
 
-## PARTE PRIMA: IL TEATRO
+**Il Teatro**
 
 ---
 
@@ -1975,7 +2031,7 @@ Blum accetta.
 
 ---
 
-## PARTE SECONDA: LA BANDA
+**La Banda**
 
 ---
 
@@ -2087,7 +2143,7 @@ E scoprono l'esistenza della banda.
 
 ---
 
-## PARTE TERZA: L'OBERSTLEUTNANT E IL MAGGIORE
+**L'Oberstleutnant e il Maggiore**
 
 ---
 
@@ -2135,7 +2191,7 @@ Ma nel gennaio 1950 il ciclo si rompe.
 
 ---
 
-## PARTE QUARTA: COUNTER-SNATCH
+**Counter-Snatch**
 
 ---
 
@@ -2177,7 +2233,7 @@ Benno Blum muore.
 
 ---
 
-## PARTE QUINTA: IL PROCESSO
+**Il Processo**
 
 ---
 
@@ -2219,7 +2275,7 @@ Ma la storia non è finita.
 
 ---
 
-## PARTE SESTA: LE RAT LINES
+**Le Rat Lines**
 
 ---
 
@@ -2285,7 +2341,7 @@ La Rat Line cominciò a funzionare.
 
 ---
 
-## PARTE SETTIMA: I DICIASSETTE
+**I Diciassette**
 
 ---
 
@@ -2353,7 +2409,7 @@ Era in viaggio per la Palestina.
 
 ---
 
-## PARTE OTTAVA: LE PESCATRICI
+**Le Pescatrici**
 
 ---
 
@@ -2443,8 +2499,6 @@ Il matrimonio fu celebrato in segreto. Un prete cattolico. Un magistrato locale.
 
 Andreyev promise di far battezzare i figli nella fede cattolica. Non era credente. Ma firmò.
 
-
-
 ---
 
 Trudi e Andreyev partirono per l'Italia. Poi per il Brasile.
@@ -2457,7 +2511,7 @@ Come tutti gli altri clienti della Rat Line.
 
 ---
 
-## PARTE NONA: ABRAHAM
+**Abraham**
 
 ---
 
@@ -2491,7 +2545,7 @@ Due settimane dopo l'arresto di Ingeborg.
 
 ---
 
-## PARTE DECIMA: LA SPIA ATOMICA
+**La Spia Atomica**
 
 ---
 
@@ -2579,7 +2633,7 @@ Ma c'era qualcuno che lo spiava.
 
 ---
 
-## PARTE UNDICESIMA: LO STUDENTE
+**Lo Studente**
 
 ---
 
@@ -2609,7 +2663,7 @@ E tutto questo succedeva a Vienna. Negli stessi anni. Nelle stesse strade.
 
 ---
 
-## PARTE DODICESIMA: LE DATE
+**Le Date**
 
 ---
 
@@ -2675,7 +2729,7 @@ Ci sono solo due date. Un giorno di distanza. Due eventi focali.
 
 ---
 
-## PARTE TREDICESIMA: IL SISTEMA
+**Il Sistema**
 
 ---
 
@@ -2723,7 +2777,7 @@ E tra quei nomi c'era quello di Ingeborg.
 
 ---
 
-## PARTE QUATTORDICESIMA: L'ANALISTA
+**L'Analista**
 
 ---
 
@@ -2773,10 +2827,6 @@ Un giorno dopo l'ultimo arresto della rete atomica.
 
 ---
 
-## EPILOGO
-
----
-
 Sappiamo già come finisce.
 
 12 agosto 1950. Una donna verso la stazione Est. Un arresto. Un processo. Una sentenza.
@@ -2811,12 +2861,7 @@ Su di lei.
 
 ---
 
-*Fine Episodio 6*
-
-
----
-
-# Episodio 7: La Ratline
+## Capitolo 7: La Ratline
 
 ---
 
@@ -2840,7 +2885,7 @@ Sa che non tornerà mai più in Europa.
 
 ---
 
-## PARTE PRIMA: IL MAGGIORE
+**Il Maggiore**
 
 ---
 
@@ -2896,7 +2941,7 @@ La Linea dei Topi.
 
 ---
 
-## PARTE SECONDA: IL NOME
+**Il Nome**
 
 ---
 
@@ -2940,7 +2985,7 @@ A Roma.
 
 ---
 
-## PARTE TERZA: IL BUON PADRE
+**Il Buon Padre**
 
 ---
 
@@ -3006,7 +3051,7 @@ Ma funzionava.
 
 ---
 
-## PARTE QUARTA: LA ROTTA
+**La Rotta**
 
 ---
 
@@ -3096,7 +3141,7 @@ Dalla Vienna sovietica al Sud America.
 
 ---
 
-## PARTE QUINTA: IL SISTEMA
+**Il Sistema**
 
 ---
 
@@ -3156,7 +3201,7 @@ Non si voltavano indietro.
 
 ---
 
-## PARTE SESTA: I PROBLEMI
+**I Problemi**
 
 ---
 
@@ -3216,7 +3261,7 @@ La guerra fredda non era un gioco pulito.
 
 ---
 
-## PARTE SETTIMA: IL BRASILE
+**Il Brasile**
 
 ---
 
@@ -3280,7 +3325,7 @@ Chi entrava dall'altra parte usciva come qualcun altro.
 
 ---
 
-## PARTE OTTAVA: "LEFT FOR UNKNOWN"
+**"Left for Unknown"**
 
 ---
 
@@ -3332,7 +3377,7 @@ Può solo contarli.
 
 ---
 
-## PARTE NONA: LA RETE
+**La Rete**
 
 ---
 
@@ -3392,7 +3437,7 @@ L'ufficio di Draganovic.
 
 ---
 
-## PARTE DECIMA: ALEKSANDR
+**Aleksandr**
 
 ---
 
@@ -3454,7 +3499,7 @@ Due settimane dopo l'arresto di Ingeborg.
 
 ---
 
-## PARTE UNDICESIMA: LE DOMANDE
+**Le Domande**
 
 ---
 
@@ -3492,7 +3537,7 @@ Ma le possibilità meritano indagini.
 
 ---
 
-## PARTE DODICESIMA: LE DOMANDE APERTE
+**Le Domande Aperte**
 
 ---
 
@@ -3540,10 +3585,6 @@ Il sistema le ha notate. Ma non sa ancora cosa significhino.
 
 ---
 
-## EPILOGO
-
----
-
 Settant'anni dopo la Rat Line non esiste più.
 
 I disertori che la usarono sono morti. O nascosti. O dimenticati.
@@ -3578,12 +3619,7 @@ Ma quelle risposte richiederanno strumenti nuovi. Archivi più profondi.
 
 ---
 
-*Fine Episodio 7*
-
-
----
-
-# Episodio 8: Il Segreto della Bomba
+## Capitolo 8: Il Segreto della Bomba
 
 ---
 
@@ -3625,7 +3661,7 @@ Strano.
 
 ---
 
-## PARTE PRIMA: LA RETE DEI NOMI
+**La Rete dei Nomi**
 
 ---
 
@@ -3677,7 +3713,7 @@ Karl Engelmann.
 
 ---
 
-## PARTE SECONDA: LO STUDENTE
+**Lo Studente**
 
 ---
 
@@ -3721,7 +3757,7 @@ Ma il CIC voleva di più.
 
 ---
 
-## PARTE TERZA: IL PROFESSORE
+**Il Professore**
 
 ---
 
@@ -3785,7 +3821,7 @@ Ma non bastava.
 
 ---
 
-## PARTE QUARTA: LA CATENA
+**La Catena**
 
 ---
 
@@ -3843,7 +3879,7 @@ Il sistema non può saperlo. Segnala solo la correlazione.
 
 ---
 
-## PARTE QUINTA: LA DEMARKATIONSLINIE
+**La Demarkationslinie**
 
 ---
 
@@ -3889,7 +3925,7 @@ Morte.
 
 ---
 
-## PARTE SESTA: IL GNADENGESUCH
+**Il Gnadengesuch**
 
 ---
 
@@ -3925,7 +3961,7 @@ La stessa età di Ingeborg quando fu condannata.
 
 ---
 
-## PARTE SETTIMA: IL SILENZIO
+**Il Silenzio**
 
 ---
 
@@ -3973,7 +4009,7 @@ Perché un marinaio tedesco senza soldi dormiva nella casa di un'agente del CIC?
 
 ---
 
-## PARTE OTTAVA: I KARL
+**I Karl**
 
 ---
 
@@ -4021,7 +4057,7 @@ Strano.
 
 ---
 
-## PARTE NONA: L'IPOTESI
+**L'Ipotesi**
 
 ---
 
@@ -4095,7 +4131,7 @@ Ma le coincidenze si accumulano. Un nome. Una nazionalità. Una situazione econo
 
 ---
 
-## PARTE DECIMA: LA VERA ANOMALIA
+**La Vera Anomalia**
 
 ---
 
@@ -4147,7 +4183,7 @@ Perché loro sì?
 
 ---
 
-## PARTE UNDICESIMA: LA RETE ATOMICA
+**La Rete Atomica**
 
 ---
 
@@ -4187,7 +4223,7 @@ Engelmann pagò con la vita per aver cercato di scoprire i segreti di Broda.
 
 ---
 
-## PARTE DODICESIMA: IL SISTEMA
+**Il Sistema**
 
 ---
 
@@ -4221,7 +4257,7 @@ Chi era questo Karl?
 
 ---
 
-## PARTE TREDICESIMA: LA DOMANDA SENZA RISPOSTA
+**La Domanda Senza Risposta**
 
 ---
 
@@ -4260,10 +4296,6 @@ Per vederli bisogna andare là. Bisogna fare richiesta. Bisogna aspettare.
 Forse un giorno l'analista troverà la risposta.
 
 O forse no.
-
----
-
-## EPILOGO
 
 ---
 
@@ -4313,13 +4345,9 @@ Adesso sappiamo perché.
 
 ---
 
-*Fine Episodio 8*
+# Parte IV: Il Meccanismo
 
-
-
----
-
-# Episodio 9: L'Articolo 58
+## Capitolo 9: L'Articolo 58
 
 ---
 
@@ -4341,7 +4369,7 @@ Per capirlo dobbiamo entrare nel sistema penale sovietico. Dobbiamo capire l'Art
 
 ---
 
-## PARTE PRIMA: L'ARTICOLO 58
+**L'Articolo 58**
 
 ---
 
@@ -4379,11 +4407,11 @@ Preparazione di atti di spionaggio a favore degli Stati Uniti d'America.
 
 Era il 21 ottobre 1950. Il tribunale militare 28990. Baden.
 
-Lo stesso tribunale che un anno dopo avrebbe condannato Karl Engelmann. Lo abbiamo già incontrato nell'episodio precedente.
+Lo stesso tribunale che un anno dopo avrebbe condannato Karl Engelmann. Lo abbiamo già incontrato.
 
 ---
 
-## PARTE SECONDA: LA LINEA TEMPORALE
+**La Linea Temporale**
 
 ---
 
@@ -4433,7 +4461,7 @@ Non la morte.
 
 ---
 
-## PARTE TERZA: IL PROCESSO
+**Il Processo**
 
 ---
 
@@ -4487,7 +4515,7 @@ Ne abbiamo già parlato.
 
 ---
 
-## PARTE QUARTA: IL GNADENGESUCH
+**Il Gnadengesuch**
 
 ---
 
@@ -4515,7 +4543,7 @@ Respinto.
 
 ---
 
-## PARTE QUINTA: LE STATISTICHE
+**Le Statistiche**
 
 ---
 
@@ -4567,7 +4595,7 @@ Ingeborg rientra nel secondo periodo.
 
 ---
 
-## PARTE SESTA: IL SEGRETO
+**Il Segreto**
 
 ---
 
@@ -4601,7 +4629,7 @@ Adesso sappiamo perché lo diceva.
 
 ---
 
-## PARTE SETTIMA: IL DIBATTITO
+**Il Dibattito**
 
 ---
 
@@ -4685,7 +4713,7 @@ Il sistema non può dare certezze. Ma può mostrare le domande giuste.
 
 ---
 
-## PARTE OTTAVA: LA RIABILITAZIONE
+**La Riabilitazione**
 
 ---
 
@@ -4729,7 +4757,7 @@ La differenza sembra minima. Ma per le famiglie conta.
 
 ---
 
-## PARTE NONA: LA DOMANDA
+**La Domanda**
 
 ---
 
@@ -4764,10 +4792,6 @@ O aveva solo capito che parlare significava pericolo? Che chi faceva domande att
 ---
 
 Non lo sapremo mai.
-
----
-
-## EPILOGO
 
 ---
 
@@ -4813,12 +4837,7 @@ Ma l'analista continua a cercare.
 
 ---
 
-*Fine Episodio 9*
-
-
----
-
-# Episodio 10: La Resa Inspiegabile
+## Capitolo 10: La Resa Inspiegabile
 
 ---
 
@@ -5524,12 +5543,7 @@ Il resto è ancora sepolto negli archivi di Mosca e di Washington.
 
 ---
 
-*Fine Episodio 10*
-
-
----
-
-# Episodio 11: Maskirovka o Damnatio Memoriae
+## Capitolo 11: Maskirovka o Damnatio Memoriae
 
 ---
 
@@ -5553,7 +5567,7 @@ Non è cosa abbiamo trovato.
 
 ---
 
-## PARTE PRIMA: IL PATTERN
+**Il Pattern**
 
 ---
 
@@ -5655,7 +5669,7 @@ O qualcuno lo ha fatto sparire di proposito?
 
 ---
 
-## PARTE SECONDA: DUE INTERPRETAZIONI
+**Due Interpretazioni**
 
 ---
 
@@ -5725,7 +5739,7 @@ Ma c'è qualcosa che non torna.
 
 ---
 
-## PARTE TERZA: L'ARCHIVIO CHE NON C'È
+**L'Archivio che Non C'è**
 
 ---
 
@@ -5827,7 +5841,7 @@ O forse no.
 
 ---
 
-## PARTE QUARTA: IL PRECEDENTE
+**Il Precedente**
 
 ---
 
@@ -5949,7 +5963,7 @@ Teniamo questo a mente.
 
 ---
 
-## PARTE QUINTA: L'ANOMALIA
+**L'Anomalia**
 
 ---
 
@@ -6045,7 +6059,7 @@ Qualcuno è sopravvissuto.
 
 ---
 
-## PARTE SESTA: LA SINTESI
+**La Sintesi**
 
 ---
 
@@ -6129,7 +6143,7 @@ E c'è una domanda ancora più grande.
 
 ---
 
-## PARTE SETTIMA: LA DOMANDA
+**La Domanda**
 
 ---
 
@@ -6243,10 +6257,11 @@ E chi è davvero sparito?
 
 *Fine*
 
-
 ---
 
-# Episodio 12: Il Paradosso di Vienna
+# Parte V: La Scoperta
+
+## Capitolo 12: Il Paradosso di Vienna
 
 ---
 
@@ -6282,7 +6297,7 @@ Le due catastrofi non erano separate. Erano intrecciate.
 
 ---
 
-## PARTE PRIMA: LA FOTOGRAFA
+**La Fotografa**
 
 ---
 
@@ -6344,7 +6359,7 @@ E li trova.
 
 ---
 
-## PARTE SECONDA: IL TERZO UOMO
+**Il Terzo Uomo**
 
 ---
 
@@ -6444,7 +6459,7 @@ Non è un caso.
 
 ---
 
-## PARTE TERZA: IL RECLUTAMENTO
+**Il Reclutamento**
 
 ---
 
@@ -6524,7 +6539,7 @@ Teniamo questa frase a mente.
 
 ---
 
-## PARTE QUARTA: LA SECONDA RETE
+**La Seconda Rete**
 
 ---
 
@@ -6614,7 +6629,7 @@ E qui arriviamo al paradosso.
 
 ---
 
-## PARTE QUINTA: LO STUDENTE
+**Lo Studente**
 
 ---
 
@@ -6670,7 +6685,7 @@ Broda morì libero senza mai essere arrestato.
 
 ---
 
-## PARTE SESTA: IL DISASTRO BIDIREZIONALE
+**Il Disastro Bidirezionale**
 
 ---
 
@@ -6728,7 +6743,7 @@ Ma c'è qualcosa di ancora più strano.
 
 ---
 
-## PARTE SETTIMA: LE DATE
+**Le Date**
 
 ---
 
@@ -6764,7 +6779,7 @@ Ma registra la correlazione.
 
 ---
 
-## PARTE OTTAVA: IL PARADOSSO
+**Il Paradosso**
 
 ---
 
@@ -6814,7 +6829,7 @@ E la stessa città le aveva distrutte.
 
 ---
 
-## PARTE NONA: ENTRAMBE VERE
+**Entrambe Vere**
 
 ---
 
@@ -6900,7 +6915,7 @@ Le prove non bastano.
 
 ---
 
-## PARTE DECIMA: LA SIMMETRIA
+**La Simmetria**
 
 ---
 
@@ -6964,10 +6979,6 @@ Ma non può spiegarlo.
 
 ---
 
-## EPILOGO
-
----
-
 Vienna. Oggi.
 
 ---
@@ -7006,12 +7017,7 @@ Ma questa è un'altra storia.
 
 ---
 
-*Fine Episodio 12*
-
-
----
-
-# Episodio 13: La Scoperta
+## Capitolo 13: La Scoperta
 
 ---
 
@@ -7039,7 +7045,7 @@ Si chiama Pipeline Watchdog.
 
 ---
 
-## PARTE PRIMA: IL WATCHDOG
+**Il Watchdog**
 
 ---
 
@@ -7091,7 +7097,7 @@ Lascia il computer acceso. Va a dormire.
 
 ---
 
-## PARTE SECONDA: LA MAPPA
+**La Mappa**
 
 ---
 
@@ -7163,7 +7169,7 @@ La porta d'ingresso.
 
 ---
 
-## PARTE TERZA: IL PATTERN
+**Il Pattern**
 
 ---
 
@@ -7219,7 +7225,7 @@ L'analista continua.
 
 ---
 
-## PARTE QUARTA: LA FALSA PISTA
+**La Falsa Pista**
 
 ---
 
@@ -7259,7 +7265,7 @@ L'analista continua.
 
 ---
 
-## PARTE QUINTA: UN'ALTRA TRACCIA
+**Un'Altra Traccia**
 
 ---
 
@@ -7295,7 +7301,7 @@ Forse sta cercando qualcosa che non esiste.
 
 ---
 
-## PARTE SESTA: L'ANALISI NOTTURNA
+**L'Analisi Notturna**
 
 ---
 
@@ -7337,7 +7343,7 @@ L'analista lascia il computer acceso. Va a dormire.
 
 ---
 
-## PARTE SETTIMA: L'ALBA
+**L'Alba**
 
 ---
 
@@ -7389,12 +7395,7 @@ L'analista si sveglia.
 
 ---
 
-*Fine Episodio 13*
-
-
----
-
-# Episodio 14: Punti Immutabili
+## Capitolo 14: Punti Immutabili
 
 ---
 
@@ -7444,7 +7445,7 @@ La domanda è semplice.
 
 ---
 
-## PARTE PRIMA: IL PROBLEMA
+**Il Problema**
 
 ---
 
@@ -7526,7 +7527,7 @@ Ma prima serve un'altra operazione.
 
 ---
 
-## PARTE SECONDA: IL RESTAURO
+**Il Restauro**
 
 ---
 
@@ -7572,7 +7573,7 @@ Ora le immagini sono pronte per l'analisi.
 
 ---
 
-## PARTE TERZA: I PUNTI IMMUTABILI
+**I Punti Immutabili**
 
 ---
 
@@ -7608,7 +7609,7 @@ Ma sa anche come aggirare il problema.
 
 ---
 
-## PARTE TERZA: IL BROWSER FANTASMA
+**Il Browser Fantasma**
 
 ---
 
@@ -7666,7 +7667,7 @@ L'analista mette le due griglie una accanto all'altra.
 
 ---
 
-## PARTE QUARTA: IL VISO
+**Il Viso**
 
 ---
 
@@ -7702,7 +7703,7 @@ Servono altri dati.
 
 ---
 
-## PARTE QUINTA: L'ORECCHIO
+**L'Orecchio**
 
 ---
 
@@ -7752,7 +7753,7 @@ Ma ancora non basta.
 
 ---
 
-## PARTE SESTA: I DENTI
+**I Denti**
 
 ---
 
@@ -7798,7 +7799,7 @@ Corrispondenza forte.
 
 ---
 
-## PARTE OTTAVA: IL VERDETTO
+**Il Verdetto**
 
 ---
 
@@ -7836,7 +7837,7 @@ Ma vedere non significa sapere.
 
 ---
 
-## PARTE NONA: I LIMITI
+**I Limiti**
 
 ---
 
@@ -7882,10 +7883,6 @@ E quelli sono a Mosca. O a San Paolo. O da nessuna parte.
 
 ---
 
-## EPILOGO
-
----
-
 L'analista salva i risultati.
 
 Chiude il browser fantasma.
@@ -7918,12 +7915,7 @@ Ora tocca all'analista decidere cosa farne.
 
 ---
 
-*Fine Episodio 14*
-
-
----
-
-# Episodio 15 – La Chavruta dell’Attrito (Il concetto di Satan come Equazione di Verifica)
+## Capitolo 15: La Chavruta dell’Attrito (Il concetto di Satan come Equazione di Verifica)
 
 ---
 
@@ -8315,7 +8307,6 @@ Torna alla scrivania.
 
 Guarda le due colonne.
 
-
 Potrebbe fermarsi.
 Dire che non si saprà mai.
 
@@ -8414,6 +8405,3 @@ L'indagine non è finita.
 Ma ha fatto un passo.
 
 ---
-
-*Fine Episodio 15*
-
