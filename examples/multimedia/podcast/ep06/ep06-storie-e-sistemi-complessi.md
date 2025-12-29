@@ -620,7 +620,7 @@ Il 28 agosto 1950. Fucilato a Mosca.
 
 ---
 
-Due mesi prima dell'arresto di Ingeborg.
+Due settimane dopo l'arresto di Ingeborg.
 
 ---
 
@@ -752,13 +752,19 @@ L'analista guarda i numeri. Le date. Qualcosa non torna.
 
 ---
 
+Febbraio 1950. Londra.
+
+L'MI5 arresta Klaus Fuchs. Fisico. Traditore. Confessa tutto.
+
+Da quel momento la rete comincia a crollare.
+
+Maggio. Harry Gold. Giugno. David Greenglass. Luglio. Julius Rosenberg.
+
+E l'FBI sapeva di altri. Theodore Hall. Saville Sax. Li avevano identificati. Ma non potevano arrestarli. Avrebbero rivelato le fonti.
+
 11 agosto 1950. New York.
 
-L'FBI arresta una serie di sospette spie sovietiche. Membri di una rete che passava segreti atomici.
-
-12 agosto 1950. Washington.
-
-Altri arresti. L'operazione colpisce il cuore della rete di spionaggio atomico sovietico negli Stati Uniti.
+L'FBI arresta Ethel Rosenberg. La moglie. L'ultimo anello della catena americana.
 
 ---
 
@@ -776,9 +782,9 @@ Non arriverà mai.
 
 L'analista guarda le date.
 
-L'11 e il 12 agosto 1950 sono i giorni in cui crolla la rete di spionaggio atomico sovietico.
+L'11 agosto 1950. L'ultimo arresto della rete atomica americana. Ethel Rosenberg.
 
-Sono anche i giorni in cui Ingeborg viene arrestata.
+Il giorno dopo Ingeborg cammina verso la stazione Est.
 
 ---
 
@@ -798,7 +804,7 @@ Forse.
 
 È solo un'ipotesi. Non ci sono prove.
 
-Ci sono solo due date. Lo stesso giorno. Due eventi.
+Ci sono solo due date. Un giorno di distanza. Due eventi focali.
 
 ---
 
@@ -826,9 +832,9 @@ E al centro di tutto c'era Ingeborg.
 
 Ricordate suo padre? Il prigioniero 16417 di Buchenwald? Il documento firmato dal capitano Bessman del CIC?
 
-E ricordate chi la reclutò a Wels?
+E ricordate chi invece l'avrebbe reclutata a Wels secondo la versione ufficiale?
 
-Abraham. Achtyrskij. Fucilato due mesi prima di lei.
+Achtyrskij. Fucilato due settimane dopo il suo arresto.
 
 ---
 
@@ -896,7 +902,7 @@ Una donna di ventitré anni. Figlia di un resistente. Amante di un disertore. Ag
 
 Catturata il 12 agosto 1950.
 
-Lo stesso giorno in cui crollava la rete atomica.
+Un giorno dopo l'ultimo arresto della rete atomica.
 
 ---
 
@@ -912,13 +918,15 @@ Ma adesso sappiamo qualcos'altro.
 
 ---
 
-Quel giorno a New York l'FBI stava arrestando spie atomiche.
+Il giorno prima a New York l'FBI aveva arrestato Ethel Rosenberg.
 
-A Washington la rete dello spionaggio nucleare sovietico stava crollando.
+La rete dello spionaggio atomico americano era smantellata. Ma altri sapevano. Theodore Hall. Saville Sax. Mai toccati.
 
-A Vienna Achtyrskij era morto da due settimane.
+Venti giorni dopo Bruno Pontecorvo sarebbe scomparso in Italia. Riapparso a Mosca. Fisico nucleare. Traditore. Fuggito prima che lo prendessero.
 
-Benno Blum da quattro mesi.
+Due settimane dopo Achtyrskij sarebbe stato fucilato a Mosca.
+
+Benno Blum era morto da quattro mesi.
 
 ---
 

@@ -64,7 +64,7 @@ Karl Wolf. Un professore dell'università tecnica di Vienna. Morto l'undici genn
 
 Karl Kauder. Un informatore. Forse una vittima designata della banda di Blum.
 
-Karl Engelmann. Uno studente di fisica. Ventidue anni. Reclutato dal CIC nel 1949.
+Karl Engelmann. Uno studente di fisica. Poco più di vent'anni. Reclutato dal CIC nel 1949.
 
 ---
 
@@ -98,7 +98,7 @@ Karl Engelmann.
 
 Karl Engelmann era uno studente di fisica. Studiava all'Università di Vienna.
 
-Aveva ventidue anni nel 1949. Non aveva soldi. Non aveva lavoro. Non sapeva come pagare le tasse universitarie.
+Aveva vent'anni nel 1949. Non aveva soldi. Non aveva lavoro. Non sapeva come pagare le tasse universitarie.
 
 ---
 

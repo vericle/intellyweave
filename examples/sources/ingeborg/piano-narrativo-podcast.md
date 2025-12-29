@@ -295,36 +295,52 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 ---
 
-### EPISODIO 11: "Maskirovka o Damnatio Memorie"
+### EPISODIO 11: "Maskirovka o Damnatio Memoriae"
 
-**Focus Narrativo**: Il pattern "documented ghost" - perché Achtyrskij ha ZERO traccia digitale nonostante documentazione estensiva? Questo porta alla teoria alternativa
+**Focus Narrativo**: Dall'interpretazione del "fantasma documentato" alla teoria alternativa - non cosa abbiamo trovato (ep10), ma cosa SIGNIFICA
 
-**Timeline Primaria**: Investigazione - il pattern di cancellazione storica e cosa rivela
+**Timeline Primaria**: Investigazione - il significato dell'assenza e le sue implicazioni
 
-**Timeline Secondaria**: Storia umana - la convergenza di agosto 1950 (New York + Washington + Vienna + Mosca)
+**Timeline Secondaria**: Storia umana - il precedente Agent Garbo e l'ipotesi di sopravvivenza di Novikova-Achtyrskaja
 
-**Concetto chiave**: Potenzialmente l'assenza di tracce digitali non è un bug - è una feature. La cancellazione sistematica nasconde narrative alternative ? o è lo standarda della Maskirowska? 
+**Concetto chiave**: L'assenza di tracce digitali è intenzionale o casuale? Due interpretazioni: Maskirovka (mascheramento attivo per nascondere qualcosa) vs Damnatio Memoriae (cancellazione passiva di chi non appartiene a nessuna memoria istituzionale).
+Oppure cancellazione intenzionlae di copertura. 
+La risposta cambia tutto.
 
 **Scene Chiave**:
-- Cold open: Il sistema completa la ricerca su Achtyrskij - ma qualcosa non torna
-- Digressione tecnica: Validazione tramite control group (altri defector SONO trovabili)
-- Digressione storica: Perché certe persone sono "né vittime né eroi"
-- Montaggio parallelo: La convergenza agosto 1950 (arresti FBI, arresto Vienna, esecuzioni Mosca)
-- Climax: "Ma chi era il vero obiettivo?"
+- Cold open: L'analista rilegge i risultati di ep10 - il fantasma esiste, ma perché?
+- Digressione storica: Maskirovka - la dottrina sovietica dell'inganno sistematico
+- Il precedente Agent Garbo: 1948, dichiarato morto di malaria in Angola - rivelato vivo 36 anni dopo. Prova che i servizi POSSONO inscenare morti false
+- Il mistero Novikova-Achtyrskaja: Ha testimoniato con Achtyrskij ma NON è stata fucilata - quale accordo ha ottenuto?
+- L'archivio esiste ma non è digitalizzato: GARF d. 102 (1950) non accessibile, mentre d. 58 (1938) è online - coincidenza?
+- Climax: "Chi era il vero obiettivo? E chi è davvero sparito?"
 
-**Teoria Alternativa Introdotta**:
-- **Teoria A**: Ingeborg fu giustiziata come documentato
-- **Teoria B**: Il KGB orchestrò una "pulizia" per proteggere asset più importanti
-- **ENTRAMBE POTREBBERO ESSERE VERE**: Attori diversi, obiettivi diversi
+**Teoria Alternativa Seminata** (non affermata, suggerita):
+- Se Novikova-Achtyrskaja è sopravvissuta collaborando, altri potrebbero averlo fatto
+- Agent Garbo prova che le morti false erano una pratica reale dell'intelligence
+- Gli scambi di prigionieri esistevano - Ingeborg potrebbe essere stata merce di scambio
+- La morte ufficiale e la sopravvivenza non sono mutualmente esclusive
 
-**Domande per l'Utente**:
-- Quanto enfatizzare il "paradosso di Vienna"?
-- Introdurre Engelmann/Broda qui o nel prossimo episodio?
-- Quanto esplicitare la teoria alternativa della Maskirovka o lasciarla emergere gradualmente?
+**Collegamento con ep10**: Callback alla scoperta del fantasma - "Ricordate cosa ha trovato il Case Officer? Ora chiediamoci cosa significa."
 
-**Collegamento con ep10**: Il "fantasma" Achtyrskij suggerisce cancellazioni più ampie
+**Preparazione per ep12**: Pone le domande che il Paradosso di Vienna esplorerà - la coesistenza di narrative opposte
 
-**Nota**: Maskirovka (маскировка) è un termine russo che significa "mascheramento" o "camuffamento", ma nella dottrina militare si riferisce a una complessa strategia di inganno, occultamento e disinformazione per confondere l'avversario.
+**Nota Maskirovka**: Maskirovka (маскировка) = dottrina militare sovietica di inganno, occultamento e disinformazione. Damnatio Memoriae = cancellazione della memoria storica di chi non serve a nessuna narrativa istituzionale.
+
+**Nota Agent Garbo - Juan Pujol García** (Morte Falsa 1948 - Rivelato Vivo 1984):
+
+| Fatto | Dettaglio |
+|-------|-----------|
+| Nome completo | Juan Pujol García (1912-1988), spagnolo |
+| Nomi in codice | "Garbo" (MI5 britannico) / "Alaric" (Abwehr tedesco) |
+| Ruolo | Doppio agente WWII - lavorò per MI5 ingannando i tedeschi |
+| Impresa principale | Disinformazione decisiva per il D-Day (Operation Fortitude) |
+| Morte falsa | 1948 - istruì MI5 di annunciare morte per malaria in Angola |
+| Motivo | Temeva i cacciatori di nazisti in Venezuela dove viveva |
+| Realtà | Vivo per 36 ANNI mentre il mondo lo credeva morto |
+| Rivelato vivo | 1984 dallo scrittore Nigel West che indagò sulla sua vita |
+| Conseguenze | Tornò in Europa, incontrò i figli che lo avevano pianto morto |
+| Fonte | History.com "The WWII Spy Who Faked His Death for 36 Years" |
 
 ---
 
