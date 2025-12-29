@@ -93,7 +93,7 @@ A marzo 1948 nasce un figlio: Hans.
 
 A fine marzo 1949 la famiglia scompare dai registri dell'I.R.O.
 Sulla scheda una sola riga:
-"left for unknow" *Partiti per ignoto.*
+"left for unknown" *Partiti per ignoto.*
 
 Questo è certo.
 
@@ -133,7 +133,7 @@ E Vienna ha prodotto anche le loro vittime.
 Alcuni sono vissuti liberi fino alla vecchiaia.
 Altri sono morti a vent'anni.
 
-La differenza non era nel crimine. Era nel loro grado di utilià al sistema.
+La differenza non era nel crimine. Era nel loro grado di utilità al sistema.
 
 ---
 

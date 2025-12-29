@@ -622,6 +622,8 @@ Tornò in Austria. Continuò a lavorare per il CIC. Continuò a reclutare agenti
 
 Reclutò Ingeborg.
 
+Forse.
+
 ---
 
 Fu un errore.
@@ -630,7 +632,7 @@ Nel 1950 i sovietici lo presero. Lo portarono a Baden. Lo processarono.
 
 Il 28 agosto 1950 fu fucilato a Mosca.
 
-Due settimane prima dell'arresto di Ingeborg.
+Due settimane dopo l'arresto di Ingeborg.
 
 ---
 

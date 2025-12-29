@@ -564,19 +564,7 @@ Il matrimonio fu celebrato in segreto. Un prete cattolico. Un magistrato locale.
 
 Andreyev promise di far battezzare i figli nella fede cattolica. Non era credente. Ma firmò.
 
----
 
-C'è un dettaglio.
-
-Prima della partenza una governante perquisì i bagagli di Trudi. Routine.
-
-Trovò una pistola. Un derringer con due proiettili.
-
-Milano la convocò. Le chiese spiegazioni.
-
-Trudi lo guardò. "Le ho sempre pensato che sareste stati una bella coppia" disse "Lei e io. Peccato."
-
-Milano non rispose.
 
 ---
 
