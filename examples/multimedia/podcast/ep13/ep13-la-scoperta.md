@@ -2,7 +2,7 @@
 
 ---
 
-Roma. Febbraio 2026. Sera.
+Roma. Dicembre 2025. Sera.
 
 L'analista ha un'idea.
 
@@ -22,11 +22,7 @@ Ma il sistema ha una funzione che potrebbe aiutare.
 
 ---
 
-Si chiama Pipeline Watchdog.
-
----
-
-## PARTE PRIMA: IL WATCHDOG
+Si chiama Watchdog.
 
 ---
 
@@ -38,7 +34,7 @@ Li ha raccolti nel corso di mesi. Non li ha mai analizzati tutti insieme.
 
 ---
 
-Il Pipeline Watchdog funziona così.
+Il Watchdog funziona così.
 
 Monitora una cartella. Quando rileva nuovi file li prende. Li sposta in una coda di elaborazione. Li processa uno dopo l'altro.
 
@@ -78,10 +74,6 @@ Lascia il computer acceso. Va a dormire.
 
 ---
 
-## PARTE SECONDA: LA MAPPA
-
----
-
 La mattina dopo. Roma. Le sette.
 
 L'analista si sveglia. Prepara il caffè. Torna al computer.
@@ -108,7 +100,7 @@ Bisogna capire come si collegano.
 
 ---
 
-L'analista attiva un'altra funzione. Si chiama Geospatial Mapping.
+L'analista attiva un'altra funzione. Si chiama Geospatial Analyst.
 
 ---
 
@@ -150,10 +142,6 @@ La porta d'ingresso.
 
 ---
 
-## PARTE TERZA: IL PATTERN
-
----
-
 Ma i punti sulla mappa non bastano.
 
 L'analista cerca qualcosa di specifico.
@@ -184,7 +172,7 @@ L'analista li apre uno per uno.
 
 ---
 
-Il primo è un rapporto dell'intelligence americana. Parla di disertori sovietici. Di criptonimi. Di viaggi verso il Perù.
+Il primo è un rapporto dell'intelligence americana. Parla di disertori sovietici. Di viaggi verso il Perù. Contiene criptonimi.
 
 Non è quello che cerca.
 
@@ -203,10 +191,6 @@ Interessante. Ma non è quello che cerca.
 ---
 
 L'analista continua.
-
----
-
-## PARTE QUARTA: LA FALSA PISTA
 
 ---
 
@@ -246,10 +230,6 @@ L'analista continua.
 
 ---
 
-## PARTE QUINTA: UN'ALTRA TRACCIA
-
----
-
 Al decimo documento si ferma di nuovo.
 
 ---
@@ -279,10 +259,6 @@ Un'altra falsa pista.
 L'analista si alza. Si stira. Guarda fuori dalla finestra.
 
 Forse sta cercando qualcosa che non esiste.
-
----
-
-## PARTE SESTA: L'ANALISI NOTTURNA
 
 ---
 
@@ -321,10 +297,6 @@ Il sistema calcola che ci vorranno diverse ore.
 Sono le dieci di sera.
 
 L'analista lascia il computer acceso. Va a dormire.
-
----
-
-## PARTE SETTIMA: L'ALBA
 
 ---
 
