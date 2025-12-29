@@ -144,7 +144,7 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 
 ---
 
-### EPISODIO 6: "Storie e Sistemi Complessi" ✅ SCRITTO
+### EPISODIO 6: "Storie e Sistemi Complessi"
 
 **Focus Narrativo**: I quattro archi storici che convergono su Ingeborg
 
@@ -220,9 +220,7 @@ Da lì in poi, quel dettaglio non può più essere ignorato e l’indagine diven
 - Montaggio parallelo: Mentre a New York cade la rete, a Vienna cade Ingeborg
 - Climax: "Due continenti. Due operazioni. Lo stesso giorno. La stessa ora."
 
-**Domande per l'Utente**:
-- XXXXXX
-- XXXXXX
+
 
 **Collegamento con ep06**: Callback a "Abbiamo già incontrato Broda, Engelmann..."
 
