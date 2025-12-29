@@ -417,7 +417,34 @@ existed" — Jaustamerhist study, citing multiple biographers"
 
 ---
 
-### EPISODIO 14: "I Limiti del Possibile"
+### EPISODIO 14: "Punti Immutabili"
+
+**Focus Narrativo**: L'analisi biometrica del passaporto - la donna nel documento è Ingeborg?
+
+**Timeline Primaria**: Investigazione (analisi biometrica come prova scientifica)
+
+**Timeline Secondaria**: Storia umana (progressione temporale: la donna giovane vs la donna nel passaporto)
+
+**Concetto chiave**: Il sistema ha trovato il passaporto. Ora deve determinare: è la stessa persona? I "punti immutabili" del viso possono rivelare la verità.
+
+**Scene Chiave**:
+- Cold open: L'analista davanti al passaporto scoperto nell'episodio precedente
+- Digressione scientifica: Come funziona il facial recognition - landmark points stabili
+- Digressione scientifica: Biometria auricolare e dentale
+- Montaggio parallelo: Le due foto side-by-side mentre l'AI le analizza
+- Climax: "Il sistema vede qualcosa. Ma vedere non significa sapere."
+
+**Domande per l'Utente**:
+- Il risultato biometrico deve essere conclusivo o ambiguo?
+- Enfatizzare i limiti della tecnologia o la potenza dell'analisi?
+- Qauli demo e e immagin usare per capire il confronto biometrico ?
+- Domanda aperta in merito a dettagli tecnici e metodologici?
+
+**Collegamento con ep13**: Risposta diretta al cliffhanger - "PROCEED WITH BIOMETRIC ANALYSIS"
+
+---
+
+### EPISODIO 15: "La Chavruta dell’Attrito"
 
 **Focus Narrativo**: Cosa si può sapere e cosa resta irraggiungibile
 
@@ -439,32 +466,6 @@ existed" — Jaustamerhist study, citing multiple biographers"
 **Domande per l'Utente**:
 - Mantenere tono speranzoso o sottolineare frustrazione dei limiti?
 - Menzionare possibili sviluppi futuri dell'indagine?
-
----
-
-### EPISODIO 15: "Punti Immutabili"
-
-**Focus Narrativo**: L'analisi biometrica del passaporto - la donna nel documento è Ingeborg?
-
-**Timeline Primaria**: Investigazione (analisi biometrica come prova scientifica)
-
-**Timeline Secondaria**: Storia umana (progressione temporale: la donna giovane vs la donna nel passaporto)
-
-**Concetto chiave**: Il sistema ha trovato il passaporto. Ora deve determinare: è la stessa persona? I "punti immutabili" del viso possono rivelare la verità.
-
-**Scene Chiave**:
-- Cold open: L'analista davanti al passaporto scoperto nell'episodio precedente
-- Digressione scientifica: Come funziona il facial recognition - landmark points stabili
-- Digressione scientifica: Biometria auricolare e dentale
-- Montaggio parallelo: Le due foto side-by-side mentre l'AI le analizza
-- Climax: "Il sistema vede qualcosa. Ma vedere non significa sapere."
-
-**Domande per l'Utente**:
-- Il risultato biometrico deve essere conclusivo o ambiguo?
-- Enfatizzare i limiti della tecnologia o la potenza dell'analisi?
-- Includere il confronto con foto di altre Ingeborg (omonime)?
-
-**Collegamento con ep13**: Risposta diretta al cliffhanger - "PROCEED WITH BIOMETRIC ANALYSIS"
 
 ---
 

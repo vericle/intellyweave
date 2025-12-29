@@ -1,4 +1,4 @@
-# Episodio 14 – La Chavruta dell’Attrito (Il concetto di Satan come Equazione di Verifica)
+# Episodio 15 – La Chavruta dell’Attrito (Il concetto di Satan come Equazione di Verifica)
 
 ---
 
@@ -12,7 +12,7 @@ Mappe.
 
 Anni di ricerca compressi in una stanza.
 Migliaia di pagine ridotte a finestre sovrapposte.
-Decine di archivi che non si parlano.
+Decine di archivi che non si parlavano.
 Strumenti che non esistevano quando tutto è cominciato.
 
 E adesso?
@@ -44,11 +44,7 @@ Scrive.
 
 ---
 
-Ingeborg Louzek nasce a Vienna il 4 luglio 1927.
-Questo è certo.
-L’anagrafe lo conferma.
-
-Suo padre, Antonin Louzek, impiegato postale ceco, viene arrestato dalla Gestapo nell’agosto del 1943 per attività antinaziste.
+Il padre di Ingeborg, Antonin Louzek, impiegato postale ceco, viene arrestato dalla Gestapo nell’agosto del 1943 per attività antinaziste.
 Auschwitz.
 Poi Buchenwald.
 Matricola 16417.
@@ -93,13 +89,51 @@ Lei Ingeborg Nowak, nata Louzek.
 
 Si sposano.
 
-Il 17 marzo 1948 nasce un figlio: Hans.
+A marzo 1948 nasce un figlio: Hans.
 
-Il 30 marzo 1949 la famiglia scompare dai registri dell’I.R.O.
+A fine marzo 1949 la famiglia scompare dai registri dell'I.R.O.
 Sulla scheda una sola riga:
-*Partiti per ignoto.*
+"left for unknow" *Partiti per ignoto.*
 
 Questo è certo.
+
+---
+
+è una catena di eventi.
+
+Il reclutatore tradisce. Il reclutatore brucia la rete.
+Il reclutatore testimonia contro il marito di Ingeborg.
+
+Ingeborg e altri agenti vengono arrestati.
+
+La moglie del reclutatore testimonia. Ma non viene fucilata.
+Qualcuno sopravvive. Qualcuno parla.
+
+Questo è molto probabile.
+
+---
+
+C'è un precedente.
+
+Un agente britannico dichiarato morto nel 1948.
+Riemerso vivo nel 1984. Trentasei anni dopo.
+I servizi segreti inscenano morti false.
+Lo hanno fatto. Lo fanno ancora.
+
+Questo è documentato.
+
+---
+
+C'è un paradosso.
+
+Vienna ha prodotto le più grandi spie del secolo.
+Le stesse strade. Gli stessi caffè. Le stesse università.
+E Vienna ha prodotto anche le loro vittime.
+
+Alcuni sono vissuti liberi fino alla vecchiaia.
+Altri sono morti a vent'anni.
+
+La differenza non era nel crimine. Era nel loro grado di utilià al sistema.
 
 ---
 
@@ -116,19 +150,26 @@ Questa è la versione ufficiale.
 
 E poi c'è il documento brasiliano.
 
-Un passaporto.
+Una scheda consolare.
 
 Nome: Ingeborg Novak.
 Nata a Vienna.
-Data di nascita diversa da quella ufficiale.
+Data di nascita diversa da quella ufficiale. Cinque anni di meno.
+
+Luogo di rilascio: Milano.
+
+Uno scherzo del destino. Il colonnello che gestiva le ratline si chiamava James V. Milano.
 
 Data di emissione: 21 luglio 1954.
 Ingresso in Brasile: 11 agosto 1954.
 
-Tre anni e mezzo dopo l'esecuzione.
+11 Agosto una data che ricorre come un'altro scherzo del destino.
+
+11 Agosto tre anni e mezzo dopo l'esecuzione.
 
 Il documento esiste.
 È autentico.
+Segue la stessa procedura usata per altri viaggiatori delle ratline.
 
 Ma cosa significa?
 
@@ -284,14 +325,21 @@ Restano le domande.
 
 Chi reclutò davvero Ingeborg?
 Quando?
-Prima o dopo l’evasione?
+Prima o dopo l'evasione?
 
-Come fece una civile di vent’anni a far evadere un prigioniero da una prigione militare sovietica?
+Come fece una civile di vent'anni a far evadere un prigioniero da una prigione militare sovietica?
 
 Dove finì la famiglia Nowak dopo il 1949?
 
 E soprattutto:
 Ingeborg morì davvero a Mosca il 9 gennaio 1951?
+O visse in Brasile come Ingeborg Novak?
+
+---
+
+La biometria dice: sessantasette per cento di probabilità che sia lei.
+
+Ma sessantasette non è cento.
 
 ---
 
@@ -373,11 +421,12 @@ Scrive:
 
 ---
 
-Ma c'è qualcosa che può fare.
+Ma qualcosa è stato fatto.
 
-Il passaporto ha una foto.
-I documenti sovietici hanno una foto.
-L'archivio di famiglia ha altre foto.
+Il passaporto aveva una foto.
+L'archivio di famiglia aveva altre foto.
+
+La macchina le ha confrontate.
 
 ---
 
@@ -390,28 +439,56 @@ La struttura dentale.
 
 ---
 
-Se è la stessa persona i punti corrisponderanno.
-Se non è la stessa persona non corrisponderanno.
+Il sistema ha misurato tutto.
+Ha sovrapposto griglie.
+Ha calcolato distanze.
 
-La macchina può misurarli.
-Confrontarli.
-Calcolare probabilità.
+Il risultato è sul grafo.
 
----
-
-L'analista apre il modulo di analisi biometrica.
-
-Carica la prima foto.
+Sessantasette per cento.
 
 ---
 
-L'orologio segna tardi.
-
-Ma domani avrà una risposta.
-
-O almeno una probabilità.
+Sessantasette per cento di probabilità che la donna del passaporto sia Ingeborg.
 
 ---
 
-*Fine Episodio 14*
+Non è una prova.
+Non è nemmeno un caso.
+
+È una possibilità.
+
+---
+
+L'analista guarda il numero.
+
+Pensa a cosa significa.
+
+---
+
+Sessantasette per cento dice che potrebbe essere lei.
+Trentatré per cento dice che potrebbe non esserlo.
+
+La macchina non può decidere.
+
+E forse nemmeno lui.
+
+---
+
+Ma c'è una differenza.
+
+Prima del sistema la probabilità era zero.
+Nessuno aveva cercato.
+Nessuno aveva misurato.
+
+Ora c'è un numero.
+
+---
+
+L'indagine non è finita.
+Ma ha fatto un passo.
+
+---
+
+*Fine Episodio 15*
 
