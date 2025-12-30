@@ -6,11 +6,21 @@
 
 L'analista è seduto davanti allo schermo. Ha un problema.
 
-Un problema che non dovrebbe esistere.
+Parole come improvvisamente, inspiegabilmente, misteriosamente sono come incognite di un'equazione.
+
+E un'equazione su di lui ha lo stesso effetto che il colore rosso ha su un toro.
+
+L'analista sa che nessun fenomeno naturale o umano è veramente improvviso o inspiegabile.
+
+Ogni cosa è governata dalla legge di causa ed efetto. Di azione e reazione.
+
+Ha anche un'altro problema. I nomi con una sola o pochissime ricorrenze.
+
+Novikov. Un agente che si è consegnato ai sovietici e che in tutta la documentazione disponibile appare una sola volta. 
 
 ---
 
-Nella colonna delle certezze c'è scritto: Aleksandr Achtyrskij. Agente del CIC. Presidente del Comitato degli Emigrati Bianchi a Wels. L'uomo che reclutò Ingeborg.
+Nella colonna delle certezze c'è scritto: Aleksandr Achtyrskij. Agente del CIC. Presidente del Comitato degli Emigrati Bianchi a Wels. L'uomo che ufficialmente reclutò Ingeborg.
 
 Nella colonna delle domande c'è scritto: Perché si è consegnato ai sovietici?
 
@@ -30,25 +40,29 @@ Ma non l'ha mai guardata da vicino.
 
 Perché un agente di quella caratura dovrebbe consegnarsi ai sovietici? Un uomo che sa cosa lo aspetta. Che conosce i tribunali militari. Che sa cosa significa l'Articolo 58.
 
-Non ha senso.
+Sembra non avere senso.
 
 ---
 
 Fermiamoci qui. Roma. Un ufficio. Uno schermo acceso nel buio.
 
-Per capire cosa succede adesso bisogna parlare di strumenti. Di archivi. Di come si cerca quello che non vuole essere trovato.
+Per capire cosa succede adesso bisogna parlare di strumenti. Di archivi. Di come si cerca ciò che manca.
 
 ---
 
+L'analista ha sviluppato altri strumenti.
+
 La piattaforma di analisi si è evoluta.
 
-Non interroga più soltanto il database corrente. Fa qualcosa di diverso. Mappa quello che esiste. E anche quello che dovrebbe esistere, ma non c'è.
+Adesso non interroga più soltanto il database corrente. Fa qualcosa di diverso. Mappa quello che esiste. E ipotizza quello che dovrebbe esistere, ma non c'è.
 
 L'analista ha costruito due agenti specializzati. Li ha chiamati Quartermaster e Case Officer.
 
 ---
 
-In gergo militare il Quartermaster è l'ufficiale logistico. Quello che fornisce gli strumenti prima delle operazioni. Quello che sa dove si trovano le risorse e come vanno usate.
+In gergo militare il Quartermaster è l'ufficiale logistico. Quello che fornisce gli strumenti prima delle operazioni. 
+
+Quello che sa dove si trovano le risorse e come vanno usate.
 
 Il Quartermaster digitale funziona allo stesso modo. Ma il suo teatro operativo sono gli archivi del mondo.
 
@@ -56,11 +70,11 @@ Il Quartermaster digitale funziona allo stesso modo. Ma il suo teatro operativo 
 
 Prima di ogni ricerca il Quartermaster mappa il territorio informativo.
 
-Non cerca la risposta. Cerca dove la risposta potrebbe trovarsi.
+Non cerca la risposta. Cerca dove potrebbe trovarsi la risposta.
 
 Quali archivi potrebbero contenere documenti rilevanti. Quali database. Quali collezioni di microfilm. Quali fondi d'archivio consultabili solo su supporto fisico.
 
-Classifica ogni fonte. Pubblica. Ristretta. Solo accesso fisico. Richiede credenziali. Non esiste online.
+Classifica ogni fonte. Pubblica. Ristretta. Con solo accesso fisico. Che richiede credenziali. O che mon esiste online.
 
 Non risponde alla domanda. Risponde alla meta-domanda.
 
@@ -72,11 +86,13 @@ Il secondo agente si chiama Case Officer.
 
 In gergo di intelligence è l'ufficiale che gestisce un'operazione. Che coordina gli agenti sul campo. Che analizza le informazioni e trae conclusioni operative.
 
-Il Case Officer digitale fa la stessa cosa. Ma i suoi agenti sul campo sono le query. Le sue fonti sono i database. La sua analisi è computazionale.
+Il Case Officer digitale fa la stessa cosa. Ma i suoi agenti sul campo sono le API, gli scraper, i browser headless, le proxy chain, le query SPARQL. Le sue fonti sono i database. 
+
+Le sue operazioni sono computazionali. Sono pura logica e potenza di calcolo.
 
 ---
 
-Riceve l'intelligence dal Quartermaster. Sa dove cercare. Sa cosa è accessibile. Sa cosa manca.
+Riceve l'intelligence dal Quartermaster. Adesso sa dove cercare. Sa cosa è accessibile. Sa cosa manca.
 
 Poi comincia l'indagine vera.
 
@@ -86,31 +102,37 @@ E fa una cosa che lo distingue da qualsiasi altro sistema.
 
 ---
 
-Può provare un'assenza.
+Può ipotizzare i motivi di un'assenza. Le cause di un gap informativo.
 
 ---
 
-Sembra un paradosso. Come si prova che qualcosa non esiste?
+Sembra un paradosso. Come si ipotizza che qualcosa non esiste?
 
-Il Case Officer lo fa attraverso i gruppi di controllo. Cerca altri soggetti con profili simili. Disertori sovietici. Agenti doppiogiochisti. Giustiziati negli stessi anni.
+Il Case Officer lo fa attraverso i gruppi di controllo. Cerca altri soggetti con profili simili. Altri target.
 
-Verifica se vengono trovati. Se il sistema funziona per loro ma non per il soggetto in esame, allora l'assenza è significativa.
+Disertori. Agenti doppiogiochisti. Coinvolti in fatti strettamente correlati nello stesso arco temporale.
 
-Non è un errore di ricerca.
+Verifica se su di loro ci sono informazioni disponibili. Se il sistema trova risultati per loro ma non per il soggetto in esame, allora l'assenza è significativa.
 
-Non è un errore. Qualcuno lo ha fatto sparire.
+Non è un errore metodologico o ricerca. Non è un errore tecnico di traslitterazione. è un atto deliberato. è logica umana. è volontà.
 
 ---
+
+Dato che nella documentazione ufficiale risulta che Achtyrskij, nella sua richiesta di grazia dice di essersi consegnato ai sovietici perché temeva la vendetta del controspionaggio americano che lo accusava di aver fatto fallire operazioni importanti e che lo aveva minacciato di gravi conseguenze.
 
 L'analista dà ai due agenti un compito.
 
-Trovare tutto quello che esiste su Aleksandr Achtyrskij. Spiegare perché si è consegnato.
+Trovare documenti desecretati del CIC inerenti lamnentele e rapporti disciplinari del periodo 1948-1950.
+
+Trovare documenti o microfilm sovietici sul debriefing di Achtyrskij. Verbali degli interrogatori. La richiesta di grazia originale. 
+
+L'obbiettivo è tentare di spiegare perché si è consegnato.
 
 Il sistema lavora per ore.
 
 ---
 
-Torniamo a quella notte di dicembre. L'analista davanti allo schermo. I primi risultati che compaiono.
+è tardi. L'analista davanti allo schermo. I primi risultati che compaiono.
 
 Il Quartermaster ha mappato il teatro informativo.
 
@@ -144,7 +166,7 @@ Zero.
 
 ---
 
-Achtyrskij è il primo nome nella lista delle ventisei persone austriache fucilate in Unione Sovietica tra il 1950 e il 1953. È menzionato nei documenti sovietici. Ha reclutato numerosi agenti, almeno tre dei quali sono stati processati e giustiziati.
+Achtyrskij è il primo nome nella lista delle persone fucilate in Unione Sovietica tra il 1950 e il 1953. È menzionato nei documenti sovietici. Ha reclutato numerosi agenti, almeno tre dei quali sono stati processati e giustiziati.
 
 È una persona reale. Documentata.
 
@@ -156,7 +178,7 @@ Il Case Officer attiva il protocollo di validazione.
 
 Cerca altri disertori sovietici dello stesso periodo. Viktor Belenko. Arkadij Shevchenko. Svetlana Alliluyeva. Mikhail Baryshnikov.
 
-Tutti trovati. Wikipedia. Articoli. Libri digitalizzati.
+Li trova tutti. Wikipedia. Articoli. Libri digitalizzati.
 
 Il sistema restituisce risultati coerenti.
 
@@ -186,7 +208,7 @@ Seconda ragione. Non appartiene a nessuna categoria commemorativa.
 
 I database ucraini raccolgono i combattenti dell'Esercito di Liberazione Ucraino. Ma Achtyrskij ci è rimasto poco. Non abbastanza per essere catalogato.
 
-I database austriaci raccolgono le vittime civili. Ma Achtyrskij era un agente. Non un civile innocente.
+I database austriaci raccolgono le vittime civili. Ma Achtyrskij era un agente. Non un civile.
 
 I database americani raccolgono gli eroi della Guerra Fredda. Ma Achtyrskij si è consegnato. Ha tradito.
 
@@ -202,7 +224,7 @@ Achtyrskij era celibe. Non aveva figli. Non ci sono discendenti che possano chie
 
 ---
 
-Teniamo questa scoperta sospesa. Un fantasma documentato. Un uomo che esiste negli archivi fisici ma non nel web.
+Teniamo questa scoperta sospesa. Un "fantasma documentato". Un uomo che esiste negli archivi fisici ma non nel web.
 
 Perché adesso il Case Officer trova qualcos'altro.
 
@@ -230,7 +252,7 @@ L'analista conosce quel nome.
 
 Lyon era il capo delle operazioni del 430esimo CIC. Aveva sede a Salisburgo. Gestiva le Rat Line. Le vie di fuga per i disertori sovietici. E gestiva una rete di agenti nella zona sovietica.
 
-Nel 1949 quella rete venne annichilita.
+Tra il 1949 e il 1950 quella rete venne annichilita.
 
 ---
 
@@ -256,11 +278,7 @@ Steyr.
 
 L'analista guarda la mappa.
 
-Steyr è a trenta chilometri da Wels. La città dove operava Achtyrskij. La città dove Ingeborg aveva raggiunto Kolesnikov.
-
-Coincidenza?
-
----
+Steyr è a trenta chilometri da Wels. La città dove operava Achtyrskij. La città dove Ingeborg viveva con Kolesnikov.
 
 Il Case Officer continua ad analizzare il documento BISHOP.
 
@@ -294,7 +312,7 @@ L'analista rilegge il paragrafo.
 
 Una mattina. Quattro destinazioni. Due ambasciate. La polizia. Un alto funzionario dell'IRO.
 
-Distruzione sistematica.
+Vendetta sistematica.
 
 ---
 
@@ -346,7 +364,7 @@ Minacciato con rappresaglie.
 
 È lo stesso pattern del documento BISHOP.
 
-Lyon incolpava gli altri per i fallimenti delle operazioni. Lyon minacciava rappresaglie. Lyon distruggeva carriere e vite in una sola mattina.
+Lyon incolpava gli altri per i fallimenti delle operazioni. Lyon minacciava rappresaglie. Lyon distruggeva carriere e vite in poche ore.
 
 ---
 
@@ -374,11 +392,11 @@ Il sistema ha ricostruito la sequenza degli eventi.
 
 ---
 
-1949. La rete di Lyon viene distrutta. Tre agenti portati in Unione Sovietica. Fucilati.
+1949. La rete di Lyon viene compromessa. Tre agenti portati in Unione Sovietica. Fucilati.
 
-Lyon cerca qualcuno da incolpare. Il suo pattern è documentato. Quando sospetta un tradimento non indaga. Agisce.
+Lyon cerca qualcuno da incolpare. Il suo pattern comportamentale è documentato. Quando sospetta un tradimento non indaga. Agisce.
 
-Achtyrskij operava nella stessa zona. Wels. A trenta chilometri da Steyr. Dove Lyon interrogò il sospettato.
+Achtyrskij? Stessso teatro operativo. Stessa area geografica. Wels. A trenta chilometri da Steyr. Dove Lyon interrogò il sospettato.
 
 Achtyrskij aveva reclutato agenti. Kolacek-Greskova. Kolber. Ingeborg. Molti altri.
 
@@ -386,27 +404,31 @@ Forse qualcuno di loro era compromesso. Forse la rete di Achtyrskij si interseca
 
 ---
 
-Achtyrskij conosceva il pattern di Lyon.
+Achtyrskij sapeva come Lyon si vendicava di chi riteneva responsabile dei fallimenti?
 
-Sapeva cosa succedeva a chi veniva incolpato. Due ambasciate. La polizia. I superiori. Tutto in una mattina.
+Sapeva cosa succedeva a chi veniva incolpato. Due ambasciate. La polizia. I superiori. Tutto in poche ore.
 
-Fine della carriera. Fine della protezione. Fine delle opzioni.
+Fine della carriera. Fine della protezione. 
+
+Fine della vita?
 
 ---
 
 E allora ha fatto un calcolo.
 
-La rappresaglia americana significava distruzione totale. Senza processo. Senza appello. Senza possibilità di difesa.
+La rappresaglia americana significava annichilimento. Senza processo. Senza appello. Senza possibilità di difesa.
 
 La giustizia sovietica significava tribunale militare. Condanna certa. Probabilmente esecuzione. Ma c'era una procedura. C'era la possibilità di appellarsi. La possibilità della grazia.
 
+Potenzialmente 25 anni di lavori forzati. Non la morte.
+
 ---
 
-Teniamo questa scena sospesa. Fine 1948. Un ufficio a Wels. Due porte.
+Teniamo questa scena sospesa.  Un ufficio a Wels. Due porte.
 
-Una porta conduce alla vendetta americana. Veloce. Totale. Senza procedura.
+Una porta conduce alla vendetta americana. Veloce. Totale. Senza procedure. Senza pietà.
 
-L'altra porta conduce alla giustizia sovietica. Lenta. Burocratica. Con procedure.
+L'altra porta conduce alla giustizia sovietica. Lenta. Burocratica. Procedurale. Appellabile. Corruttibile.
 
 Achtyrskij sceglie la porta sovietica.
 
@@ -422,13 +444,13 @@ Non è passato al nemico per convinzione ideologica. Non ha tradito per denaro. 
 
 È fuggito dalla feroce rappresaglia americana verso la giustizia militare sovietica.
 
-Ha scelto la certezza della procedura rispetto all'incertezza della vendetta.
+Ha scelto la burocrazia e le procedure all'incertezza della vendetta.
 
 ---
 
 Nella sua richiesta di grazia scrive una frase.
 
-Sapevo che sarei stato punito severamente. Ma ho deciso di terminare la mia vita in un campo di lavoro sovietico piuttosto che continuare questo lavoro abominevole.
+Sapevo che sarei stato punito severamente. Ma ho deciso di terminare la mia vita in un campo di lavoro piuttosto che continuare con quell'abominio.
 
 ---
 
@@ -452,15 +474,17 @@ Nella richiesta di grazia Achtyrskij scrive anche cosa ha fatto dopo essersi con
 
 Ha dato ai sovietici informazioni. Nomi. Luoghi. Operazioni.
 
-Come risultato delle mie informazioni le spie sono state liquidate dagli agenti del controspionaggio sovietico. Il controspionaggio sovietico possiede inoltre una lista di spie che si trovano nel servizio segreto americano in Austria.
+Come risultato delle sue rivelazioni agenti del CIC sono stati liquidati dallo SMERH e dall'NKVD.
+
+Il controspionaggio sovietico possiede inoltre una lista di asset del servizio segreto americano in Austria.
 
 ---
 
 L'analista rilegge la frase.
 
-Le spie sono state liquidate.
+Le agenti del CIC sono stati liquidati.
 
-Una lista di spie.
+Una lista di asset. Agenti. Informatori. Risorse. Safe houses.
 
 ---
 
@@ -514,6 +538,8 @@ Novikova-Achtyrskaja.
 
 Il cognome è al femminile. In russo i cognomi delle donne sposate si declinano. Novikova è il cognome da nubile. Achtyrskaja è la forma femminile di Achtyrskij.
 
+Achtyrskij non era nubile. L'agente Novikov citato dagli storici di Graz.
+
 Era sua moglie. Anche lei si è consegnata. Anche lei ha testimoniato.
 
 ---
@@ -522,19 +548,23 @@ Teniamo questa scoperta sospesa. Perché il cerchio si è chiuso.
 
 ---
 
+A questo punto secondo le fonti documentali.
+
 Achtyrskij recluta Ingeborg nel 1947.
 
 Achtyrskij si consegna ai sovietici tra la fine del 1948 e l'inizio del 1949.
 
-Achtyrskij testimonia contro Kolesnikov.
+Achtyrskij compromette la rete.
 
-Kolesnikov era l'uomo che Ingeborg aveva aiutato a fuggire.
+Kolesnikov viene catturato.
+
+Achtyrskij testimonia contro Kolesnikov.
 
 ---
 
-Il reclutatore ha tradito l'uomo della sua agente.
+Il reclutatore ha tradito. Ha brucaito un'intera rete.
 
-Chi aveva portato Ingeborg nell'intelligence americana ha fatto condannare a morte l'uomo per cui lei aveva rischiato tutto.
+Chi arruolato Ingeborg ha fatto condannare a morte un'asset critico. E non solo lui.
 
 ---
 
@@ -544,7 +574,7 @@ L'ipotesi Abraham non era corretta.
 
 ---
 
-Abraham. Il nome in codice citato nel libro del colonnello Milano. Diciassette disertori sovietici esfiltrati attraverso le Rat Line. Abraham era uno di loro.
+Abraham. Il nome in codice citato nel libro del colonnello Milano. Diciassette disertori sovietici e altri asset potenzialmente esfiltrati attraverso le Rat Line. Abraham non era uno di loro.
 
 L'analista aveva ipotizzato che Abraham fosse Achtyrskij.
 
@@ -572,11 +602,15 @@ Il Case Officer ricostruisce la cronologia completa.
 
 ---
 
+Tra la fine del 1948 e l'inizio del 1949. Achtyrskij si consegna. Testimonia contro Kolesnikov.
+
 Marzo 1949. Kolesnikov scompare dal campo di Wels. I registri dell'IRO dicono "Partito per ignoto".
 
-15 maggio 1949. Kolesnikov viene formalmente arrestato. Sei settimane dopo la scomparsa.
+Maggio 1949. Kolesnikov viene formalmente arrestato. Sei settimane dopo la scomparsa.
 
-Fine 1948 o inizio 1949. Achtyrskij si consegna. Testimonia contro Kolesnikov.
+Giugno 1949 Mykolaj Baranowsky un altro disertore sovietico viene rapito da Benno Blum a Salisburgo.
+
+Luglio 1949 Nikolaj Agzew viene rapito. Qualcosa va storto.
 
 15 marzo 1950. Achtyrskij viene condannato a morte dal Tribunale Militare 28990.
 
@@ -678,9 +712,9 @@ Il sistema ha fatto il suo lavoro.
 
 Ha trovato il fantasma documentato.
 
-Ha ricostruito il pattern di vendetta.
+Ha ricostruito il pattern della vendetta.
 
-Ha mappato la connessione tra il reclutatore e la reclutata.
+Ha mappato la connessione tra il reclutatore, la reclutata e gli asset.
 
 Ha identificato il tradimento che ha innescato la catena.
 
