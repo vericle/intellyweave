@@ -34,7 +34,7 @@ Cerca cose che dovrebbero ripetersi ma non si ripetono. Cerca cose che mancano.
 
 ---
 
-La domanda non è più perché Achtyrskij sia invisibile. Questo lo sappiamo già.
+La domanda non è più perché Achtyrskij sia invisibile.
 
 La domanda è se esiste un pattern. Se la sua cancellazione segue uno schema. Se è successo anche ad altri.
 
@@ -56,7 +56,7 @@ Non è un errore. Non è una coincidenza. È un meccanismo.
 
 Sullo schermo appare una lista. Diversi fattori di esclusione.
 
-I primi tre li conosciamo. Non riabilitato. Nessuna categoria commemorativa. Nessun discendente che lo cerchi.
+I primi tre. Non riabilitato. Nessuna categoria commemorativa. Nessun discendente che lo cerchi.
 
 Ma il sistema ha trovato qualcos'altro.
 
@@ -84,7 +84,7 @@ L'analista guarda lo schermo.
 
 Il pattern è chiaro. Achtyrskij non è stato dimenticato per errore.
 
-È caduto in tutte le fessure possibili.
+È stato escluso da ogni archivio digitale.
 
 ---
 
@@ -103,8 +103,6 @@ O qualcuno lo ha fatto sparire di proposito?
 ---
 
 Fermiamoci qui. Uno schermo. Una notte. Una domanda.
-
-Perché l'analista ha bisogno di un framework. Di un modo per pensare a questo problema.
 
 ---
 
@@ -142,7 +140,7 @@ Basta che nessuno ti cerchi.
 
 ---
 
-Nessuna istituzione lo ha reclamato. Nessun familiare.
+Nessuna istituzione e nessun familiare lo ha cercato.
 
 E così è sparito.
 
@@ -158,7 +156,7 @@ Damnatio Memoriae. Cancellazione passiva. Sessantotto per cento.
 
 L'analista guarda i numeri.
 
-Il sistema preferisce la spiegazione semplice. L'oblio accidentale. La caduta tra le fessure.
+Il sistema preferisce la spiegazione semplice. L'oblio accidentale. L'esclusione casuale da ogni categoria.
 
 ---
 
@@ -172,7 +170,7 @@ Ma c'è qualcosa che non torna.
 
 L'analista attiva un'altra funzione. Si chiama Network Analysis.
 
-Analizza le persone. I luoghi. Le fonti. Analizza le strutture. I nodi. Le connessioni. E soprattutto i vuoti.
+Analizza le persone. I luoghi. Le fonti. Le strutture. I nodi. Le connessioni. E soprattutto i vuoti.
 
 ---
 
@@ -186,7 +184,7 @@ Fondo 7523. La collezione del Presidium del Soviet Supremo. Contiene le richiest
 
 L'analista dà un compito al sistema. Confrontare i fascicoli disponibili online.
 
-Il Quartermaster mappa il territorio. Il Case Officer esegue.
+Il Quartermaster mappa il teatro informativo. Il Case Officer esegue la ricerca.
 
 ---
 
@@ -222,15 +220,13 @@ Non è online.
 
 ---
 
-Il Quartermaster restituisce il confronto.
+Il Quartermaster restituisce i risultati.
 
 Delo 58 del 1938. Digitalizzato.
 
 Delo 102 del 1950. Non digitalizzato.
 
 ---
-
-L'analista guarda lo schermo.
 
 Due fascicoli. Stesso fondo. Stesso tipo di documenti. Richieste di grazia respinte.
 
@@ -280,13 +276,13 @@ Le morti false esistono.
 
 I servizi segreti le hanno usate. Le usano ancora.
 
-Non è teoria. È storia documentata.
+Non è una teoria. È un fatto documentato.
 
 ---
 
 L'analista dà un nuovo compito al sistema. Cercare precedenti. Casi di agenti dichiarati morti e poi riemersi.
 
-Il Quartermaster mappa gli archivi di intelligence. Il Case Officer esegue.
+Il sistema cerca nei database di intelligence.
 
 ---
 
@@ -302,7 +298,7 @@ Il suo nome in codice era Garbo. I tedeschi lo conoscevano come Alaric.
 
 ---
 
-Era un doppio agente. Fingeva di lavorare per i tedeschi. In realtà passava disinformazione agli Alleati.
+Era un doppiogiochista. Fingeva di lavorare per i tedeschi. In realtà forniva loro informazioni false per conto degli Alleati.
 
 Fu decisivo per lo sbarco in Normandia. L'operazione Fortitude. Convinse i tedeschi che l'invasione sarebbe avvenuta a Calais. Non in Normandia.
 
@@ -336,7 +332,7 @@ E lui continuò a vivere.
 
 Per trentasei anni il mondo lo credette morto.
 
-I suoi stessi figli lo credettero morto. Lo piansero. Andarono avanti con le loro vite.
+I suoi stessi figli lo credettero morto. Lo piansero. Continuarono a vivere.
 
 ---
 
@@ -364,8 +360,6 @@ Ricevette onorificenze. Raccontò la sua storia. Morì nel 1988. Questa volta pe
 
 ---
 
-L'analista guarda lo schermo.
-
 Un uomo dichiarato morto nel 1948. Rivelato vivo nel 1984.
 
 Trentasei anni.
@@ -374,7 +368,7 @@ Trentasei anni.
 
 Non è fantascienza. Non è teoria del complotto.
 
-È storia documentata. Fonti verificabili. Fatti.
+Sono fatti documentati. Fonti verificabili.
 
 ---
 
@@ -422,7 +416,7 @@ Il sistema presenta due scenari.
 
 Scenario A. Damnatio Memoriae passiva.
 
-Achtyrskij è caduto nell'oblio per cause strutturali. Non riabilitato. Senza discendenti. Senza categoria commemorativa. Il libro che lo documenta non è digitalizzato.
+Achtyrskij è caduto nell'oblio per cause strutturali. Non riabilitato. Senza discendenti. Senza categoria commemorativa. Il fascicolo che lo riguarda non è digitalizzato.
 
 L'assenza di tracce digitali è un effetto collaterale della storia. Non un'azione deliberata.
 
@@ -453,8 +447,6 @@ Altri attori sconosciuti. Non possiamo escludere interessi che non conosciamo.
 Probabilità dello Scenario B: quarantacinque per cento.
 
 ---
-
-L'analista guarda i numeri.
 
 Il sistema non può decidere. Le prove non sono sufficienti.
 
@@ -488,7 +480,7 @@ Ma non può rispondere alla domanda fondamentale.
 
 ---
 
-L'analista torna alla finestra.
+L'analista resta alla finestra.
 
 Agent Garbo è stato dichiarato morto nel 1948. È riemerso nel 1984.
 
