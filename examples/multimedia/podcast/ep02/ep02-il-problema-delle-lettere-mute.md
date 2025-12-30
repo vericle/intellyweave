@@ -6,9 +6,7 @@
 
 Ha settantacinque documenti. Tutti in cirillico. Tutti provenienti dagli archivi del controspionaggio militare sovietico.
 
-L'uomo è un analista. Non un analista di intelligence. Ma un analista e architetto software con più di venti anni di esperienza.
-
-È specializzato in big data, machine learning e linguistica computazionale.
+L'uomo è specializzato in big data, machine learning e linguistica computazionale.
 
 L'uomo è il nipote di Ingeborg. La donna misteriosamente scomparsa nel 1950 a Vienna.
 
@@ -23,10 +21,6 @@ L'uomo carica i settantacinque documenti nel sistema.
 Il sistema restituisce zero entità.
 
 Settantacinque documenti. Zero nomi. Zero luoghi. Zero date.
-
----
-
-I documenti rimangono in silenzio. Anche loro non parlano. Come tutti gli altri in questa storia.
 
 ---
 
@@ -86,47 +80,13 @@ E adesso ha settantacinque documenti che il software non riesce a leggere.
 
 Ma da dove vengono questi documenti? E perché sono in cirillico?
 
-Per capirlo dobbiamo fare un salto. Indietro nel tempo e tornare a Vienna.
+Quei documenti parlano di una donna. Ingeborg Loucek. Arrestata nel 1950 a Vienna. Condannata a morte. Fucilata a Mosca.
 
----
+L'uomo a Roma è suo nipote.
 
-È il 12 agosto 1950. Una donna cammina verso la stazione Est. Ha ventitré anni. 
+Ha i documenti declassificati. Sono pubblici dal 2009. Ma sono in russo.
 
-Si chiama Ingeborg Loucek. Alias Ingeborg Novak. Alias Ingeborg Bucek.
-
-Forse.
-
-Sta andando a trovare suo figlio a Wels. Non ci arriva. La arrestano prima.
-
-Il 21 ottobre dello stesso anno un tribunale militare a Baden la condanna a morte. L'accusa è spionaggio a favore degli Stati Uniti d'America.
-
-Per decenni la sua storia resta sepolta. Nessuno sa cosa le sia successo. La famiglia non sa. Gli storici non sanno.
-
-Suo figlio di tre anni. Hans Peter viene "prelevato" dai servizi segreti austriaci due giorni dopo. Esce dal programma di protezione solo nel 1965.
-
-La madre di Ingeborg (la nonna dell'analista). Muore nel 1992 senza sapere la verità.
-
-Per tutta la vita alle domande ha risposto: "Non dovete parlare. Ci ammazzano tutti."
-
----
-
-Poi nel 2009 il Cremlino declassifica gli archivi dell'NKVD e dello SMERSH. Il controspionaggio militare sovietico.
-
-Tra quei documenti c'è il fascicolo di Ingeborg Loucek.
-
-Un team di ricercatori austriaci dell'Istituto Ludwig Boltzmann di Graz ottiene accesso agli archivi. Li analizza. Nel 2009 pubblica un libro. Si chiama "Stalins letzte Opfer". Le ultime vittime di Stalin.
-
-Il libro racconta la storia di Ingeborg. L'arresto. Il processo. La condanna. L'esecuzione.
-
-Ma racconta anche altro. Racconta incongruenze. Date che non tornano. Dettagli oscuri. Versioni contraddittorie.
-
-L'uomo a Roma vuole capire queste incongruenze.
-
-Ha i documenti declassificati. Sono pubblici dal 2009. Chiunque può accedervi. Ma sono in russo. E non sono tutti.
-
-L'uomo parla italiano. Parla inglese. Parla tedesco.
-
-Ma non conosce il russo.
+E lui non conosce il russo.
 
 ---
 
@@ -298,21 +258,9 @@ E quello che trova non torna.
 
 I documenti dicono cose impossibili.
 
-Date che si contraddicono. Versioni degli eventi che non combaciano.
+Incongruenze. Contraddizioni. Versioni che non combaciano.
 
-La versione ufficiale dice una cosa. I documenti dicono un'altra.
-
-Il libro dell'Istituto Boltzmann racconta una storia. I documenti raccontano pezzi di storie diverse.
-
-C'è un'evasione impossibile. Un ufficiale sovietico che fugge da una prigione di massima sicurezza. L'unico a riuscirci in tutta la storia di quella prigione.
-
-C'è una ragazza di vent'anni che procura documenti falsi attraverso contatti personali.
-
-C'è una scomparsa improvvisa. "left for unknown", "Partito per ignoto." Destinazione sconosciuta.
-
-C'è un arresto nel 1950. Una condanna a morte. Un'esecuzione a Mosca.
-
-E ci sono tracce che portano altrove. In altri paesi. In altri archivi. Tracce che il sistema deve ancora esplorare.
+Tracce che portano altrove. In altri paesi. In altri archivi.
 
 ---
 
@@ -337,5 +285,3 @@ L'uomo a Roma la conosce molto bene.
 Sa come integrarla nel sistema.
 
 ---
-
-*Fine Episodio 2*
