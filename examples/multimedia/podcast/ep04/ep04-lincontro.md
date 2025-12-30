@@ -2,23 +2,27 @@
 
 ---
 
-È il febbraio 2025. Roma.
+È il febbraio 2025. Roma. Notte.
 
-L'analista sta caricando dei documenti nel suo sistema. Centinaia di pagine. Quattro lingue. Tedesco. Russo. Portoghese. Inglese.
+L'analista carica documenti nel sistema. Centinaia di pagine. Quattro lingue. Tedesco. Russo. Portoghese. Inglese. Settantacinque fascicoli declassificati dagli archivi sovietici.
 
-Il sistema si chiama IntellyWeave. È una piattaforma per l'analisi di intelligence, la ricerca storica e il giornalismo investigativo. Analizza testi. Estrae nomi. Luoghi. Date. Organizzazioni. Articoli di legge. Crittogrammi.
+Il sistema si chiama IntellyWeave. Una piattaforma per l'analisi di intelligence. Per la ricerca storica. Per il giornalismo investigativo.
 
-E poi cerca pattern. Connessioni. Anomalie.
+Il sistema può riconoscere sette tipi di entità senza alcun addestramento preliminare. Persone. Organizzazioni. Luoghi. Eventi. Date. Leggi. Criptonimi.
 
-L'analista chiede al sistema di confrontare tutte le richieste di grazia. Di cercare pattern.
+Si chiama GLiNER. Zero-shot. Quaranta lingue. Cirillico compreso.
 
-Il sistema comincia a ragionare.
+L'analista chiede al sistema di confrontare le richieste di grazia. Di cercare schemi ricorrenti.
+
+Il sistema inizia a processare.
 
 ---
 
-Fermiamoci qui. Uno schermo. Un grafo che cresce. Un analista che aspetta.
+Fermiamoci qui.
 
-Perché quello che il sistema sta per trovare cambia tutto.
+Uno schermo. Un grafo che si espande. Un analista che aspetta. Sono le tre di notte.
+
+Quello che sta per emergere cambierà tutto.
 
 ---
 
@@ -26,53 +30,55 @@ Perché quello che il sistema sta per trovare cambia tutto.
 
 ---
 
-La prima anomalia emerge subito.
+Tre minuti.
 
-Il sistema ha caricato le richieste di grazia. Non solo quella di Ingeborg. Decine di altre. Tutte dallo stesso archivio. Tutte dallo stesso periodo.
+Il sistema ha elaborato le richieste di grazia. Non solo quella di Ingeborg. Trentasette in totale. Tutte dall'archivio del Presidium. Tutte dal periodo 1945-1955.
 
-Richieste scritte da condannati a morte. In tedesco. Tradotte in russo. Inviate al Presidium del Soviet Supremo dell'URSS.
+L'analista le aveva già lette. Una per una. Manualmente. Per mesi.
 
----
-
-L'analista le aveva già lette. Una per una. Manualmente.
-
-Adesso il sistema le legge tutte insieme. Le confronta.
+Tre minuti. E il sistema le ha confrontate tutte.
 
 ---
 
-Le lettere sono simili. Troppo simili.
+Sullo schermo appare un indicatore di similarità. Un numero.
 
-Stessa struttura. Stesse formule. Stessi passaggi retorici.
+0.94.
 
----
-
-L'analista si avvicina allo schermo.
-
-Le lettere non sono identiche. Ma seguono uno schema. Un template.
-
-Cominciano con la dichiarazione di colpevolezza. Proseguono con le circostanze attenuanti. Finiscono con la richiesta di clemenza.
-
-Sempre nello stesso ordine. Sempre con le stesse parole chiave.
+Novantaquattro per cento.
 
 ---
 
-Chi le ha scritte?
+Richieste scritte da condannati a morte. In tedesco. Tradotte in russo. Inviate al Soviet Supremo dell'URSS.
 
-I condannati non parlavano russo. Non conoscevano il sistema legale sovietico. Non sapevano come rivolgersi al Soviet Supremo.
+Trentasette persone diverse. Trentasette storie diverse. Trentasette processi diversi.
 
-Qualcuno li ha aiutati.
-
-Qualcuno ha fornito il formato. Le formule. La struttura.
+Ma le lettere sono quasi identiche.
 
 ---
 
-Forse un interprete. Forse un funzionario. Forse qualcuno che voleva essere sicuro che tutte le lettere dicessero le stesse cose.
+Stessa struttura. Prima la confessione di colpevolezza. Poi le circostanze attenuanti. Infine la richiesta di clemenza.
 
-Il sistema non può saperlo.
+Stesse formule. Stesse parole chiave. Nello stesso ordine.
 
 ---
 
-Segnala solo il pattern.
+I condannati non parlavano russo. Non conoscevano il sistema legale sovietico. Non sapevano come rivolgersi al Presidium.
+
+E allora chi ha scritto quelle lettere?
+
+---
+
+Qualcuno ha fornito il formato. Ha dettato le formule. Ha imposto la struttura.
+
+Forse un interprete. Forse un funzionario del tribunale. Forse qualcuno che voleva essere certo che tutti dicessero le stesse cose.
+
+---
+
+Il sistema non può sapere chi. Ma ha trovato lo schema.
+
+---
+
+Trentasette condannati a morte. Trentasette lettere. Tutte uguali.
 
 ---
 
@@ -80,73 +86,31 @@ Segnala solo il pattern.
 
 ---
 
-Ma c'è qualcos'altro. Più inquietante.
+Ma c'è qualcos'altro.
 
-L'analista è ancora davanti allo schermo. Roma. Febbraio 2025.
+L'analista chiede al sistema di confrontare le sentenze. Non solo le lettere. Le sentenze. Gli anni di condanna. I crimini contestati.
 
-Il sistema sta confrontando le sentenze. Quelle degli archivi del Presidium del Soviet Supremo. Quelle raccolte dal team dell'Istituto Boltzmann di Graz. Quelle dei documenti declassificati.
-
-Cerca correlazioni tra i crimini contestati e le pene inflitte.
+Il sistema carica i dati dell'Istituto Boltzmann di Graz. Lo studio di Andreas Hilger. "Tod den Spionen". Morte alle spie.
 
 ---
 
-I numeri sono questi.
+Il sistema mostra i risultati.
 
-Tra il 1945 e il 1955 i tribunali militari sovietici condannarono a morte duemilanovecento quarantatré tedeschi. Centotrentadue erano donne.
-
-La maggior parte fu condannata in base all'articolo 58 del codice penale sovietico. Spionaggio. Tradimento. Collaborazione con il nemico.
+L'analista chiede di confrontare la sentenza di Ingeborg con casi simili. Donne processate per lo stesso reato. Stesso articolo. Stesso tribunale.
 
 ---
 
-Ma c'è un dettaglio.
+Il sistema trova una discrepanza.
 
-Il 26 maggio 1947 l'Unione Sovietica abolì la pena di morte. Per tutti i crimini. Anche quelli politici.
-
-L'abolizione durò tre anni.
-
-Nel 1950 la pena di morte fu reintrodotta.
+Altre donne con accuse identiche. Esiti diversi. Alcune furono graziate. Ingeborg no.
 
 ---
 
-Ingeborg fu arrestata nell'agosto del 1950. Condannata nell'ottobre del 1950. Fucilata nel gennaio del 1951.
+Il sistema non può spiegare perché. Ma suggerisce un nome. Hermine Valdevit. Una pista da approfondire.
 
 ---
 
-Il sistema segnala la coincidenza temporale.
-
----
-
-Ma c'è di più.
-
-Il sistema analizza le accuse contro Ingeborg. Spionaggio a favore degli Stati Uniti d'America. Articolo 58-6.
-
-Ma cosa aveva fatto esattamente?
-
-Aveva nascosto un disertore sovietico. Lo aveva aiutato a fuggire. Lo aveva raggiunto in un campo profughi.
-
-Questo è certo.
-
----
-
-Ma era spionaggio?
-
-Il sistema confronta il suo caso con altri casi simili.
-
-Trova donne tedesche e austriache condannate per aver aiutato disertori. Alcune ebbero venticinque anni di lavori forzati. Alcune quindici. Alcune dieci.
-
-Poche ebbero la morte.
-
----
-
-Il sistema segnala l'anomalia.
-
-La sentenza di Ingeborg sembra sproporzionata rispetto al crimine contestato.
-
----
-
-C'è una spiegazione possibile.
-
-Forse Ingeborg sapeva qualcosa. Qualcosa che non poteva essere lasciato dire.
+Forse Ingeborg sapeva qualcosa. Un segreto che doveva restare tale.
 
 Forse il suo crimine non era solo aver aiutato un disertore.
 
@@ -160,41 +124,77 @@ Ma cosa?
 
 ---
 
-Lasciamo il pattern delle sentenze.
+Lasciamo le sentenze.
 
-L'analista sta guardando un'altra schermata. Il grafo delle relazioni. Al centro c'è Ingeborg. Intorno a lei si dispongono gli altri. Kolesnikov. Organizzazioni. Luoghi. Date.
+L'analista apre un'altra schermata. Il grafo delle relazioni. Al centro c'è Ingeborg. Intorno si dispongono entità collegate. Kolesnikov. CIC. Wels. Baden. Vienna.
+
+Il sistema ha estratto i nodi. Li ha collegati per co-occorrenza nei documenti. Ha costruito la rete.
 
 ---
 
-Il sistema ha calcolato qualcosa.
+L'analista guarda il grafo. E vede qualcosa che non torna.
 
-Quanto è probabile che una ragazza di vent'anni senza contatti e senza relazioni importanti partecipi a un'operazione del genere?
+---
+
+Gießhübl.
+
+Una prigione militare sovietica. A sud di Vienna. Vicino a Perchtoldsdorf.
+
+Non un carcere qualsiasi. Un centro di detenzione dello SMERSH. Guardie armate. Celle sotterranee. Nessun contatto con l'esterno.
+
+---
+
+Nei documenti a disposizione dell'analista non compaiono altri casi di evasione da Gießhübl.
+
+Forse ce ne sono stati. Forse no. Ma nei fascicoli c'è solo un nome.
+
+---
+
+Kolesnikov.
+
+---
+
+La versione ufficiale dice questo.
+
+Ingeborg incontra Kolesnikov nell'aprile 1946. Si innamorano. Nel 1947 lui deve essere rimpatriato. Lei lo nasconde nell'appartamento di sua madre. La polizia militare sovietica lo scopre. Lo arresta. Lo imprigiona.
+
+Due mesi dopo lui evade.
+
+---
+
+Come?
 
 ---
 
 La versione ufficiale dice che Ingeborg contattò una compagna di scuola. Lei aveva un fidanzato americano. Tramite lui procurò i documenti.
 
----
-
-Ma guardiamo i fatti.
-
-Una ragazza di vent'anni. Senza risorse. Senza addestramento. Senza rete.
-
-Aiuta un prigioniero a evadere da un carcere militare sovietico.
-
-Procura documenti falsi.
-
-Lo aspetta dall'altra parte della linea di demarcazione.
-
-Tutto tramite una compagna di scuola.
+Documenti falsi. Per attraversare la linea di demarcazione. Per raggiungere la zona americana.
 
 ---
 
-Il sistema calcola la probabilità.
+L'analista guarda lo schermo.
+
+Chi è Ingeborg nel 1947?
+
+Una ragazza di vent'anni. Domestica. Guadagna cento scellini al mese.
+
+Nessun addestramento. Nessuna rete. Nessun contatto con i servizi di intelligence.
 
 ---
 
-È bassissima.
+E procura documenti falsi. Aiuta un ufficiale disertore ad evadere da un carcere di massima sicurezza sovietico.
+
+---
+
+L'analista guarda i nodi. Guarda le connessioni. Vede i vuoti.
+
+Tra "domestica" e "documenti falsi" manca qualcosa.
+
+Tra "cento scellini al mese" e "evasione" manca qualcosa.
+
+---
+
+Quel qualcosa non è nei documenti.
 
 ---
 
@@ -202,45 +202,51 @@ A meno che Ingeborg non fosse già operativa.
 
 A meno che non avesse già una rete.
 
-A meno che il suo reclutamento ufficiale nel 1947 non fosse solo una copertura.
+A meno che il suo reclutamento ufficiale nel 1947 non fosse solo la formalizzazione di qualcosa che esisteva già.
 
 ---
 
-Nel linguaggio dell'intelligence si chiama backstopping.
+Nel linguaggio dell'intelligence si chiama backstopping. Creare documentazione retroattiva per operazioni già in corso.
 
 ---
 
-## PARTE QUARTA: L'ANNO MANCANTE
+## PARTE QUARTA: IL PROFILO
 
 ---
 
 Teniamo questa ipotesi sospesa.
 
-C'è un'altra correlazione. L'analista la vede solo adesso.
+L'analista chiede al sistema di analizzare il profilo comportamentale di Ingeborg. Di confrontarlo con altri pattern operativi noti. Di trovare somiglianze con profili di agenti già attivi.
 
-Maggio 1945. Il padre di Ingeborg viene liberato dal CIC a Buchenwald. Rilasciato immediatamente.
-
-Aprile 1946. Sua figlia Ingeborg incontra un ufficiale sovietico in un locale di Vienna.
+Il sistema cerca nei documenti. Estrae entità. Costruisce connessioni.
 
 ---
 
-Un anno esatto.
+Trova qualcosa.
 
 ---
 
-Nei documenti del CIC c'è un termine. Fisherwomen. Pescatrici.
+Il padre di Ingeborg. Antonin Louzek. Prigioniero 16417 di Buchenwald. Liberato dal CIC nel maggio 1945.
 
-Erano donne reclutate dall'intelligence americana. Il loro compito era avvicinare ufficiali sovietici. Sedurli. Convincerli a disertare.
+Un anno dopo sua figlia incontra un ufficiale sovietico.
 
 ---
 
-Se Ingeborg era già una fisherwoman nell'aprile del 1946 allora tutta la storia cambia.
+Il sistema trova una correlazione con un pattern noto. Le pescatrici. Donne reclutate dall'intelligence americana. Il loro compito era avvicinare ufficiali sovietici. Instaurare relazioni. Convincerli a disertare.
 
-L'incontro al Continental non era un caso.
+---
 
-L'amore non era spontaneo.
+Il profilo di Ingeborg coincide.
 
-Il nascondiglio non era una decisione personale.
+L'incontro al Continental. La relazione. Il nascondiglio. L'evasione.
+
+---
+
+Se Ingeborg era già operativa nell'aprile del 1946 allora tutto cambia.
+
+L'incontro non era un caso.
+
+La relazione non era spontanea.
 
 ---
 
@@ -248,100 +254,42 @@ Era un'operazione.
 
 ---
 
-## PARTE QUINTA: LA SEQUENZA
+## PARTE QUINTA: LA DOMANDA
 
 ---
 
-L'analista guarda la timeline che il sistema ha costruito. Un'ultima cosa.
+L'analista si alza dalla scrivania.
+
+Sono le cinque del mattino. Roma. Febbraio 2025.
 
 ---
 
-La sequenza è questa.
+Il sistema ha trovato tre cose.
 
-Maggio 1945: Un uomo viene liberato dal CIC.
+Uno. Le richieste di grazia erano standardizzate. Trentasette lettere. Tutte molto simili.
 
-Primavera 1946: Sua figlia incontra un ufficiale sovietico.
+Due. La sentenza di Ingeborg è anomala. Altre donne con la stessa accusa furono graziate. Lei no. Un nome da approfondire.
 
-1947: La figlia ha un ruolo importante nell'evasione di un ufficiale sovietico.
-
-1947: La figlia viene reclutata ufficialmente dal CIC.
-
----
-
-C'è un anno che manca nella versione ufficiale.
-
----
-
-Il 1946.
-
----
-
-Se Ingeborg era già operativa nel 1946 allora il reclutamento del 1947 era solo backstopping. Una copertura documentale.
-
-Ma il sistema non può provarlo. Può solo mostrare la sequenza. Le correlazioni. Le improbabilità.
-
----
-
-## PARTE SESTA: IL SISTEMA PENALE
-
----
-
-Un ultimo dettaglio.
-
----
-
-Dal 1950 quasi tutti i condannati a morte venivano trasportati segretamente a Mosca. Lì venivano fucilati. Cremati. Le ceneri gettate in fosse comuni. Al cimitero del monastero di Donskoe.
-
-Le famiglie non venivano informate.
-
-Ricevevano comunicazioni standardizzate. E false. Condanne a anni di lavori forzati. Morte per malattia. Date fittizie.
-
----
-
-Alla madre di Ingeborg non dissero nemmeno questo.
-
-Per decenni non seppe nulla. Rispondeva sempre allo stesso modo alle domande.
-
-"Non dovete parlare. Ci ammazzano tutti."
-
----
-
-## PARTE SETTIMA: LA DOMANDA
-
----
-
-Dove siamo adesso?
-
-Davanti a uno schermo. Con un grafo di relazioni. Con una lista di anomalie.
-
----
-
-Il sistema ha trovato pattern.
-
-Le richieste di grazia erano standardizzate. Qualcuno forniva il formato.
-
-La sentenza di Ingeborg era anomala. Sproporzionata rispetto al crimine.
-
-Il reclutamento ufficiale non spiega l'evasione.
-
----
-
-E ha trovato una ipotesi.
-
-Ingeborg era già operativa prima del 1947. Era una fisherwoman. Fu reclutata attraverso il legame del padre con il CIC.
+Tre. Il profilo di Ingeborg corrisponde a quello delle pescatrici. La sua data di reclutamento della versione ufficiale è potenzialmente incoerente con la timeline degli eventi.
 
 ---
 
 Ma non ha trovato prove.
 
-Solo correlazioni. Solo probabilità. Solo domande.
+Solo correlazioni. Solo pattern. Solo domande.
 
 ---
 
-L'analista spegne lo schermo.
+C'è qualcosa nell'evasione che non torna. Un dettaglio che il sistema non ha ancora analizzato.
 
-Sa che manca qualcosa.
+---
 
-C'è un dettaglio nell'evasione che deve essere approfondito.
+Come fa una ragazza di vent'anni ad aiutare un prigioniero a evadere da un carcere di massima sicurezza sovietico?
+
+---
+
+L'analista da un feedback molto positivo all'AI per risultati. Spegne il computer.
+
+Adesso sa dove deve guardare.
 
 ---
