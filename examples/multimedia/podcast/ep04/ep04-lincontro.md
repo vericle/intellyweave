@@ -2,17 +2,17 @@
 
 ---
 
-È il febbraio 2025. Roma. Uno schermo.
+È il febbraio 2025. Roma.
 
-L'analista sta caricando documenti in un sistema. Centinaia di pagine. Quattro lingue. Tedesco. Russo. Portoghese. Inglese.
+L'analista sta caricando dei documenti nel suo sistema. Centinaia di pagine. Quattro lingue. Tedesco. Russo. Portoghese. Inglese.
 
-Il sistema si chiama IntellyWeave. È una piattaforma di intelligence. Legge testi in qualsiasi alfabeto. Estrae nomi. Luoghi. Date. Organizzazioni. Articoli di legge. Crittogrammi.
+Il sistema si chiama IntellyWeave. È una piattaforma per l'analisi di intelligence, la ricerca storica e il giornalismo investigativo. Analizza testi. Estrae nomi. Luoghi. Date. Organizzazioni. Articoli di legge. Crittogrammi.
 
 E poi cerca pattern. Connessioni. Anomalie.
 
-L'analista preme un tasto.
+L'analista chiede al sistema di confrontare tutte le richieste di grazia. Di cercare pattern.
 
-Il sistema comincia a processare.
+Il sistema comincia a ragionare.
 
 ---
 
