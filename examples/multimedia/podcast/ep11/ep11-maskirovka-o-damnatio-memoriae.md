@@ -336,7 +336,7 @@ I suoi stessi figli lo credettero morto. Lo piansero. Continuarono a vivere.
 
 ---
 
-Nel 1984 uno scrittore britannico di nome Nigel West stava facendo ricerche sulla Seconda Guerra Mondiale. Cercava informazioni sulle operazioni di intelligence.
+Nel 1984 uno scrittore britannico di nome Nigel West stava studiando le operazioni di intelligence della Seconda Guerra Mondiale.
 
 Trovò tracce di un agente chiamato Garbo. Un agente straordinario. Uno dei più importanti della guerra.
 
@@ -354,13 +354,13 @@ Aveva settantadue anni. Viveva ancora in Venezuela. Era rimasto nascosto per qua
 
 West lo convinse a uscire allo scoperto.
 
-Pujol García tornò in Europa. Incontrò i suoi figli. Quelli che lo avevano pianto morto.
+Pujol García tornò in Europa. Rivide i suoi figli.
 
 Ricevette onorificenze. Raccontò la sua storia. Morì nel 1988. Questa volta per davvero.
 
 ---
 
-Un uomo dichiarato morto nel 1948. Rivelato vivo nel 1984.
+Nel 1948 il mondo lo credeva morto. Nel 1984 era ancora vivo.
 
 Trentasei anni.
 
@@ -372,13 +372,13 @@ Sono fatti documentati. Fonti verificabili.
 
 ---
 
-I servizi segreti possono inscenare morti false.
+I servizi segreti sanno come eliminare le persone. Anche solo sulla carta.
 
 Lo hanno fatto.
 
 ---
 
-Teniamo questo a mente.
+Ricordiamolo.
 
 ---
 
@@ -394,11 +394,9 @@ Il sistema ha completato l'analisi. Adesso deve sintetizzare.
 
 La funzione si chiama Synthesis. Integra tutto. Entità. Relazioni. Pattern. Anomalie.
 
-Produce una valutazione complessiva.
-
 ---
 
-Sullo schermo appare il risultato.
+Sullo schermo appare la sintesi.
 
 ---
 
@@ -418,7 +416,7 @@ Scenario A. Damnatio Memoriae passiva.
 
 Achtyrskij è caduto nell'oblio per cause strutturali. Non riabilitato. Senza discendenti. Senza categoria commemorativa. Il fascicolo che lo riguarda non è digitalizzato.
 
-L'assenza di tracce digitali è un effetto collaterale della storia. Non un'azione deliberata.
+L'assenza di tracce digitali è accidentale. Non deliberata.
 
 Probabilità: cinquantacinque per cento.
 
@@ -426,7 +424,7 @@ Probabilità: cinquantacinque per cento.
 
 Scenario B. Maskirovka attiva.
 
-L'assenza di tracce è intenzionale. Qualcuno ha interesse a mantenere Achtyrskij invisibile.
+L'assenza di tracce è intenzionale. Qualcuno vuole che Achtyrskij resti invisibile.
 
 Chi potrebbe avere questo interesse?
 
@@ -436,9 +434,9 @@ Il sistema elenca le possibilità.
 
 ---
 
-I servizi russi. Se Achtyrskij ha fornito informazioni sensibili durante gli interrogatori potrebbero voler mantenere segreta l'estensione della sua collaborazione.
+I servizi russi. Achtyrskij ha parlato durante gli interrogatori. Quanto ha detto? Potrebbero volerlo nascondere.
 
-I servizi occidentali. Se Achtyrskij era più importante di quanto appaia nei documenti potrebbero voler proteggere operazioni ancora classificate.
+I servizi occidentali. Se Achtyrskij contava più di quanto non sembri dai documenti, potrebbero proteggere operazioni ancora classificate.
 
 Altri attori sconosciuti. Non possiamo escludere interessi che non conosciamo.
 
@@ -454,9 +452,7 @@ Ma ha identificato qualcosa di importante.
 
 ---
 
-La domanda non è più se Achtyrskij sia esistito.
-
-La domanda è perché è stato cancellato.
+Le informazioni su Achtyrskij sono state soppresse. La domanda è: perché?
 
 ---
 
@@ -480,19 +476,17 @@ Ma non può rispondere alla domanda fondamentale.
 
 ---
 
-L'analista resta alla finestra.
-
-Agent Garbo è stato dichiarato morto nel 1948. È riemerso nel 1984.
+Agent Garbo. Nel 1948 era stato dichiarato morto. Nel 1984 invece era ancora vivo.
 
 Trentasei anni.
 
 ---
 
-Gli scambi di prigionieri esistevano. Durante tutta la Guerra Fredda. Agenti scambiati. Spie barattate. Vite negoziate.
+La Guerra Fredda è stata un mercato. Di cose e di persone. Prigionieri scambiati tra le parti. Asset. Risorse. Vite.
 
 ---
 
-La morte ufficiale e la sopravvivenza non sono mutualmente esclusive.
+Si può essere morti sulla carta e vivi nella realtà.
 
 ---
 
@@ -508,15 +502,15 @@ Una domanda che non aveva mai considerato prima.
 
 ---
 
-Se Agent Garbo ha vissuto trentasei anni da morto chi altri potrebbe essere sparito e non morto?
+Agent Garbo è sopravvissuto trentasei anni mentre tutti lo credevano morto. Chi altro potrebbe aver avuto un destino simile?
 
-Se il fascicolo del 1950 non è stato digitalizzato cosa contiene che non deve essere visto?
+Se il fascicolo del 1950 non è stato digitalizzato, cosa potrebbe nascondere?
 
 ---
 
-Il sistema ha mappato un fantasma.
+Il sistema ha confermato un fantasma.
 
-Ma forse il fantasma è più vivo di quanto sembri.
+Ma se questo fantasma non fosse mai morto?
 
 ---
 
@@ -532,14 +526,14 @@ O confermare quello che già sappiamo.
 
 ---
 
-Ma fino a quando quel fascicolo resta chiuso c'è una domanda che rimane aperta.
+Ma fino a quando quel fascicolo resta chiuso, una domanda resta aperta.
 
 ---
 
-Chi era il vero obiettivo di tutta questa operazione?
+Quali erano i veri obiettivi di queste operazioni?
 
 ---
 
-E chi è davvero sparito?
+E i morti sono davvero morti?
 
 ---
