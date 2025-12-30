@@ -1,8 +1,8 @@
-# Episodio 10: La Resa Inspiegabile
+# Episodio 10: Il filo rosso
 
 ---
 
-È tardi. Roma. Dicembre 2025.
+È tardi. Roma. Novembre 2025.
 
 L'analista è seduto davanti allo schermo. Ha un problema.
 

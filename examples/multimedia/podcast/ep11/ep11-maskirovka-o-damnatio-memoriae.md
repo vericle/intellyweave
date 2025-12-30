@@ -2,23 +2,23 @@
 
 ---
 
-È tardi. Roma. Gennaio 2026.
+È tardi. Roma. Dicembre 2025.
 
-L'analista rilegge i risultati sullo schermo. Sono passate settimane da quella notte di dicembre. Da quando il sistema ha trovato il fantasma.
+L'analista rilegge i risultati sullo schermo. Sono passate alcune settimane da quella notte di novembre. Da quando il sistema ha trovato il fantasma.
 
 ---
 
 Aleksandr Achtyrskij. L'uomo che reclutò Ingeborg. L'uomo che si consegnò ai sovietici. L'uomo che tradì Kolesnikov.
 
-Sappiamo tutto questo. Il sistema lo ha ricostruito.
+Adesso sappiamo molto più di prima su questa storia. Il sistema ha disvelato la trama e ha trovato il filo rosso.
 
 Ma c'è qualcosa che non torna.
 
 ---
 
-Non è cosa abbiamo trovato.
+E non è cosa è stato trovato.
 
-È cosa significa.
+È che cosa significa ciò che è stato trovato.
 
 ---
 
@@ -28,7 +28,9 @@ Non è cosa abbiamo trovato.
 
 L'analista attiva una nuova funzione. Si chiama Pattern Detection.
 
-Il sistema non cerca più entità. Non cerca relazioni. Cerca ricorrenze. Anomalie. Cose che si ripetono. E cose che mancano.
+Il sistema non cerca solo entità. Non cerca solo relazioni. Cerca ricorrenze. Anomalie. Cose che si ripetono. 
+
+Cerca cose che dovrebbero ripetersi ma non si ripetono. Cerca cose che mancano.
 
 ---
 
