@@ -2,17 +2,13 @@
 
 ---
 
-È il febbraio 2024. Roma. Uno schermo.
+È il febbraio 2025. Roma. Uno schermo.
 
 L'analista sta caricando documenti in un sistema. Centinaia di pagine. Quattro lingue. Tedesco. Russo. Portoghese. Inglese.
 
-Il sistema si chiama IntellyWeave. È una piattaforma di intelligence. Fa cose che nessun software faceva tre anni prima.
+Il sistema si chiama IntellyWeave. È una piattaforma di intelligence. Legge testi in qualsiasi alfabeto. Estrae nomi. Luoghi. Date. Organizzazioni. Articoli di legge. Crittogrammi.
 
-Legge testi in qualsiasi alfabeto. Estrae nomi. Luoghi. Date. Organizzazioni. Articoli di legge. Crittogrammi.
-
-E poi fa qualcos'altro. Cerca pattern. Connessioni. Anomalie.
-
----
+E poi cerca pattern. Connessioni. Anomalie.
 
 L'analista preme un tasto.
 
@@ -20,79 +16,19 @@ Il sistema comincia a processare.
 
 ---
 
-## PARTE PRIMA: LA MACCHINA
-
----
-
-La prima fase si chiama Entity Extraction. Estrazione di entità.
-
-Il sistema legge ogni documento. Identifica automaticamente le parole importanti. Nomi propri. Organizzazioni. Luoghi geografici.
-
-Usa un modello che si chiama GLiNER. Trecentotrenta milioni di parametri. Addestrato su corpus enormi.
-
-GLiNER non ha bisogno di esempi. Gli dai un'etichetta. Lui trova le corrispondenze.
-
----
-
-L'analista guarda lo schermo. Le entità cominciano ad apparire.
-
-Ingeborg Louzek. Veniamin Kolesnikov. Vienna. Baden. Gießhübl. SMERSH. CIC. Articolo 58.
-
-E poi altre. Decine. Centinaia.
-
----
-
-La seconda fase si chiama Relationship Mapping. Mappatura delle relazioni.
-
-Il sistema prende le entità estratte. Le collega. Chi conosce chi. Chi lavora per chi. Chi è stato dove.
-
-Costruisce un grafo. Nodi e archi. Persone e connessioni.
-
----
-
-L'analista guarda il grafo crescere.
-
-Al centro c'è Ingeborg. Intorno a lei si dispongono gli altri. Kolesnikov. Suo padre Antonin. Un uomo di nome Achtyrskij. Organizzazioni. Luoghi. Date.
-
-Un sistema complesso. Una rete.
-
----
-
-La terza fase si chiama Network Analysis. Analisi di rete.
-
-Il sistema studia il grafo. Cerca i nodi centrali. Quelli con più connessioni. Cerca i cluster. Gruppi di entità che stanno insieme.
-
-Cerca i ponti. I nodi che collegano gruppi separati.
-
----
-
-Ingeborg è un ponte.
-
-Collega il cluster familiare con il cluster del CIC. Collega Kolesnikov con l'apparato sovietico. Collega Vienna con Wels.
-
-Il sistema lo segnala. Evidenzia il nodo. Lo marca come critico.
-
----
-
-La quarta fase si chiama Pattern Detection. Rilevamento di pattern.
-
-È qui che le cose diventano interessanti.
-
----
-
-Fermiamoci qui. Uno schermo. Un grafo. Un'analista che aspetta.
+Fermiamoci qui. Uno schermo. Un grafo che cresce. Un analista che aspetta.
 
 Perché quello che il sistema sta per trovare cambia tutto.
 
 ---
 
-## PARTE SECONDA: I DOCUMENTI CHE PARLANO
+## PARTE PRIMA: IL PATTERN
 
 ---
 
-Il sistema ha caricato le richieste di grazia.
+La prima anomalia emerge subito.
 
-Non solo quella di Ingeborg. Decine di altre. Tutte dallo stesso archivio. Tutte dallo stesso periodo.
+Il sistema ha caricato le richieste di grazia. Non solo quella di Ingeborg. Decine di altre. Tutte dallo stesso archivio. Tutte dallo stesso periodo.
 
 Richieste scritte da condannati a morte. In tedesco. Tradotte in russo. Inviate al Presidium del Soviet Supremo dell'URSS.
 
@@ -100,11 +36,9 @@ Richieste scritte da condannati a morte. In tedesco. Tradotte in russo. Inviate 
 
 L'analista le aveva già lette. Una per una. Manualmente.
 
-Adesso il sistema le legge tutte insieme. Le confronta. Cerca pattern.
+Adesso il sistema le legge tutte insieme. Le confronta.
 
 ---
-
-Il primo pattern emerge subito.
 
 Le lettere sono simili. Troppo simili.
 
@@ -134,21 +68,23 @@ Qualcuno ha fornito il formato. Le formule. La struttura.
 
 Forse un interprete. Forse un funzionario. Forse qualcuno che voleva essere sicuro che tutte le lettere dicessero le stesse cose.
 
-Il sistema non può saperlo. Segnala solo il pattern.
+Il sistema non può saperlo.
 
 ---
 
-Ma c'è un secondo pattern. Più inquietante.
+Segnala solo il pattern.
 
 ---
 
-## PARTE TERZA: L'ANOMALIA
+## PARTE SECONDA: L'ANOMALIA
 
 ---
 
-Il sistema confronta le sentenze.
+Ma c'è qualcos'altro. Più inquietante.
 
-Quelle degli archivi del Presidium del Soviet Supremo. Quelle raccolte dal team dell'Istituto Boltzmann di Graz. Quelle dei documenti declassificati.
+L'analista è ancora davanti allo schermo. Roma. Febbraio 2025.
+
+Il sistema sta confrontando le sentenze. Quelle degli archivi del Presidium del Soviet Supremo. Quelle raccolte dal team dell'Istituto Boltzmann di Graz. Quelle dei documenti declassificati.
 
 Cerca correlazioni tra i crimini contestati e le pene inflitte.
 
@@ -164,21 +100,17 @@ La maggior parte fu condannata in base all'articolo 58 del codice penale sovieti
 
 Ma c'è un dettaglio.
 
-Il 26 maggio 1947 l'Unione Sovietica abolì la pena di morte.
-
-Per tutti i crimini. Anche quelli politici.
-
----
+Il 26 maggio 1947 l'Unione Sovietica abolì la pena di morte. Per tutti i crimini. Anche quelli politici.
 
 L'abolizione durò tre anni.
 
 Nel 1950 la pena di morte fu reintrodotta.
 
-Proprio nel 1950.
-
 ---
 
 Ingeborg fu arrestata nell'agosto del 1950. Condannata nell'ottobre del 1950. Fucilata nel gennaio del 1951.
+
+---
 
 Il sistema segnala la coincidenza temporale.
 
@@ -186,15 +118,9 @@ Il sistema segnala la coincidenza temporale.
 
 Ma c'è di più.
 
----
-
-Il sistema analizza le accuse contro Ingeborg.
-
-Spionaggio a favore degli Stati Uniti d'America. Articolo 58-6.
+Il sistema analizza le accuse contro Ingeborg. Spionaggio a favore degli Stati Uniti d'America. Articolo 58-6.
 
 Ma cosa aveva fatto esattamente?
-
----
 
 Aveva nascosto un disertore sovietico. Lo aveva aiutato a fuggire. Lo aveva raggiunto in un campo profughi.
 
@@ -230,169 +156,43 @@ Ma cosa?
 
 ---
 
-Il sistema non lo sa. Segnala solo l'anomalia.
+## PARTE TERZA: L'IMPROBABILITÀ
 
 ---
 
-## PARTE QUARTA: LA PESCATRICE
+Lasciamo il pattern delle sentenze.
+
+L'analista sta guardando un'altra schermata. Il grafo delle relazioni. Al centro c'è Ingeborg. Intorno a lei si dispongono gli altri. Kolesnikov. Organizzazioni. Luoghi. Date.
 
 ---
 
-Torniamo a Vienna. Aprile 1946.
+Il sistema ha calcolato qualcosa.
 
-L'abbiamo già vista questa scena. In un altro episodio. Il Continental Cabaret. Una ragazza di diciannove anni. Un ufficiale sovietico.
-
-Ma non l'abbiamo guardata abbastanza da vicino.
-
----
-
-Ingeborg lavora come domestica. Guadagna cento scellini al mese. Quasi niente.
-
-Vive con sua madre. In Margaretenstraße 139. Interno 12. Settore sovietico.
-
-Suo padre è tornato dai campi da un anno. L'ha liberato il capitano Bessman. Lo sappiamo già.
-
----
-
-Quella sera al Continental Ingeborg incontra Kolesnikov.
-
-La versione ufficiale dice che fu un caso. Due persone che si incontrano in un locale. Si piacciono. Cominciano a frequentarsi.
-
-Amore.
-
----
-
-Ma il sistema ha trovato qualcosa.
-
----
-
-Nei documenti del CIC c'è un termine. Fisherwomen. Pescatrici.
-
-Erano donne reclutate dall'intelligence americana. Il loro compito era avvicinare ufficiali sovietici. Sedurli. Convincerli a disertare.
-
----
-
-Le fisherwomen operavano nei locali notturni di Vienna. Nei caffè. Nei ristoranti. Ovunque ci fossero ufficiali sovietici in cerca di compagnia.
-
-Alcune lo facevano per denaro. Alcune per disperazione. Alcune perché non avevano altra scelta.
-
----
-
-Ingeborg incontra Kolesnikov al Continental Cabaret.
-
-Lui è un ufficiale sovietico. Ha dieci anni più di lei. È vulnerabile. Tra pochi mesi dovrà tornare in Unione Sovietica.
-
-Lei è una ragazza che non ha niente.
-
-Tranne un padre che conosce il CIC.
-
----
-
-Il sistema segnala la correlazione.
-
----
-
-Aprile 1945. Il capitano Bessman del CIC firma il documento di liberazione di Antonin Louzek a Buchenwald.
-
-Aprile 1946. La figlia di Antonin Louzek incontra un ufficiale sovietico in un locale di Vienna.
-
-Un anno esatto.
-
----
-
-Coincidenza?
-
----
-
-Il sistema non può rispondere. Può solo mostrare le connessioni.
-
-E le connessioni dicono questo.
-
-Se Ingeborg era già una fisherwoman nell'aprile del 1946 allora tutta la storia cambia.
-
-L'incontro al Continental non era un caso.
-
-L'amore non era spontaneo.
-
-Il nascondiglio non era una decisione personale.
-
----
-
-Era un'operazione.
-
----
-
-## PARTE QUINTA: IL RECLUTAMENTO
-
----
-
-Teniamo questa ipotesi sospesa. Non è provata. È solo una possibilità.
-
-Ma guardiamo cosa succede dopo.
-
----
-
-Ingeborg e Kolesnikov si frequentano. Estate 1946. Autunno. Inverno.
-
-Lui passa sempre più tempo con lei. Trascura i suoi doveri. Evita i controlli. Diventa vulnerabile.
-
-Nel febbraio del 1947 riceve l'ordine di rimpatrio. Deve tornare in Unione Sovietica.
-
-Non lo fa.
-
----
-
-Si nasconde a casa della madre di Ingeborg. Nel cuore del settore sovietico. A pochi chilometri dal quartier generale dello SMERSH.
-
-È una follia.
-
-O forse no.
-
----
-
-Se Ingeborg era una fisherwoman il nascondiglio aveva senso.
-
-Non era una decisione disperata di due innamorati. Era una fase dell'operazione.
-
-Kolesnikov andava tenuto nascosto fino a quando non si poteva estrarlo.
-
----
-
-Ma qualcosa andò storto.
-
-Nell'aprile del 1947 qualcuno parlò. Lo SMERSH trovò Kolesnikov. Lo arrestarono.
-
----
-
-Eppure due mesi dopo Kolesnikov evade.
-
-L'unico nella storia di quella prigione.
-
----
-
-Come?
+Quanto è probabile che una ragazza di vent'anni senza contatti e senza relazioni importanti partecipi a un'operazione del genere?
 
 ---
 
 La versione ufficiale dice che Ingeborg contattò una compagna di scuola. Lei aveva un fidanzato americano. Tramite lui procurò i documenti.
 
-Ma il sistema segnala l'improbabilità.
-
 ---
+
+Ma guardiamo i fatti.
 
 Una ragazza di vent'anni. Senza risorse. Senza addestramento. Senza rete.
 
-Organizza l'evasione di un prigioniero da un carcere militare sovietico.
+Aiuta un prigioniero a evadere da un carcere militare sovietico.
 
 Procura documenti falsi.
 
-Organizza il passaggio della linea di demarcazione.
+Lo aspetta dall'altra parte della linea di demarcazione.
 
-Tutto tramite contatti personali.
+Tutto tramite una compagna di scuola.
 
 ---
 
 Il sistema calcola la probabilità.
+
+---
 
 È bassissima.
 
@@ -408,128 +208,87 @@ A meno che il suo reclutamento ufficiale nel 1947 non fosse solo una copertura.
 
 Nel linguaggio dell'intelligence si chiama backstopping.
 
-Il sistema non può provarlo. Ma lo segnala come ipotesi.
+---
+
+## PARTE QUARTA: L'ANNO MANCANTE
 
 ---
 
-## PARTE SESTA: IL PADRE
+Teniamo questa ipotesi sospesa.
+
+C'è un'altra correlazione. L'analista la vede solo adesso.
+
+Maggio 1945. Il padre di Ingeborg viene liberato dal CIC a Buchenwald. Rilasciato immediatamente.
+
+Aprile 1946. Sua figlia Ingeborg incontra un ufficiale sovietico in un locale di Vienna.
 
 ---
 
-Torniamo ad Antonin.
-
-Lo conosciamo già. Buchenwald. Matricola 16417. La firma del capitano Bessman.
-
-Ma c'è qualcosa che non abbiamo guardato.
+Un anno esatto.
 
 ---
 
-Antonin Louzek fu arrestato dalla Gestapo nell'agosto del 1943. L'accusa era "azioni antinaziste" e "raccolta illegale di denaro".
+Nei documenti del CIC c'è un termine. Fisherwomen. Pescatrici.
 
-In altre parole era un finanziatore della resistenza.
-
----
-
-Non sappiamo a quale gruppo appartenesse. Ma sappiamo cosa succedeva in Cecoslovacchia nel 1943.
-
-Dopo l'attentato a Heydrich la resistenza ceca era sotto attacco. Migliaia di arresti. Esecuzioni. Deportazioni.
-
-Gli inglesi del SOE avevano perso quasi tutti i loro contatti.
+Erano donne reclutate dall'intelligence americana. Il loro compito era avvicinare ufficiali sovietici. Sedurli. Convincerli a disertare.
 
 ---
 
-Antonin sopravvive ad Auschwitz. Sopravvive a Buchenwald. Viene liberato nell'aprile del 1945.
+Se Ingeborg era già una fisherwoman nell'aprile del 1946 allora tutta la storia cambia.
 
-Il documento porta la firma di un ufficiale del CIC.
+L'incontro al Continental non era un caso.
 
----
+L'amore non era spontaneo.
 
-Perché il CIC si interessava a un impiegato postale ceco?
-
----
-
-Il sistema cerca correlazioni.
-
-Trova questo.
-
-Nel dopoguerra il CIC reclutava informatori tra i sopravvissuti dei campi. Gente che conosceva le reti della resistenza. Gente che aveva contatti.
-
-Antonin Louzek era un finanziatore della resistenza. Conosceva nomi. Conosceva reti.
-
-Era esattamente il tipo di persona che interessava al CIC.
+Il nascondiglio non era una decisione personale.
 
 ---
 
-Ipotesi.
-
-Antonin Louzek fu reclutato dal CIC nel 1945.
-
-Un anno dopo sua figlia Ingeborg cominciò a frequentare ufficiali sovietici.
-
-Due anni dopo organizzò l'evasione di un disertore.
+Era un'operazione.
 
 ---
 
-Chi la reclutò?
-
-La versione ufficiale dice Aleksandr Achtyrskij. L'abbiamo incontrato già. Nel campo profughi di Wels. Nel 1947.
-
-Ma se Ingeborg era già operativa prima di Wels allora qualcun altro la reclutò prima.
+## PARTE QUINTA: LA SEQUENZA
 
 ---
 
-Suo padre?
+L'analista guarda la timeline che il sistema ha costruito. Un'ultima cosa.
 
 ---
 
-Il sistema non può provarlo. Ma la sequenza è questa.
+La sequenza è questa.
 
-1945: Antonin liberato dal CIC.
-1946: Ingeborg incontra un ufficiale sovietico.
-1947: Ingeborg organizza un'evasione impossibile.
-1947: Ingeborg viene reclutata ufficialmente da Achtyrskij.
+Maggio 1945: Un uomo viene liberato dal CIC.
+
+Primavera 1946: Sua figlia incontra un ufficiale sovietico.
+
+1947: La figlia ha un ruolo importante nell'evasione di un ufficiale sovietico.
+
+1947: La figlia viene reclutata ufficialmente dal CIC.
 
 ---
 
 C'è un anno che manca nella versione ufficiale.
 
+---
+
 Il 1946.
 
 ---
 
-## PARTE SETTIMA: IL SISTEMA PENALE
+Se Ingeborg era già operativa nel 1946 allora il reclutamento del 1947 era solo backstopping. Una copertura documentale.
+
+Ma il sistema non può provarlo. Può solo mostrare la sequenza. Le correlazioni. Le improbabilità.
 
 ---
 
-Torniamo al sistema. Ai pattern. Alle anomalie.
+## PARTE SESTA: IL SISTEMA PENALE
 
 ---
 
-L'analista sta guardando i risultati dell'analisi del sistema penale sovietico.
-
-Il sistema ha processato lo studio di Andreas Hilger. "Tod den Spionen". Morte alle spie.
-
-Ha processato le statistiche del Presidium del Soviet Supremo. Ha processato le sentenze. Le richieste di grazia. Gli esiti.
+Un ultimo dettaglio.
 
 ---
-
-I numeri dicono questo.
-
-La pena di morte fu abolita il 26 maggio 1947.
-
-Fu reintrodotta nel 1950.
-
-Nel periodo tra il 1947 e il 1950 le condanne per spionaggio prevedevano i lavori forzati. Non la morte.
-
----
-
-Ma quando la pena di morte tornò nel 1950 i tribunali militari sovietici la usarono con ferocia.
-
-Soprattutto contro le presunte spie.
-
----
-
-C'è un dettaglio.
 
 Dal 1950 quasi tutti i condannati a morte venivano trasportati segretamente a Mosca. Lì venivano fucilati. Cremati. Le ceneri gettate in fosse comuni. Al cimitero del monastero di Donskoe.
 
@@ -547,7 +306,7 @@ Per decenni non seppe nulla. Rispondeva sempre allo stesso modo alle domande.
 
 ---
 
-## PARTE OTTAVA: LA DOMANDA
+## PARTE SETTIMA: LA DOMANDA
 
 ---
 
@@ -569,7 +328,7 @@ Il reclutamento ufficiale non spiega l'evasione.
 
 E ha trovato una ipotesi.
 
-Ingeborg era già operativa prima del 1947. Era una fisherwoman. Fu reclutata attraverso suo padre.
+Ingeborg era già operativa prima del 1947. Era una fisherwoman. Fu reclutata attraverso il legame del padre con il CIC.
 
 ---
 
@@ -586,5 +345,3 @@ Sa che manca qualcosa.
 C'è un dettaglio nell'evasione che deve essere approfondito.
 
 ---
-
-*Fine Episodio 4*
