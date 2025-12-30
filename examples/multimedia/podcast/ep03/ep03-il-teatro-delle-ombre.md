@@ -2,7 +2,7 @@
 
 ---
 
-È l'agosto 1943. České Budějovice. Boemia meridionale.
+È il 19 gennaio 1943. České Budějovice. Boemia meridionale.
 
 Un uomo viene portato via. Ha trentanove anni. Si chiama Antonin Louzek. È un impiegato postale.
 
@@ -16,11 +16,7 @@ Poi lo caricano su un treno.
 
 ---
 
-Dove siamo adesso? In una prigione nella Boemia del Sud. Gennaio 1943. Un impiegato postale ceco in manette.
-
-Teniamolo lì fermo per un momento. Perché per capire cosa sta succedendo dobbiamo tornare indietro di qualche mese.
-
-A Praga. Al 27 maggio del 1942.
+Ma per capire cosa sta succedendo dobbiamo tornare indietro. A Praga. Al 27 maggio del 1942.
 
 ---
 
@@ -42,7 +38,7 @@ Heydrich muore una settimana dopo. Per le ferite e per un'infezione.
 
 I due uomini che lo hanno ucciso si chiamano Jan Kubiš e Jozef Gabčík. Sono soldati cecoslovacchi. Addestrati in Gran Bretagna. Dal SOE.
 
-L'SOE è la Special Operations Executive. L'agenzia britannica per le operazioni clandestine. La chiamano il Ministero della Guerra Non Convenzionale.
+Il SOE è la Special Operations Executive. L'agenzia britannica per le operazioni clandestine. La chiamano il Ministero della Guerra Non Convenzionale.
 
 Hanno paracadutato Kubiš e Gabčík in Cecoslovacchia nel dicembre 1941. Con altri sette uomini. Per uccidere Heydrich.
 
@@ -60,7 +56,7 @@ Ma la resistenza ceca non si ferma.
 
 ---
 
-Sette mesi dopo Lidice. Gennaio 1943. České Budějovice.
+Gennaio 1943. České Budějovice.
 
 Un impiegato postale viene arrestato.
 
@@ -70,7 +66,7 @@ La Gestapo lo considera pericoloso abbastanza da mandarlo nei campi.
 
 ---
 
-Dove siamo adesso? Su un treno. Febbraio 1943. Antonin Louzek sta andando ad Auschwitz.
+Febbraio 1943. Un treno attraversa la Germania. Antonin Louzek sta andando ad Auschwitz.
 
 Resterà cinque settimane nel campo di Birkenau. Poi cinque mesi nel campo principale.
 
@@ -134,9 +130,13 @@ Il CIC reclutava anche agenti. Per operazioni contro i sovietici. La Guerra Fred
 
 ---
 
-Il capitano Bessman firma il documento di liberazione di Antonin Louzek il 30 aprile 1945.
+Il 7 maggio 1945 un comitato esamina il caso di Antonin Louzek. Tra i membri c'è il capitano Bessman. 301st CIC Detachment.
 
-Lo stesso capitano Bessman del Counter Intelligence Corps.
+La decisione è una sola parola. Released. Rilasciato.
+
+Ma c'è un dettaglio. Il documento dice "released forthwith". Rilasciato immediatamente.
+
+Non tutti i prigionieri venivano rilasciati immediatamente.
 
 Antonin torna a Vienna. Ritrova sua moglie Elizabeth. Ritrova sua figlia Ingeborg. Ha diciassette anni.
 
@@ -146,7 +146,7 @@ E un'altra è appena iniziata.
 
 ---
 
-Settant'anni dopo. Un uomo sta cercando dei documenti.
+Più di settant'anni dopo. Un uomo sta cercando dei documenti.
 
 L'uomo è il nipote di Ingeborg, e ha giurato al padre che avrebbe trovato Ingeborg viva o morta.
 
@@ -155,8 +155,6 @@ Sta indagando sulla storia di sua zia. Quella storia che tutti in famiglia conos
 Di quella storia sua nonna non voleva mai parlare. E provarci portava sempre allo stesso risultato.
 
 "Non dovete parlare con anima viva. Qui ci ammazzano tutti".
-
-L'uomo è anche un analista. È un esperto di elaborazione di grandi moli di dati e di linguistica computazionale con più di vent'anni di esperienza. 
 
 Per trovare Ingeborg parte da Antonin.
 
@@ -178,9 +176,9 @@ L'analista guarda quella firma.
 
 Antonin non è suo nonno. Ma il primo marito della madre di Ingeborg.
 
-Antonin viene liberato dal controspionaggio americano. Nell'aprile 1945.
+Antonin viene liberato dal controspionaggio americano. Nel maggio 1945.
 
-Due anni dopo sua figlia Ingeborg organizza l'evasione di un ufficiale sovietico da un carcere militare di massima sicurezza. Un carcere dal quale nessuno poteva fuggire. Poi viene reclutata dal CIC per lo stesso tipo di operazioni.
+Due anni dopo sua figlia Ingeborg aiuta un ufficiale sovietico a evadere da un carcere militare. Poco dopo il CIC la recluta.
 
 Due anni.
 
@@ -224,7 +222,7 @@ E Ingeborg. Fu reclutata nel 1947 come dice la versione ufficiale? O era già op
 
 C'è un modo per saperlo.
 
-I documenti del CIC di quel periodo esistono. Sono stati declassificati dalla CIA. Ma non sono stati digitalizzati. Sono in un archivio negli Stati Uniti. Bisogna andarci di persona per leggerli.
+I documenti del CIC di quel periodo esistono. Sono stati declassificati dalla CIA. Ma non sono stati digitalizzati. Sono in un archivio negli Stati Uniti. Per leggerli bisogna andarci.
 
 L'analista non ci è ancora andato.
 
@@ -248,7 +246,7 @@ Due mesi prima dell'arresto di Ingeborg.
 
 L'analista guarda la timeline.
 
-Aprile 1945. Il capitano Bessman del CIC libera Antonin Louzek a Buchenwald.
+Maggio 1945. Il capitano Bessman del CIC libera Antonin Louzek a Buchenwald.
 
 Primavera 1946. Ingeborg incontra Kolesnikov al Continental Cabaret di Vienna.
 
@@ -295,6 +293,4 @@ Comincia con il prigioniero 16417.
 Comincia con suo padre.
 
 ---
-
-*Fine Episodio 3*
 
