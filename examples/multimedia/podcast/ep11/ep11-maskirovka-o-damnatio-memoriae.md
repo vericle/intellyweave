@@ -28,17 +28,15 @@ E non è cosa è stato trovato.
 
 L'analista attiva una nuova funzione. Si chiama Pattern Detection.
 
-Il sistema non cerca solo entità. Non cerca solo relazioni. Cerca ricorrenze. Anomalie. Cose che si ripetono. 
+Il sistema non cerca solo entità. Non cerca solo relazioni. Cerca ricorrenze. Anomalie. Cose che si ripetono.
 
 Cerca cose che dovrebbero ripetersi ma non si ripetono. Cerca cose che mancano.
 
 ---
 
-La domanda è semplice.
+La domanda non è più perché Achtyrskij sia invisibile. Questo lo sappiamo già.
 
-Perché Achtyrskij è un fantasma documentato?
-
-Perché esiste negli archivi fisici ma non nel web?
+La domanda è se esiste un pattern. Se la sua cancellazione segue uno schema. Se è successo anche ad altri.
 
 ---
 
@@ -56,45 +54,19 @@ Non è un errore. Non è una coincidenza. È un meccanismo.
 
 ---
 
-Sullo schermo appare una lista.
+Sullo schermo appare una lista. Diversi fattori di esclusione.
+
+I primi tre li conosciamo. Non riabilitato. Nessuna categoria commemorativa. Nessun discendente che lo cerchi.
+
+Ma il sistema ha trovato qualcos'altro.
 
 ---
 
-Primo fattore. Achtyrskij non è stato riabilitato.
+L'organizzazione stessa è sparita.
 
-Lo sappiamo già. Nel 2001 la Federazione Russa ha riabilitato molte vittime delle repressioni sovietiche. Chi viene riabilitato entra nei database di Memorial. Chi non viene riabilitato resta fuori.
+Il Quartermaster mappa il territorio informativo. Cerca "Weißemigrantenkomitee Wels". Il Comitato degli Emigrati Bianchi di Wels. L'organizzazione che Achtyrskij presiedeva.
 
-Achtyrskij non è stato riabilitato.
-
----
-
-Secondo fattore. Non appartiene a nessuna categoria commemorativa.
-
-I database ucraini raccolgono i combattenti dell'Esercito di Liberazione Ucraino. Ma Achtyrskij ci è rimasto poco. Non abbastanza per essere catalogato.
-
-I database austriaci raccolgono le vittime civili. Ma Achtyrskij era un agente. Non un civile innocente.
-
-I database americani raccolgono gli eroi della Guerra Fredda. Ma Achtyrskij si è consegnato. Ha tradito.
-
----
-
-Terzo fattore. Nessuno lo cerca.
-
-Achtyrskij era celibe. Non aveva figli. Non ci sono discendenti che possano chiedere la riabilitazione. Che possano portare avanti la sua memoria.
-
----
-
-Quarto fattore. Il libro non è digitalizzato.
-
-"Stalins letzte Opfer". L'unica fonte che lo documenta in dettaglio. Pubblicato a Graz. Edizione accademica. Tiratura limitata.
-
-Non esiste online.
-
----
-
-Quinto fattore. L'organizzazione stessa è sparita.
-
-L'analista cerca "Weißemigrantenkomitee Wels". Il Comitato degli Emigrati Bianchi di Wels. L'organizzazione che Achtyrskij presiedeva.
+Il Case Officer esegue la ricerca.
 
 Zero risultati.
 
@@ -170,9 +142,7 @@ Basta che nessuno ti cerchi.
 
 ---
 
-Achtyrskij non era né vittima né eroe. Era troppo colpevole per essere commemorato. Troppo sconfitto per essere celebrato.
-
-Nessuna istituzione lo ha reclamato.
+Nessuna istituzione lo ha reclamato. Nessun familiare.
 
 E così è sparito.
 
@@ -202,7 +172,7 @@ Ma c'è qualcosa che non torna.
 
 L'analista attiva un'altra funzione. Si chiama Network Analysis.
 
-Non analizza le persone. Analizza le strutture. I nodi. Le connessioni. E soprattutto i vuoti.
+Analizza le persone. I luoghi. Le fonti. Analizza le strutture. I nodi. Le connessioni. E soprattutto i vuoti.
 
 ---
 
@@ -214,19 +184,21 @@ Fondo 7523. La collezione del Presidium del Soviet Supremo. Contiene le richiest
 
 ---
 
-L'analista cerca i fascicoli disponibili online.
+L'analista dà un compito al sistema. Confrontare i fascicoli disponibili online.
+
+Il Quartermaster mappa il territorio. Il Case Officer esegue.
 
 ---
 
-Delo 58. Anno 1938.
+Primo fascicolo. Delo 58. Anno 1938.
 
-È il fascicolo delle richieste di grazia dopo i processi di Mosca. Bukharin. Rykov. Gli altri.
+Le richieste di grazia dopo i processi di Mosca. Bukharin. Rykov. Gli altri.
 
-È digitalizzato. È online. Su istmat.org. Chiunque può leggerlo.
+Il Case Officer lo trova. È digitalizzato. È online. Su istmat.org. Chiunque può leggerlo.
 
 ---
 
-L'analista apre il documento.
+Il documento esiste. È consultabile. È pubblico.
 
 Protocollo numero due. Quattordici marzo 1938.
 
@@ -238,15 +210,11 @@ Firma: Segretario del Presidium A. Gorkin.
 
 ---
 
-Il documento esiste. È consultabile. È pubblico.
+Secondo fascicolo. Delo 102. Anno 1950.
 
----
+La richiesta di grazia di Achtyrskij. Pagine 49-53.
 
-Adesso l'analista cerca un altro fascicolo.
-
-Delo 102. Anno 1950.
-
-È il fascicolo che contiene la richiesta di grazia di Achtyrskij. Pagine 49-53.
+Il Case Officer cerca.
 
 ---
 
@@ -254,7 +222,7 @@ Non è online.
 
 ---
 
-Il sistema verifica.
+Il Quartermaster restituisce il confronto.
 
 Delo 58 del 1938. Digitalizzato.
 
@@ -316,9 +284,9 @@ Non è teoria. È storia documentata.
 
 ---
 
-L'analista cerca nei database.
+L'analista dà un nuovo compito al sistema. Cercare precedenti. Casi di agenti dichiarati morti e poi riemersi.
 
-Cerca casi di agenti dichiarati morti e poi riemersi.
+Il Quartermaster mappa gli archivi di intelligence. Il Case Officer esegue.
 
 ---
 
@@ -420,103 +388,7 @@ Teniamo questo a mente.
 
 ---
 
-## PARTE QUINTA: L'ANOMALIA
-
----
-
-Torniamo all'analista. Torniamo allo schermo.
-
-C'è un altro nome che il sistema ha segnalato.
-
----
-
-Novikova-Achtyrskaja.
-
----
-
-Ricordate il documento sovietico che condanna Kolesnikov.
-
-Smascherato dalle testimonianze delle spie americane condannate Achtyrskij e Novikova-Achtyrskaja.
-
----
-
-Due persone hanno testimoniato contro Kolesnikov.
-
-Achtyrskij e sua moglie.
-
----
-
-Ma ecco l'anomalia.
-
----
-
-Achtyrskij è stato fucilato. Il 28 agosto 1950. A Mosca.
-
-Novikova-Achtyrskaja non compare nella lista dei fucilati.
-
----
-
-L'analista cerca in tutti i database disponibili.
-
-Lista delle ventisei persone austriache fucilate tra il 1950 e il 1953. Achtyrskij c'è. Novikova-Achtyrskaja no.
-
-Database Memorial. Nessun risultato.
-
-Archivi ucraini. Nessun risultato.
-
----
-
-Cosa le è successo?
-
----
-
-Il sistema formula tre ipotesi.
-
----
-
-Prima ipotesi. È stata fucilata ma non registrata.
-
-Possibile. Ma improbabile. I sovietici erano meticolosi nei registri delle esecuzioni.
-
----
-
-Seconda ipotesi. È morta in un campo di lavoro.
-
-Possibile. Molti prigionieri non sopravvivevano.
-
----
-
-Terza ipotesi. Ha ottenuto qualcosa in cambio della sua testimonianza.
-
----
-
-L'analista si ferma su questa ipotesi.
-
----
-
-Se Novikova-Achtyrskaja ha testimoniato insieme ad Achtyrskij ma non è stata fucilata forse la sua testimonianza valeva di più.
-
-Forse sapeva qualcosa che altri non sapevano.
-
-Forse la lista che ha fornito era più lunga.
-
----
-
-O forse ha fatto un accordo.
-
----
-
-Il sistema non può confermare. Non ci sono documenti accessibili.
-
-Ma registra l'anomalia. La segnala come priorità alta per future ricerche.
-
----
-
-Qualcuno è sopravvissuto.
-
----
-
-## PARTE SESTA: LA SINTESI
+## PARTE QUINTA: LA SINTESI
 
 ---
 
@@ -600,7 +472,7 @@ E c'è una domanda ancora più grande.
 
 ---
 
-## PARTE SETTIMA: LA DOMANDA
+## PARTE SESTA: LA DOMANDA
 
 ---
 
@@ -613,36 +485,6 @@ Roma comincia a svegliarsi.
 Il sistema ha fatto il suo lavoro. Ha mappato i pattern. Ha identificato le anomalie. Ha calcolato le probabilità.
 
 Ma non può rispondere alla domanda fondamentale.
-
----
-
-Torniamo indietro.
-
-Torniamo a quello che sappiamo con certezza.
-
----
-
-Achtyrskij si consegna ai sovietici tra la fine del 1948 e l'inizio del 1949. Porta con sé una lista di spie. Testimonia contro Kolesnikov.
-
-Il 28 agosto 1950 viene fucilato a Mosca.
-
----
-
-Ingeborg viene arrestata il 12 agosto 1950. Sedici giorni prima dell'esecuzione del suo reclutatore.
-
-Il 9 gennaio 1951 viene fucilata anche lei.
-
----
-
-Kolesnikov scompare il 30 marzo 1949. Viene formalmente arrestato il 15 maggio 1949. Condannato sulla base della testimonianza di Achtyrskij.
-
-Anche lui fucilato.
-
----
-
-Novikova-Achtyrskaja testimonia insieme al marito.
-
-Ma non viene fucilata.
 
 ---
 
@@ -673,8 +515,6 @@ Ma ha una domanda.
 Una domanda che non aveva mai considerato prima.
 
 ---
-
-Se Novikova-Achtyrskaja è sopravvissuta collaborando chi altri potrebbe averlo fatto?
 
 Se Agent Garbo ha vissuto trentasei anni da morto chi altri potrebbe essere sparito e non morto?
 
@@ -711,5 +551,3 @@ Chi era il vero obiettivo di tutta questa operazione?
 E chi è davvero sparito?
 
 ---
-
-*Fine*

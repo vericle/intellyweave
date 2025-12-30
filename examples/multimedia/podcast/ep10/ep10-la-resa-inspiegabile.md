@@ -1,4 +1,4 @@
-# Episodio 10: Il filo rosso
+# Il filo rosso
 
 ---
 
@@ -12,11 +12,11 @@ E un'equazione su di lui ha lo stesso effetto che il colore rosso ha su un toro.
 
 L'analista sa che nessun fenomeno naturale o umano è veramente improvviso o inspiegabile.
 
-Ogni cosa è governata dalla legge di causa ed efetto. Di azione e reazione.
+Ogni cosa è governata dalla legge di causa ed effetto. Di azione e reazione.
 
-Ha anche un'altro problema. I nomi con una sola o pochissime ricorrenze.
+Ha anche un altro problema. I nomi con una sola o pochissime ricorrenze.
 
-Novikov. Un agente che si è consegnato ai sovietici e che in tutta la documentazione disponibile appare una sola volta. 
+Novikov. Un agente che si è consegnato ai sovietici e che in tutta la documentazione disponibile appare una sola volta.
 
 ---
 
@@ -60,7 +60,7 @@ L'analista ha costruito due agenti specializzati. Li ha chiamati Quartermaster e
 
 ---
 
-In gergo militare il Quartermaster è l'ufficiale logistico. Quello che fornisce gli strumenti prima delle operazioni. 
+In gergo militare il Quartermaster è l'ufficiale logistico. Quello che fornisce gli strumenti prima delle operazioni.
 
 Quello che sa dove si trovano le risorse e come vanno usate.
 
@@ -74,7 +74,7 @@ Non cerca la risposta. Cerca dove potrebbe trovarsi la risposta.
 
 Quali archivi potrebbero contenere documenti rilevanti. Quali database. Quali collezioni di microfilm. Quali fondi d'archivio consultabili solo su supporto fisico.
 
-Classifica ogni fonte. Pubblica. Ristretta. Con solo accesso fisico. Che richiede credenziali. O che mon esiste online.
+Classifica ogni fonte. Pubblica. Ristretta. Con solo accesso fisico. Che richiede credenziali. O che non esiste online.
 
 Non risponde alla domanda. Risponde alla meta-domanda.
 
@@ -114,15 +114,15 @@ Disertori. Agenti doppiogiochisti. Coinvolti in fatti strettamente correlati nel
 
 Verifica se su di loro ci sono informazioni disponibili. Se il sistema trova risultati per loro ma non per il soggetto in esame, allora l'assenza è significativa.
 
-Non è un errore metodologico o ricerca. Non è un errore tecnico di traslitterazione. è un atto deliberato. è logica umana. è volontà.
+Non è un errore metodologico. Non è un errore tecnico di traslitterazione. È un atto deliberato. È logica umana. È volontà.
 
 ---
 
-Dato che nella documentazione ufficiale risulta che Achtyrskij, nella sua richiesta di grazia dice di essersi consegnato ai sovietici perché temeva la vendetta del controspionaggio americano che lo accusava di aver fatto fallire operazioni importanti e che lo aveva minacciato di gravi conseguenze.
+Nella documentazione ufficiale Achtyrskij spiega perché si è consegnato. Era la sua richiesta di grazia. Temeva la vendetta del controspionaggio americano. Lo accusavano di aver fatto fallire operazioni importanti. Lo avevano minacciato di gravi conseguenze.
 
 L'analista dà ai due agenti un compito.
 
-Trovare documenti desecretati del CIC inerenti lamnentele e rapporti disciplinari del periodo 1948-1950.
+Trovare documenti desecretati del CIC inerenti lamentele e rapporti disciplinari del periodo 1948-1950.
 
 Trovare documenti o microfilm sovietici sul debriefing di Achtyrskij. Verbali degli interrogatori. La richiesta di grazia originale. 
 
@@ -132,7 +132,7 @@ Il sistema lavora per ore.
 
 ---
 
-è tardi. L'analista davanti allo schermo. I primi risultati che compaiono.
+È tardi. L'analista davanti allo schermo. I primi risultati che compaiono.
 
 Il Quartermaster ha mappato il teatro informativo.
 
@@ -396,7 +396,7 @@ Il sistema ha ricostruito la sequenza degli eventi.
 
 Lyon cerca qualcuno da incolpare. Il suo pattern comportamentale è documentato. Quando sospetta un tradimento non indaga. Agisce.
 
-Achtyrskij? Stessso teatro operativo. Stessa area geografica. Wels. A trenta chilometri da Steyr. Dove Lyon interrogò il sospettato.
+Achtyrskij? Stesso teatro operativo. Stessa area geografica. Wels. A trenta chilometri da Steyr. Dove Lyon interrogò il sospettato.
 
 Achtyrskij aveva reclutato agenti. Kolacek-Greskova. Kolber. Ingeborg. Molti altri.
 
@@ -528,7 +528,7 @@ L'uomo che Ingeborg aveva aiutato a fuggire. L'ufficiale sovietico che lei aveva
 
 ---
 
-Achtyrskij lo ha tradito.
+Lo ha tradito.
 
 Ha testimoniato contro di lui. La sua testimonianza è stata usata per condannarlo.
 
@@ -562,9 +562,9 @@ Achtyrskij testimonia contro Kolesnikov.
 
 ---
 
-Il reclutatore ha tradito. Ha brucaito un'intera rete.
+Il reclutatore ha tradito. Ha bruciato un'intera rete.
 
-Chi arruolato Ingeborg ha fatto condannare a morte un'asset critico. E non solo lui.
+Chi ha arruolato Ingeborg ha fatto condannare a morte un asset critico. E non solo lui.
 
 ---
 
@@ -737,5 +737,3 @@ Il sistema ha mappato il primo anello della catena.
 Il resto è ancora sepolto negli archivi di Mosca e di Washington.
 
 ---
-
-*Fine Episodio 10*
