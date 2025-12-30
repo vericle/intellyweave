@@ -2,11 +2,25 @@
 
 ---
 
+È il gennaio 2025. Roma.
+
+Un uomo è seduto davanti a uno schermo. Ha settantacinque documenti. Tutti in cirillico. Tutti provenienti dagli archivi del controspionaggio militare sovietico.
+
+L'uomo è un analista. Non un analista di intelligence. Ma un analista funzionale. Un architetto software con più di vent'anni di esperienza in linguistica computazionale.
+
+È il nipote di una donna scomparsa nel 1950 a Vienna. Una donna che nessuno ha mai ritrovato. Una donna di cui la famiglia non ha mai potuto parlare.
+
+Per decenni sua nonna ripeteva sempre la stessa frase. "Non dovete parlare. Ci ammazzano tutti."
+
+L'uomo sta leggendo un documento. È datato agosto 1950. Parla di una donna. Una donna che cammina verso una stazione.
+
+---
+
 È il 12 agosto 1950. Vienna.
 
-Una donna cammina. Ha ventitré anni. I capelli scuri raccolti. Un vestito leggero. È estate.
+Una donna cammina. Ha ventitré anni. I capelli raccolti. Un vestito leggero. È estate.
 
-Si chiama Ingeborg. Ingeborg Novak. O forse no.
+Si chiama Ingeborg. Ingeborg Loucek. O forse Novak.
 
 Sta andando alla stazione Est. La Ostbahnhof. Deve prendere un treno per Wels. Lì c'è suo figlio. Ha due anni. Si chiama Hans.
 
@@ -15,8 +29,6 @@ Ingeborg cammina veloce. Non vede l'ora di abbracciarlo.
 Al campo profughi di Wels non ci arriverà mai.
 
 ---
-
-Dove siamo adesso? Una strada di Vienna. Una mattina d'estate. Una giovane madre.
 
 Fermiamola lì per un momento. Prima che tutto cambi.
 
@@ -29,30 +41,6 @@ Per capire dobbiamo tornare indietro. Sempre a Vienna ma quattro anni prima.
 È l'aprile del 1946. La guerra è finita da un anno.
 
 Vienna è una città ferita. Le bombe hanno lasciato il segno. Interi quartieri sono macerie. Ma la gente ricostruisce. Sopravvive. Cerca di tornare alla normalità.
-
-Ingeborg ha diciannove anni. È nata qui. Suo padre è un impiegato postale di origine ceca. Sua madre è viennese. Anche lei di origine ceca. Vivono a Margaretenstraße. Nel quinto distretto.
-
-Ingeborg lavora come domestica. Guadagna poco. Ma è giovane. Ha tutta la vita davanti.
-
-Una sera va a ballare. Al Continental Cabaret. Su Taborstrasse. È un locale popolare. Ci vanno i viennesi. Ci vanno anche i militari delle potenze occupanti.
-
-Quella sera Ingeborg incontra un uomo. È alto. Elegante. Ha gli occhi chiari.
-
-Si chiama Veniamin. Veniamin Kolesnikov. È un capitano d'artiglieria dell'Armata Rossa.
-
----
-
-Dove siamo adesso? Al Continental Cabaret. Aprile 1946. Una ragazza viennese e un ufficiale sovietico.
-
-Fermiamoli lì per un momento. Prima che si innamorino.
-
-Perché quello che sta per succedere cambierà le loro vite. E ne distruggerà almeno una. 
-
-Forse.
-
-Ma per capire dobbiamo prima capire dove ci troviamo.
-
----
 
 Vienna nel 1946 non è una città normale. È una città occupata.
 
@@ -67,6 +55,36 @@ E il centro storico? Il primo distretto? Quello lo controllano tutti. A rotazion
 Ci sono posti di blocco. Controlli. Pattuglie miste. Soldati americani accanto a soldati sovietici. Alleati sulla carta. Ma già nemici nella pratica.
 
 Perché nel 1946 la Guerra Fredda sta già cominciando. E Vienna è nel mezzo.
+
+---
+
+L'analista a Roma alza gli occhi dallo schermo.
+
+I documenti parlano di Vienna. Parlano di settori. Parlano di controlli.
+
+Ma parlano anche di qualcos'altro. Parlano di una ragazza di diciannove anni che incontra un ufficiale sovietico in un locale notturno.
+
+Torniamo a Vienna. Torniamo a quella primavera del 1946.
+
+---
+
+Ingeborg ha diciannove anni. È nata qui. Suo padre è un impiegato postale di origine ceca. Un uomo che ha fatto cose. Cose di cui in famiglia non si parla mai. Sua madre è viennese. Anche lei di origine ceca. Vivono a Margaretenstraße. Nel quinto distretto.
+
+Ingeborg lavora come domestica. Guadagna poco. Ma è giovane. Ha tutta la vita davanti.
+
+Una sera va a ballare. Al Continental Cabaret. Su Taborstrasse. È un locale popolare. Ci vanno i viennesi. Ci vanno anche i militari delle potenze occupanti.
+
+Quella sera Ingeborg incontra un uomo. È alto. Elegante. Ha gli occhi chiari.
+
+Si chiama Veniamin. Veniamin Kolesnikov. È un capitano d'artiglieria dell'Armata Rossa.
+
+---
+
+Lasciamoli lì per un momento. Al Continental Cabaret. Aprile 1946. Una ragazza viennese e un ufficiale sovietico.
+
+Perché quello che sta per succedere cambierà le loro vite.
+
+Ma per capire dobbiamo prima capire il contesto. Il pericolo. Le regole.
 
 ---
 
@@ -88,21 +106,25 @@ Kolesnikov lo sa. Ma continua a vedere Ingeborg.
 
 ---
 
-Torniamo al Continental Cabaret. Quella sera di aprile.
+L'analista a Roma ha trovato i rapporti dello SMERSH su Kolesnikov.
+
+Sanno tutto. Sanno chi frequenta. Sanno dove va. Sanno con chi parla.
+
+Ma c'è qualcosa che non torna. Nelle date. Nei dettagli.
+
+I documenti dicono cose che non combaciano con la versione ufficiale.
+
+Torniamo a Vienna. Torniamo a quell'amore impossibile.
+
+---
 
 Ingeborg e Veniamin ballano. Parlano. Si scoprono. Lei ha diciannove anni. Lui qualcuno di più.
 
 Si rivedono. Una volta. Poi un'altra. Poi diventano inseparabili.
 
-È amore? Probabilmente sì. Almeno all'inizio.
-
 Ma c'è anche altro. Per Ingeborg Kolesnikov rappresenta protezione. Sicurezza. In un mondo incerto.
 
 Per Kolesnikov Ingeborg rappresenta forse una via d'uscita. Un legame con l'Occidente. Una possibilità.
-
-Quale possibilità? Lo scopriremo.
-
----
 
 Passano i mesi. L'estate del 1946. L'autunno. L'inverno.
 
@@ -130,59 +152,59 @@ Kolesnikov si nasconde lì. Nel cuore del settore sovietico. A pochi chilometri 
 
 La madre di Ingeborg non è contenta. Non vuole quell'uomo in casa. Non vuole rischiare. Ma la figlia insiste.
 
-Kolesnikov resta nascosto per settimane. Poi per mesi. Ingeborg lo mantiene. Porta cibo. Porta notizie. Cerca di trovare una via d'uscita.
+Kolesnikov resta nascosto per settimane. Ingeborg lo mantiene. Porta cibo. Porta notizie. Cerca di trovare una via d'uscita.
 
 Ma non è facile. Attraversare la linea di demarcazione richiede documenti. Contatti. Aiuto.
 
 ---
 
-Ma prima che il piano possa funzionare succede qualcosa.
-
 È aprile 1947. Qualcuno ha parlato. Forse un vicino. Forse una spia. Lo SMERSH sa dove si nasconde Kolesnikov.
 
-L'irruzione avviene di notte. La polizia militare sovietica. Agenti del controspionaggio. Entrano nell'appartamento. Trovano Kolesnikov.
+L'irruzione avviene di notte. La polizia militare. Agenti del controspionaggio. Entrano nell'appartamento. Trovano Kolesnikov.
 
-Kolesnikov fugge sui tetti.
+Kolesnikov tenta la fuga sui tetti.
 
-Lo prendono. Lo portano via.
+Lo prendono.
+
+---
 
 Lo arrestano.
 
 ---
 
-Dove siamo adesso? Aprile 1947. Un appartamento a Margaretenstraße. Un uomo viene portato via.
-
-Fermiamoci qui per un momento.
-
-Cosa succede a Ingeborg? E cosa succede a Kolesnikov?
-
----
-
 Kolesnikov viene portato alla prigione militare sovietica di Gießhübl. Vicino a Perchtoldsdorf. A sud di Vienna.
 
-Non sappiamo molto di questa prigione. I documenti sono scarsi. Ma sappiamo che fa parte del sistema SMERSH e dell'NKVD. Stesse procedure di Baden. Stessa durezza.
+Non sappiamo molto di questa prigione. I documenti sono scarsi. Ma sappiamo che fa parte del sistema SMERSH. Stesse procedure di Baden. Stessa durezza.
 
 L'accusa contro Kolesnikov è alto tradimento. Diserzione. La pena prevista è la morte.
 
 Ma Kolesnikov non viene fucilato. Non subito.
 
+---
+
+L'analista a Roma rilegge questo passaggio.
+
 Due mesi dopo l'arresto succede qualcosa di incredibile.
 
 Kolesnikov evade.
 
-È l'unico a riuscirci in tutta la storia di quella prigione. Prima di lui nessuno. Dopo di lui nessuno.
+Sembra essere l'unico a riuscirci in tutta la storia di quella prigione. Prima di lui nessuno. Dopo di lui nessuno.
 
 Come fa? Chi lo aiuta?
 
+I documenti raccontano una versione. Ma l'analista sa che le versioni ufficiali spesso sono incomplete.
+
+---
+
 La versione ufficiale dice che Ingeborg contatta una sua ex compagna di scuola. Lei ha un fidanzato americano. Tramite questo contatto procura i documenti necessari.
 
-Kolesnikov attraversa la linea di demarcazione sul fiume Enz. E raggiunge la zona americana. Si rifugia nel campo profughi di Wels.
+Kolesnikov attraversa la linea di demarcazione sul fiume Enns. E raggiunge la zona americana. Si rifugia nel campo profughi di Wels.
 
 Due settimane dopo scrive a Ingeborg. Le dice di raggiungerlo.
 
 ---
 
-Ingeborg parte. Contro il volere di sua madre. Contro ogni logica.
+Ingeborg parte. Contro il volere di sua madre.
 
 Va a Wels. Trova Kolesnikov. Si stabiliscono insieme nel campo profughi.
 
@@ -216,11 +238,13 @@ Ma tiene duro. Per Hans.
 
 Poi qualcosa cambia di nuovo.
 
-Kolesnikov scompare. Nel 1949. Da un giorno all'altro non c'è più.
+Kolesnikov scompare. Nel 1949. Da un giorno all'altro scompare.
+
+I documenti sovietici riportano una nota. "Left for unknown." Partito per ignoto.
 
 Nessuno sa dove sia andato. I sovietici lo cercano ancora. Gli americani forse lo proteggono. Forse lo hanno fatto sparire. Forse altro.
 
-Ingeborg resta sola. Con un bambino di un anno. Senza soldi. Senza marito.
+Ingeborg resta sola. Con un bambino di un anno. Senza soldi. Senza compagno.
 
 Torna a Vienna. Trova lavoro. Lascia Hans a Wels con qualcuno che può prendersene cura. Va a trovarlo quando può.
 
@@ -248,7 +272,7 @@ Questa volta interrogano lei.
 
 Cosa le chiedono? Cosa sa di Kolesnikov? Dove è andato? Chi lo ha aiutato? Chi sono i suoi contatti americani?
 
-Ingeborg risponde. O non risponde. Non lo sappiamo con certezza.
+Ingeborg risponde. O non risponde. I documenti non lo dicono con certezza.
 
 Sappiamo solo cosa succede dopo.
 
@@ -258,13 +282,13 @@ Il 21 ottobre 1950. Due mesi dopo l'arresto.
 
 Un tribunale militare sovietico si riunisce a Baden. Il Tribunale MT 28990.
 
-Ingeborg viene processata. L'accusa è spionaggio. Articolo 17-58-6 del codice penale sovietico. Spionaggio per conto degli Stati Uniti d'America.
+Ingeborg viene processata. L'accusa è spionaggio. Articolo 58-6 del codice penale sovietico. Spionaggio per conto degli Stati Uniti d'America.
 
 Il processo dura poco. La sentenza arriva in fretta.
 
 Colpevole.
 
-La condanna.
+---
 
 Morte per fucilazione.
 
@@ -276,7 +300,7 @@ Scrive una lettera. Una domanda di grazia. Undici pagine. In tedesco. Viene trad
 
 Nella lettera racconta la sua storia. Come ha conosciuto Kolesnikov. Come lo ha nascosto. Come lo ha aiutato a fuggire. Perché lo ha fatto.
 
-Dice di aver agito per amore. Non per soldi. Non per ideologia. Per amore.
+Dice di aver agito per amore. Non per soldi. Non per ideologia.
 
 Chiede pietà. Chiede di poter vivere. Di poter vedere suo figlio crescere.
 
@@ -284,15 +308,15 @@ Chiede pietà. Chiede di poter vivere. Di poter vedere suo figlio crescere.
 
 Il 6 dicembre 1950 la Corte Suprema dell'URSS esamina la sua richiesta.
 
-La risposta è no.
-
-La condanna a morte viene confermata.
+La risposta arriva.
 
 ---
 
-Il 9 gennaio 1951.
+No.
 
-Mosca.
+---
+
+Il 9 gennaio 1951. Mosca.
 
 Ingeborg viene fucilata. Ha ventitré anni e sei mesi.
 
@@ -300,11 +324,13 @@ Il suo corpo viene cremato. Le ceneri vengono sepolte in una fossa comune. Al ci
 
 Hans ha quasi tre anni. Non vedrà mai più sua madre.
 
+Due giorni dopo l'arresto di Ingeborg qualcuno preleva Hans dal campo di Wels. Chi sia e perché lo faccia i documenti non lo dicono.
+
 ---
 
-Questa è la storia ufficiale.
+L'analista a Roma chiude il fascicolo.
 
-Una giovane donna viennese si innamora di un ufficiale sovietico. Lo nasconde quando lui vuole disertare. Lo aiuta a fuggire. Viene catturata. Processata. Condannata. Giustiziata.
+Questa è la storia ufficiale. Una giovane donna viennese si innamora di un ufficiale sovietico. Lo nasconde quando lui vuole disertare. Lo aiuta a fuggire. Viene catturata. Processata. Condannata. Giustiziata.
 
 Una storia tragica. Una storia di guerra fredda. Una storia finita.
 
@@ -338,15 +364,13 @@ O così sembra.
 
 ---
 
-Ma c'è qualcosa che non torna.
+L'analista a Roma guarda i documenti.
 
-Nei documenti. Nelle date. Nei dettagli.
+Ci sono incongruenze. Date che non tornano. Dettagli oscuri. Versioni contraddittorie.
 
-Qualcosa che un'analista nota. Anni dopo. Leggendo e rileggendo le carte.
+Un'evasione impossibile. Una ragazza di vent'anni che procura documenti falsi. Una scomparsa improvvisa. Partito per ignoto.
 
-Qualcosa che non si spiega con la versione ufficiale.
-
----
+E tracce che portano altrove. In altri paesi. In altri archivi.
 
 Chi era davvero Ingeborg?
 
@@ -365,6 +389,3 @@ Questa è la sua storia.
 Ma forse. Forse non è finita come pensiamo.
 
 ---
-
-*Fine Episodio 1*
-
