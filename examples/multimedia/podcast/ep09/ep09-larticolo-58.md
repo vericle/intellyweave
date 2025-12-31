@@ -58,7 +58,7 @@ Preparazione di atti di spionaggio a favore degli Stati Uniti d'America.
 
 Era il 21 ottobre 1950. Il tribunale militare 28990. Baden.
 
-Lo stesso tribunale che un anno dopo avrebbe condannato Karl Engelmann. Lo abbiamo già incontrato nell'episodio precedente.
+Lo stesso tribunale che un anno dopo avrebbe condannato Karl Engelmann. Lo studente che spiava Broda.
 
 ---
 
@@ -128,11 +128,7 @@ Le accuse sono queste. Ingeborg ha conosciuto un ufficiale sovietico. Lo ha aiut
 
 ---
 
-Questo lo sappiamo già. Lo abbiamo raccontato negli episodi precedenti.
-
----
-
-Quello che non abbiamo raccontato è il dettaglio che cambia tutto.
+Ma c'è un dettaglio che cambia tutto.
 
 Al momento dell'arresto di Ingeborg suo figlio aveva due anni e mezzo. E suo padre?
 
@@ -148,7 +144,7 @@ La versione ufficiale sovietica dice altro. Condannato per tradimento. Articolo 
 
 Se è vero allora qualcuno lo ha catturato. Nel cuore della zona americana. A Wels.
 
-La banda di Benno Blum. La conosciamo. Rapiva disertori sovietici. Li consegnava ai sovietici.
+La banda di Benno Blum. Rapiva disertori sovietici. Li consegnava ai sovietici.
 
 Forse.
 
@@ -162,8 +158,6 @@ Hans era a Wels. Zona americana. Due giorni dopo l'arresto di sua madre i serviz
 
 Entrò in un programma di protezione. Ne uscì solo nel 1965. A diciassette anni.
 
-Ne abbiamo già parlato.
-
 ---
 
 ## PARTE QUARTA: IL GNADENGESUCH
@@ -176,7 +170,7 @@ Undici pagine.
 
 ---
 
-Non è l'unica a farlo. Abbiamo già visto che queste lettere seguono un formato simile. Una struttura. Un template.
+Non è l'unica a farlo. Queste lettere seguono un formato simile. Una struttura. Uno schema.
 
 ---
 
@@ -358,6 +352,18 @@ Nella coorte dei casi sotto l'Articolo 58-6 la condanna di Ingeborg fu più seve
 
 ---
 
+C'era un'altra differenza. Ingeborg non aveva solo spiato. Aveva reclutato. Aveva costruito una rete.
+
+Johanna Tscharnutter. Edeltraude Kolacek-Greskova. Altre donne ancora.
+
+E prima ancora aveva contribuito a un'evasione. Kolesnikov. Gießhübl. Documenti falsi. Linea di demarcazione.
+
+Forse questa era l'aggravante. L'organizzazione. Il reclutamento. L'esfiltrazione.
+
+O forse Ingeborg sapeva qualcosa che altri non dovevano sapere.
+
+---
+
 Il sistema non può dare certezze. Ma può mostrare le domande giuste.
 
 ---
@@ -378,7 +384,7 @@ Cinquant'anni dopo la sua esecuzione.
 
 E non fu l'unica.
 
-Lo studio conta 104 casi esaminati per riabilitazione. 69 decisioni positive nel 1993. 36 nel 1999. 17 nel 2001.
+Lo studio conta più di cento casi esaminati per riabilitazione. Decine di decisioni positive negli anni novanta. Altre ancora nel 2001.
 
 Riabilitazioni su questa scala non dimostrano ogni singola ingiustizia.
 
@@ -412,7 +418,7 @@ La differenza sembra minima. Ma per le famiglie conta.
 
 Torniamo alla frase della madre di Ingeborg.
 
-L'abbiamo sentita in più episodi. Ogni volta che qualcuno chiedeva di Ingeborg. La stessa risposta.
+Ogni volta che qualcuno chiedeva di Ingeborg. La stessa risposta.
 
 "Non dovete parlare. Ci ammazzano tutti."
 

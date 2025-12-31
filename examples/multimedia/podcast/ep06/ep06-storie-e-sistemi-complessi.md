@@ -118,17 +118,7 @@ Il suo vice per il contrabbando è Karl Holländer. Quello della rissa. Si sono 
 
 Per le operazioni di rapimento invece c'è Fischel. Philipp Mehler. È lui che tiene i contatti con i sovietici. È lui che procura le auto. Le bottiglie con i sedativi. Che individua le vittime.
 
----
-
-Poi ci sono gli altri.
-
-Adi Altmann. Ventotto anni. Operaio tessile. Rumeno. Ebreo. Uno che ha perso tutto durante la guerra e adesso cerca di sopravvivere.
-
-Herbert Eichhorn. Ventitré anni. Meccanico. Viennese.
-
-Jetty Hahn. Una donna. Non sappiamo molto di lei. Ma c'è anche lei nelle operazioni.
-
-E altri ancora. Autisti. Vedette. Picchiatori.
+Poi ci sono gli altri. Autisti. Vedette. Picchiatori. Gente che ha perso tutto durante la guerra e adesso cerca di sopravvivere.
 
 ---
 
@@ -146,27 +136,9 @@ La consegnano.
 
 ---
 
-Il primo rapimento avviene il 7 giugno 1949.
+Il primo rapimento avviene il 7 giugno 1949. La vittima si chiama Mykolaj Baranowsky. Disertore sovietico. Salisburgo.
 
-La vittima si chiama Mykolaj Baranowsky. È un disertore sovietico. Vive a Salisburgo.
-
-Lo attirano con una scusa. Lo portano a Linz. Lo drogano. Lo caricano su un'auto.
-
-Quando si sveglia è in una cella. In un edificio al numero 2 della Plößlgasse. A Vienna.
-
-È la prigione segreta dell'NKWD.
-
----
-
-La Plößlgasse 2 è nel IV distretto. Nella zona sovietica.
-
-Dall'esterno sembra un edificio qualunque. Dentro ci sono celle. Stanze per gli interrogatori. Uomini che non usciranno mai.
-
-Baranowsky viene portato in una cella. C'è un altro uomo. Si chiama Marcus Aronowicz. È lì da mesi.
-
-Baranowsky gli racconta cosa è successo. Come lo hanno preso. Chi lo ha preso.
-
-Aronowicz ascolta. E ricorda.
+Finisce nella Plößlgasse 2. La prigione segreta dell'NKWD nel IV distretto. Dall'esterno sembra un edificio qualunque. Dentro ci sono celle. Stanze per gli interrogatori. Uomini che non usciranno mai.
 
 ---
 
@@ -197,8 +169,6 @@ I sovietici al posto di controllo lo vedono correre. Sentono le grida. Gli spari
 Lo prendono loro.
 
 Agzew finisce comunque nella Plößlgasse 2.
-
-Aronowicz lo vede attraverso il buco della serratura. Lo riconosce.
 
 ---
 
@@ -270,7 +240,7 @@ L'operazione Counter-Snatch scatta prima che i rapitori possano agire.
 
 ---
 
-Gli americani arrestano Altmann. Arrestano Eichhorn. Sequestrano le bottiglie con i sedativi. Trovano i documenti.
+Gli americani arrestano gli uomini della banda. Sequestrano le bottiglie con i sedativi. Trovano i documenti.
 
 Per la prima volta hanno prove concrete.
 
@@ -304,39 +274,15 @@ Benno Blum muore.
 
 Un'aula di tribunale. Salisburgo. Estate 1950.
 
-Sul banco degli imputati ci sono Adi Altmann e Herbert Eichhorn. Un alto tribunale civile americano.
+Sul banco degli imputati ci sono due uomini della banda. Il processo rivela il sistema: un rapimento al mese per un mese di protezione.
 
----
-
-Il processo rivela i dettagli dell'organizzazione.
-
-I testimoni raccontano. Friedrich Wühl. Un meccanico di Vienna che riparava le auto dell'NKWD. Racconta di essere stato amico intimo di un certo capitano Orlow. E di Karandashov. Racconta di aver conosciuto Blum attraverso di loro.
-
-Marcus Aronowicz. Quello che era nella cella della Plößlgasse. Racconta cosa ha visto. Chi ha incontrato. Cosa gli hanno raccontato le vittime.
-
----
-
-Emergono altri nomi. Altre operazioni.
-
-Il sistema delle "quote". Un rapimento al mese per un mese di protezione.
-
-I pagamenti in dollari. Trecento. Cinquecento. Solo promesse mai mantenute.
-
-Le donne coinvolte. Jetty Hahn e altre.
-
----
-
-Altmann ed Eichhorn vengono condannati.
-
-Ma sono pesci piccoli. I capi sono morti o irraggiungibili.
+Vengono condannati. Ma sono pesci piccoli. I capi sono morti o irraggiungibili.
 
 Blum è morto. Karandashov e Mokhow sono intoccabili nella zona sovietica.
 
 ---
 
-Il processo si chiude.
-
-Ma la storia non è finita.
+Il processo si chiude. Ma la storia non è finita.
 
 ---
 
@@ -422,7 +368,9 @@ Avevano nomi in codice. Abraham. Moe. Fergus. O'Toole. Alex. Thurmond.
 
 Abraham era un capitano di artiglieria ucraino. Trentacinque anni. Insegnante di matematica. I suoi genitori erano morti nella grande carestia ucraina. Non aveva mai creduto nel comunismo.
 
-Si chiamava Aleksandr Achtyrskij.
+L'analista ha un'ipotesi. Forse Abraham era Aleksandr Achtyrskij. L'uomo che reclutò Ingeborg a Wels.
+
+Ma è solo un'ipotesi. I documenti non lo confermano.
 
 ---
 
@@ -478,14 +426,6 @@ Era in viaggio per la Palestina.
 
 ---
 
-Una casa sicura alla periferia di Vienna. Fine anni quaranta.
-
-Un ufficiale americano parla con una donna. È austriaca. È bella. È disponibile. È disperata.
-
-L'ufficiale le fa una proposta.
-
----
-
 Nel linguaggio dell'intelligence americana le chiamavano fisherwomen. Pescatrici.
 
 Erano donne. Austriache. Tedesche. Donne che la guerra aveva lasciato senza niente.
@@ -496,59 +436,15 @@ Il loro compito era semplice. Avvicinare ufficiali sovietici. Sedurli. Convincer
 
 Il sistema funzionava così.
 
-La donna individuava un obiettivo. Un ufficiale che sembrava insoddisfatto. Che aveva paura di tornare in Unione Sovietica. Che era vulnerabile.
+La donna individuava un obiettivo. Un ufficiale vulnerabile. Gli si avvicinava. Costruiva un rapporto. Lo lavorava per mesi.
 
-Gli si avvicinava. Si faceva mantenere. Costruiva un rapporto.
-
-Poi cominciava a lavorarlo. A parlargli dell'Occidente. Della libertà. Della possibilità di ricominciare.
-
-Se l'ufficiale accettava di disertare la donna lo consegnava agli americani.
-
-In cambio otteneva una nuova vita anche lei.
+Se l'ufficiale accettava di disertare la donna lo consegnava agli americani. In cambio otteneva una nuova vita anche lei.
 
 ---
 
-Una di loro si chiamava Trudi.
+Una di loro si chiamava Trudi. Agganciò un capitano sovietico del segretariato dello Stato Maggiore. Lo convinse a disertare.
 
-Non sappiamo il suo vero nome. Sappiamo che era austriaca. Sappiamo che era cattolica. Che non entrava in una chiesa da anni.
-
-E sappiamo cosa fece.
-
----
-
-Trudi aveva agganciato un capitano sovietico. Si chiamava Yuli Andreyev. Lavorava nel segretariato dello Stato Maggiore sovietico a Vienna.
-
-Si erano conosciuti. Si erano frequentati. Trudi si era trasferita nel suo stesso palazzo. Nella zona sovietica.
-
-Era pericolosissimo. Ma discreto.
-
----
-
-Un giorno un agente americano si presentò a Trudi. Si chiamava Brewer.
-
-Le propose un accordo. Se avesse convinto Andreyev a disertare gli americani le avrebbero dato una nuova identità. Una nuova vita. Lontano dall'Austria.
-
-Trudi accettò.
-
----
-
-Ci vollero mesi.
-
-Trudi lavorò il capitano. Con pazienza. Con abilità.
-
-Alla fine Andreyev accettò.
-
----
-
-La fuga fu organizzata nei minimi dettagli.
-
-Andreyev ricevette un nuovo nome. Dexter. Documenti falsi. Vestiti americani. I capelli tinti di nero. Un baffo finto.
-
-Trudi divenne Josephine. Parrucca rossa. Gonna lunga. Documenti che la identificavano come cittadina americana. Moglie di Dexter.
-
-Presero il treno notturno per Salisburgo.
-
----
+La fuga fu organizzata nei minimi dettagli. Nuovi nomi. Documenti falsi. Il treno notturno per Salisburgo.
 
 Il maresciallo sovietico in persona si presentò al quartier generale americano. Voleva sapere dove fosse il suo capitano.
 
@@ -556,25 +452,7 @@ Gli americani negarono tutto.
 
 ---
 
-Andreyev e Trudi vennero portati prima a Bludenz. Poi in una casa sicura vicino a Salisburgo.
-
-Prima di partire per l'Italia dovevano sposarsi. Era una condizione di Draganovic. Solo coppie sposate regolarmente.
-
-Il matrimonio fu celebrato in segreto. Un prete cattolico. Un magistrato locale.
-
-Andreyev promise di far battezzare i figli nella fede cattolica. Non era credente. Ma firmò.
-
-
-
----
-
-Trudi e Andreyev partirono per l'Italia. Poi per il Brasile.
-
-Non sappiamo cosa successe dopo. Se restarono insieme. Se si separarono.
-
-Sappiamo solo che scomparvero.
-
-Come tutti gli altri clienti della Rat Line.
+Trudi e il suo capitano partirono per il Brasile. Scomparvero. Come tutti gli altri clienti della Rat Line.
 
 ---
 
@@ -584,7 +462,7 @@ Come tutti gli altri clienti della Rat Line.
 
 Torniamo ad Abraham. Il capitano ucraino che partì per il Perù nel 1948.
 
-Abbiamo già incontrato il suo vero nome. Aleksandr Achtyrskij. L'uomo che reclutò Ingeborg a Wels.
+Se l'ipotesi è corretta il suo vero nome era Aleksandr Achtyrskij. L'uomo che reclutò Ingeborg a Wels.
 
 Ma c'è qualcosa che non abbiamo ancora detto.
 
@@ -833,6 +711,10 @@ Conosceva le Rat Lines. Le aveva usate. Forse aveva aiutato altri a usarle.
 Conosceva i disertori. Li aveva incontrati. Forse li aveva aiutati a fuggire.
 
 Conosceva Achtyrskij. Era stato lui a reclutarla.
+
+Ma Achtyrskij aveva reclutato anche altri agenti. Kolacek-Greskova. Kolber. Altri ancora.
+
+Forse qualcuno di loro era già compromesso. Forse qualcuno di loro lavorava per qualcun altro.
 
 ---
 

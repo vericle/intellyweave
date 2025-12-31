@@ -126,7 +126,7 @@ Trovare documenti desecretati del CIC inerenti lamentele e rapporti disciplinari
 
 Trovare documenti o microfilm sovietici sul debriefing di Achtyrskij. Verbali degli interrogatori. La richiesta di grazia originale. 
 
-L'obbiettivo è tentare di spiegare perché si è consegnato.
+L'obiettivo è tentare di spiegare perché si è consegnato.
 
 Il sistema lavora per ore.
 
@@ -224,7 +224,9 @@ Achtyrskij era celibe. Non aveva figli. Non ci sono discendenti che possano chie
 
 ---
 
-Teniamo questa scoperta sospesa. Un "fantasma documentato". Un uomo che esiste negli archivi fisici ma non nel web.
+Un "fantasma documentato". Un uomo che esiste negli archivi fisici ma non nel web.
+
+Ma aspettiamo un momento.
 
 Perché adesso il Case Officer trova qualcos'altro.
 
@@ -256,9 +258,9 @@ Tra il 1949 e il 1950 quella rete venne annichilita.
 
 ---
 
-Ma fermiamoci qui. Salisburgo. 1949. Un ufficio del CIC. Dossier aperti sulla scrivania.
+Salisburgo. 1949. Un ufficio del CIC. Dossier aperti sulla scrivania.
 
-Perché questa storia è collegata ad Achtyrskij.
+Questa storia è collegata ad Achtyrskij.
 
 ---
 
@@ -386,8 +388,6 @@ Due agenti. Insieme. Due agenti che avevano paura delle stesse rappresaglie.
 
 ---
 
-L'analista guarda lo schermo.
-
 Il sistema ha ricostruito la sequenza degli eventi.
 
 ---
@@ -401,6 +401,24 @@ Achtyrskij? Stesso teatro operativo. Stessa area geografica. Wels. A trenta chil
 Achtyrskij aveva reclutato agenti. Kolacek-Greskova. Kolber. Ingeborg. Molti altri.
 
 Forse qualcuno di loro era compromesso. Forse la rete di Achtyrskij si intersecava con quella di Lyon. Forse il disastro venne attribuito a lui.
+
+---
+
+C'era un altro dettaglio. Kolacek-Greskova. Una delle reclute di Achtyrskij.
+
+I documenti suggeriscono che potesse essere stata un'agente francese. Prima di essere reclutata dal CIC.
+
+Se fosse vero sarebbe un pattern inquietante. Un'agente francese. Che poi lavora per gli americani. Che poi viene catturata e fucilata dai sovietici.
+
+Tre bandiere. Una persona.
+
+---
+
+E se Kolacek-Greskova fosse stata compromessa fin dall'inizio?
+
+Tutta la catena di tradimenti potrebbe essere partita da lei. Benno Blum che rapisce Kolesnikov. Lyon che accusa Achtyrskij. Achtyrskij che si consegna.
+
+Un domino. Forse.
 
 ---
 
@@ -424,7 +442,7 @@ Potenzialmente 25 anni di lavori forzati. Non la morte.
 
 ---
 
-Teniamo questa scena sospesa.  Un ufficio a Wels. Due porte.
+Un ufficio a Wels. Due porte.
 
 Una porta conduce alla vendetta americana. Veloce. Totale. Senza procedure. Senza pietà.
 
@@ -482,7 +500,7 @@ Il controspionaggio sovietico possiede inoltre una lista di asset del servizio s
 
 L'analista rilegge la frase.
 
-Le agenti del CIC sono stati liquidati.
+Gli agenti del CIC sono stati liquidati.
 
 Una lista di asset. Agenti. Informatori. Risorse. Safe houses.
 
@@ -518,8 +536,6 @@ Smascherato dalle testimonianze delle spie americane condannate Achtyrskij e Nov
 
 ---
 
-L'analista guarda lo schermo.
-
 Kolesnikov.
 
 Veniamin Petrovic Kolesnikov.
@@ -538,13 +554,13 @@ Novikova-Achtyrskaja.
 
 Il cognome è al femminile. In russo i cognomi delle donne sposate si declinano. Novikova è il cognome da nubile. Achtyrskaja è la forma femminile di Achtyrskij.
 
-Achtyrskij non era nubile. L'agente Novikov citato dagli storici di Graz.
+Achtyrskij non era celibe. L'agente Novikov citato dagli storici di Graz era sua moglie.
 
-Era sua moglie. Anche lei si è consegnata. Anche lei ha testimoniato.
+Anche lei si è consegnata. Anche lei ha testimoniato.
 
 ---
 
-Teniamo questa scoperta sospesa. Perché il cerchio si è chiuso.
+Il cerchio si è chiuso.
 
 ---
 
@@ -608,9 +624,9 @@ Marzo 1949. Kolesnikov scompare dal campo di Wels. I registri dell'IRO dicono "P
 
 Maggio 1949. Kolesnikov viene formalmente arrestato. Sei settimane dopo la scomparsa.
 
-Giugno 1949 Mykolaj Baranowsky un altro disertore sovietico viene rapito da Benno Blum a Salisburgo.
+Giugno 1949. Mykolaj Baranowsky, un altro disertore sovietico, viene rapito da Benno Blum a Salisburgo.
 
-Luglio 1949 Nikolaj Agzew viene rapito. Qualcosa va storto.
+Luglio 1949. Nikolaj Agzew viene rapito. Qualcosa va storto.
 
 15 marzo 1950. Achtyrskij viene condannato a morte dal Tribunale Militare 28990.
 
@@ -665,8 +681,6 @@ Ma Novikova-Achtyrskaja no.
 Cosa le è successo?
 
 ---
-
-L'analista guarda lo schermo.
 
 Il Case Officer non ha la risposta.
 
