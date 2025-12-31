@@ -64,9 +64,11 @@ L'analisi incrociata dei documenti CIA, in particolare il memorandum BISHOP del 
 
 ### Perché Questo Libro per il Pubblico Austriaco
 
-Il caso di Ingeborg si inserisce nel contesto documentato dalla ricerca storica austriaca sulle vittime della repressione sovietica. Questo libro offre un caso individuale che prova ad illuminare un pattern più ampio.
+Il lavoro del Ludwig Boltzmann Institut für Kriegsfolgenforschung, in particolare *Stalins letzte Opfer* curato da Stefan Karner e Barbara Stelzl-Marx, ha ricostruito le storie di oltre cento austriaci deportati e giustiziati a Mosca tra il 1950 e il 1953. Lo studio di Andreas Hilger *Tod den Spionen* ha fornito l'analisi prosopografica delle condanne.
 
-Vienna fu l'epicentro dello spionaggio della Guerra Fredda. La Besatzungszeit ha lasciato traumi che ancora oggi attraversano le famiglie austriache. Il silenzio di mia nonna, "Ci ammazzano tutti", è lo stesso silenzio di migliaia di famiglie che non hanno mai potuto raccontare.
+Ingeborg Loucek compare in quella ricerca. Ma la mia indagine parte da un punto di vista diverso: quello di un familiare con accesso a fonti complementari e strumenti di analisi computazionale. Questo libro non corregge né completa il lavoro degli storici. Offre una prospettiva interna su un singolo caso, con domande che potrebbero aprire nuove direzioni di ricerca.
+
+Vienna fu l'epicentro dello spionaggio della Guerra Fredda. La Besatzungszeit ha lasciato traumi che ancora oggi attraversano le famiglie austriache. Il silenzio di mia nonna, *"Ci ammazzano tutti"*, è presumibilmente lo stesso silenzio di molte famiglie che non hanno mai potuto raccontare.
 
 Questo libro rompe il silenzio della mia famiglia. Con documenti. Con metodo. Con domande.
 
