@@ -448,6 +448,48 @@ E chi stava dietro di lui restò nell'ombra.
 
 ---
 
+Ma il sistema trova qualcos'altro.
+
+Il Quartermaster mappa gli asset del 430esimo CIC. Stesso teatro operativo. Stesso periodo. Stessa catena di comando.
+
+---
+
+Nello stesso distaccamento c'erano altre reti. Altri agenti. Alcuni con criptonimi.
+
+MOUNT VERNON. MONTGOMERY.
+
+---
+
+Alcuni di questi asset hanno sedici volumi di file CIA. Parzialmente declassificati. Parzialmente ancora coperti.
+
+Alcuni furono reclutati dallo stesso comandante che supervisionava Lyon. Un ufficiale di nome Thomas Lucid.
+
+---
+
+Il Case Officer ricostruisce la lista degli asset che il CIC doveva proteggere.
+
+Il padre di Ingeborg. Liberato da Buchenwald dal CIC nel 1945. Firmato Capitano Bessman.
+
+Le safe house. Margaretenstraße. Altre.
+
+L'amica di scuola di Ingeborg. Quella che procurò i documenti per l'evasione di Kolesnikov. Mai nominata nei verbali sovietici.
+
+Il fidanzato americano. Quello che aveva accesso ai documenti falsi. Mai identificato.
+
+---
+
+E forse qualcun altro.
+
+Qualcuno più importante di Achtyrskij. Qualcuno con criptonimi invece di nomi. Qualcuno con sedici volumi di file.
+
+---
+
+Lyon preferì bruciare Achtyrskij.
+
+La domanda è: per proteggere chi?
+
+---
+
 Probabilità dello Scenario B: quarantacinque per cento.
 
 ---
