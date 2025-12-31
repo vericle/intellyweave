@@ -185,7 +185,7 @@ The podcast investigates whether Ingeborg was:
 - gennaio 2023, aprile 1945, giugno 1947
 
 **Locations:**
-- Roma, Vienna, Margaretenstraße, Gießhübl, Perchtoldsdorf, Wels, fiume Enz
+- Roma, Vienna, Margaretenstraße, Gießhübl, Perchtoldsdorf, Wels, fiume Enns
 
 **Organizations:**
 - CIC, SMERSH
@@ -274,6 +274,51 @@ The podcast investigates whether Ingeborg was:
 
 **Statistics:**
 - 2,943 Germans sentenced to death (1945-1955), 132 women, 2,223 executed, 9 commuted
+
+---
+  STATISTICHE VERIFICATE (Studio Hilger - "Tod den Spionen")
+
+  | Dato                                | Valore     |
+  |-------------------------------------|------------|
+  | Condanne a morte totali (1945-1955) | 2.943      |
+  | Di cui donne                        | 132        |
+  | Esecuzioni effettive                | 2.223      |
+  | Casi sotto Art. 58-6 (Spionaggio)   | 92         |
+  | Condanne commutate                  | 9          |
+  | Pena di morte abolita               | 26.05.1947 |
+  | Pena di morte reintrodotta          | 12.01.1950 |
+
+  ---
+  TABELLA: 9 CONDANNE A MORTE COMMUTATE (dopo reintroduzione 1950)
+
+  | Cognome   | Nome     | Sesso | Arresto    | Condanna a morte | Accusa                                   | Pena commutata | Rimpatrio  | Riabilitazione |
+  |-----------|----------|-------|------------|------------------|------------------------------------------|----------------|------------|----------------|
+  | Ratiev    | Fedor A. | M     | n.d.       | 06.03.1950       | Art. 58-1 (Tradimento)                   | 20 anni        | n.d.       | n.d.           |
+  | Kohout    | Franz    | M     | 31.10.1950 | 04.04.1951       | Crimini di guerra                        | 25 anni        | 16.11.1955 | n.d.           |
+  | Rabara    | Ernst    | M     | 31.10.1950 | 04.04.1951       | Crimini di guerra                        | 25 anni        | 16.11.1955 | n.d.           |
+  | Vazhdaev  | Ivan N.  | M     | n.d.       | 28.03.1951       | Art. 58-8 (Terrorismo)                   | n.d.           | n.d.       | n.d.           |
+  | Reissner  | Franz    | M     | 11.10.1951 | 07.01.1952       | Art. 58-6 (Spionaggio Francia)           | 25 anni        | 25.06.1955 | n.d.           |
+  | Valdevit  | Hermine  | F     | 14.08.1951 | 16.01.1952       | Art. 58-6 (contatti ufficiale sovietico) | 20 anni        | 23.12.1956 | Positiva       |
+  | Schneider | Karl     | M     | 13.12.1951 | 11.03.1952       | Art. 58-6 (Spionaggio Francia)           | 25 anni        | 20.06.1955 | Positiva       |
+  | Brunner   | Walter   | M     | 18.02.1953 | 20.05.1953       | Art. 58-6 (Spionaggio USA/CIC)           | 25 anni        | 16.11.1955 | Positiva       |
+  | Lintner   | Pius     | M     | 14.03.1953 | 20.05.1953       | Art. 58-6 (Spionaggio USA/CIC)           | 25 anni        | 16.11.1955 | Positiva       |
+
+  ---
+  CONFRONTO CRITICO: VALDEVIT vs INGEBORG
+
+  |                | Hermine Valdevit                             | Ingeborg Loucek                |
+  |----------------|----------------------------------------------|--------------------------------|
+  | Sesso          | Donna                                        | Donna                          |
+  | Nascita        | Vienna, 1919                                 | Vienna, 1927                   |
+  | Stato civile   | Divorziata, 1 figlio                         | Non sposata, 1 figlio          |
+  | Accusa         | Art. 58-6 (contatti con ufficiale sovietico) | Art. 58-6 (spionaggio per USA) |
+  | Arresto        | 14.08.1951                                   | 12.08.1950                     |
+  | Condanna       | 16.01.1952                                   | 21.10.1950                     |
+  | Esito          | COMMUTATA → 20 anni                          | ESEGUITA → 09.01.1951          |
+  | Riabilitazione | Positiva                                     | Positiva (02.10.2001)          |
+
+  ---
+  DATO CHIAVE: Hermine Valdevit è l'UNICA DONNA tra le 9 condanne commutate. Ingeborg, con accusa quasi identica, fu fucilata.
 
 ---
 

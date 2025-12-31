@@ -82,11 +82,11 @@ Non per umanità. Soprattutto per necessità economica.
 
 Milioni di uomini sovietici erano morti durante la guerra. Stalin aveva bisogno di manodopera. Gratuita. Per ricostruire l'industria.
 
-I condannati a morte diventavano condannati a venticinque anni di lavori forzati. Lavoratori non pagati.
+I condannati a morte diventavano condannati a 25 anni di lavori forzati. Lavoratori non pagati.
 
 ---
 
-Tra il 1947 e il 1950 chi veniva processato per spionaggio riceveva venticinque anni. Non la morte.
+Tra il 1947 e il 1950 chi veniva processato per spionaggio riceveva 25 anni. Non la morte.
 
 ---
 
@@ -206,9 +206,9 @@ Il sistema ha processato lo studio di Andreas Hilger. "Tod den Spionen". Morte a
 
 I numeri sono questi.
 
-Tra il 1945 e il 1955 i tribunali militari sovietici emisero duemilanovecentoquarantatré condanne a morte per tedeschi. Centotrentadue erano donne.
+Tra il 1945 e il 1955 i tribunali militari sovietici emisero 2.943 condanne a morte per tedeschi e austriaci. 132 erano donne.
 
-Di queste condanne duemiladuecentoventitrè furono eseguite.
+Di queste condanne 2.223 furono eseguite.
 
 L'ultima sentenza capitale fu emessa il 20 gennaio 1954.
 
@@ -216,9 +216,7 @@ L'ultima sentenza capitale fu emessa il 20 gennaio 1954.
 
 Ma ecco il dato che conta.
 
-Lo studio prosopografico ha ricostruito le accuse. Novantadue casi furono processati sotto l'Articolo 58-6. Spionaggio.
-
-Novantadue su centoquattro.
+Lo studio prosopografico ha ricostruito le accuse. 92 casi furono processati sotto l'Articolo 58-6. Spionaggio.
 
 È l'accusa dominante. Ingeborg non era un'eccezione. Era la norma.
 
@@ -226,7 +224,7 @@ Novantadue su centoquattro.
 
 E c'è un altro numero.
 
-Nove condanne a morte furono convertite. Nove persone condannate a morte che non morirono. La loro pena fu commutata in venti o venticinque anni di lavori forzati.
+9 condanne a morte furono convertite. 9 persone condannate a morte che non morirono. La loro pena fu commutata in 20 o 25 anni di lavori forzati.
 
 Molte di queste erano accuse di spionaggio. Articolo 58-6.
 
@@ -314,7 +312,7 @@ Lo stesso pattern di Ingeborg. Contatto con ufficiale sovietico. Stessa accusa. 
 
 La sentenza iniziale? Morte.
 
-La sentenza finale? Venti anni. La pena fu convertita.
+La sentenza finale? 20 anni. La pena fu convertita.
 
 ---
 
@@ -322,7 +320,7 @@ Se le condanne a morte fossero state inevitabili sotto l'Articolo 58-6 non vedre
 
 Ma la vediamo.
 
-Lo studio mostra che il tempo tra condanna ed esecuzione variava da trentuno giorni a quattordici mesi. Media: tre mesi e mezzo.
+Lo studio mostra che il tempo tra condanna ed esecuzione variava da 31 giorni a 14 mesi. Media: 3 mesi e mezzo.
 
 Non automatismo. Discrezionalità.
 
@@ -380,7 +378,7 @@ Cinquant'anni dopo la sua esecuzione.
 
 E non fu l'unica.
 
-Lo studio conta centoquattro casi esaminati per riabilitazione. Sessantanove decisioni positive solo nel 1993. Altre trentasei nel 1999. Diciassette nel 2002.
+Lo studio conta 104 casi esaminati per riabilitazione. 69 decisioni positive nel 1993. 36 nel 1999. 17 nel 2001.
 
 Riabilitazioni su questa scala non dimostrano ogni singola ingiustizia.
 
