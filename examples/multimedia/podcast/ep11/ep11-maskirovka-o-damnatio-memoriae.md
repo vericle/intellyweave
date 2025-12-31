@@ -16,9 +16,9 @@ Ma c'è qualcosa che non torna.
 
 ---
 
-E non è cosa è stato trovato.
+Il problema non è cosa ha trovato il sistema.
 
-È che cosa significa ciò che è stato trovato.
+È cosa significa.
 
 ---
 
@@ -79,8 +79,6 @@ Il sistema calcola la probabilità che tutti questi fattori si verifichino insie
 Meno del due per cento.
 
 ---
-
-L'analista guarda lo schermo.
 
 Il pattern è chiaro. Achtyrskij non è stato dimenticato per errore.
 
@@ -153,8 +151,6 @@ Maskirovka. Cancellazione attiva. Trentadue per cento.
 Damnatio Memoriae. Cancellazione passiva. Sessantotto per cento.
 
 ---
-
-L'analista guarda i numeri.
 
 Il sistema preferisce la spiegazione semplice. L'oblio accidentale. L'esclusione casuale da ogni categoria.
 
@@ -439,6 +435,16 @@ I servizi russi. Achtyrskij ha parlato durante gli interrogatori. Quanto ha dett
 I servizi occidentali. Se Achtyrskij contava più di quanto non sembri dai documenti, potrebbero proteggere operazioni ancora classificate.
 
 Altri attori sconosciuti. Non possiamo escludere interessi che non conosciamo.
+
+---
+
+E se Achtyrskij non fosse un traditore come sembra?
+
+Qualcuno doveva essere bruciato. Per proteggere i veri asset. I veri reclutatori. I veri contatti. Le safe house.
+
+Achtyrskij venne bruciato.
+
+E chi stava dietro di lui restò nell'ombra.
 
 ---
 

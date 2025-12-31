@@ -416,6 +416,14 @@ Ma non lo sapeva.
 
 ---
 
+Il KGB avrebbe protetto Broda a qualsiasi costo. Era la fonte principale sulla bomba. Non poteva essere scoperto.
+
+Chiunque potesse collegare le operazioni del CIC al programma nucleare diventava un problema.
+
+Engelmann lo era. Ingeborg forse lo era.
+
+---
+
 Engelmann morì per aver cercato di scoprire qualcosa che esisteva davvero.
 
 Broda morì libero senza mai essere arrestato.
@@ -472,7 +480,9 @@ Il disastro era bidirezionale.
 
 ---
 
-Vienna era il ground zero di una guerra segreta dove entrambe le parti perdevano.
+A Vienna si combatteva una guerra segreta.
+
+E in quella guerra non c'erano vincitori.
 
 ---
 
@@ -484,35 +494,43 @@ Ma c'è qualcosa di ancora più strano.
 
 ---
 
-L'analista guarda le date sul grafo.
+Le date sul grafo.
 
 ---
 
-11 agosto 1950. New York. L'FBI arresta Ethel Rosenberg. L'ultima della rete di spie atomiche americana.
+11 agosto 1950. New York. L'FBI arresta Ethel Rosenberg. La rete nucleare americana crolla.
 
 12 agosto 1950. Vienna. I sovietici arrestano Ingeborg.
 
-28 agosto 1950. Mosca. Achtyrskij viene fucilato.
+---
+
+Ventiquattro ore.
 
 ---
 
-Sedici giorni.
+Ma c'è qualcosa che non abbiamo considerato.
+
+Un tedesco di nome Karl viveva a casa della madre di Ingeborg. In Margaretenstraße. Un ex sommergibilista. Nessuno sapeva cosa facesse lì.
+
+E se quella casa fosse stata una safe house? Un punto d'appoggio per le operazioni del CIC?
 
 ---
 
-La rete atomica americana crolla lo stesso giorno in cui Ingeborg viene catturata.
+Karl Engelmann spiava Broda. Engelmann era del CIC.
 
-Il reclutatore di Ingeborg viene fucilato due settimane dopo.
-
----
-
-Coincidenza?
+Se la casa di Margaretenstraße era una safe house allora Ingeborg ed Engelmann si conoscevano. Condividevano la stessa rete.
 
 ---
 
-Il sistema non può rispondere.
+Engelmann spiava la fonte principale sulla bomba.
 
-Ma registra la correlazione.
+Ingeborg era nella stessa rete.
+
+Broda doveva restare invisibile.
+
+---
+
+Due problemi. Uno dopo l'altro.
 
 ---
 
@@ -570,9 +588,7 @@ E la stessa città le aveva distrutte.
 
 ---
 
-L'analista guarda il grafo.
-
-Vede le due narrative che si intrecciano.
+Il grafo mostra due narrative che si intrecciano.
 
 ---
 
