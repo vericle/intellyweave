@@ -42,7 +42,7 @@ Fa parte dello stesso sistema dello SMERSH a Baden. Stesse procedure. Stessi liv
 
 Dove siamo adesso? Gießhübl. Giugno 1947. Un ufficiale sovietico è in cella. Si chiama Veniamin Kolesnikov.
 
-È stato arrestato due mesi prima. Lo hanno trovato nascosto nell'appartamento della madre di Ingeborg. Nel cuore del settore sovietico. Aveva cercato di evitare il rimpatrio in Unione Sovietica.
+Lo hanno arrestato due mesi prima. Lo hanno trovato nascosto nell'appartamento della madre di Ingeborg. Nel cuore del settore sovietico. Aveva cercato di evitare il rimpatrio in Unione Sovietica.
 
 L'accusa è alto tradimento. La pena è la morte.
 
@@ -68,7 +68,7 @@ Ma guardiamola più da vicino.
 
 ---
 
-Una ragazza di vent'anni. Figlia di un ex detenuto di Buchenwald. Senza formazione militare. Senza addestramento. Senza risorse.
+Vent'anni. Nessuna formazione militare. Nessun addestramento. Nessuna risorsa.
 
 Questa ragazza contribuisce a far fuggire un prigioniero da un carcere militare sovietico di massima sicurezza.
 
@@ -88,7 +88,7 @@ Tutto questo tramite contatti personali. Una compagna di scuola. Un fidanzato am
 
 Chi era quella compagna di scuola?
 
-I documenti non lo dicono. Il libro dell'Istituto Boltzmann non lo rivela. I verbali sovietici non la nominano.
+I documenti non lo dicono. Il libro dell'Istituto Boltzmann non lo rivela. I verbali sovietici non la nominano. Mai. In nessun interrogatorio.
 
 Chi era quel fidanzato americano?
 
@@ -96,11 +96,25 @@ Di che grado era? Per quale agenzia o ufficio lavorava? Come poteva procurare do
 
 E soprattutto. Come faceva Ingeborg a sapere chi contattare?
 
-Una ragazza di vent'anni. Nel 1947. Non ha telefono. Non ha automobile. Nessuna rete di relazioni importanti.
+---
+
+Nomi. Nessun nome.
+
+I verbali sovietici registrano ogni dettaglio. Date. Luoghi. Parole esatte degli interrogati.
+
+Ma la compagna di scuola non ha nome. Il fidanzato americano non ha nome.
+
+Due persone che aiutano un prigioniero a evadere da Gießhübl. E nessuno le nomina.
+
+Perché?
+
+---
+
+Una ragazza qualunque. Nel 1947. Nessun contatto nei servizi. Nessun protettore. Nessuna rete.
 
 Vive con sua madre. Lavora come domestica. Guadagna cento scellini al mese.
 
-Ma contribuisce all'evasione di un prigioniero sovietico da un carcere di massima sicurezza.
+Ma contribuisce all'evasione di un prigioniero sovietico da quella prigione.
 
 ---
 
@@ -134,7 +148,7 @@ Un uomo fugge da una prigione di massima sicurezza. Una donna di vent'anni lo as
 
 Due settimane dopo lui le scrive una lettera. Le dice che ha una casa. Un lavoro. Che ha bisogno di lei.
 
-Lei lo raggiunge a Wels. Contro il volere di sua madre. Contro ogni logica.
+Lei lo raggiunge a Wels. Sua madre si oppone. Non serve a nulla.
 
 Poi viene reclutata dal CIC.
 
