@@ -4,15 +4,11 @@
 
 È il novembre 1948. Genova. Un porto.
 
-Un uomo cammina verso una nave. Ha trentacinque anni. È ucraino. Si chiama Aleksandr. Nei documenti del CIC ha un criptonimo. Un nome in codice. Abraham.
+Un uomo cammina verso una nave. Ha trentacinque anni. È ucraino. Si chiama Aleksandr. Nei documenti del CIC ha un criptonimo. Abraham.
 
 Ha documenti falsi in tasca. Un biglietto per il Perù. Una nuova vita davanti.
 
-Dietro di lui ci sono altri cinque uomini. Anche loro hanno criptonimi. Moe. Fergus. O'Toole. Alex. Thurmond. Anche loro hanno documenti falsi. Anche loro stanno scomparendo.
-
----
-
-La nave salperà tra qualche ora. Destinazione finale: Callao. Il porto di Lima.
+Dietro di lui ci sono altri cinque uomini. Anche loro hanno criptonimi. Moe. Fergus. O'Toole. Alex. Thurmond. Anche loro stanno scomparendo.
 
 ---
 
@@ -22,155 +18,167 @@ Sa che non tornerà mai più in Europa.
 
 ---
 
-## PARTE PRIMA: IL MAGGIORE
+Teniamolo lì. Sulla nave. Il motore che vibra sotto i piedi.
 
 ---
 
-Fermiamoci qui. Un porto. Una nave. Sei uomini che spariscono.
+Vienna. Un ufficio del CIC.
 
-Come ci sono arrivati?
+Un uomo sta firmando documenti. Si chiama James Milano. È un maggiore. Figlio di immigrati italiani. Parla tedesco, italiano, francese.
 
-Per capirlo dobbiamo tornare indietro. A Vienna. A un ufficio del CIC.
+Ha davanti una lista. Sei nomi. Sei criptonimi. Sei persone che devono sparire.
 
----
-
-L'uomo che gestiva questa operazione l'abbiamo già incontrato. Si chiamava James V. Milano. Lo abbiamo presentato come Colonnello del CIC.
-
-Ma nel 1948 era ancora un Maggiore.
+Milano guarda l'orologio. La nave parte tra quattro ore.
 
 ---
 
-Milano era newyorkese. Figlio di immigrati italiani. Aveva studiato legge alla Fordham University. Parlava italiano. Parlava tedesco. Parlava francese.
-
-Nel 1942 era entrato nell'esercito. Nel 1945 era arrivato in Austria. Nel 1947 era diventato il capo delle operazioni del CIC a Salisburgo.
+Lasciamolo lì. Con la penna in mano.
 
 ---
 
-Il suo compito ufficiale era la sicurezza. Proteggere le truppe americane. Identificare le minacce. Fermare le infiltrazioni sovietiche.
+Roma. Via Tomacelli 132.
 
-Ma Milano aveva anche un altro compito. Uno che non era scritto in nessun documento ufficiale.
+Un prete sta aprendo una busta. Dentro ci sono banconote. Millecinquecento dollari.
 
-Gestiva i disertori.
+Si chiama Krunoslav Draganovic. Lo chiamano il Buon Padre.
 
----
-
-Ogni mese arrivavano ufficiali sovietici che volevano scappare. Alcuni avevano informazioni preziose. Alcuni erano solo disperati. Alcuni erano trappole del KGB.
-
-Milano doveva distinguerli. Interrogarli. Spremere ogni informazione utile.
-
-E poi doveva farli sparire.
+Ha appena procurato sei visti per il Perù.
 
 ---
 
-Perché non poteva tenerli in Austria per sempre.
+Tre uomini. Tre luoghi. Lo stesso momento.
 
-I sovietici li cercavano. Li volevano indietro. Li rapivano. Li uccidevano.
+Aleksandr sulla nave. Milano nell'ufficio. Draganovic nel seminario.
 
-La banda di Blum. La conosciamo già. Il Café Hauswirth. Le bottiglie con i sedativi. La Plößlgasse 2.
-
----
-
-Milano aveva bisogno di una via di fuga. Un sistema per far uscire i disertori dall'Europa. Portarli in un posto sicuro. Dargli una nuova vita.
-
-La chiamò Rat Line.
-
-La Linea dei Topi.
+Come si sono trovati?
 
 ---
 
-## PARTE SECONDA: IL NOME
+Torniamo indietro. Di un anno.
 
 ---
 
-Perché proprio questo nome?
+Nel 1947 Milano aveva un problema.
 
-Milano lo racconta nel suo libro. "Soldiers, Spies, and the Rat Line". L'ha scritto nel 1995 insieme a Patrick Brogan.
+Ogni mese arrivavano disertori sovietici. Ufficiali dell'Armata Rossa che volevano scappare. Alcuni avevano informazioni preziose. Alcuni erano solo disperati.
 
-Il nome venne proposto da un suo agente. Si chiamava Jack Whitmore.
+Milano li interrogava. Li spremeva. Estraeva tutto quello che sapevano.
 
----
-
-Whitmore era un veterano. Aveva combattuto in Italia. Conosceva le vie di fuga che i partigiani usavano durante la guerra.
-
-Le chiamavano "rat lines". Sentieri nascosti. Passaggi segreti. Tunnel attraverso le montagne.
-
-Vie che solo i topi potevano percorrere.
+E poi?
 
 ---
 
-Milano accettò il nome. Gli piaceva.
+Non poteva tenerli in Austria per sempre.
 
-Era onesto. Non pretendeva di essere nobile. Riconosceva la natura dell'operazione.
+I sovietici li cercavano. Li volevano indietro. Li rapivano.
 
-Erano topi. Si muovevano nell'ombra. Scappavano dalle trappole.
+La banda di Blum. Il Café Hauswirth. Le bottiglie con i sedativi. La Plößlgasse 2.
 
 ---
 
-Ma c'era un problema.
+Dove sono adesso i nostri tre?
 
-Per far funzionare una rat line servivano documenti. Visti. Passaporti. Lasciapassare.
+Aleksandr è ancora sulla nave. Il porto si sta allontanando. Genova diventa piccola.
+
+Milano ha finito di firmare. Sta chiudendo il fascicolo.
+
+Draganovic sta contando i soldi.
+
+---
+
+Torniamo alla storia.
+
+---
+
+Milano aveva bisogno di una via di fuga. Un sistema per far uscire i disertori dall'Europa. Portarli in un posto sicuro.
+
+Il nome venne proposto da un suo agente. Jack Whitmore. Un veterano che aveva combattuto in Italia.
+
+Whitmore conosceva le vie di fuga dei partigiani. Sentieri nascosti. Passaggi segreti. Tunnel attraverso le montagne.
+
+Le chiamavano rat lines. Vie che solo i topi potevano percorrere.
+
+---
+
+Milano accettò il nome.
+
+Era onesto. Non pretendeva di essere nobile.
+
+Erano topi. Si muovevano nell'ombra.
+
+---
+
+Ma per far funzionare una rat line servivano documenti. Visti. Passaporti.
 
 Documenti che il CIC non poteva procurare ufficialmente.
 
 ---
 
-Serviva qualcuno che potesse ottenerli. Qualcuno fuori dai canali normali. Qualcuno che non facesse domande.
+Dove sono i nostri tre adesso?
 
-E Milano lo trovò.
+Aleksandr è in cabina. Sente il rumore delle macchine. La nave ha lasciato il porto.
 
-A Roma.
+Milano sta camminando verso la mensa degli ufficiali. Ha fame.
 
----
-
-## PARTE TERZA: IL BUON PADRE
+Draganovic sta pregando. Le banconote sono nel cassetto.
 
 ---
 
-L'abbiamo già incontrato. Lo chiamavano il Buon Padre.
-
-Ma non abbiamo guardato abbastanza da vicino.
+Continuiamo.
 
 ---
 
-Si chiamava Krunoslav Draganovic. Era croato. Era un prete. Aveva cinquantacinque anni nel 1948.
+Milano cercava qualcuno che potesse procurare documenti impossibili. Qualcuno fuori dai canali normali.
 
-Viveva a Roma dal 1943. Dirigeva il Seminario di San Girolamo degli Illirici. Un istituto per la formazione di giovani preti croati.
-
----
-
-Ma Draganovic aveva anche un'altra attività.
-
-Procurava visti. Per il Sud America. Per chiunque potesse pagare.
+Lo trovò a Roma.
 
 ---
 
-La sua rete era impressionante.
+Draganovic era croato. Prete. Dirigeva il Seminario di San Girolamo degli Illirici.
 
-Aveva contatti con i consolati sudamericani a Roma. Perù. Uruguay. Argentina. Brasile.
+Ma aveva anche un'altra attività.
 
-Aveva contatti con la Croce Rossa Internazionale. Con il Vaticano. Con le autorità italiane.
-
-Sapeva come ottenere documenti che nessun altro poteva ottenere.
+Procurava visti per il Sud America. Per chiunque potesse pagare.
 
 ---
 
-E non faceva domande.
+Aveva contatti con i consolati sudamericani. Perù. Uruguay. Argentina. Brasile.
 
-Non chiedeva chi fossero i suoi clienti. Non chiedeva perché avessero bisogno di sparire. Non chiedeva cosa avessero fatto.
+Aveva contatti con la Croce Rossa Internazionale. Con il Vaticano.
+
+Non faceva domande.
 
 ---
 
-Gli americani sapevano chi era. Sapevano cosa aveva fatto durante la guerra. Sapevano che aveva collegamenti con gli Ustascia croati. Con il regime di Ante Pavelic. Con i massacri dei serbi.
+Gli americani sapevano chi era. Sapevano cosa aveva fatto durante la guerra. I collegamenti con gli Ustascia croati. Con il regime di Ante Pavelic.
 
 Forse era un criminale di guerra.
 
 Non importava.
 
+---
+
 Era utile.
 
 ---
 
-Milano stabilì un accordo con Draganovic.
+Fermiamoci un momento.
+
+Aleksandr è sdraiato nella cuccetta. Ha gli occhi aperti. Sta pensando ai suoi genitori. Sono morti nella grande carestia. Quella che Stalin aveva imposto all'Ucraina.
+
+Non ha mai creduto nel comunismo.
+
+Nel 1944 aveva disertato. Si era arreso ai tedeschi. Aveva combattuto contro i sovietici.
+
+Nel 1945 era finito nella zona americana. Si era nascosto. Aveva collaborato con il CIC.
+
+---
+
+Adesso sta andando in Perù.
+
+---
+
+Milano e Draganovic stabilirono un accordo.
 
 I disertori sovietici sarebbero stati portati a Roma. Draganovic avrebbe procurato i documenti. Le navi li avrebbero portati in Sud America.
 
@@ -184,289 +192,61 @@ Era un patto col diavolo.
 
 Milano lo sapeva.
 
-Ma funzionava.
+---
+
+Settant'anni dopo. Uno schermo.
+
+L'analista sta ricostruendo la rotta. Ha una funzione che si chiama Geospatial Mapping.
+
+Prende le coordinate geografiche dai documenti. Le proietta su una mappa. Collega i punti.
 
 ---
 
-## PARTE QUARTA: LA ROTTA
+Punto uno. Vienna. La raccolta.
+
+Punto due. Salisburgo. Le safe house del CIC. Qui lavorava Dominic Del Greco. Il falsario. Passaporti in bianco. Timbri. Nuove identità.
+
+Punto tre. Innsbruck. Il passaggio delle Alpi.
+
+Punto quattro. Roma. L'ufficio di Draganovic.
+
+Punto cinque. Genova. L'imbarco.
 
 ---
 
-Torniamo all'analista. Allo schermo. Al sistema.
+Dove sono i nostri tre?
 
-È il 2025. L'analista sta caricando documenti. Il sistema restituisce: Mappe. Coordinate. Nomi di luoghi.
+La nave di Aleksandr è in mare aperto. Le luci della costa italiana sono scomparse.
 
-Vuole ricostruire la rotta della Rat Line. Capire come funzionava.
+Milano sta dormendo nel suo appartamento di Salisburgo.
 
----
-
-Il sistema si chiama IntellyWeave. Ha una funzione che si chiama Geospatial Mapping.
-
-Prende le coordinate geografiche estratte dai documenti. Le proietta su una mappa tridimensionale. Collega i punti.
+Draganovic sta scrivendo una lettera. Un'altra richiesta di visto. Un altro cliente.
 
 ---
 
-L'analista guarda lo schermo. La mappa dell'Europa appare. I primi punti cominciano a illuminarsi.
+La linea non finisce a Genova.
+
+Attraversa l'Atlantico. Raggiunge il Sud America.
 
 ---
 
-Punto uno. Vienna.
+Punto sei. Callao. Il porto di Lima. La destinazione di Aleksandr.
 
-La raccolta. I disertori venivano individuati. Intervistati. Valutati. Quelli che passavano il controllo venivano preparati.
+Punto sette. Santos. Il porto di São Paulo.
 
----
-
-Punto due. Salisburgo.
-
-Il centro operativo. Qui c'erano le safe house del CIC. Qui lavorava Dominic Del Greco.
-
-Del Greco era il falsario. Procurava modulistica. Passaporti in bianco. Timbri. Fotografie. Creava le nuove identità.
+Punto otto. Montevideo. L'Uruguay. Nessuna estradizione.
 
 ---
 
-Punto tre. Innsbruck.
-
-Il passaggio delle Alpi. Da qui i disertori venivano portati verso il Brennero. Verso l'Italia.
+Otto punti. Una linea che attraversa mezzo mondo.
 
 ---
 
-Punto quattro. Roma.
+Torniamo all'analista.
 
-L'ufficio di Draganovic. Il Seminario di San Girolamo. Qui venivano procurati i visti. I documenti della Croce Rossa. I biglietti per le navi.
+Ha davanti un documento dell'IRO. L'International Refugee Organization.
 
----
-
-Punto cinque. Genova.
-
-Il porto. Le navi della Compagnia Italiana Transatlantica. L'imbarco. La partenza.
-
----
-
-L'analista guarda la mappa. Una linea collega i punti. Vienna. Salisburgo. Innsbruck. Roma. Genova.
-
-È la Rat Line.
-
----
-
-Ma la linea non finisce a Genova.
-
-Continua. Attraversa l'Atlantico. Raggiunge il Sud America.
-
----
-
-Punto sei. Callao.
-
-Il porto di Lima. La prima destinazione principale. Molti disertori scendevano qui. Scomparivano in Perù.
-
----
-
-Punto sette. Santos.
-
-Il porto di São Paulo. La seconda destinazione. Il Brasile.
-
----
-
-Punto otto. Montevideo.
-
-L'Uruguay. Piccolo. Tranquillo. Nessuna estradizione.
-
----
-
-La mappa è completa. Otto punti. Una linea che attraversa mezzo mondo.
-
-Dalla Vienna sovietica al Sud America.
-
----
-
-## PARTE QUINTA: IL SISTEMA
-
----
-
-Ma come funzionava esattamente?
-
-L'analista approfondisce. Carica altri documenti. Il libro di Milano. I rapporti declassificati della CIA. Le interviste ai sopravvissuti.
-
----
-
-Il processo era questo.
-
-Prima fase. Selezione.
-
-Non tutti i disertori potevano usare la Rat Line. Alcuni erano troppo noti. Alcuni erano troppo pericolosi. Alcuni non valevano il rischio.
-
-Milano e il suo staff decidevano chi poteva partire.
-
----
-
-Seconda fase. Preparazione.
-
-I disertori scelti venivano portati in una safe house vicino a Salisburgo. Restavano lì per settimane. A volte mesi.
-
-In quel tempo imparavano le loro nuove identità. Studiavano le loro storie di copertura. Memorizzavano i dettagli.
-
----
-
-Terza fase. Documenti.
-
-Del Greco preparava i documenti. Passaporti. Tessere della Croce Rossa. Certificati di nascita.
-
-Tutto falso. Tutto perfetto.
-
----
-
-Quarta fase. Trasferimento.
-
-Da Salisburgo i disertori venivano portati in Italia. Di solito in treno. A volte in auto.
-
-Viaggiavano con uniformi americane. Si fingevano soldati.
-
----
-
-Quinta fase. Roma.
-
-Arrivati a Roma venivano portati da Draganovic. Il prete procurava i visti. Il processo durava giorni. A volte settimane.
-
-I disertori aspettavano in pensioni anonime. Senza uscire. Senza farsi vedere.
-
----
-
-Sesta fase. Imbarco.
-
-Quando i documenti erano pronti venivano portati a Genova. Salivano sulla nave. Partivano.
-
-Non si voltavano indietro.
-
----
-
-## PARTE SESTA: I PROBLEMI
-
----
-
-Ma non tutto andava sempre liscio.
-
-Milano racconta diversi incidenti nel suo libro.
-
----
-
-C'era il problema delle donne.
-
-Alcuni disertori avevano mogli. Fidanzate. Amanti. Volevano portarle con loro.
-
-Ma Draganovic aveva delle regole. Niente coppie non sposate. Era un prete. Aveva i suoi principi.
-
----
-
-Allora bisognava sposarli.
-
-In fretta. In segreto. A volte con documenti falsi.
-
-Trudi e Andreyev. Li abbiamo già incontrati. Si sposarono così. In una cerimonia segreta. Prima di partire per il Brasile.
-
----
-
-C'era il problema dei soldi.
-
-La Rat Line costava. I visti. I documenti. Le pensioni. I biglietti.
-
-Il CIC aveva un budget limitato. A volte non bastava.
-
-Milano doveva improvvisare. Negoziare. Tagliare.
-
----
-
-C'era il problema della sicurezza.
-
-I sovietici sapevano che esisteva una rete. Cercavano di infiltrarla. Di scoprire le rotte. Di catturare i disertori prima che partissero.
-
-Ogni operazione era un rischio.
-
----
-
-E c'era il problema etico.
-
-La Rat Line usava la rete di Draganovic. La stessa rete che faceva uscire gli Ustascia. I criminali di guerra croati. Gli assassini.
-
-Milano pagava per i visti dei suoi disertori. E con quei soldi Draganovic finanziava la fuga di altri.
-
----
-
-Era un compromesso sporco.
-
-Milano lo sapeva. Lo accettava.
-
-La guerra fredda non era un gioco pulito.
-
----
-
-## PARTE SETTIMA: IL BRASILE
-
----
-
-Ma dove finivano esattamente?
-
-Alcuni andavano in Perù. Alcuni in Uruguay. Alcuni in Argentina.
-
-Ma molti andavano in Brasile.
-
----
-
-Perché il Brasile?
-
-Perché era grande. Perché aveva una popolazione tedesca numerosa. Perché le leggi sull'immigrazione erano flessibili.
-
-E perché c'era una porta d'ingresso.
-
----
-
-Si chiamava Ilha das Flores.
-
-L'Isola dei Fiori. Nella Baia di Guanabara. Di fronte a Rio de Janeiro.
-
-Era un centro di smistamento per gli immigrati. Un'isola dove i nuovi arrivati venivano registrati. Processati. Distribuiti.
-
----
-
-L'analista carica altri documenti. Trova qualcosa.
-
-Un decreto legge. Il Decreto-Lei Nº 7.967 del 18 settembre 1945.
-
----
-
-Questo decreto stabiliva le regole per l'immigrazione in Brasile dopo la guerra.
-
-Ma aveva una clausola speciale. L'Articolo 10.
-
-Permetteva l'ingresso di stranieri al di fuori delle quote normali. A discrezione delle autorità di immigrazione.
-
----
-
-In pratica significava questo.
-
-Se conoscevi le persone giuste. Se avevi i documenti giusti. Se pagavi chi doveva essere pagato.
-
-Potevi entrare in Brasile. Senza domande.
-
----
-
-L'analista continua a cercare. Trova riferimenti a centinaia di persone che passarono per Ilha das Flores.
-
-Tedeschi. Austriaci. Ucraini. Polacchi.
-
-Alcuni con nomi veri. Alcuni con identità false.
-
----
-
-La Rat Line non lasciava tracce chiare. Era progettata così.
-
-Chi entrava dall'altra parte usciva come qualcun altro.
-
----
-
-## PARTE OTTAVA: "LEFT FOR UNKNOWN"
-
----
-
-C'è un'espressione che appare nei documenti dell'IRO. L'International Refugee Organization.
+C'è un'espressione che appare spesso.
 
 "Left for unknown."
 
@@ -474,15 +254,13 @@ Partito per destinazione sconosciuta.
 
 ---
 
-L'analista la trova sulle schede dei campi profughi. Sulle liste dei rifugiati.
-
-Significa che qualcuno è scomparso. Ha lasciato il campo. Non ha detto dove andava.
+Significa che qualcuno è scomparso. Ha lasciato il campo profughi. Non ha detto dove andava.
 
 O non voleva dirlo.
 
 ---
 
-La moglie dell'analista cerca questa espressione nei documenti di Wels.
+L'analista cerca questa espressione nei documenti di Wels.
 
 Trova una scheda. Archivio Arolsen. DocID: 68436595.
 
@@ -494,197 +272,81 @@ Annotazione: "Left for unknown."
 
 Weniamin Nowak. La nuova identità di Veniamin Kolesnikov.
 
-Scomparso dal campo di Wels. Destinazione sconosciuta.
+L'uomo che Ingeborg aveva nascosto. L'uomo che era evaso da Gießhübl.
+
+Scomparso. Destinazione sconosciuta.
 
 ---
 
-Cerca ancora.
+Dove sono i nostri tre adesso?
 
-Trova altre schede con la stessa annotazione.
+La nave di Aleksandr sta attraversando lo Stretto di Gibilterra. L'Europa è alle spalle.
 
-Tutte con la stessa formula. "Left for unknown."
+Milano si sta svegliando. Ha una riunione tra un'ora. Altri disertori da processare.
 
----
-
-Alcuni di loro usarono la Rat Line. Alcuni usarono altre vie. Alcuni scomparvero semplicemente.
-
-Il sistema non può distinguerli.
-
-Può solo contarli.
+Draganovic sta celebrando messa. Le prime luci dell'alba entrano dalle vetrate.
 
 ---
 
-## PARTE NONA: LA RETE
+Ma c'è qualcosa che non torna.
 
 ---
 
-L'analista passa a un'altra funzione. Si chiama Network Analysis.
+Aleksandr partì per il Perù nel novembre 1948.
 
-Prende tutte le entità estratte dai documenti. Le persone. Le organizzazioni. I luoghi. Le collega.
+L'analista ha un'ipotesi. Forse Abraham era Aleksandr Achtyrskij. L'uomo che reclutò Ingeborg a Wels.
 
-Costruisce un grafo.
-
----
-
-Lo schermo si riempie di nodi e archi.
-
-Al centro ci sono i nodi principali. Milano. Draganovic. Del Greco.
-
-Intorno a loro si dispongono gli altri. I disertori. Gli agenti. I facilitatori.
+Ma se è vero allora qualcosa non funziona.
 
 ---
 
-Le linee collegano tutto.
-
-Milano con Del Greco. Del Greco con i documenti. I documenti con i disertori.
-
-Draganovic con i consolati. I consolati con i visti. I visti con le navi.
-
----
-
-È una rete complessa. Un sistema con molte parti.
-
-Ma ha un centro. Un nodo che collega tutto.
-
----
-
-L'analista clicca su quel nodo.
-
-Si chiama Roma.
-
-Tutto passava per Roma.
-
----
-
-I disertori arrivavano da Vienna. Passavano per Roma. Partivano per il Sud America.
-
-I soldi arrivavano dal CIC. Passavano per Roma. Finivano a Draganovic.
-
-I documenti venivano preparati a Salisburgo. Validati a Roma. Usati a Genova.
-
-Roma era il crocevia.
-
----
-
-E al centro di Roma c'era un edificio.
-
-Via Tomacelli 132. Il Seminario di San Girolamo degli Illirici.
-
-L'ufficio di Draganovic.
-
----
-
-## PARTE DECIMA: ALEKSANDR
-
----
-
-Torniamo a quella nave. Novembre 1948. Genova.
-
-Aleksandr è seduto nella sua cabina. La nave sta salpando.
-
----
-
-Chi era quest'uomo?
-
-Nel libro di Milano si chiama Abraham. È un criptonimo. Un nome in codice.
-
-L'analista ha un'ipotesi. Forse Abraham era Aleksandr Achtyrskij. L'ucraino che reclutò Ingeborg a Wels. Lo abbiamo già incontrato.
-
-Non è certo. È solo una possibilità.
-
----
-
-Ma sappiamo qualcosa di Abraham.
-
-Era ucraino. Trentacinque anni. Capitano di artiglieria.
-
-I suoi genitori erano morti nella grande carestia. Quella che Stalin aveva imposto all'Ucraina negli anni trenta. Milioni di morti.
-
-Non aveva mai creduto nel comunismo.
-
----
-
-Nel 1944 aveva disertato. Si era arreso ai tedeschi. Aveva combattuto contro i sovietici.
-
-Nel 1945 era finito nella zona americana. Si era nascosto. Aveva collaborato con il CIC.
-
-Nel 1948 Milano aveva deciso che era tempo di farlo sparire.
-
----
-
-Abraham partì per il Perù con gli altri cinque. Arrivarono a Lima. Scomparvero.
-
----
-
-Ma se l'ipotesi è giusta allora Abraham non rimase in Perù.
+Achtyrskij non restò in Perù.
 
 Tornò in Austria. Continuò a lavorare per il CIC. Continuò a reclutare agenti.
 
-Reclutò Ingeborg.
+---
 
-Forse.
+Nel 1950 i sovietici lo presero.
 
 ---
 
-Fu un errore.
+L'analista guarda la mappa sullo schermo. La linea che collega Vienna al Brasile.
 
-Nel 1950 i sovietici lo presero. Lo portarono a Baden. Lo processarono.
+È una via di fuga. Per chi aveva le connessioni giuste.
 
-Il 28 agosto 1950 fu fucilato a Mosca.
-
-Due settimane dopo l'arresto di Ingeborg.
+Ma Achtyrskij tornò indietro. Perché?
 
 ---
 
-## PARTE UNDICESIMA: LE DOMANDE
+Aleksandr è in mezzo all'Atlantico adesso. Manca una settimana a Lima.
+
+Sta pensando al futuro. A una nuova vita. A dimenticare.
+
+Non sa che tornerà.
 
 ---
 
-Ma torniamo al sistema. Alla mappa. Alla rete.
+Milano è nella sala riunioni. Sta parlando di un nuovo gruppo di disertori.
 
-L'analista sta cercando qualcos'altro.
+Ha una lista di nomi. Nuovi criptonimi da assegnare.
 
----
-
-La Rat Line esisteva. È documentata. Milano l'ha descritta nel suo libro.
-
-Draganovic procurava i visti. Le navi partivano. Le persone scomparivano.
+Non sa che uno dei suoi agenti lo tradirà.
 
 ---
 
-Ma c'è una domanda che il sistema non può ancora rispondere.
+Draganovic sta ricevendo un visitatore. Un uomo con un accento strano.
 
-Chi altro potrebbe aver usato quella rotta?
+Un altro cliente. Un altro visto da procurare.
 
----
-
-I documenti dell'IRO mostrano decine di "Left for unknown" tra il 1949 e il 1952.
-
-Persone che sparirono dai campi. Destinazione sconosciuta.
-
-Alcune usarono la Rat Line. Altre no. Altre non si sa.
-
----
-
-L'analista guarda la mappa. La linea che collega Vienna al Brasile.
-
-È una possibilità. Niente di più.
-
-Ma le possibilità meritano indagini.
-
----
-
-## PARTE DODICESIMA: LE DOMANDE APERTE
-
----
-
-Fermiamoci qui. Una rete. Una rotta. Migliaia di scomparsi.
+Non chiede da dove viene. Non chiede cosa ha fatto.
 
 ---
 
 La Rat Line funzionò per anni. Dal 1947 al 1952. Forse oltre.
 
-Milano racconta di diciassette operazioni confermate. Ma ce ne furono molte altre.
+Milano racconta di diciassette operazioni confermate nel suo libro. "Soldiers, Spies, and the Rat Line". L'ha scritto nel 1995.
+
+Ma ce ne furono molte altre.
 
 Disertori sovietici. Criminali di guerra. Rifugiati. Spie.
 
@@ -692,71 +354,61 @@ Disertori sovietici. Criminali di guerra. Rifugiati. Spie.
 
 Chi passò per quella rotta?
 
-L'analista non può saperlo con certezza. Non ha accesso a tutti i documenti.
+L'analista non può saperlo con certezza.
 
-Alcuni sono ancora classificati. Altri sono andati perduti. Altri non furono mai scritti.
-
----
-
-Ma la domanda resta.
-
-Se la Rat Line esisteva. Se funzionava. Se portava persone da Vienna al Brasile.
-
-Chi altro potrebbe averla usata?
+Alcuni documenti sono ancora classificati. Altri sono andati perduti. Altri non furono mai scritti.
 
 ---
 
-L'analista guarda la mappa sullo schermo. La linea che attraversa l'Europa. L'Atlantico. Il Sud America.
-
-Una via di fuga. Per chi aveva le connessioni giuste.
+Torniamo alla nave. Per l'ultima volta.
 
 ---
 
-Ma c'è un'altra domanda. Più scomoda.
+Aleksandr è sul ponte. Vede la costa del Perù all'orizzonte.
 
-Che fine fece Abraham? L'ipotesi dice che tornò in Austria. Che fu catturato. Che testimoniò.
-
-Ma l'ipotesi ha delle falle. Delle incongruenze.
-
-Il sistema le ha notate. Ma non sa ancora cosa significhino.
+Tra poche ore sarà a Lima. Scomparirà. Diventerà qualcun altro.
 
 ---
 
-## EPILOGO
+Ma l'ipotesi dice che tornò.
+
+Tornò in Austria. Continuò a lavorare. Reclutò Ingeborg.
 
 ---
 
-Settant'anni dopo la Rat Line non esiste più.
+Fu catturato a Baden.
 
-I disertori che la usarono sono morti. O nascosti. O dimenticati.
+---
 
-Milano è morto nel 2007. Draganovic nel 1983.
+Processato.
+
+---
+
+Il 28 agosto 1950.
+
+---
+
+Fucilato a Mosca.
+
+---
+
+Due settimane dopo l'arresto di Ingeborg.
+
+---
+
+Milano morì nel 2007. Draganovic nel 1983.
 
 Le safe house sono state demolite. I porti sono cambiati. Le navi sono state rottamate.
 
----
-
 Ma i documenti restano.
 
-Negli archivi. Nei database. Nelle vecchie schede ingiallite.
+---
 
 E raccontano una storia.
 
----
-
-Una storia di fuga. Di compromessi. Di identità cancellate.
+Di fuga. Di compromessi. Di identità cancellate.
 
 Una storia che inizia a Vienna e finisce chissà dove.
-
----
-
-L'analista spegne lo schermo.
-
-Sa che non ha finito. Sa che ci sono altre domande.
-
-Sulla Rat Line. Su Abraham. Sulle incongruenze che il sistema ha trovato.
-
-Ma quelle risposte richiederanno strumenti nuovi. Archivi più profondi.
 
 ---
 
