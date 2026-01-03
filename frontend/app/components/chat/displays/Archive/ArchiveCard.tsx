@@ -1,239 +1,208 @@
 "use client";
 
 import React from "react";
-import { motion, Variants } from "framer-motion";
-import { ArchivePayload } from "@/app/types/displays";
 import {
-  PiGlobe,
-  PiLockKey,
-  PiBuildings,
-  PiBook,
-  PiDatabase,
-  PiWarning,
-  PiCheckCircle,
-  PiXCircle,
-  PiCircleHalf,
-  PiLightning,
-  PiLink,
+	PiBook,
+	PiBuildings,
+	PiCheckCircle,
+	PiCircleHalf,
+	PiDatabase,
+	PiGlobe,
+	PiLightning,
+	PiLockKey,
+	PiShieldWarning,
+	PiWarning,
+	PiXCircle,
 } from "react-icons/pi";
+import { ArchivePayload } from "@/app/types/displays";
+import { Badge } from "@/components/ui/badge";
 
 interface ArchiveCardProps {
-  archive: ArchivePayload;
-  handleOpen: (archive: ArchivePayload) => void;
-  index?: number;
+	archive: ArchivePayload;
+	handleOpen: (archive: ArchivePayload) => void;
+	index?: number;
 }
 
-const ArchiveCard: React.FC<ArchiveCardProps> = ({
-  archive,
-  handleOpen,
-  index = 0,
-}) => {
-  const cardVariants: Variants = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-      scale: 0.95,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.4,
-        delay: index * 0.03,
-        ease: [0.4, 0, 0.2, 1],
-      },
-    },
-  };
+// Access level styling
+const accessLevelStyles = {
+	PUBLIC_OPEN: {
+		icon: PiGlobe,
+		label: "Public",
+		badgeClass: "bg-green-500/20 text-green-300 border-green-500/30",
+		iconClass: "text-green-500",
+		borderClass: "border-l-4 border-gray-500/40",
+		gradientClass: "from-gray-500/10 via-gray-400/5 to-transparent",
+	},
+	SUBSCRIPTION: {
+		icon: PiBook,
+		label: "Subscription",
+		badgeClass: "bg-blue-500/20 text-blue-300 border-blue-500/30",
+		iconClass: "text-blue-500",
+		borderClass: "border-l-4 border-gray-500/40",
+		gradientClass: "from-gray-500/10 via-gray-400/5 to-transparent",
+	},
+	PHYSICAL_OR_SUBSCRIPTION: {
+		icon: PiBook,
+		label: "Physical/Sub",
+		badgeClass: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
+		iconClass: "text-indigo-500",
+		borderClass: "border-l-4 border-gray-500/40",
+		gradientClass: "from-gray-500/10 via-gray-400/5 to-transparent",
+	},
+  RESTRICTED: {
+		icon: PiShieldWarning,
+		label: "Restricted",
+		badgeClass: "bg-orange-500/20 text-orange-300 border-orange-500/30",
+		iconClass: "text-orange-500",
+		borderClass: "border-l-4 border-gray-500/40",
+		gradientClass: "from-gray-500/10 via-gray-400/5 to-transparent",
+	},
+  PHYSICAL_ONLY: {
+		icon: PiLockKey,
+		label: "Physical Only",
+		badgeClass: "bg-red-500/20 text-red-300 border-red-500/30",
+		iconClass: "text-red-500",
+		borderClass: "border-red-500/40",
+		gradientClass: "from-red-500/10 via-red-400/5 to-transparent",
+	},
+	READING_ROOM_ONLY: {
+		icon: PiLockKey,
+		label: "Reading Room",
+		badgeClass: "bg-red-500/20 text-red-300 border-red-500/30",
+		iconClass: "text-red-500",
+		borderClass: "border-red-500/40",
+		gradientClass: "from-red-500/10 via-red-400/5 to-transparent",
+	},
+} as const;
 
-  // Access level indicator
-  const getAccessIcon = () => {
-    switch (archive.access_level) {
-      case "PUBLIC_OPEN":
-        return <PiGlobe className="text-green-500" />;
-      case "PHYSICAL_ONLY":
-      case "READING_ROOM_ONLY":
-        return <PiBuildings className="text-orange-500" />;
-      case "RESTRICTED":
-        return <PiLockKey className="text-red-500" />;
-      case "SUBSCRIPTION":
-      case "PHYSICAL_OR_SUBSCRIPTION":
-        return <PiBook className="text-blue-500" />;
-      default:
-        return <PiDatabase className="text-gray-400" />;
-    }
-  };
+// Default style for unknown access levels
+const defaultAccessStyle = {
+	icon: PiDatabase,
+	label: "Unknown",
+	badgeClass: "bg-slate-500/20 text-slate-300 border-slate-500/30",
+	iconClass: "text-slate-400",
+	borderClass: "border-slate-500/40",
+	gradientClass: "from-slate-500/10 via-slate-400/5 to-transparent",
+};
 
-  // Digitization status indicator
-  const getDigitizationIndicator = () => {
-    switch (archive.digitization_status) {
-      case "FULLY_DIGITIZED":
-        return (
-          <span className="flex items-center gap-1 text-green-600 text-xs">
-            <PiCheckCircle /> Digitized
-          </span>
-        );
-      case "PARTIALLY_DIGITIZED":
-        return (
-          <span className="flex items-center gap-1 text-amber-600 text-xs">
-            <PiCircleHalf /> Partial
-          </span>
-        );
-      case "NOT_DIGITIZED":
-        return (
-          <span className="flex items-center gap-1 text-red-600 text-xs">
-            <PiXCircle /> Physical Only
-          </span>
-        );
-      default:
-        return null;
-    }
-  };
+const ArchiveCard: React.FC<ArchiveCardProps> = ({ archive, handleOpen }) => {
+	const accessStyle =
+		accessLevelStyles[archive.access_level as keyof typeof accessLevelStyles] ||
+		defaultAccessStyle;
+	const AccessIcon = accessStyle.icon;
 
-  // Has results indicator
-  const hasResults = archive.source_urls && archive.source_urls.length > 0;
+	// Has results indicator
+	const hasResults = archive.source_urls && archive.source_urls.length > 0;
 
-  // Classification badge
-  const getClassificationBadge = () => {
-    if (archive.classification === "DISCOVERED") {
-      return (
-        <span className="flex items-center gap-1 px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded-full">
-          <PiLightning className="text-sm" />
-          <span>Discovery</span>
-        </span>
-      );
-    }
-    if (archive.classification === "INSTITUTIONAL") {
-      return (
-        <span className="flex items-center gap-1 px-2 py-0.5 text-xs bg-blue-500/20 text-blue-400 rounded-full">
-          <PiBuildings className="text-sm" />
-          <span>Institutional</span>
-        </span>
-      );
-    }
-    return null;
-  };
+	// Get border color - red if no results
+	const borderClass = !hasResults
+		? "border-red-500/40"
+		: accessStyle.borderClass;
+	const gradientClass = !hasResults
+		? "from-red-500/10 via-red-400/5 to-transparent"
+		: accessStyle.gradientClass;
 
-  // Border color based on access level
-  const getBorderColor = () => {
-    if (!hasResults) return "border-red-500/40 hover:border-red-500/60";
-    switch (archive.access_level) {
-      case "PUBLIC_OPEN":
-        return "border-green-500/40 hover:border-green-500/60";
-      case "PHYSICAL_ONLY":
-        return "border-orange-500/40 hover:border-orange-500/60";
-      case "RESTRICTED":
-        return "border-red-500/40 hover:border-red-500/60";
-      default:
-        return "border-gray-500/40 hover:border-gray-500/60";
-    }
-  };
+	// Digitization badge
+	const getDigitizationBadge = () => {
+		switch (archive.digitization_status) {
+			case "FULLY_DIGITIZED":
+				return (
+					<Badge className="bg-green-500/20 text-green-300 border-green-500/30 border text-[10px] flex items-center gap-1">
+						<PiCheckCircle className="w-3 h-3" />
+						Digitized
+					</Badge>
+				);
+			case "PARTIALLY_DIGITIZED":
+				return (
+					<Badge className="bg-amber-500/20 text-amber-300 border-amber-500/30 border text-[10px] flex items-center gap-1">
+						<PiCircleHalf className="w-3 h-3" />
+						Partial
+					</Badge>
+				);
+			case "NOT_DIGITIZED":
+				return (
+					<Badge className="bg-red-500/20 text-red-300 border-red-500/30 border text-[10px] flex items-center gap-1">
+						<PiXCircle className="w-3 h-3" />
+						Physical
+					</Badge>
+				);
+			default:
+				return null;
+		}
+	};
 
-  return (
-    <motion.div
-      variants={cardVariants}
-      initial="hidden"
-      animate="visible"
-      whileHover={{ scale: 1.02, y: -2 }}
-      whileTap={{ scale: 0.98 }}
-      className="group relative w-full h-full"
-      data-ref-id={archive._REF_ID}
-    >
-      <div
-        className={`relative flex flex-col h-full rounded-xl overflow-hidden cursor-pointer
-          border-l-4 ${getBorderColor()}
-          bg-gradient-to-br from-gray-500/10 via-gray-400/5 to-transparent
-          backdrop-blur-sm shadow-lg hover:shadow-xl
-          transition-all duration-300 ease-in-out`}
-        onClick={() => handleOpen(archive)}
-      >
-        {/* Header with classification badge and access indicator */}
-        <div className="flex items-center justify-between p-3 border-b border-primary/10">
-          <div className="flex items-center gap-2">
-            <span className="text-xl">{getAccessIcon()}</span>
-            <span className="text-xs font-medium text-primary/60 uppercase tracking-wide">
-              {archive.group.replace("_", " ")}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            {getClassificationBadge()}
-            {getDigitizationIndicator()}
-          </div>
-        </div>
+	return (
+		<div
+			className={`
+        flex items-center gap-3 p-3 rounded-lg cursor-pointer
+        bg-gradient-to-r ${gradientClass}
+        border-l-4 ${borderClass}
+        hover:bg-primary/5 transition-all duration-200
+      `}
+			onClick={() => handleOpen(archive)}
+			onKeyDown={(e) => e.key === "Enter" && handleOpen(archive)}
+			role="button"
+			tabIndex={0}
+			data-ref-id={archive._REF_ID}
+		>
+			{/* Icon */}
+			<div className={`flex-shrink-0 p-1.5 rounded-md bg-primary/5`}>
+				<AccessIcon className={`w-4 h-4 ${accessStyle.iconClass}`} />
+			</div>
 
-        {/* Content */}
-        <div className="flex flex-col p-3 gap-2 min-w-0 flex-1">
-          {/* Name */}
-          <h3 className="text-sm font-semibold text-primary line-clamp-2 leading-snug">
-            {archive.name}
-          </h3>
+			{/* Content - takes available space */}
+			<div className="flex-1 min-w-0">
+				{/* Name - full width, truncates if needed */}
+				<span className="text-sm font-medium text-primary truncate block">
+					{archive.name}
+				</span>
 
-          {/* Domain */}
-          <p className="text-xs text-primary/60 font-mono truncate">
-            {archive.domain}
-          </p>
+				{/* Notes */}
+				<span className="text-xs text-primary/60 truncate block">
+					{archive.notes}
+				</span>
 
-          {/* Summary */}
-          {archive.summary && (
-            <p className="text-xs text-primary/70 line-clamp-3 mt-1">
-              {archive.summary}
-            </p>
-          )}
+				{/* Domain */}
+				<span className="text-xs truncate block">
+					{archive.domain}
+				</span>
+			</div>
 
-          {/* Source URLs */}
-          {hasResults ? (
-            <div className="flex flex-col gap-1 mt-2 pt-2 border-t border-primary/10">
-              {archive.source_urls.slice(0, 2).map((url) => {
-                // Extract filename or path from URL for display
-                let displayName: string;
-                try {
-                  const urlObj = new URL(url);
-                  const pathParts = urlObj.pathname.split('/').filter(Boolean);
-                  displayName = pathParts.length > 0
-                    ? decodeURIComponent(pathParts[pathParts.length - 1])
-                    : urlObj.hostname;
-                } catch {
-                  displayName = url.substring(0, 40);
-                }
-                return (
-                  <a
-                    key={url}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-blue-400 hover:text-blue-300 truncate flex items-center gap-1"
-                    onClick={(e) => e.stopPropagation()}
-                    title={url}
-                  >
-                    <PiLink className="flex-shrink-0" />
-                    <span className="truncate">{displayName}</span>
-                  </a>
-                );
-              })}
-              {archive.source_urls.length > 2 && (
-                <span className="text-xs text-primary/50">
-                  +{archive.source_urls.length - 2} more source{archive.source_urls.length - 2 > 1 ? "s" : ""}
-                </span>
-              )}
-            </div>
-          ) : (
-            <div className="mt-auto pt-2">
-              <span className="text-xs text-primary/50">No results found</span>
-            </div>
-          )}
+			{/* Right side: Badges aligned right */}
+			<div className="flex-shrink-0 flex items-center gap-2">
+				{/* Access Level Badge */}
+				<Badge className={`${accessStyle.badgeClass} border text-[10px]`}>
+					{accessStyle.label}
+				</Badge>
 
-          {/* Constraints warning */}
-          {archive.constraints && archive.constraints.length > 0 && (
-            <div className="flex items-center gap-1 text-amber-500 text-xs mt-1">
-              <PiWarning />
-              {archive.constraints.length} constraint
-              {archive.constraints.length > 1 ? "s" : ""}
-            </div>
-          )}
-        </div>
-      </div>
-    </motion.div>
-  );
+				{/* Classification Badge */}
+				{archive.classification === "DISCOVERED" ? (
+					<Badge className="bg-amber-500/20 text-amber-400 border-amber-500/30 border text-[10px] flex items-center gap-1">
+						<PiLightning className="w-3 h-3" />
+						Discovery
+					</Badge>
+				) : archive.classification === "INSTITUTIONAL" ? (
+					<Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30 border text-[10px] flex items-center gap-1">
+						<PiBuildings className="w-3 h-3" />
+						Institutional
+					</Badge>
+				) : null}
+
+				{/* Digitization Badge */}
+				{getDigitizationBadge()}
+
+				{/* Results indicator */}
+				{!hasResults ? (
+					<span className="text-xs text-red-400">No results</span>
+				) : archive.constraints && archive.constraints.length > 0 ? (
+					<span className="flex items-center gap-1 text-xs text-amber-500">
+						<PiWarning className="w-3 h-3" />
+						{archive.constraints.length}
+					</span>
+				) : null}
+			</div>
+		</div>
+	);
 };
 
 export default ArchiveCard;

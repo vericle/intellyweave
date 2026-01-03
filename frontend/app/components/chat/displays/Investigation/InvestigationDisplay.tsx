@@ -8,18 +8,18 @@ import {
 } from "@/app/types/displays";
 import {
   PiLightbulb,
-  PiCheckCircle,
-  PiXCircle,
-  PiQuestion,
   PiArrowRight,
   PiWarning,
   PiFileText,
-  PiLink,
 } from "react-icons/pi";
 import { File } from "lucide-react";
 import NextStepCard, { NextStep } from "./NextStepCard";
 import NextStepView from "./NextStepView";
+import HypothesisCard from "./HypothesisCard";
+import HypothesisView from "./HypothesisView";
 import DocumentCard, { FileReference } from "@/app/components/documents/DocumentCard";
+import DocumentView from "./DocumentView";
+import DisplayPagination from "../../components/DisplayPagination";
 
 interface SourceUrlMapping {
   url: string;
@@ -43,9 +43,14 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
   filesForReview = [],
   sourceUrlsMapping = {},
 }) => {
-  // State for tracking which next step is selected for detail view
+  // State for tracking which items are selected for detail view
+  const [selectedHypothesisIndex, setSelectedHypothesisIndex] = useState<number | null>(null);
   const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null);
+  const [selectedDocumentIndex, setSelectedDocumentIndex] = useState<number | null>(null);
+
+  const selectedHypothesis = selectedHypothesisIndex !== null ? hypotheses[selectedHypothesisIndex] : null;
   const selectedStep = selectedStepIndex !== null ? nextSteps[selectedStepIndex] : null;
+  const selectedDocument = selectedDocumentIndex !== null ? filesForReview[selectedDocumentIndex] : null;
 
   if (paragraphs.length === 0) return null;
 
@@ -68,21 +73,6 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
       transition: { duration: 0.3 },
     },
   };
-
-  // Hypothesis status indicator
-  const getHypothesisIcon = (status: string) => {
-    switch (status) {
-      case "CONFIRMED":
-        return <PiCheckCircle className="text-green-500 text-lg" />;
-      case "REFUTED":
-        return <PiXCircle className="text-red-500 text-lg" />;
-      case "INDETERMINATE":
-        return <PiQuestion className="text-amber-500 text-lg" />;
-      default:
-        return <PiLightbulb className="text-blue-500 text-lg" />;
-    }
-  };
-
 
   return (
     <motion.div
@@ -144,42 +134,44 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
         ))}
       </div>
 
-      {/* Hypotheses section */}
+      {/* Hypotheses section - paginated list with detail view */}
       {hypotheses.length > 0 && (
         <motion.div variants={itemVariants} className="space-y-3">
           <h3 className="text-sm font-semibold text-primary/70 uppercase tracking-wide flex items-center gap-2">
             <PiLightbulb />
             Hypotheses
           </h3>
-          <div className="space-y-2">
-            {hypotheses.map((hypothesis) => (
-              <div
-                key={hypothesis.id}
-                className="flex items-start gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10"
+          <AnimatePresence mode="wait">
+            {selectedHypothesis ? (
+              <HypothesisView
+                key="hypothesis-detail"
+                hypothesis={selectedHypothesis}
+                onBack={() => setSelectedHypothesisIndex(null)}
+                sourceUrlsMapping={sourceUrlsMapping}
+              />
+            ) : (
+              <motion.div
+                key="hypothesis-list"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
               >
-                {getHypothesisIcon(hypothesis.status)}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between gap-2">
-                    <p className="text-sm font-medium text-primary">
-                      {hypothesis.description}
-                    </p>
-                    <span className="text-xs text-primary/50 whitespace-nowrap">
-                      {Math.round(hypothesis.confidence * 100)}% confidence
-                    </span>
-                  </div>
-                  {hypothesis.reasoning && (
-                    <p className="text-xs text-primary/60 mt-1">
-                      {hypothesis.reasoning}
-                    </p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+                <DisplayPagination itemsPerPage={3}>
+                  {hypotheses.map((hypothesis, idx) => (
+                    <HypothesisCard
+                      key={`hypothesis-${hypothesis.id}-${idx}`}
+                      hypothesis={hypothesis}
+                      onClick={() => setSelectedHypothesisIndex(idx)}
+                    />
+                  ))}
+                </DisplayPagination>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
       )}
 
-      {/* Next steps section - with detail view on click */}
+      {/* Next steps section - paginated list with detail view */}
       {nextSteps.length > 0 && (
         <motion.div variants={itemVariants} className="space-y-3">
           <h3 className="text-sm font-semibold text-primary/70 uppercase tracking-wide flex items-center gap-2">
@@ -189,62 +181,34 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
           <AnimatePresence mode="wait">
             {selectedStep ? (
               <NextStepView
-                key="detail"
+                key="nextstep-detail"
                 step={selectedStep}
                 onBack={() => setSelectedStepIndex(null)}
               />
             ) : (
               <motion.div
-                key="list"
+                key="nextstep-list"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="grid gap-2 sm:grid-cols-2"
               >
-                {nextSteps.map((step, idx) => (
-                  <NextStepCard
-                    key={`${step.text}-${idx}`}
-                    step={step}
-                    index={idx}
-                    onClick={() => setSelectedStepIndex(idx)}
-                  />
-                ))}
+                <DisplayPagination itemsPerPage={3}>
+                  {nextSteps.map((step, idx) => (
+                    <NextStepCard
+                      key={`step-${step.text}-${idx}`}
+                      step={step}
+                      index={idx}
+                      onClick={() => setSelectedStepIndex(idx)}
+                    />
+                  ))}
+                </DisplayPagination>
               </motion.div>
             )}
           </AnimatePresence>
         </motion.div>
       )}
 
-      {/* Sources section - list all sources with clickable URLs */}
-      {Object.keys(sourceUrlsMapping).length > 0 && (
-        <motion.div variants={itemVariants} className="space-y-3">
-          <h3 className="text-sm font-semibold text-primary/70 uppercase tracking-wide flex items-center gap-2">
-            <PiLink />
-            Sources
-          </h3>
-          <div className="space-y-1">
-            {Object.entries(sourceUrlsMapping).map(([refId, source], idx) => (
-              <div
-                key={refId}
-                className="flex items-center gap-2 text-sm"
-              >
-                <span className="text-primary/50 font-mono text-xs">[{idx + 1}]</span>
-                <a
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 hover:underline truncate flex items-center gap-1"
-                >
-                  {source.title || source.url}
-                  <PiLink className="text-xs flex-shrink-0" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      )}
-
-      {/* Documents for review section */}
+      {/* Documents for review section - paginated list with detail view */}
       {filesForReview.length > 0 && (
         <motion.div variants={itemVariants} className="space-y-3">
           <h3 className="text-sm font-semibold text-primary/70 uppercase tracking-wide flex items-center gap-2">
@@ -252,26 +216,51 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
             Documents Requiring Manual Review
           </h3>
           <p className="text-xs text-primary/50">
-            These files were not processed automatically to prevent context saturation. Click to open:
+            These files were not processed automatically to prevent context saturation. Click to view details:
           </p>
-          <div className="space-y-2">
-            {filesForReview.map((file, idx) => (
-              <DocumentCard
-                key={`${file.url}-${idx}`}
-                variant="list"
-                file={file}
+          <AnimatePresence mode="wait">
+            {selectedDocument ? (
+              <DocumentView
+                key="document-detail"
+                file={selectedDocument}
+                onBack={() => setSelectedDocumentIndex(null)}
               />
-            ))}
-          </div>
+            ) : (
+              <motion.div
+                key="document-list"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <DisplayPagination itemsPerPage={3}>
+                  {filesForReview.map((file, idx) => (
+                    <div
+                      key={`doc-${file.url}-${idx}`}
+                      onClick={() => setSelectedDocumentIndex(idx)}
+                      onKeyDown={(e) => e.key === "Enter" && setSelectedDocumentIndex(idx)}
+                      role="button"
+                      tabIndex={0}
+                      className="cursor-pointer"
+                    >
+                      <DocumentCard
+                        variant="list"
+                        file={file}
+                      />
+                    </div>
+                  ))}
+                </DisplayPagination>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
       )}
 
       {/* Warning footer */}
       <motion.div
         variants={itemVariants}
-        className="flex items-start gap-2 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-600"
+        className="flex items-start gap-2 p-3 rounded-lg bg-gray-500/10 border border-l-4 border-amber-500/20 text-primary"
       >
-        <PiWarning className="text-lg flex-shrink-0 mt-0.5" />
+        <PiWarning className="text-lg flex-shrink-0 mt-0.5 text-orange-500" />
         <p className="text-xs">
           This analysis identifies patterns and generates hypotheses based on
           available data. Physical archive access may be required to confirm

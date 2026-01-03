@@ -1,17 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { ArchivePayload } from "@/app/types/displays";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import ArchiveCard from "./ArchiveCard";
-import DisplayPagination from "../../components/DisplayPagination";
 import {
   PiGlobe,
   PiLockKey,
   PiBuildings,
   PiBook,
+  PiDatabase,
   PiWarning,
   PiCheckCircle,
   PiXCircle,
@@ -21,20 +19,13 @@ import {
   PiInfo,
   PiStar,
   PiClipboardText,
-  PiArrowLeft,
-  PiShieldWarning,
-  PiDatabase,
 } from "react-icons/pi";
 
-interface ArchiveDisplayProps {
-  archives: ArchivePayload[];
-  handleResultPayloadChange: (
-    type: string,
-    payload: /* eslint-disable @typescript-eslint/no-explicit-any */ any
-  ) => void;
+interface ArchiveViewProps {
+  archive: ArchivePayload;
 }
 
-// Access level styling - PHYSICAL_ONLY uses locker (most restricted), RESTRICTED uses shield
+// Access level styling
 const accessLevelStyles = {
   PUBLIC_OPEN: {
     icon: PiGlobe,
@@ -44,14 +35,14 @@ const accessLevelStyles = {
     description: "Freely accessible online without restrictions",
   },
   PHYSICAL_ONLY: {
-    icon: PiLockKey, // Locker = requires physical visit (most restricted)
+    icon: PiBuildings,
     label: "Physical Only",
     badgeClass: "bg-orange-500/20 text-orange-300 border-orange-500/30",
     iconClass: "text-orange-500",
     description: "Requires in-person visit to archive facility",
   },
   RESTRICTED: {
-    icon: PiShieldWarning, // Shield = access requires clearance but may be digital
+    icon: PiLockKey,
     label: "Restricted",
     badgeClass: "bg-red-500/20 text-red-300 border-red-500/30",
     iconClass: "text-red-500",
@@ -144,20 +135,19 @@ const protocolStyles = {
 const constraintSeverityStyles = {
   low: {
     badgeClass: "bg-slate-500/20 text-slate-300 border-slate-500/30",
+    iconClass: "text-slate-400",
   },
   medium: {
     badgeClass: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+    iconClass: "text-amber-400",
   },
   high: {
     badgeClass: "bg-red-500/20 text-red-300 border-red-500/30",
+    iconClass: "text-red-400",
   },
 } as const;
 
-// Archive Detail View Component (inline)
-const ArchiveDetailView: React.FC<{
-  archive: ArchivePayload;
-  onBack: () => void;
-}> = ({ archive, onBack }) => {
+const ArchiveView: React.FC<ArchiveViewProps> = ({ archive }) => {
   const accessStyle =
     accessLevelStyles[archive.access_level] || accessLevelStyles.PUBLIC_OPEN;
   const digitizationStyle =
@@ -168,8 +158,10 @@ const ArchiveDetailView: React.FC<{
   const AccessIcon = accessStyle.icon;
   const DigitizationIcon = digitizationStyle.icon;
 
+  // Has results indicator
   const hasResults = archive.source_urls && archive.source_urls.length > 0;
 
+  // Get border color based on access level
   const getBorderColor = () => {
     if (!hasResults) return "border-red-500/40";
     switch (archive.access_level) {
@@ -189,24 +181,10 @@ const ArchiveDetailView: React.FC<{
 
   return (
     <motion.div
-      key="archive-detail"
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -20 }}
-      transition={{ duration: 0.2 }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
       className="w-full"
     >
-      {/* Back button */}
-      <Button
-        variant="ghost"
-        size="sm"
-        onClick={onBack}
-        className="mb-3 text-primary/60 hover:text-primary flex items-center gap-1"
-      >
-        <PiArrowLeft className="w-4 h-4" />
-        Back to sources
-      </Button>
-
       <div
         className={`relative rounded-xl overflow-hidden border-l-4 ${getBorderColor()} bg-gradient-to-br from-gray-500/10 via-gray-400/5 to-transparent backdrop-blur-sm shadow-lg`}
       >
@@ -226,6 +204,7 @@ const ArchiveDetailView: React.FC<{
                 </p>
               </div>
             </div>
+            {/* Classification badge */}
             {archive.classification === "DISCOVERED" ? (
               <Badge
                 className={`bg-amber-500/20 text-amber-400 border-amber-500/30 flex items-center gap-1`}
@@ -243,6 +222,7 @@ const ArchiveDetailView: React.FC<{
             )}
           </div>
 
+          {/* Group */}
           <p className="text-xs text-primary/50 mt-2 uppercase tracking-wide">
             {archive.group.replace(/_/g, " ")}
           </p>
@@ -250,16 +230,23 @@ const ArchiveDetailView: React.FC<{
 
         {/* Status badges row */}
         <div className="px-4 py-3 border-b border-primary/10 flex flex-wrap items-center gap-2">
+          {/* Access Level */}
           <Badge className={`${accessStyle.badgeClass} border text-xs`}>
             {accessStyle.label}
           </Badge>
+
+          {/* Digitization Status */}
           <Badge className={`${digitizationStyle.badgeClass} border text-xs flex items-center gap-1`}>
             <DigitizationIcon className="w-3 h-3" />
             {digitizationStyle.label}
           </Badge>
+
+          {/* Protocol */}
           <Badge className={`${protocolStyle.badgeClass} border text-xs`}>
             {protocolStyle.label}
           </Badge>
+
+          {/* Relevance score for discovered sources */}
           {archive.classification === "DISCOVERED" && archive.relevance_score !== undefined && (
             <Badge className="bg-primary/10 text-primary/80 border-primary/20 border text-xs flex items-center gap-1">
               <PiStar className="w-3 h-3" />
@@ -328,7 +315,7 @@ const ArchiveDetailView: React.FC<{
                     constraintSeverityStyles.medium;
                   return (
                     <div
-                      key={`${constraint.type}-${constraint.severity}-${idx}`}
+                      key={idx}
                       className={`p-3 rounded-lg border-l-2 ${
                         constraint.severity === "high"
                           ? "border-l-red-500 bg-red-500/5"
@@ -375,7 +362,7 @@ const ArchiveDetailView: React.FC<{
                   }
                   return (
                     <a
-                      key={`${url}-${idx}`}
+                      key={idx}
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -407,100 +394,4 @@ const ArchiveDetailView: React.FC<{
   );
 };
 
-// Main ArchiveDisplay Component
-const ArchiveDisplay: React.FC<ArchiveDisplayProps> = ({
-  archives,
-  handleResultPayloadChange,
-}) => {
-  // State for tracking which archive is selected for detail view
-  const [selectedArchiveIndex, setSelectedArchiveIndex] = useState<number | null>(null);
-  const selectedArchive = selectedArchiveIndex !== null ? archives[selectedArchiveIndex] : null;
-
-  if (archives.length === 0) return null;
-
-  // Count statistics
-  const withResults = archives.filter(
-    (a) => a.source_urls && a.source_urls.length > 0
-  ).length;
-  const discoveredCount = archives.filter(
-    (a) => a.classification === "DISCOVERED"
-  ).length;
-  const physicalOnly = archives.filter(
-    (a) =>
-      a.access_level === "PHYSICAL_ONLY" ||
-      a.digitization_status === "NOT_DIGITIZED"
-  ).length;
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        duration: 0.3,
-      },
-    },
-  };
-
-  return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="w-full space-y-4"
-    >
-      {/* Section title */}
-      <h3 className="text-sm font-semibold text-primary/70 uppercase tracking-wide flex items-center gap-2">
-        <PiDatabase className="w-4 h-4" />
-        Mapped Sources
-      </h3>
-
-      {/* Summary stats */}
-      <div className="flex items-center justify-between px-2 text-xs text-primary/60">
-        <span>
-          {archives.length} source{archives.length !== 1 ? "s" : ""}
-        </span>
-        <span className="flex gap-3">
-          {discoveredCount > 0 && (
-            <span className="text-amber-500">{discoveredCount} discovered</span>
-          )}
-          <span className="text-green-600">{withResults} with results</span>
-          <span className="text-orange-600">{physicalOnly} physical-only</span>
-        </span>
-      </div>
-
-      {/* Conditional rendering: List view or Detail view */}
-      <AnimatePresence mode="wait">
-        {selectedArchive ? (
-          <ArchiveDetailView
-            key="detail"
-            archive={selectedArchive}
-            onBack={() => setSelectedArchiveIndex(null)}
-          />
-        ) : (
-          <motion.div
-            key="list"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.2 }}
-          >
-            {/* Archive list - single column with pagination */}
-            <DisplayPagination itemsPerPage={3}>
-              {archives.map((archive, idx) => (
-                <ArchiveCard
-                  key={`${archive.id}-${archive.domain}-${idx}`}
-                  archive={archive}
-                  handleOpen={() => setSelectedArchiveIndex(idx)}
-                  index={idx}
-                />
-              ))}
-            </DisplayPagination>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
-  );
-};
-
-export default ArchiveDisplay;
+export default ArchiveView;

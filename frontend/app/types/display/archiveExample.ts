@@ -45,66 +45,193 @@ export const archiveResponse: any = {
       payload: {
         type: "archives",
         objects: [
+          // === INSTITUTIONAL + HIGH RELEVANCE: CIA Reading Room (PRIMARY SOURCE) ===
           {
-            id: "src_cacb_uscourts_gov",
-            name: "cacb.uscourts.gov",
-            domain: "cacb.uscourts.gov",
-            group: "DISCOVERED",
+            id: "src_cia_gov",
+            name: "CIA Reading Room",
+            domain: "cia.gov",
+            group: "us_government",
             summary:
-              "U.S. Bankruptcy Court. Central District of California. Awarded Professional Fees by Payee, Case Number and Date. Date. Payee. Case Number.",
+              "I told him to bring them to my office. 56. There were two, both in uniform. Cie was Paul LYON who is half Hungarian. The other was Jaok WHITEHEAD, a ...",
             access_level: "PUBLIC_OPEN",
-            digitization_status: "N_A",
-            protocol: "HTML_CONTENT",
-            constraints: [],
-            notes: "",
-            source_urls: [
-              "https://www.cacb.uscourts.gov/sites/cacb/files/documents/2017_Payee.pdf",
+            digitization_status: "PARTIALLY_DIGITIZED",
+            protocol: "WEB_DIGITAL_REPOSITORY",
+            constraints: [
+              {
+                type: "LEGAL",
+                severity: "medium",
+                description:
+                  "Some sections remain redacted under Executive Order 13526 national security exemptions",
+              },
             ],
-            classification: "DISCOVERED",
-            relevance_score: 0,
-            relevance_reasoning: "",
+            notes: "Declassified intelligence documents, FOIA releases",
+            source_urls: [
+              "https://www.cia.gov/readingroom/docs/BISHOP,%20ROBERT%20%20%20VOL.%202_0030.pdf",
+            ],
+            classification: "INSTITUTIONAL",
+            relevance_score: 0.92,
+            relevance_reasoning:
+              "Document directly mentions 'Paul LYON who is half Hungarian' in operational context with uniformed personnel. Primary source for subject identification.",
             _REF_ID: "quartermaster_archives_0_0",
           },
+          // === PHYSICAL_ONLY + NOT_DIGITIZED: National Archives (requires in-person visit) ===
           {
-            id: "src_catholic_edu",
-            name: "catholic.edu",
-            domain: "catholic.edu",
-            group: "DISCOVERED",
+            id: "src_nara_gov",
+            name: "U.S. National Archives - Record Group 319",
+            domain: "archives.gov",
+            group: "us_government",
             summary:
-              "Bishop Robert Barron, bishop of the Diocese of Winona–Rochester and founder of Word on Fire, delivered the 2025 University Commencement address on Saturday, ...",
-            access_level: "PUBLIC_OPEN",
-            digitization_status: "N_A",
-            protocol: "HTML_CONTENT",
-            constraints: [],
-            notes: "",
-            source_urls: [
-              "https://www.catholic.edu/all-stories/bishop-robert-barron-shares-pearl-great-price-2025-commencement-address",
+              "Counter Intelligence Corps operational files from European Theater, 1944-1947. Includes personnel rosters, operational reports, and agent files from Austrian occupation zone.",
+            access_level: "PHYSICAL_ONLY",
+            digitization_status: "NOT_DIGITIZED",
+            protocol: "READING_ROOM_ONLY",
+            constraints: [
+              {
+                type: "ACCESS_BLOCKED",
+                severity: "high",
+                description:
+                  "Records require in-person visit to College Park, MD facility. No remote access available.",
+              },
+              {
+                type: "LEGAL",
+                severity: "medium",
+                description:
+                  "Some files require researcher credentials and prior approval from archivist.",
+              },
             ],
-            classification: "DISCOVERED",
-            relevance_score: 0,
-            relevance_reasoning: "",
+            notes:
+              "Primary repository for CIC records. Finding aids available online but documents require physical retrieval.",
+            source_urls: [],
+            classification: "INSTITUTIONAL",
+            relevance_score: 0.78,
+            relevance_reasoning:
+              "Record Group 319 contains CIC personnel files from Austria 1945-1946. High probability of Lyon/Bishop records but requires physical visit.",
             _REF_ID: "quartermaster_archives_0_1",
           },
+          // === RESTRICTED: Still-classified CIA records ===
           {
-            id: "src_cga_ct_gov",
-            name: "cga.ct.gov",
-            domain: "cga.ct.gov",
-            group: "DISCOVERED",
+            id: "src_cia_classified",
+            name: "CIA Operational Files - Austria Station 1945-1950",
+            domain: "cia.gov",
+            group: "us_government",
             summary:
-              "OR several years the work incident to the production of this volume has engaged the services of a large staff of editors and contributors.",
-            access_level: "PUBLIC_OPEN",
+              "Classified operational records from Vienna Station covering early Cold War counterintelligence activities. Not available through FOIA Reading Room.",
+            access_level: "RESTRICTED",
             digitization_status: "N_A",
-            protocol: "HTML_CONTENT",
-            constraints: [],
-            notes: "",
-            source_urls: [
-              "https://www.cga.ct.gov/hco/books/Prominent_Families_of_New_York.pdf",
+            protocol: "SEARCH_UI_ONLY",
+            constraints: [
+              {
+                type: "LEGAL",
+                severity: "high",
+                description:
+                  "Records classified under National Security Act. Declassification review pending until 2045.",
+              },
+              {
+                type: "TECHNICAL",
+                severity: "high",
+                description:
+                  "No public search interface. Mandatory review requests require specific document identifiers.",
+              },
             ],
-            classification: "DISCOVERED",
-            relevance_score: 0,
-            relevance_reasoning: "",
+            notes:
+              "Potential source for complete operational context. Submit mandatory declassification review request via NARA.",
+            source_urls: [],
+            classification: "INSTITUTIONAL",
+            relevance_score: 0.65,
+            relevance_reasoning:
+              "Likely contains unredacted context for Paul Lyon operations but access currently impossible without security clearance.",
             _REF_ID: "quartermaster_archives_0_2",
           },
+          // === SUBSCRIPTION: JSTOR academic database ===
+          {
+            id: "src_jstor_org",
+            name: "JSTOR - Cold War Intelligence Studies",
+            domain: "jstor.org",
+            group: "academic_projects",
+            summary:
+              "Scholarly articles on American counterintelligence in postwar Austria, including analyses of CIC operations and personnel during 1945-1950 occupation period.",
+            access_level: "SUBSCRIPTION",
+            digitization_status: "FULLY_DIGITIZED",
+            protocol: "WEB_DIGITAL_REPOSITORY",
+            constraints: [
+              {
+                type: "OTHER",
+                severity: "medium",
+                description:
+                  "Requires institutional subscription or JSTOR individual access ($19.50/month).",
+              },
+            ],
+            notes:
+              "Academic secondary sources may cite primary CIC documents with personnel names.",
+            source_urls: [
+              "https://www.jstor.org/stable/10.2307/j.ctt6wq0g5",
+            ],
+            classification: "INSTITUTIONAL",
+            relevance_score: 0.55,
+            relevance_reasoning:
+              "Academic literature on Austrian occupation may reference CIC officers by name. Secondary source for biographical context.",
+            _REF_ID: "quartermaster_archives_0_3",
+          },
+          // === PHYSICAL_OR_SUBSCRIPTION: German Bundesarchiv ===
+          {
+            id: "src_bundesarchiv_de",
+            name: "Bundesarchiv - Besatzungsakten Österreich",
+            domain: "bundesarchiv.de",
+            group: "european_archives",
+            summary:
+              "German federal archives containing Allied occupation records, including documentation of American military personnel interactions with German authorities in Austrian border regions.",
+            access_level: "PHYSICAL_OR_SUBSCRIPTION",
+            digitization_status: "PARTIALLY_DIGITIZED",
+            protocol: "LIBRARY_CATALOGS",
+            constraints: [
+              {
+                type: "LANGUAGE",
+                severity: "medium",
+                description:
+                  "Primary documents in German. Finding aids available in German and English.",
+              },
+              {
+                type: "ACCESS_BLOCKED",
+                severity: "low",
+                description:
+                  "Remote access requires Invenio account registration. Full documents available on-site in Koblenz.",
+              },
+            ],
+            notes:
+              "May contain German-side documentation of American CIC activities in Austrian occupation zone.",
+            source_urls: [
+              "https://www.bundesarchiv.de/DE/Navigation/Finden/Bestaende/bestaende.html",
+            ],
+            classification: "INSTITUTIONAL",
+            relevance_score: 0.45,
+            relevance_reasoning:
+              "German records may document interactions with Lyon/Bishop from occupied territory perspective. Requires German language capability.",
+            _REF_ID: "quartermaster_archives_0_4",
+          },
+          // === FULLY_DIGITIZED + WIKI_COLLABORATIVE: Internet Archive ===
+          {
+            id: "src_archive_org",
+            name: "Internet Archive - Military History Collection",
+            domain: "archive.org",
+            group: "academic_projects",
+            summary:
+              "Digitized collection of declassified military documents, unit histories, and veteran memoirs from WWII and early Cold War period. Full-text searchable.",
+            access_level: "PUBLIC_OPEN",
+            digitization_status: "FULLY_DIGITIZED",
+            protocol: "API",
+            constraints: [],
+            notes:
+              "Community-contributed materials may include CIC veteran memoirs or unit histories mentioning personnel.",
+            source_urls: [
+              "https://archive.org/details/military-history",
+            ],
+            classification: "INSTITUTIONAL",
+            relevance_score: 0.40,
+            relevance_reasoning:
+              "Full-text search across veteran accounts and unit histories may surface Lyon/Bishop mentions in informal sources.",
+            _REF_ID: "quartermaster_archives_0_5",
+          },
+          // === DISCOVERED sources (lower relevance - search noise) ===
           {
             id: "src_en_wikipedia_org",
             name: "en.wikipedia.org",
@@ -113,35 +240,16 @@ export const archiveResponse: any = {
             summary:
               "Robert Grosseteste also known as Robert Greathead or Robert of Lincoln, was an English statesman, scholastic philosopher, theologian, scientist and Bishop ...",
             access_level: "PUBLIC_OPEN",
-            digitization_status: "N_A",
-            protocol: "HTML_CONTENT",
+            digitization_status: "FULLY_DIGITIZED",
+            protocol: "WIKI_COLLABORATIVE",
             constraints: [],
             notes: "",
             source_urls: ["https://en.wikipedia.org/wiki/Robert_Grosseteste"],
             classification: "DISCOVERED",
-            relevance_score: 0,
-            relevance_reasoning: "",
-            _REF_ID: "quartermaster_archives_0_3",
-          },
-          {
-            id: "src_gutenberg_org",
-            name: "gutenberg.org",
-            domain: "gutenberg.org",
-            group: "DISCOVERED",
-            summary:
-              "The Lyon in Mourning is a collection of Journals, Narratives, and Memoranda relating to the life of Prince Charles Edward Stuart at and subsequent to the ...",
-            access_level: "PUBLIC_OPEN",
-            digitization_status: "N_A",
-            protocol: "HTML_CONTENT",
-            constraints: [],
-            notes: "",
-            source_urls: [
-              "https://www.gutenberg.org/files/43222/43222-h/43222-h.htm",
-            ],
-            classification: "DISCOVERED",
-            relevance_score: 0,
-            relevance_reasoning: "",
-            _REF_ID: "quartermaster_archives_0_4",
+            relevance_score: 0.05,
+            relevance_reasoning:
+              "False positive - medieval bishop, not WWII-era counterintelligence personnel. Name collision in search results.",
+            _REF_ID: "quartermaster_archives_0_6",
           },
           {
             id: "src_legacy_com",
@@ -153,54 +261,22 @@ export const archiveResponse: any = {
             access_level: "PUBLIC_OPEN",
             digitization_status: "N_A",
             protocol: "HTML_CONTENT",
-            constraints: [],
+            constraints: [
+              {
+                type: "ACCESS_BLOCKED",
+                severity: "low",
+                description:
+                  "Full obituary text blocked by Cloudflare security verification.",
+              },
+            ],
             notes: "",
             source_urls: [
               "https://www.legacy.com/us/obituaries/appealdemocrat/name/paul-robert-bishop-obituary?id=23450988",
             ],
             classification: "DISCOVERED",
-            relevance_score: 0,
-            relevance_reasoning: "",
-            _REF_ID: "quartermaster_archives_0_5",
-          },
-          {
-            id: "src_oregon_gov",
-            name: "oregon.gov",
-            domain: "oregon.gov",
-            group: "DISCOVERED",
-            summary:
-              "JUDY. AARON. Between $50 and $100 PO BOX 798. HEPPNER. OR. 97836. EMERET. ABAY. Over $100. 5221 N HAIGHT AVE UNIT 1B. PORTLAND.",
-            access_level: "PUBLIC_OPEN",
-            digitization_status: "N_A",
-            protocol: "HTML_CONTENT",
-            constraints: [],
-            notes: "",
-            source_urls: [
-              "https://www.oregon.gov/pers/Documents/General-Information/Unclaimed-Deceased-Member-Benefits-List.pdf",
-            ],
-            classification: "DISCOVERED",
-            relevance_score: 0,
-            relevance_reasoning: "",
-            _REF_ID: "quartermaster_archives_0_6",
-          },
-          {
-            id: "src_cia_gov",
-            name: "CIA Reading Room",
-            domain: "cia.gov",
-            group: "us_government",
-            summary:
-              "I told him to bring them to my office. 56. There were two, both in uniform. Cie was Paul LYON who is half Hungarian. The other was Jaok WHITEHEAD, a ...",
-            access_level: "PUBLIC_OPEN",
-            digitization_status: "PARTIALLY_DIGITIZED",
-            protocol: "WEB_DIGITAL_REPOSITORY",
-            constraints: [],
-            notes: "Declassified intelligence documents, FOIA releases",
-            source_urls: [
-              "https://www.cia.gov/readingroom/docs/BISHOP,%20ROBERT%20%20%20VOL.%202_0030.pdf",
-            ],
-            classification: "INSTITUTIONAL",
-            relevance_score: 0,
-            relevance_reasoning: "",
+            relevance_score: 0.25,
+            relevance_reasoning:
+              "Paul Robert Bishop obituary (2008) - birth year ~1930-1940 would make 1945-1946 service possible. Requires verification.",
             _REF_ID: "quartermaster_archives_0_7",
           },
         ],
@@ -213,14 +289,13 @@ export const archiveResponse: any = {
           needs_summarising: false,
           query_output: {
             target_collections: [
-              "cacb.uscourts.gov",
-              "catholic.edu",
-              "cga.ct.gov",
-              "en.wikipedia.org",
-              "gutenberg.org",
-              "legacy.com",
-              "oregon.gov",
               "cia.gov",
+              "archives.gov",
+              "jstor.org",
+              "bundesarchiv.de",
+              "archive.org",
+              "en.wikipedia.org",
+              "legacy.com",
             ],
             search_type: "external_archives",
             search_query:
@@ -228,25 +303,6 @@ export const archiveResponse: any = {
             limit: 50,
           },
           archive_sources_for_case_officer: [
-            {
-              id: "src_cacb_uscourts_gov",
-              name: "cacb.uscourts.gov",
-              domain: "cacb.uscourts.gov",
-              group: "DISCOVERED",
-              summary:
-                "U.S. Bankruptcy Court. Central District of California. Awarded Professional Fees by Payee, Case Number and Date. Date. Payee. Case Number.",
-              access_level: "PUBLIC_OPEN",
-              digitization_status: "N_A",
-              protocol: "HTML_CONTENT",
-              constraints: [],
-              notes: "",
-              source_urls: [
-                "https://www.cacb.uscourts.gov/sites/cacb/files/documents/2017_Payee.pdf",
-              ],
-              classification: "DISCOVERED",
-              relevance_score: 0,
-              relevance_reasoning: "",
-            },
             {
               id: "src_cia_gov",
               name: "CIA Reading Room",
@@ -257,14 +313,47 @@ export const archiveResponse: any = {
               access_level: "PUBLIC_OPEN",
               digitization_status: "PARTIALLY_DIGITIZED",
               protocol: "WEB_DIGITAL_REPOSITORY",
-              constraints: [],
+              constraints: [
+                {
+                  type: "LEGAL",
+                  severity: "medium",
+                  description:
+                    "Some sections remain redacted under Executive Order 13526 national security exemptions",
+                },
+              ],
               notes: "Declassified intelligence documents, FOIA releases",
               source_urls: [
                 "https://www.cia.gov/readingroom/docs/BISHOP,%20ROBERT%20%20%20VOL.%202_0030.pdf",
               ],
               classification: "INSTITUTIONAL",
-              relevance_score: 0,
-              relevance_reasoning: "",
+              relevance_score: 0.92,
+              relevance_reasoning:
+                "Document directly mentions 'Paul LYON who is half Hungarian' in operational context with uniformed personnel.",
+            },
+            {
+              id: "src_nara_gov",
+              name: "U.S. National Archives - Record Group 319",
+              domain: "archives.gov",
+              group: "us_government",
+              summary:
+                "Counter Intelligence Corps operational files from European Theater, 1944-1947.",
+              access_level: "PHYSICAL_ONLY",
+              digitization_status: "NOT_DIGITIZED",
+              protocol: "READING_ROOM_ONLY",
+              constraints: [
+                {
+                  type: "ACCESS_BLOCKED",
+                  severity: "high",
+                  description:
+                    "Records require in-person visit to College Park, MD facility.",
+                },
+              ],
+              notes: "Primary repository for CIC records.",
+              source_urls: [],
+              classification: "INSTITUTIONAL",
+              relevance_score: 0.78,
+              relevance_reasoning:
+                "Record Group 319 contains CIC personnel files from Austria 1945-1946.",
             },
           ],
         },
@@ -367,58 +456,125 @@ export const archiveResponse: any = {
           title:
             "Investigation: Paul Lyon counterintelligence corps officer Austria 1945-1946 and relations with Robert Bishop",
           hypotheses: [
+            // === CONFIRMED: Primary evidence found ===
             {
               id: 1,
               description:
-                "Paul Lyon was a counterintelligence corps officer of partial Hungarian descent stationed in Austria during the immediate post-WWII period (1945-1946), and may have had professional or personal relations with an individual named Robert Bishop in some capacity",
-              status: "PENDING",
-              confidence: 0.25,
-              evidence: [],
+                "Paul Lyon was an individual of partial Hungarian descent present in an operational intelligence context during the post-WWII period",
+              status: "CONFIRMED",
+              confidence: 0.85,
+              evidence: [
+                {
+                  source_id: "quartermaster_archives_0_0",
+                  content:
+                    "CIA declassified document explicitly states 'Paul LYON who is half Hungarian' in context of uniformed personnel in operational setting",
+                  relevance_score: 0.95,
+                  is_positive: true,
+                },
+              ],
               reasoning:
-                "The CIA document fragment specifically mentions 'Paul LYON who is half Hungarian' in what appears to be an operational or organizational context involving uniformed personnel. The partial Hungarian heritage is consistent with potential Austrian service and counterintelligence work. However, the fragmentary nature of this reference and complete absence of corroborating evidence prevents stronger confidence.",
+                "Direct documentary evidence confirms Lyon's existence and partial Hungarian heritage. The CIA Reading Room document (BISHOP, ROBERT VOL. 2_0030.pdf) provides primary source confirmation of identity, though exact role and timeline require additional verification.",
             },
+            // === INDETERMINATE: Insufficient evidence ===
             {
               id: 2,
               description:
-                "Robert Bishop was a civilian official, liaison, or fellow intelligence operative with whom Paul Lyon worked during post-war Austrian occupation operations",
-              status: "PENDING",
-              confidence: 0.2,
-              evidence: [],
+                "Paul Lyon served specifically as a Counter Intelligence Corps officer stationed in Austria during 1945-1946",
+              status: "INDETERMINATE",
+              confidence: 0.45,
+              evidence: [
+                {
+                  source_id: "quartermaster_archives_0_0",
+                  content:
+                    "Document mentions uniformed personnel but does not explicitly state CIC affiliation or Austrian posting",
+                  relevance_score: 0.6,
+                  is_positive: true,
+                },
+                {
+                  source_id: "quartermaster_archives_0_1",
+                  content:
+                    "NARA Record Group 319 contains CIC files but requires physical visit - not yet searched",
+                  relevance_score: 0.7,
+                  is_positive: false,
+                },
+              ],
               reasoning:
-                "The query specifically asks about 'relations' between Paul Lyon and Robert Bishop, suggesting a professional or operational connection. The inability to access the Bishop obituary and the lack of military records creates a significant information gap. If Bishop was a civilian official, he may not appear prominently in military archives.",
+                "While Lyon's existence is confirmed, specific CIC affiliation and Austrian 1945-1946 service cannot be verified without accessing physical records at National Archives. The fragmentary CIA document does not provide temporal or geographic anchors.",
             },
+            // === PENDING: Requires investigation ===
             {
               id: 3,
               description:
-                "The search results are capturing incorrect or tangentially related records, and the primary evidence (Paul Lyon) and secondary evidence (Robert Bishop) may not actually be connected or may refer to different time periods than 1945-1946",
+                "Robert Bishop had a documented professional or personal relationship with Paul Lyon during Austrian occupation operations",
               status: "PENDING",
-              confidence: 0.35,
-              evidence: [],
+              confidence: 0.30,
+              evidence: [
+                {
+                  source_id: "quartermaster_archives_0_0",
+                  content:
+                    "Document titled 'BISHOP, ROBERT VOL. 2' mentions Paul Lyon, suggesting contextual connection",
+                  relevance_score: 0.5,
+                  is_positive: true,
+                },
+                {
+                  source_id: "quartermaster_archives_0_7",
+                  content:
+                    "Paul Robert Bishop obituary (2008) blocked by security verification - potential biographical source",
+                  relevance_score: 0.3,
+                  is_positive: false,
+                },
+              ],
               reasoning:
-                "The presence of completely unrelated results (medieval bishop, 2008 obituaries, bankruptcy records) alongside fragmentary CIA references suggests potential search algorithm misalignment. The Paul Robert Bishop obituary from 2008 would indicate someone born approximately 1930-1950, making service in 1945-1946 possible but requiring verification.",
+                "The fact that Lyon is mentioned in a document titled 'BISHOP, ROBERT' suggests some documentary connection, but the nature of the relationship (professional, operational, or coincidental mention) cannot be determined from available evidence.",
             },
+            // === REFUTED: Evidence contradicts ===
             {
               id: 4,
               description:
-                "Paul Lyon and Robert Bishop may have been involved in Austrian counterintelligence operations with Cold War implications, and the classified nature of available records reflects ongoing security restrictions on operational details",
-              status: "PENDING",
-              confidence: 0.3,
-              evidence: [],
+                "Robert Grosseteste references in search results are related to the investigation subject Robert Bishop",
+              status: "REFUTED",
+              confidence: 0.95,
+              evidence: [
+                {
+                  source_id: "quartermaster_archives_0_6",
+                  content:
+                    "Wikipedia article describes Robert Grosseteste as a 13th-century English bishop and philosopher - clearly unrelated to WWII-era investigation",
+                  relevance_score: 0.02,
+                  is_positive: false,
+                },
+              ],
               reasoning:
-                "The sole substantive evidence appears in a CIA classified document, suggesting the topic retains security classification value. Post-WWII Austria was strategically important with competing Allied and Soviet interests. The fragmentary nature of declassified materials may indicate heavily redacted or partially released documents.",
+                "Search noise definitively refuted. Robert Grosseteste (c. 1175-1253) was a medieval bishop with no connection to 20th-century counterintelligence. This represents search algorithm contamination from name collision, not relevant evidence.",
             },
+            // === PENDING: Classified records ===
             {
               id: 5,
               description:
-                "No verifiable historical record exists for Paul Lyon as a named counterintelligence corps officer in Austria 1945-1946, or his connection to Robert Bishop may be based on misidentification or conflation of records",
+                "Complete operational details of Lyon-Bishop activities remain classified and will require FOIA request or declassification review for full verification",
               status: "PENDING",
-              confidence: 0.4,
-              evidence: [],
+              confidence: 0.70,
+              evidence: [
+                {
+                  source_id: "quartermaster_archives_0_2",
+                  content:
+                    "CIA Operational Files for Austria Station 1945-1950 remain classified until 2045",
+                  relevance_score: 0.8,
+                  is_positive: true,
+                },
+                {
+                  source_id: "quartermaster_archives_0_0",
+                  content:
+                    "Available CIA document is heavily redacted, indicating classified content withheld",
+                  relevance_score: 0.75,
+                  is_positive: true,
+                },
+              ],
               reasoning:
-                "The complete absence of corroborating evidence from military archives, historical databases, or biographical sources—despite broad search coverage including CIA archives—suggests the query may be based on incomplete information, misremembered details, or records that remain fully classified and inaccessible.",
+                "The fragmentary nature of declassified materials and existence of still-classified Austria Station files strongly suggests that comprehensive operational details exist but remain protected. Mandatory declassification review may eventually release additional context.",
             },
           ],
           next_steps: [
+            // === physical_archive: Requires in-person visit ===
             {
               text: "Search U.S. National Archives for Counter Intelligence Corps records from Austria 1945-1946, specifically for personnel rosters and operational files mentioning Paul Lyon",
               query:
@@ -426,9 +582,19 @@ export const archiveResponse: any = {
               reasoning:
                 "The National Archives holds primary CIC records from the postwar occupation period. Personnel files and operational records would establish Lyon's official role and activities.",
               priority: "high",
-              access_instructions:
-                "Visit archives.gov and search the National Archives Catalog (NAC) for Record Group 226 (OSS) and Record Group 319 (Army Intelligence). Request records through the archives' FOIA process if necessary.",
+              access_instructions: {
+                type: "physical_archive",
+                steps: [
+                  "Navigate to archives.gov",
+                  "Find reading room or access information for College Park, MD facility",
+                  "Submit researcher access request (free researcher card with government ID)",
+                  "Visit the physical location at Archives II, 8601 Adelphi Road",
+                  "Request Record Group 319 boxes by reference number from finding aids",
+                  "Upload scanned documents to IntellyWeave for analysis",
+                ],
+              },
             },
+            // === subscription: Database with paid access ===
             {
               text: "Search military personnel databases and declassified Army records for Robert Bishop's service record during the same period in Austria",
               query:
@@ -436,9 +602,18 @@ export const archiveResponse: any = {
               reasoning:
                 "Establishing Bishop's documented presence and role will help verify the connection and context of the Lyon-Bishop relationship.",
               priority: "high",
-              access_instructions:
-                "Consult military.com, ancestry.com military records, and the Army Heritage and Education Center database for officer service records.",
+              access_instructions: {
+                type: "subscription",
+                steps: [
+                  "Navigate to fold3.com or ancestry.com",
+                  "Create an account if required (free trial available)",
+                  "Subscribe to military records access ($7.99/month for Fold3)",
+                  "Search for relevant documents using name and date filters",
+                  "Download and upload results to IntellyWeave",
+                ],
+              },
             },
+            // === subscription: Academic database access ===
             {
               text: "Search academic databases and published histories of postwar Austria and U.S. occupation for mentions of CIC operations and these individuals",
               query:
@@ -446,9 +621,18 @@ export const archiveResponse: any = {
               reasoning:
                 "Scholarly works on the Austrian occupation may provide context and document notable CIC officers or operations from this period.",
               priority: "high",
-              access_instructions:
-                "Use JSTOR, Google Scholar, and university library systems to access peer-reviewed historical journals and monographs on Austrian occupation history.",
+              access_instructions: {
+                type: "subscription",
+                steps: [
+                  "Navigate to jstor.org",
+                  "Create an account if required",
+                  "Subscribe or request institutional access via university library",
+                  "Search for relevant documents in History collection",
+                  "Download and upload to IntellyWeave",
+                ],
+              },
             },
+            // === restricted: Government records with access requirements ===
             {
               text: "Examine declassified intelligence reports and summaries from the Vienna station and Austrian theater during 1945-1946",
               query:
@@ -456,9 +640,18 @@ export const archiveResponse: any = {
               reasoning:
                 "Declassified intelligence reports may reference CIC activities and personnel operating in Austria during the postwar period.",
               priority: "medium",
-              access_instructions:
-                "Search the CIA's FOIA Reading Room (foia.cia.gov) and the Office of the Historian database for declassified reports from Austria operations.",
+              access_instructions: {
+                type: "restricted",
+                steps: [
+                  "Navigate to cia.gov/readingroom",
+                  "Review access requirements for FOIA requests",
+                  "Apply for access credentials if available",
+                  "Submit FOIA request with specific document identifiers if needed",
+                  "Contact archive administrators at foia@cia.gov if required",
+                ],
+              },
             },
+            // === general: Open web resources ===
             {
               text: "Search for any memoirs, oral histories, or biographical accounts published by or about CIC officers stationed in Austria",
               query:
@@ -466,9 +659,17 @@ export const archiveResponse: any = {
               reasoning:
                 "Veterans' accounts and memoirs often contain specific names and operational details not found in official records.",
               priority: "medium",
-              access_instructions:
-                "Search WorldCat library catalog, Internet Archive, and veteran interview collections (Pritzker Military Museum, Library of Congress Veterans History Project).",
+              access_instructions: {
+                type: "general",
+                steps: [
+                  "Visit archive.org",
+                  "Search for relevant content using full-text search",
+                  "Download or copy relevant information",
+                  "Check worldcat.org for library copies of rare memoirs",
+                ],
+              },
             },
+            // === physical_archive: Foreign archive requiring contact ===
             {
               text: "Contact the Vienna-based Austrian State Archives and Austrian documentation centers for records of American occupation personnel",
               query:
@@ -476,9 +677,19 @@ export const archiveResponse: any = {
               reasoning:
                 "Austrian archives may hold parallel documentation of American CIC activities from the Austrian side, with administrative records of occupation personnel.",
               priority: "medium",
-              access_instructions:
-                "Contact the Österreichisches Staatsarchiv directly via email or through their research request portal. Inquire about Besatzungskörper (occupation forces) documentation.",
+              access_instructions: {
+                type: "physical_archive",
+                steps: [
+                  "Navigate to oesta.gv.at",
+                  "Find reading room or access information for Archiv der Republik",
+                  "Submit researcher access request via email to archiv@oesta.gv.at",
+                  "Visit the physical location in Vienna if required",
+                  "Request Besatzungsakten (occupation records) documents by reference number",
+                  "Upload scanned documents to IntellyWeave",
+                ],
+              },
             },
+            // === general: Free genealogy databases ===
             {
               text: "Search genealogical and biographical databases for Paul Lyon and Robert Bishop to establish basic biographical information and military service dates",
               query:
@@ -486,79 +697,141 @@ export const archiveResponse: any = {
               reasoning:
                 "Basic biographical verification will confirm these individuals existed and held relevant positions, establishing foundation for further investigation.",
               priority: "low",
-              access_instructions:
-                "Search Ancestry.com, FamilySearch.org, and Biography.com for historical military service records and biographical entries.",
+              access_instructions: {
+                type: "general",
+                steps: [
+                  "Visit familysearch.org (free, no account required)",
+                  "Search for relevant content in military records collection",
+                  "Download or copy relevant information",
+                  "Cross-reference with findagrave.com for veteran burial records",
+                ],
+              },
             },
           ],
           sources_read: 2,
           sources_inaccessible: 0,
           expanded_searches: 9,
           files_for_user_review: [
+            // === PDF (Red) - Primary CIA document ===
             {
               url: "https://www.cia.gov/readingroom/docs/BISHOP,%20ROBERT%20%20%20VOL.%202_0030.pdf",
-              title: "CIA Reading Room",
+              title: "CIA Reading Room - BISHOP, ROBERT VOL. 2",
               snippet:
                 "I told him to bring them to my office. 56. There were two, both in uniform. Cie was Paul LYON who is half Hungarian. The other was Jaok WHITEHEAD, a ...",
-              origin: "quartermaster",
-              reason:
-                "Non-web file (may cause context saturation) - requires manual review",
-            },
-            {
-              url: "https://www.cia.gov/readingroom/docs/BISHOP,%20ROBERT%20%20%20VOL.%202_0030.pdf",
-              title: "Document",
-              snippet: "",
               origin: "quartermaster",
               priority: "high",
               reason: "Non-web file (PDF/doc) - requires manual review",
             },
+            // === Word/DOCX (Blue) - Document too large ===
             {
-              url: "https://www.cacb.uscourts.gov/sites/cacb/files/documents/2017_Payee.pdf",
-              title:
-                "U.S. Bankruptcy Court Central District of California Awarded ...",
+              url: "https://www.archives.gov/files/research/military/ww2/oss/oss-personnel-files.docx",
+              title: "OSS Personnel Files Index - National Archives",
               snippet:
-                "U.S. Bankruptcy Court. Central District of California. Awarded Professional Fees by Payee, Case Number and Date. Date. Payee. Case Number.",
+                "Office of Strategic Services personnel index for European Theater operations 1944-1946, including CIC liaison officers and field agents.",
+              origin: "independent_discovery",
+              priority: "high",
+              reason: "Document too large (2,450KB) - review manually",
+            },
+            // === Excel/XLSX (Emerald) - Context budget exhausted ===
+            {
+              url: "https://www.nara.gov/datasets/rg319-personnel-roster-austria-1945.xlsx",
+              title: "RG 319 Personnel Roster - Austria 1945",
+              snippet:
+                "Complete personnel roster for Counter Intelligence Corps operations in Austrian occupation zone, including assignment dates and unit designations.",
+              origin: "quartermaster",
+              priority: "high",
+              reason: "Context budget exhausted - review manually",
+            },
+            // === Markdown (Purple) - Content too large after read ===
+            {
+              url: "https://github.com/military-history/cold-war-archives/blob/main/austria-cic-operations.md",
+              title: "Austria CIC Operations Documentation",
+              snippet:
+                "Comprehensive markdown documentation of Counter Intelligence Corps activities in post-war Austria, compiled from declassified sources and veteran accounts.",
               origin: "independent_discovery",
               priority: "medium",
+              reason: "Content too large (890KB) - review manually",
+            },
+            // === CSV (Cyan) - Would exceed context budget ===
+            {
+              url: "https://www.archives.gov/research/military/ww2/cic-agents-europe.csv",
+              title: "CIC Agents Database - European Theater",
+              snippet:
+                "Database export of CIC agent assignments across European Theater including Austria, Germany, and Italy occupation zones 1945-1948.",
+              origin: "independent_discovery",
+              priority: "medium",
+              reason: "Would exceed context budget (~45K tokens) - review manually",
+            },
+            // === JSON (Yellow) - Non-web file ===
+            {
+              url: "https://api.archives.gov/records/rg319/personnel/bishop-robert.json",
+              title: "NARA API Response - Bishop, Robert Personnel File",
+              snippet:
+                "Structured JSON response from National Archives API containing personnel record metadata for Robert Bishop CIC service records.",
+              origin: "quartermaster",
+              priority: "medium",
+              reason: "Non-web file (may cause context saturation) - requires manual review",
+            },
+            // === HTML (Orange) - Web resource blocked ===
+            {
+              url: "https://www.legacy.com/us/obituaries/appealdemocrat/name/paul-robert-bishop-obituary?id=23450988",
+              title: "Paul Robert Bishop Obituary (2008)",
+              snippet:
+                "He married Mary Perkins in a tiny Episcopal Church in Tahoe City in 1961. He and Mary enjoyed 46 years together until his death.",
+              origin: "independent_discovery",
+              priority: "low",
               reason: "Non-web file (PDF/doc) - requires manual review",
             },
+            // === Text/TXT (Green) - Standard PDF skip ===
             {
               url: "https://www.cga.ct.gov/hco/books/Prominent_Families_of_New_York.pdf",
-              title:
-                "Prominent Families of New York - Connecticut General Assembly",
+              title: "Prominent Families of New York - Connecticut Assembly",
               snippet:
-                "OR several years the work incident to the production of this volume has engaged the services of a large staff of editors and contributors.",
+                "For several years the work incident to the production of this volume has engaged the services of a large staff of editors and contributors.",
               origin: "independent_discovery",
-              priority: "medium",
-              reason: "Non-web file (PDF/doc) - requires manual review",
-            },
-            {
-              url: "https://www.fortdodgeiowa.org/egov/documents/1367354138_899749.pdf",
-              title: "Page 1 - City of Fort Dodge, Iowa",
-              snippet:
-                "OWNERS NAME. OWNERS ADDRESS. OWNERS ADDRESS. LOCATION. ASSESSED VALUE. 1040 VENTURES. 414 W MIDWEST. CASPER WY. 1816 3RD AVE S. 5,570. 3A INVESTMENT INC.",
-              origin: "independent_discovery",
-              priority: "medium",
-              reason: "Non-web file (PDF/doc) - requires manual review",
-            },
-            {
-              url: "https://www.oregon.gov/pers/Documents/General-Information/Unclaimed-Deceased-Member-Benefits-List.pdf",
-              title: "Unclaimed Deceased Member Benefits List - Oregon.gov",
-              snippet:
-                "JUDY. AARON. Between $50 and $100 PO BOX 798. HEPPNER. OR. 97836. EMERET. ABAY. Over $100. 5221 N HAIGHT AVE UNIT 1B. PORTLAND.",
-              origin: "independent_discovery",
-              priority: "medium",
+              priority: "low",
               reason: "Non-web file (PDF/doc) - requires manual review",
             },
           ],
           analysis_phase: "investigation_synthesis",
           source_urls_mapping: {
-            expanded_0: {
-              url: "https://en.wikipedia.org/wiki/Robert_Grosseteste",
-              title: "Robert Grosseteste - Wikipedia",
+            // Quartermaster archive sources (clickable in frontend)
+            quartermaster_archives_0_0: {
+              url: "https://www.cia.gov/readingroom/docs/BISHOP,%20ROBERT%20%20%20VOL.%202_0030.pdf",
+              title: "CIA Reading Room - BISHOP, ROBERT VOL. 2",
             },
-            expanded_1: {
+            quartermaster_archives_0_1: {
+              url: "https://catalog.archives.gov/id/7583553",
+              title: "NARA Record Group 319 - Army Intelligence Files",
+            },
+            quartermaster_archives_0_3: {
+              url: "https://www.jstor.org/stable/10.2307/j.ctt6wq0g5",
+              title: "JSTOR - Cold War Intelligence Studies",
+            },
+            quartermaster_archives_0_4: {
+              url: "https://www.bundesarchiv.de/DE/Navigation/Finden/Bestaende/bestaende.html",
+              title: "Bundesarchiv - Besatzungsakten",
+            },
+            quartermaster_archives_0_5: {
+              url: "https://archive.org/details/military-history",
+              title: "Internet Archive - Military History Collection",
+            },
+            quartermaster_archives_0_6: {
+              url: "https://en.wikipedia.org/wiki/Robert_Grosseteste",
+              title: "Robert Grosseteste - Wikipedia (false positive)",
+            },
+            quartermaster_archives_0_7: {
               url: "https://www.legacy.com/us/obituaries/appealdemocrat/name/paul-robert-bishop-obituary?id=23450988",
-              title: "Paul Robert Bishop Obituary (2008) - Marysville, CA - Legacy",
+              title: "Paul Robert Bishop Obituary (2008)",
+            },
+            // Case Officer investigation findings
+            case_officer_default_0_0: {
+              url: "https://www.cia.gov/readingroom/docs/BISHOP,%20ROBERT%20%20%20VOL.%202_0030.pdf",
+              title: "Investigation Summary - Primary Source",
+            },
+            case_officer_default_0_1: {
+              url: "https://www.cia.gov/readingroom/docs/BISHOP,%20ROBERT%20%20%20VOL.%202_0030.pdf",
+              title: "Paul Lyon Reference - CIA Document",
             },
           },
         },
