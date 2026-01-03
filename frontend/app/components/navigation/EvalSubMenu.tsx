@@ -56,10 +56,11 @@ const EvalSubMenu: React.FC = () => {
     { name: "Network Chart", path: "network_chart" },
     { name: "Mapbox", path: "mapbox" },
     // Stage 4: Synthesis
+    { name: "Archive", path: "archive" },
     { name: "Intelligence Agent", path: "intelligence_agent" },
     { name: "Courthouse Debate", path: "courthouse_debate" },
-
-     { name: "Tickets", path: "tickets" },
+    // Stage 5: Other
+    { name: "Tickets", path: "tickets" },
     { name: "Products", path: "product" },
   ];
 

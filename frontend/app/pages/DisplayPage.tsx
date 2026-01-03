@@ -6,6 +6,7 @@ import RenderChat from "@/app/components/chat/RenderChat";
 import { ChatProvider } from "@/app/components/contexts/ChatContext";
 import type { Query } from "@/app/types/chat";
 import { AggregationResponse } from "@/app/types/display/aggregationExample";
+import { archiveResponse } from "@/app/types/display/archiveExample";
 import { BarChartResponse } from "@/app/types/display/barChartExample";
 import { chartResponse } from "@/app/types/display/chartExample";
 import { CourthouseDebateResponse } from "@/app/types/display/courthouseDebateExample";
@@ -35,6 +36,7 @@ const DISPLAY_QUERIES = {
 	bar_chart: [BarChartResponse],
 	mapbox: [MapboxResponse],
 	network_chart: [NetworkChartResponse],
+	archive: [archiveResponse],
 	courthouse_debate: [CourthouseDebateResponse],
 	intelligence_agent: [IntelligenceAgentResponse],
 } as const satisfies Record<string, Query[]>;
