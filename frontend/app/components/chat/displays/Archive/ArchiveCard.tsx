@@ -14,6 +14,7 @@ import {
   PiXCircle,
   PiCircleHalf,
   PiLightning,
+  PiLink,
 } from "react-icons/pi";
 
 interface ArchiveCardProps {
@@ -179,21 +180,56 @@ const ArchiveCard: React.FC<ArchiveCardProps> = ({
             </p>
           )}
 
-          {/* Bottom row: Results count + Constraints warning */}
-          <div className="flex items-center justify-between mt-auto pt-2">
-            <span className="text-xs text-primary/50">
-              {hasResults
-                ? `${archive.source_urls.length} source${archive.source_urls.length > 1 ? "s" : ""}`
-                : "No results found"}
-            </span>
-            {archive.constraints && archive.constraints.length > 0 && (
-              <span className="flex items-center gap-1 text-amber-500 text-xs">
-                <PiWarning />
-                {archive.constraints.length} constraint
-                {archive.constraints.length > 1 ? "s" : ""}
-              </span>
-            )}
-          </div>
+          {/* Source URLs */}
+          {hasResults ? (
+            <div className="flex flex-col gap-1 mt-2 pt-2 border-t border-primary/10">
+              {archive.source_urls.slice(0, 2).map((url) => {
+                // Extract filename or path from URL for display
+                let displayName: string;
+                try {
+                  const urlObj = new URL(url);
+                  const pathParts = urlObj.pathname.split('/').filter(Boolean);
+                  displayName = pathParts.length > 0
+                    ? decodeURIComponent(pathParts[pathParts.length - 1])
+                    : urlObj.hostname;
+                } catch {
+                  displayName = url.substring(0, 40);
+                }
+                return (
+                  <a
+                    key={url}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-400 hover:text-blue-300 truncate flex items-center gap-1"
+                    onClick={(e) => e.stopPropagation()}
+                    title={url}
+                  >
+                    <PiLink className="flex-shrink-0" />
+                    <span className="truncate">{displayName}</span>
+                  </a>
+                );
+              })}
+              {archive.source_urls.length > 2 && (
+                <span className="text-xs text-primary/50">
+                  +{archive.source_urls.length - 2} more source{archive.source_urls.length - 2 > 1 ? "s" : ""}
+                </span>
+              )}
+            </div>
+          ) : (
+            <div className="mt-auto pt-2">
+              <span className="text-xs text-primary/50">No results found</span>
+            </div>
+          )}
+
+          {/* Constraints warning */}
+          {archive.constraints && archive.constraints.length > 0 && (
+            <div className="flex items-center gap-1 text-amber-500 text-xs mt-1">
+              <PiWarning />
+              {archive.constraints.length} constraint
+              {archive.constraints.length > 1 ? "s" : ""}
+            </div>
+          )}
         </div>
       </div>
     </motion.div>

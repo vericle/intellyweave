@@ -1,6 +1,7 @@
 # ABOUTME: Document reading service for CaseOfficer investigations
 # ABOUTME: Cascading reader: Jina Reader -> AgentQL -> Simple HTTP
 
+import json
 import os
 import time
 from dataclasses import dataclass, field
@@ -9,6 +10,13 @@ from typing import Any, Dict, List, Optional
 import httpx
 
 from elysia.api.core.log import logger
+
+
+def _truncate_for_log(content: str, max_length: int = 200) -> str:
+    """Truncate content for logging without breaking in middle of word."""
+    if len(content) <= max_length:
+        return content
+    return content[:max_length].rsplit(" ", 1)[0] + "..."
 
 
 @dataclass
@@ -34,6 +42,38 @@ class DocumentContent:
             "execution_time": self.execution_time,
             "error": self.error,
             "metadata": self.metadata,
+        }
+
+
+@dataclass
+class ContentSizeInfo:
+    """Result of a preflight size check."""
+
+    url: str
+    content_length: Optional[int]  # Bytes, None if unknown
+    content_type: Optional[str]
+    estimated_tokens: Optional[int]  # Rough estimate: bytes / 4
+    is_accessible: bool
+    error: Optional[str] = None
+
+    @property
+    def is_too_large(self) -> bool:
+        """Check if content exceeds reasonable limits (default 500KB ~ 125K tokens)."""
+        if self.content_length is None:
+            return False  # Unknown size, let it try
+        return self.content_length > 500_000  # 500KB threshold
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Serialize for logging."""
+        return {
+            "url": self.url[:100] + "..." if len(self.url) > 100 else self.url,
+            "content_length": self.content_length,
+            "content_length_kb": self.content_length // 1024 if self.content_length else None,
+            "content_type": self.content_type,
+            "estimated_tokens": self.estimated_tokens,
+            "is_accessible": self.is_accessible,
+            "is_too_large": self.is_too_large,
+            "error": self.error,
         }
 
 
@@ -73,6 +113,92 @@ class DocumentReaderService:
             True,  # Simple HTTP always available
         ])
 
+    async def check_content_size(
+        self,
+        url: str,
+        timeout: int = 10,
+    ) -> ContentSizeInfo:
+        """
+        Preflight check to get content size without downloading the full document.
+
+        Uses HEAD request to get Content-Length header. This is a lightweight
+        check to prevent context saturation from large documents.
+
+        Args:
+            url: The URL to check
+            timeout: Request timeout in seconds
+
+        Returns:
+            ContentSizeInfo with size information or error
+        """
+        # LOG: Preflight input
+        logger.info(f"[DOC_READER] Preflight check input: {json.dumps({'url': url[:100], 'timeout': timeout})}")
+
+        if not url or not url.startswith(("http://", "https://")):
+            result = ContentSizeInfo(
+                url=url,
+                content_length=None,
+                content_type=None,
+                estimated_tokens=None,
+                is_accessible=False,
+                error=f"Invalid URL: {url}",
+            )
+            logger.warning(f"[DOC_READER] Preflight invalid URL: {json.dumps(result.to_dict())}")
+            return result
+
+        try:
+            async with httpx.AsyncClient(
+                timeout=timeout,
+                follow_redirects=True,
+                headers={"User-Agent": "Mozilla/5.0 (compatible; IntellyWeave/1.0)"},
+            ) as client:
+                response = await client.head(url)
+
+                content_length = response.headers.get("content-length")
+                content_type = response.headers.get("content-type", "")
+
+                # Parse content length
+                size_bytes = int(content_length) if content_length else None
+
+                # Estimate tokens (rough: 1 token ≈ 4 bytes for English text)
+                estimated_tokens = size_bytes // 4 if size_bytes else None
+
+                result = ContentSizeInfo(
+                    url=url,
+                    content_length=size_bytes,
+                    content_type=content_type,
+                    estimated_tokens=estimated_tokens,
+                    is_accessible=response.status_code < 400,
+                    error=None if response.status_code < 400 else f"HTTP {response.status_code}",
+                )
+
+                # LOG: Preflight output
+                logger.info(f"[DOC_READER] Preflight result: {json.dumps(result.to_dict())}")
+                return result
+
+        except httpx.TimeoutException:
+            result = ContentSizeInfo(
+                url=url,
+                content_length=None,
+                content_type=None,
+                estimated_tokens=None,
+                is_accessible=False,
+                error="Timeout during preflight check",
+            )
+            logger.warning(f"[DOC_READER] Preflight timeout: {json.dumps(result.to_dict())}")
+            return result
+        except Exception as e:
+            result = ContentSizeInfo(
+                url=url,
+                content_length=None,
+                content_type=None,
+                estimated_tokens=None,
+                is_accessible=False,
+                error=f"Preflight check failed: {str(e)[:100]}",
+            )
+            logger.warning(f"[DOC_READER] Preflight error: {json.dumps(result.to_dict())}")
+            return result
+
     async def read_url(
         self,
         url: str,
@@ -95,8 +221,11 @@ class DocumentReaderService:
         start_time = time.time()
         timeout = timeout or self._timeout
 
+        # LOG: Read URL input
+        logger.info(f"[DOC_READER] read_url input: {json.dumps({'url': url[:100], 'preferred_reader': preferred_reader, 'timeout': timeout})}")
+
         if not url:
-            return DocumentContent(
+            result = DocumentContent(
                 url="",
                 title="",
                 content="",
@@ -105,10 +234,12 @@ class DocumentReaderService:
                 execution_time=0,
                 error="No URL provided",
             )
+            logger.warning(f"[DOC_READER] read_url no URL: {json.dumps({'error': result.error})}")
+            return result
 
         # Validate URL
         if not url.startswith(("http://", "https://")):
-            return DocumentContent(
+            result = DocumentContent(
                 url=url,
                 title="",
                 content="",
@@ -117,13 +248,16 @@ class DocumentReaderService:
                 execution_time=0,
                 error=f"Invalid URL: {url}. Must start with http:// or https://",
             )
+            logger.warning(f"[DOC_READER] read_url invalid URL: {json.dumps({'url': url[:100], 'error': result.error})}")
+            return result
 
         # Build reader cascade
         readers = self._get_reader_cascade(preferred_reader)
+        logger.info(f"[DOC_READER] Reader cascade: {[r[0] for r in readers]}")
 
         for reader_name, reader_func in readers:
             try:
-                logger.debug(f"[DOC_READER] Trying {reader_name} for {url[:60]}")
+                logger.info(f"[DOC_READER] Trying {reader_name} for {url[:80]}")
 
                 if reader_name == "AgentQL":
                     result = await reader_func(url, extraction_prompt, timeout)
@@ -132,21 +266,33 @@ class DocumentReaderService:
 
                 if result.get("success"):
                     execution_time = time.time() - start_time
-                    logger.info(
-                        f"[DOC_READER] {reader_name} succeeded for {url[:60]} "
-                        f"in {execution_time:.2f}s"
-                    )
+                    content = result.get("content", "")
+                    content_length = len(content)
+
+                    # LOG: Success with content summary (not full content)
+                    success_summary = {
+                        "url": url[:100],
+                        "reader": reader_name,
+                        "title": result.get("title", "")[:100],
+                        "content_length": content_length,
+                        "content_length_kb": content_length // 1024,
+                        "estimated_tokens": content_length // 4,
+                        "content_preview": _truncate_for_log(content, 200),
+                        "execution_time": round(execution_time, 2),
+                    }
+                    logger.info(f"[DOC_READER] read_url SUCCESS: {json.dumps(success_summary, indent=2)}")
+
                     return DocumentContent(
                         url=url,
                         title=result.get("title", ""),
-                        content=result.get("content", ""),
+                        content=content,
                         success=True,
                         protocol=reader_name.lower(),
                         execution_time=execution_time,
                         metadata=result.get("metadata", {}),
                     )
 
-                logger.debug(
+                logger.info(
                     f"[DOC_READER] {reader_name} failed: {result.get('error')}"
                 )
 
@@ -156,7 +302,7 @@ class DocumentReaderService:
 
         # All readers failed
         execution_time = time.time() - start_time
-        return DocumentContent(
+        result = DocumentContent(
             url=url,
             title="",
             content="",
@@ -165,12 +311,14 @@ class DocumentReaderService:
             execution_time=execution_time,
             error="All readers failed to extract content",
         )
+        logger.warning(f"[DOC_READER] read_url FAILED (all readers): {json.dumps({'url': url[:100], 'execution_time': round(execution_time, 2), 'error': result.error})}")
+        return result
 
     async def read_multiple(
         self,
         urls: List[str],
         extraction_prompt: Optional[str] = None,
-        max_concurrent: int = 5,
+        max_concurrent: int = 2,
     ) -> List[DocumentContent]:
         """
         Read content from multiple URLs.

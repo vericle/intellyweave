@@ -4,14 +4,15 @@
 import json
 from logging import Logger
 from typing import AsyncGenerator, List, Optional
+from urllib.parse import urlparse
 
 import dspy
 
 from elysia.api.core.log import logger
-from elysia.api.services.document_reader_service import get_document_reader
+from elysia.api.services.document_reader_service import get_document_reader, ContentSizeInfo
 from elysia.api.services.sofia_service import get_sofia_service, SofiaSearchResponse
 from elysia.objects import Result, Status, Tool
-from elysia.tools.archives.config_loader import get_archive_domains
+from elysia.tools.archives.config_loader import get_archive_domains, ArchiveConfigLoader
 from elysia.tools.archives.dspy_programs import create_dspy_programs
 from elysia.tools.archives.types import (
     AccessLevel,
@@ -20,6 +21,7 @@ from elysia.tools.archives.types import (
     HypothesisStatus,
     InvestigationReport,
     ReportParagraph,
+    SourceClassification,
 )
 from elysia.tree.objects import TreeData
 from elysia.util.client import ClientManager
@@ -30,6 +32,25 @@ READABLE_ACCESS_LEVELS = {
     AccessLevel.PUBLIC_OPEN,
     "PUBLIC_OPEN",
 }
+
+# File types to skip (non-web content that can cause context saturation)
+SKIP_FILE_EXTENSIONS = {
+    '.pdf', '.csv', '.xls', '.xlsx', '.doc', '.docx',
+    '.ppt', '.pptx', '.json', '.xml', '.zip', '.tar',
+    '.gz', '.rar', '.7z', '.exe', '.dmg', '.iso',
+}
+
+# Context budget management
+# Total context budget for document reading (in estimated tokens)
+# Model context is 200K, but we need room for prompts/responses, so use ~80K for docs
+MAX_TOTAL_CONTEXT_TOKENS = 80_000
+
+# Maximum size per individual document (in bytes)
+# ~125K tokens ≈ 500KB, but we want smaller docs to fit more sources
+MAX_DOCUMENT_BYTES = 200_000  # 200KB per doc (~50K tokens)
+
+# Minimum number of high-priority sources to read before considering medium priority
+MIN_HIGH_PRIORITY_SOURCES = 3
 
 
 class CaseOfficerTool(Tool):
@@ -86,6 +107,14 @@ class CaseOfficerTool(Tool):
         self._sofia_service = None
         self._document_reader = None
         self._dspy_programs = None
+        self._config_loader = None
+
+    @property
+    def config_loader(self):
+        """Get archive config loader instance (from archive_domains.yaml)."""
+        if self._config_loader is None:
+            self._config_loader = ArchiveConfigLoader()
+        return self._config_loader
 
     @property
     def sofia_service(self):
@@ -127,14 +156,114 @@ class CaseOfficerTool(Tool):
         query = inputs.get("query", tree_data.user_prompt)
         archive_sources_raw = inputs.get("archive_sources", [])
 
-        # Get Quartermaster results from hidden_environment if not provided
-        if not archive_sources_raw:
+        # DEBUG: Log inputs received
+        self._logger.info(
+            f"Case Officer: DEBUG - inputs keys: {list(inputs.keys())}"
+        )
+        self._logger.info(
+            f"Case Officer: DEBUG - archive_sources_raw from inputs: type={type(archive_sources_raw).__name__}, "
+            f"len={len(archive_sources_raw) if hasattr(archive_sources_raw, '__len__') else 'N/A'}, "
+            f"truthy={bool(archive_sources_raw)}"
+        )
+
+        # Check if archive_sources_raw has USEFUL data (not just truthy)
+        # The LLM might pass empty structures like [{}] which are truthy but useless
+        has_useful_input_sources = (
+            archive_sources_raw
+            and isinstance(archive_sources_raw, list)
+            and len(archive_sources_raw) > 0
+            and any(
+                isinstance(s, dict) and s.get("id") or s.get("domain") or s.get("source_urls")
+                for s in archive_sources_raw
+            )
+        )
+
+        self._logger.info(
+            f"Case Officer: DEBUG - has_useful_input_sources: {has_useful_input_sources}"
+        )
+
+        # DEBUG: Log complete environment state for diagnosis
+        self._logger.info(
+            f"Case Officer: DEBUG - hidden_environment keys: {list(tree_data.environment.hidden_environment.keys())}"
+        )
+        self._logger.info(
+            f"Case Officer: DEBUG - environment.environment keys: {list(tree_data.environment.environment.keys())}"
+        )
+        # Log quartermaster-specific data if present
+        if "quartermaster" in tree_data.environment.environment:
+            qm_env = tree_data.environment.environment["quartermaster"]
+            self._logger.info(
+                f"Case Officer: DEBUG - quartermaster sub-keys: {list(qm_env.keys())}"
+            )
+            for result_name, result_list in qm_env.items():
+                if isinstance(result_list, list) and result_list:
+                    self._logger.info(
+                        f"Case Officer: DEBUG - quartermaster['{result_name}'] has {len(result_list)} items"
+                    )
+                    # Log structure of first item
+                    if result_list:
+                        first_item = result_list[0]
+                        if isinstance(first_item, dict):
+                            self._logger.info(
+                                f"Case Officer: DEBUG - first item keys: {list(first_item.keys())}"
+                            )
+                            if "metadata" in first_item:
+                                self._logger.info(
+                                    f"Case Officer: DEBUG - metadata keys: {list(first_item['metadata'].keys())}"
+                                )
+                                # Also log the actual archive_sources_for_case_officer value
+                                sources_in_meta = first_item["metadata"].get("archive_sources_for_case_officer", [])
+                                self._logger.info(
+                                    f"Case Officer: DEBUG - archive_sources_for_case_officer count: {len(sources_in_meta)}"
+                                )
+
+        # Get Quartermaster results if not provided in inputs (or inputs are not useful)
+        if not has_useful_input_sources:
+            # Try hidden_environment first (traditional approach)
             qm_results = tree_data.environment.hidden_environment.get(
                 "quartermaster_results", []
+            )
+            self._logger.info(
+                f"Case Officer: DEBUG - hidden_environment quartermaster_results count: {len(qm_results)}"
             )
             if qm_results:
                 latest_qm = qm_results[-1]
                 archive_sources_raw = latest_qm.get("archive_sources", [])
+                self._logger.info(
+                    f"Case Officer: Found {len(archive_sources_raw)} sources from hidden_environment"
+                )
+
+            # If still empty, try to get from Quartermaster's Result metadata in environment
+            if not archive_sources_raw:
+                # Look for quartermaster tool results in environment
+                # Environment structure: environment.environment[tool_name][result_name] = [{"metadata": {}, "objects": [...]}]
+                env_data = tree_data.environment.environment
+                if "quartermaster" in env_data:
+                    for _, tool_results in env_data["quartermaster"].items():
+                        if not isinstance(tool_results, list):
+                            continue
+                        for result in reversed(tool_results):  # Most recent first
+                            if not isinstance(result, dict):
+                                continue
+                            # Check in metadata (where we now store it)
+                            metadata = result.get("metadata", {})
+                            sources = metadata.get("archive_sources_for_case_officer", [])
+                            if sources:
+                                archive_sources_raw = sources
+                                self._logger.info(
+                                    f"Case Officer: Found {len(sources)} sources in Quartermaster Result metadata"
+                                )
+                                break
+                            # Also check in objects (the Result.objects field)
+                            objects = result.get("objects", [])
+                            if objects:
+                                archive_sources_raw = objects
+                                self._logger.info(
+                                    f"Case Officer: Found {len(objects)} sources in Quartermaster Result objects"
+                                )
+                                break
+                        if archive_sources_raw:
+                            break  # Exit outer loop too
 
         # Parse archive sources
         archive_sources = self._parse_archive_sources(archive_sources_raw)
@@ -162,22 +291,22 @@ class CaseOfficerTool(Tool):
             f"Case Officer: Expanded findings payload: {json.dumps(expanded_results, indent=2)}"
         )
 
-        # Step 2: Read accessible sources (PDFs are skipped for user review)
-        yield Status("Reading accessible sources (skipping PDFs for manual review)...")
+        # Step 2: Read accessible sources (non-web files skipped for user review)
+        yield Status("Reading accessible sources (skipping non-web files for manual review)...")
         readable_sources = self._get_readable_sources(archive_sources)
-        document_contents, qm_skipped_pdfs = await self._read_sources(readable_sources)
+        document_contents, qm_skipped_files = await self._read_sources(readable_sources)
 
-        # Also read URLs from expanded search findings (PDFs skipped)
-        expanded_contents, expanded_skipped_pdfs = await self._read_expanded_findings(expanded_results)
+        # Also read URLs from expanded search findings (non-web files skipped)
+        expanded_contents, expanded_skipped_files = await self._read_expanded_findings(expanded_results)
         all_contents = document_contents + expanded_contents
-        all_skipped_pdfs = qm_skipped_pdfs + expanded_skipped_pdfs
+        all_skipped_files = qm_skipped_files + expanded_skipped_files
 
-        # LOG: Documents read and PDFs skipped
+        # LOG: Documents read and non-web files skipped
         self._logger.info(
             f"Case Officer: Read {len(document_contents)} QM + {len(expanded_contents)} expanded = {len(all_contents)} total"
         )
         self._logger.info(
-            f"Case Officer: Skipped {len(all_skipped_pdfs)} PDFs (user should review manually)"
+            f"Case Officer: Skipped {len(all_skipped_files)} files (user should review manually)"
         )
         # Log summary without full content to avoid log bloat
         docs_summary = [
@@ -192,9 +321,9 @@ class CaseOfficerTool(Tool):
         self._logger.info(
             f"Case Officer: Documents summary: {json.dumps(docs_summary, indent=2)}"
         )
-        if all_skipped_pdfs:
+        if all_skipped_files:
             self._logger.info(
-                f"Case Officer: Skipped PDFs: {json.dumps(all_skipped_pdfs, indent=2)}"
+                f"Case Officer: Skipped files: {json.dumps(all_skipped_files, indent=2)}"
             )
 
         # Step 3: Identify gaps and inaccessible sources
@@ -245,6 +374,19 @@ class CaseOfficerTool(Tool):
             f"Case Officer: Next steps: {len(next_steps)} recommendations"
         )
 
+        # Build source URL mapping for frontend (ref_id -> URL)
+        # This allows the frontend to render clickable URLs instead of raw ref_ids
+        source_urls_mapping = {}
+        for doc in all_contents:
+            source_id = doc.get("source_id", "")
+            url = doc.get("url", "")
+            title = doc.get("source_name", doc.get("title", ""))
+            if source_id and url:
+                source_urls_mapping[source_id] = {
+                    "url": url,
+                    "title": title,
+                }
+
         # Build final payload for frontend
         final_payload = {
             "type": "investigation",
@@ -258,8 +400,10 @@ class CaseOfficerTool(Tool):
                 "sources_read": len(all_contents),
                 "sources_inaccessible": len(inaccessible_sources),
                 "expanded_searches": len(expanded_results),
-                "pdfs_for_user_review": all_skipped_pdfs,  # PDFs not read - user should review
+                "files_for_user_review": all_skipped_files,  # Non-web files not read - user should review
                 "analysis_phase": "investigation_synthesis",
+                # Mapping from ref_id to URL for clickable sources in frontend
+                "source_urls_mapping": source_urls_mapping,
             },
         }
 
@@ -316,26 +460,54 @@ class CaseOfficerTool(Tool):
         # Phase 2: Autonomous web search (no domain restrictions)
         self._logger.info("Case Officer: Conducting autonomous investigation...")
         try:
+            # Build contextual system prompt to guide search interpretation
+            # CRITICAL: Helps search engine understand query intent without being limiting
+            investigation_context = (
+                "You are an expert research assistant for historical and investigative queries. "
+                "IMPORTANT DISAMBIGUATION GUIDANCE (apply reasoning, these are examples not limits): "
+                "- When a query contains capitalized words that could be names OR common nouns, "
+                "interpret them based on context. Examples: 'Robert Bishop' in a military context "
+                "is likely a person's name (surname Bishop), not a religious title; 'Paul Lyon' "
+                "in an intelligence context is likely a person, not a city. "
+                "- Apply this reasoning to ANY potentially ambiguous terms in the query. "
+                "- Focus results on the DOMAIN indicated by the query (e.g., if query mentions "
+                "'counterintelligence', 'CIC', 'Cold War', prioritize intelligence/military sources). "
+                "- Use your judgment to filter out results that are clearly off-topic based on context."
+            )
+
             # Unrestricted search - Case Officer makes own judgment
-            # No hardcoded max_results - Sofia service uses its own defaults
             autonomous_response = await self.sofia_service.advanced_search(
                 query=query,
-                # NO include_domains - autonomous search
-                # NO max_results - let provider/LLM decide appropriate depth
+                system_prompt=investigation_context,
+                max_results=15,  # Reasonable limit to avoid noise
             )
+
             for result in autonomous_response.results:
                 # Check if this is from Quartermaster's sources or independent
                 result_domain = self._extract_domain(result.url)
                 is_from_qm = any(qm_d in result_domain for qm_d in qm_domains)
+
+                # Determine priority using config system:
+                # 1. High: from Quartermaster sources (already validated)
+                # 2. High: from institutional domains (in archive_domains.yaml)
+                # 3. Medium: everything else (discovered independently)
+                priority = self._determine_source_priority(
+                    domain=result_domain,
+                    is_from_quartermaster=is_from_qm,
+                )
 
                 all_findings.append({
                     "url": result.url,
                     "title": result.title,
                     "snippet": result.content,
                     "origin": "quartermaster" if is_from_qm else "independent_discovery",
-                    "priority": "high" if result.priority == "high" else "medium",
-                    "relevance_note": "",
+                    "priority": priority,
+                    "relevance_note": self._generate_relevance_note(result, is_from_qm),
                 })
+
+            self._logger.info(
+                f"Case Officer: Autonomous search returned {len(all_findings)} results"
+            )
         except Exception as e:
             self._logger.warning(f"Autonomous search failed: {e}")
 
@@ -365,13 +537,20 @@ class CaseOfficerTool(Tool):
                     result_domain = self._extract_domain(result.url)
                     is_from_qm = any(qm_d in result_domain for qm_d in qm_domains)
 
+                    # Use config-based priority (leads from QM/institutional are still high)
+                    priority = self._determine_source_priority(
+                        domain=result_domain,
+                        is_from_quartermaster=is_from_qm,
+                    )
+
                     additional_findings.append({
                         "url": result.url,
                         "title": result.title,
                         "snippet": result.content,
                         "origin": "quartermaster" if is_from_qm else "independent_discovery",
-                        "priority": "medium",
+                        "priority": priority,
                         "lead_from": lead_query,
+                        "relevance_note": self._generate_relevance_note(result, is_from_qm),
                     })
             except Exception as e:
                 self._logger.debug(f"Lead search failed: {e}")
@@ -396,10 +575,63 @@ class CaseOfficerTool(Tool):
     def _extract_domain(self, url: str) -> str:
         """Extract domain from URL."""
         try:
-            from urllib.parse import urlparse
-            return urlparse(url).netloc.lower()
+            return urlparse(url).netloc.lower().replace("www.", "")
         except Exception:
             return ""
+
+    def _determine_source_priority(
+        self,
+        domain: str,
+        is_from_quartermaster: bool,
+    ) -> str:
+        """
+        Determine source priority using archive_domains.yaml config.
+
+        Priority levels:
+        - "high": From Quartermaster sources OR institutional domains (in config)
+        - "medium": Independent discoveries not in config
+
+        Uses the dynamic config system - no hardcoded domain lists.
+        """
+        # Quartermaster sources are always high priority (already validated)
+        if is_from_quartermaster:
+            return "high"
+
+        # Check if domain is institutional (defined in archive_domains.yaml)
+        domain_config = self.config_loader.get_domain_config(domain)
+        if domain_config:
+            # Domain is in config = institutional = high priority
+            return "high"
+
+        # Check if domain matches any configured domain (partial match for subdomains)
+        all_domains = self.config_loader.get_all_domains()
+        for config_domain in all_domains:
+            if config_domain in domain or domain in config_domain:
+                return "high"
+
+        # Independent discovery not in config
+        return "medium"
+
+    def _generate_relevance_note(self, result, is_from_quartermaster: bool) -> str:
+        """
+        Generate a relevance note for a search result.
+
+        Provides context about why this source is relevant or how it was found.
+        """
+        if is_from_quartermaster:
+            return "Corroborates Quartermaster intelligence"
+
+        # For independent discoveries, note the source type
+        domain = self._extract_domain(result.url)
+
+        # Check if it's an institutional source
+        domain_config = self.config_loader.get_domain_config(domain)
+        if domain_config:
+            group = domain_config.get("group", "")
+            return f"Institutional source ({group})" if group else "Institutional source"
+
+        # Independent discovery
+        return "Independent discovery - verify relevance"
 
     async def _extract_leads_from_findings(
         self,
@@ -466,68 +698,195 @@ class CaseOfficerTool(Tool):
             self._logger.warning(f"LLM lead extraction failed: {e}")
             return []
 
-    def _is_pdf_url(self, url: str) -> bool:
-        """Check if URL points to a PDF file."""
+    def _should_skip_file(self, url: str) -> bool:
+        """Check if URL points to a file type that should be skipped.
+
+        Skips non-web files that can cause context saturation:
+        PDF, CSV, Excel, Word, PowerPoint, JSON, XML, archives, etc.
+        """
+        from urllib.parse import urlparse
+
         url_lower = url.lower()
-        return url_lower.endswith('.pdf') or '/pdf/' in url_lower or 'pdf' in url_lower.split('/')[-1]
+        parsed = urlparse(url_lower)
+        path = parsed.path
+
+        # Check file extension
+        for ext in SKIP_FILE_EXTENSIONS:
+            if path.endswith(ext):
+                return True
+
+        # Check for /pdf/ in path (common pattern for PDF routes)
+        if '/pdf/' in url_lower:
+            return True
+
+        return False
 
     async def _read_expanded_findings(
         self,
         findings: List[dict],
     ) -> tuple[List[dict], List[dict]]:
-        """Read content from URLs in expanded search findings.
+        """Read content from URLs in expanded search findings with intelligent selection.
 
-        IMPORTANT: PDFs are NOT read automatically. They are collected separately
-        for user review.
+        IMPORTANT: Implements context budget management to prevent saturation:
+        1. Sorts findings by priority (high first, then medium)
+        2. Performs preflight size check before reading
+        3. Tracks context budget and stops when limit reached
+        4. Skips oversized documents to user review
 
         Args:
-            findings: List of dicts from _expand_search with url, title, snippet, origin, etc.
+            findings: List of dicts from _expand_search with url, title, snippet, origin, priority.
 
         Returns:
-            Tuple of (contents, skipped_pdfs):
-            - contents: List of document contents with full text extracted (non-PDFs only)
-            - skipped_pdfs: List of PDF URLs that user should review manually
+            Tuple of (contents, skipped_files):
+            - contents: List of document contents with full text extracted
+            - skipped_files: List of URLs skipped for user to review manually
         """
         contents = []
-        skipped_pdfs = []
+        skipped_files = []
         urls_processed = set()
 
-        for finding in findings:
+        # Track context budget (in estimated tokens)
+        remaining_budget = MAX_TOTAL_CONTEXT_TOKENS
+        high_priority_read = 0
+
+        # Sort findings by priority: high first, then medium
+        sorted_findings = sorted(
+            findings,
+            key=lambda f: (0 if f.get("priority") == "high" else 1, f.get("url", ""))
+        )
+
+        self._logger.info(
+            f"Case Officer: Processing {len(sorted_findings)} findings "
+            f"({len([f for f in sorted_findings if f.get('priority') == 'high'])} high priority)"
+        )
+
+        for finding in sorted_findings:
             url = finding.get("url", "")
+            priority = finding.get("priority", "medium")
+
             if not url or url in urls_processed:
                 continue
             urls_processed.add(url)
 
-            # Skip PDFs - don't read them, just track for user
-            if self._is_pdf_url(url):
-                skipped_pdfs.append({
+            # Skip non-web files - don't read them, just track for user review
+            if self._should_skip_file(url):
+                skipped_files.append({
                     "url": url,
-                    "title": finding.get("title", "PDF Document"),
+                    "title": finding.get("title", "Document"),
                     "snippet": finding.get("snippet", ""),
                     "origin": finding.get("origin", "independent_discovery"),
-                    "reason": "PDF files require manual review",
+                    "priority": priority,
+                    "reason": "Non-web file (PDF/doc) - requires manual review",
                 })
-                self._logger.info(f"Case Officer: Skipping PDF (user should review): {url}")
+                self._logger.info(f"Case Officer: Skipping file type: {url}")
                 continue
 
+            # Check if we've exhausted context budget (but always try to read some high priority)
+            if remaining_budget <= 0:
+                if priority != "high" or high_priority_read >= MIN_HIGH_PRIORITY_SOURCES:
+                    skipped_files.append({
+                        "url": url,
+                        "title": finding.get("title", "Document"),
+                        "snippet": finding.get("snippet", ""),
+                        "origin": finding.get("origin", "independent_discovery"),
+                        "priority": priority,
+                        "reason": "Context budget exhausted - review manually",
+                    })
+                    self._logger.info(f"Case Officer: Context budget exhausted, skipping: {url}")
+                    continue
+
+            # Preflight size check - get content size before reading
+            try:
+                size_info = await self.document_reader.check_content_size(url)
+
+                if size_info.content_length and size_info.content_length > MAX_DOCUMENT_BYTES:
+                    skipped_files.append({
+                        "url": url,
+                        "title": finding.get("title", "Document"),
+                        "snippet": finding.get("snippet", ""),
+                        "origin": finding.get("origin", "independent_discovery"),
+                        "priority": priority,
+                        "reason": f"Document too large ({size_info.content_length // 1024}KB) - review manually",
+                    })
+                    self._logger.info(
+                        f"Case Officer: Document too large ({size_info.content_length // 1024}KB): {url}"
+                    )
+                    continue
+
+                # Check if reading this would exceed budget
+                estimated_tokens = size_info.estimated_tokens or (MAX_DOCUMENT_BYTES // 4)
+                if estimated_tokens > remaining_budget and priority != "high":
+                    skipped_files.append({
+                        "url": url,
+                        "title": finding.get("title", "Document"),
+                        "snippet": finding.get("snippet", ""),
+                        "origin": finding.get("origin", "independent_discovery"),
+                        "priority": priority,
+                        "reason": f"Would exceed context budget (~{estimated_tokens // 1000}K tokens) - review manually",
+                    })
+                    self._logger.info(
+                        f"Case Officer: Would exceed budget (~{estimated_tokens // 1000}K tokens): {url}"
+                    )
+                    continue
+
+            except Exception as e:
+                self._logger.debug(f"Preflight check failed for {url}: {e}")
+                # Continue anyway if preflight fails - let the read attempt handle errors
+
+            # Actually read the document
             try:
                 doc_content = await self.document_reader.read_url(url)
                 if doc_content.success:
+                    content_length = len(doc_content.content)
+                    estimated_tokens = content_length // 4  # Rough estimate
+
+                    # Final check after reading - skip if way too large
+                    if content_length > MAX_DOCUMENT_BYTES * 2:  # 2x buffer for post-read check
+                        skipped_files.append({
+                            "url": url,
+                            "title": finding.get("title", "Document"),
+                            "snippet": finding.get("snippet", ""),
+                            "origin": finding.get("origin", "independent_discovery"),
+                            "priority": priority,
+                            "reason": f"Content too large ({content_length // 1024}KB) - review manually",
+                        })
+                        self._logger.info(
+                            f"Case Officer: Content too large after read ({content_length // 1024}KB): {url}"
+                        )
+                        continue
+
                     contents.append({
                         "source_id": f"expanded_{len(contents)}",
                         "source_name": finding.get("title", finding.get("source_name", "Search result")),
                         "url": url,
                         "title": doc_content.title or finding.get("title", ""),
-                        "content": doc_content.content,  # Full content - no truncation
+                        "content": doc_content.content,
                         "protocol": doc_content.protocol,
                         "origin": finding.get("origin", "independent_discovery"),
+                        "priority": priority,
                         "search_snippet": finding.get("snippet", ""),
                     })
+
+                    # Update budget tracking
+                    remaining_budget -= estimated_tokens
+                    if priority == "high":
+                        high_priority_read += 1
+
+                    self._logger.info(
+                        f"Case Officer: Read {url} ({content_length // 1024}KB, "
+                        f"~{estimated_tokens // 1000}K tokens, budget remaining: {remaining_budget // 1000}K)"
+                    )
+
             except Exception as e:
                 self._logger.debug(f"Failed to read expanded finding {url}: {e}")
                 continue
 
-        return contents, skipped_pdfs
+        self._logger.info(
+            f"Case Officer: Read {len(contents)} documents, skipped {len(skipped_files)} "
+            f"(remaining budget: {remaining_budget // 1000}K tokens)"
+        )
+
+        return contents, skipped_files
 
     async def search(
         self,
@@ -622,27 +981,27 @@ class CaseOfficerTool(Tool):
     ) -> tuple[List[dict], List[dict]]:
         """Read content from accessible sources.
 
-        IMPORTANT: PDFs are NOT read automatically. They are collected separately
-        for user review.
+        IMPORTANT: Non-web files (PDF, CSV, Excel, etc.) are NOT read automatically.
+        They are collected separately for user review to prevent context saturation.
 
         Returns:
-            Tuple of (contents, skipped_pdfs)
+            Tuple of (contents, skipped_files)
         """
         contents = []
-        skipped_pdfs = []
+        skipped_files = []
 
         for source in sources:
             for url in source.source_urls:
-                # Skip PDFs - don't read them, just track for user
-                if self._is_pdf_url(url):
-                    skipped_pdfs.append({
+                # Skip non-web files - don't read them, just track for user review
+                if self._should_skip_file(url):
+                    skipped_files.append({
                         "url": url,
                         "title": source.name,
                         "snippet": source.summary[:200] if source.summary else "",
                         "origin": "quartermaster",
-                        "reason": "PDF files require manual review",
+                        "reason": "Non-web file (may cause context saturation) - requires manual review",
                     })
-                    self._logger.info(f"Case Officer: Skipping PDF (user should review): {url}")
+                    self._logger.info(f"Case Officer: Skipping file (user should review): {url}")
                     continue
 
                 try:
@@ -661,7 +1020,7 @@ class CaseOfficerTool(Tool):
                     self._logger.warning(f"Failed to read {url}: {e}")
                     continue
 
-        return contents, skipped_pdfs
+        return contents, skipped_files
 
     # =========================================================================
     # Analysis Methods

@@ -149,6 +149,8 @@ const RenderDisplay: React.FC<RenderDisplayProps> = ({
 					title={payload.metadata?.title as string | undefined}
 					hypotheses={payload.metadata?.hypotheses}
 					nextSteps={payload.metadata?.next_steps}
+					filesForReview={payload.metadata?.files_for_user_review}
+					sourceUrlsMapping={payload.metadata?.source_urls_mapping}
 				/>
 			);
 		case "default":

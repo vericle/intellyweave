@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   InvestigationPayload,
   InvestigationHypothesis,
@@ -14,18 +14,25 @@ import {
   PiArrowRight,
   PiWarning,
   PiFileText,
+  PiLink,
 } from "react-icons/pi";
+import { File } from "lucide-react";
+import NextStepCard, { NextStep } from "./NextStepCard";
+import NextStepView from "./NextStepView";
+import DocumentCard, { FileReference } from "@/app/components/documents/DocumentCard";
+
+interface SourceUrlMapping {
+  url: string;
+  title: string;
+}
 
 interface InvestigationDisplayProps {
   paragraphs: InvestigationPayload[];
   title?: string;
   hypotheses?: InvestigationHypothesis[];
-  nextSteps?: Array<{
-    text: string;
-    query: string;
-    reasoning: string;
-    priority: "high" | "medium" | "low";
-  }>;
+  nextSteps?: NextStep[];
+  filesForReview?: FileReference[];
+  sourceUrlsMapping?: Record<string, SourceUrlMapping>;
 }
 
 const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
@@ -33,7 +40,13 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
   title,
   hypotheses = [],
   nextSteps = [],
+  filesForReview = [],
+  sourceUrlsMapping = {},
 }) => {
+  // State for tracking which next step is selected for detail view
+  const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null);
+  const selectedStep = selectedStepIndex !== null ? nextSteps[selectedStepIndex] : null;
+
   if (paragraphs.length === 0) return null;
 
   const containerVariants = {
@@ -70,19 +83,6 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
     }
   };
 
-  // Priority badge color
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case "high":
-        return "bg-red-500/20 text-red-400 border-red-500/30";
-      case "medium":
-        return "bg-amber-500/20 text-amber-400 border-amber-500/30";
-      case "low":
-        return "bg-green-500/20 text-green-400 border-green-500/30";
-      default:
-        return "bg-gray-500/20 text-gray-400 border-gray-500/30";
-    }
-  };
 
   return (
     <motion.div
@@ -112,10 +112,31 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
           >
             <p className="text-sm text-primary/90 leading-relaxed">
               {paragraph.text}
-              {/* Citation markers */}
+              {/* Citation markers - render as clickable links if URL mapping exists */}
               {paragraph.ref_ids && paragraph.ref_ids.length > 0 && (
-                <span className="ml-1 text-xs text-primary/50">
-                  [{paragraph.ref_ids.join(", ")}]
+                <span className="ml-1">
+                  {paragraph.ref_ids.map((refId, refIdx) => {
+                    const source = sourceUrlsMapping[refId];
+                    if (source) {
+                      return (
+                        <a
+                          key={refId}
+                          href={source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-blue-400 hover:text-blue-300 hover:underline"
+                          title={source.title}
+                        >
+                          [{refIdx + 1}]
+                        </a>
+                      );
+                    }
+                    return (
+                      <span key={refId} className="text-xs text-primary/50">
+                        [{refId}]
+                      </span>
+                    );
+                  })}
                 </span>
               )}
             </p>
@@ -158,35 +179,88 @@ const InvestigationDisplay: React.FC<InvestigationDisplayProps> = ({
         </motion.div>
       )}
 
-      {/* Next steps section */}
+      {/* Next steps section - with detail view on click */}
       {nextSteps.length > 0 && (
         <motion.div variants={itemVariants} className="space-y-3">
           <h3 className="text-sm font-semibold text-primary/70 uppercase tracking-wide flex items-center gap-2">
             <PiArrowRight />
             Recommended Next Steps
           </h3>
-          <div className="space-y-2">
-            {nextSteps.map((step, idx) => (
-              <div
-                key={`step-${idx}`}
-                className="flex items-start gap-3 p-3 rounded-lg bg-primary/5 border border-primary/10"
+          <AnimatePresence mode="wait">
+            {selectedStep ? (
+              <NextStepView
+                key="detail"
+                step={selectedStep}
+                onBack={() => setSelectedStepIndex(null)}
+              />
+            ) : (
+              <motion.div
+                key="list"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="grid gap-2 sm:grid-cols-2"
               >
-                <span
-                  className={`px-2 py-0.5 text-xs font-medium rounded border ${getPriorityColor(step.priority)}`}
+                {nextSteps.map((step, idx) => (
+                  <NextStepCard
+                    key={`${step.text}-${idx}`}
+                    step={step}
+                    index={idx}
+                    onClick={() => setSelectedStepIndex(idx)}
+                  />
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      )}
+
+      {/* Sources section - list all sources with clickable URLs */}
+      {Object.keys(sourceUrlsMapping).length > 0 && (
+        <motion.div variants={itemVariants} className="space-y-3">
+          <h3 className="text-sm font-semibold text-primary/70 uppercase tracking-wide flex items-center gap-2">
+            <PiLink />
+            Sources
+          </h3>
+          <div className="space-y-1">
+            {Object.entries(sourceUrlsMapping).map(([refId, source], idx) => (
+              <div
+                key={refId}
+                className="flex items-center gap-2 text-sm"
+              >
+                <span className="text-primary/50 font-mono text-xs">[{idx + 1}]</span>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 hover:underline truncate flex items-center gap-1"
                 >
-                  {step.priority}
-                </span>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-primary">
-                    {step.text}
-                  </p>
-                  {step.reasoning && (
-                    <p className="text-xs text-primary/60 mt-1">
-                      {step.reasoning}
-                    </p>
-                  )}
-                </div>
+                  {source.title || source.url}
+                  <PiLink className="text-xs flex-shrink-0" />
+                </a>
               </div>
+            ))}
+          </div>
+        </motion.div>
+      )}
+
+      {/* Documents for review section */}
+      {filesForReview.length > 0 && (
+        <motion.div variants={itemVariants} className="space-y-3">
+          <h3 className="text-sm font-semibold text-primary/70 uppercase tracking-wide flex items-center gap-2">
+            <File className="h-4 w-4" />
+            Documents Requiring Manual Review
+          </h3>
+          <p className="text-xs text-primary/50">
+            These files were not processed automatically to prevent context saturation. Click to open:
+          </p>
+          <div className="space-y-2">
+            {filesForReview.map((file, idx) => (
+              <DocumentCard
+                key={`${file.url}-${idx}`}
+                variant="list"
+                file={file}
+              />
             ))}
           </div>
         </motion.div>

@@ -12,22 +12,85 @@ import {
   Trash2,
   Eye,
   FileJson,
+  FileSpreadsheet,
   Hash,
   Calendar,
   HardDrive,
+  ExternalLink,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-interface DocumentCardProps {
+// File reference for external/web files (used by InvestigationDisplay)
+export interface FileReference {
+  url: string;
+  title: string;
+  snippet?: string;
+  origin?: string;
+  priority?: "high" | "medium" | "low";
+  reason?: string;
+}
+
+// Props for card variant (document library)
+interface CardVariantProps {
+  variant?: "card";
   document: DocumentMetadata;
   onView: (document: DocumentMetadata) => void;
   onDelete: (document_id: string) => void;
 }
 
-// File type configurations with colors and icons
-const getFileConfig = (fileType: string) => {
-  const type = fileType.toLowerCase();
-  
+// Props for list variant (investigation display)
+interface ListVariantProps {
+  variant: "list";
+  file: FileReference;
+  onClick?: () => void;
+}
+
+type DocumentCardProps = CardVariantProps | ListVariantProps;
+
+// Priority badge styling for file references
+const priorityStyles = {
+  high: {
+    badgeClass: "bg-red-500/20 text-red-300 border-red-500/30",
+    label: "High",
+  },
+  medium: {
+    badgeClass: "bg-amber-500/20 text-amber-300 border-amber-500/30",
+    label: "Medium",
+  },
+  low: {
+    badgeClass: "bg-slate-500/20 text-slate-300 border-slate-500/30",
+    label: "Low",
+  },
+} as const;
+
+// Origin badge styling for file references
+const originStyles = {
+  quartermaster: {
+    badgeClass: "bg-violet-500/20 text-violet-300 border-violet-500/30",
+    label: "Quartermaster",
+  },
+  independent_discovery: {
+    badgeClass: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
+    label: "Discovery",
+  },
+} as const;
+
+// Extract file extension from URL or filename
+export function getFileExtension(urlOrFilename: string): string {
+  // Handle URLs with query params
+  const cleanUrl = urlOrFilename.split("?")[0].split("#")[0];
+  const match = cleanUrl.match(/\.([a-z0-9]+)$/i);
+  return match ? match[1].toLowerCase() : "";
+}
+
+// File type configurations with colors and icons - exported for reuse
+export const getFileConfig = (fileTypeOrUrl: string) => {
+  // If it looks like a URL or filename, extract extension
+  let type = fileTypeOrUrl.toLowerCase();
+  if (type.includes("/") || type.includes(".")) {
+    type = getFileExtension(type) || type;
+  }
+
   switch (type) {
     case "pdf":
       return {
@@ -41,6 +104,47 @@ const getFileConfig = (fileType: string) => {
         iconClass: "text-red-400",
         badgeClass: "bg-red-500/15 text-red-300 border-red-500/25",
         accentClass: "bg-red-500/40",
+      };
+    case "doc":
+    case "docx":
+      return {
+        icon: FileText,
+        color: "blue",
+        label: "Word",
+        borderClass: "border-blue-500/40",
+        gradientClass: "from-blue-500/10 via-blue-400/5 to-transparent",
+        hoverBorderClass: "hover:border-blue-500/60",
+        iconBgClass: "bg-blue-500/15",
+        iconClass: "text-blue-400",
+        badgeClass: "bg-blue-500/15 text-blue-300 border-blue-500/25",
+        accentClass: "bg-blue-500/40",
+      };
+    case "xls":
+    case "xlsx":
+      return {
+        icon: FileSpreadsheet,
+        color: "emerald",
+        label: "Excel",
+        borderClass: "border-emerald-500/40",
+        gradientClass: "from-emerald-500/10 via-emerald-400/5 to-transparent",
+        hoverBorderClass: "hover:border-emerald-500/60",
+        iconBgClass: "bg-emerald-500/15",
+        iconClass: "text-emerald-400",
+        badgeClass: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25",
+        accentClass: "bg-emerald-500/40",
+      };
+    case "csv":
+      return {
+        icon: FileSpreadsheet,
+        color: "cyan",
+        label: "CSV",
+        borderClass: "border-cyan-500/40",
+        gradientClass: "from-cyan-500/10 via-cyan-400/5 to-transparent",
+        hoverBorderClass: "hover:border-cyan-500/60",
+        iconBgClass: "bg-cyan-500/15",
+        iconClass: "text-cyan-400",
+        badgeClass: "bg-cyan-500/15 text-cyan-300 border-cyan-500/25",
+        accentClass: "bg-cyan-500/40",
       };
     case "md":
     case "markdown":
@@ -83,50 +187,139 @@ const getFileConfig = (fileType: string) => {
         badgeClass: "bg-yellow-500/15 text-yellow-300 border-yellow-500/25",
         accentClass: "bg-yellow-500/40",
       };
+    case "html":
+    case "htm":
+      return {
+        icon: FileText,
+        color: "orange",
+        label: "HTML",
+        borderClass: "border-orange-500/40",
+        gradientClass: "from-orange-500/10 via-orange-400/5 to-transparent",
+        hoverBorderClass: "hover:border-orange-500/60",
+        iconBgClass: "bg-orange-500/15",
+        iconClass: "text-orange-400",
+        badgeClass: "bg-orange-500/15 text-orange-300 border-orange-500/25",
+        accentClass: "bg-orange-500/40",
+      };
     default:
       return {
         icon: FileText,
-        color: "grey",
-        label: type.toUpperCase(),
-        borderClass: "border-grey-500/40",
-        gradientClass: "from-grey-500/10 via-grey-400/5 to-transparent",
-        hoverBorderClass: "hover:border-grey-500/60",
-        iconBgClass: "bg-grey-500/15",
-        iconClass: "text-grey-400",
-        badgeClass: "bg-grey-500/15 text-grey-300 border-grey-500/25",
-        accentClass: "bg-grey-500/40",
+        color: "slate",
+        label: type ? type.toUpperCase() : "File",
+        borderClass: "border-slate-500/40",
+        gradientClass: "from-slate-500/10 via-slate-400/5 to-transparent",
+        hoverBorderClass: "hover:border-slate-500/60",
+        iconBgClass: "bg-slate-500/15",
+        iconClass: "text-slate-400",
+        badgeClass: "bg-slate-500/15 text-slate-300 border-slate-500/25",
+        accentClass: "bg-slate-500/40",
       };
   }
 };
 
-export default function DocumentCard({
-  document,
-  onView,
-  onDelete,
-}: DocumentCardProps) {
+const formatFileSize = (bytes: number): string => {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(2)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+};
+
+const formatDate = (dateString: string): string => {
+  try {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  } catch {
+    return dateString;
+  }
+};
+
+export default function DocumentCard(props: DocumentCardProps) {
+  // List variant for external file references (InvestigationDisplay)
+  if (props.variant === "list") {
+    const { file, onClick } = props;
+    const config = getFileConfig(file.url || file.title);
+    const IconComponent = config.icon;
+
+    return (
+      <div
+        className={`
+          flex items-start gap-3 p-3 rounded-lg
+          bg-gradient-to-r ${config.gradientClass}
+          border-l-2 ${config.borderClass}
+          ${config.hoverBorderClass}
+          transition-all duration-200
+          ${onClick ? "cursor-pointer" : ""}
+        `}
+        onClick={onClick}
+        onKeyDown={onClick ? (e) => e.key === "Enter" && onClick() : undefined}
+        role={onClick ? "button" : undefined}
+        tabIndex={onClick ? 0 : undefined}
+      >
+        <div className={`flex-shrink-0 p-1.5 rounded-md ${config.iconBgClass}`}>
+          <IconComponent className={`h-4 w-4 ${config.iconClass}`} />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <a
+              href={file.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-sm font-medium ${config.iconClass} hover:underline flex items-center gap-1`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {file.title}
+              <ExternalLink className="h-3 w-3 flex-shrink-0" />
+            </a>
+            <Badge className={`text-[10px] border ${config.badgeClass}`}>
+              {config.label}
+            </Badge>
+            {/* Origin badge */}
+            {file.origin && (
+              <Badge
+                className={`text-[10px] border ${
+                  originStyles[file.origin as keyof typeof originStyles]?.badgeClass ||
+                  "bg-slate-500/20 text-slate-300 border-slate-500/30"
+                }`}
+              >
+                {originStyles[file.origin as keyof typeof originStyles]?.label || file.origin}
+              </Badge>
+            )}
+            {/* Priority badge */}
+            {file.priority && (
+              <Badge
+                className={`text-[10px] border ${
+                  priorityStyles[file.priority]?.badgeClass ||
+                  "bg-slate-500/20 text-slate-300 border-slate-500/30"
+                }`}
+              >
+                {priorityStyles[file.priority]?.label || file.priority}
+              </Badge>
+            )}
+          </div>
+          {file.snippet && (
+            <p className="text-xs text-primary/60 mt-1 line-clamp-2">
+              {file.snippet}
+            </p>
+          )}
+          {file.reason && (
+            <p className="text-xs text-amber-500 mt-1">
+              {file.reason}
+            </p>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // Card variant for uploaded documents (DocumentLibrary)
+  const { document, onView, onDelete } = props;
   const config = getFileConfig(document.file_type);
   const IconComponent = config.icon;
-
-  const formatFileSize = (bytes: number): string => {
-    if (bytes < 1024) return `${bytes} B`;
-    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(2)} KB`;
-    return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
-  };
-
-  const formatDate = (dateString: string): string => {
-    try {
-      const date = new Date(dateString);
-      return date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-    } catch {
-      return dateString;
-    }
-  };
 
   return (
     <motion.div
@@ -157,7 +350,7 @@ export default function DocumentCard({
                   {document.filename}
                 </h3>
                 <div className="flex items-center gap-2 mt-1">
-                  <Badge variant="outline" className={`text-[10px] border ${config.badgeClass}`}>
+                  <Badge className={`text-[10px] border ${config.badgeClass}`}>
                     {config.label}
                   </Badge>
                 </div>

@@ -134,15 +134,18 @@ const DisplayPagination: React.FC<DisplayPaginationProps> = ({
         containerClass = `grid ${gridCols}`;
         break;
       case 6:
-        gridCols = "grid-cols-1 md:grid-cols-2";
+        // Max 2 columns for 6 items (3 rows x 2 cols) - enforced on all screen sizes
+        gridCols = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2";
         containerClass = `grid ${gridCols}`;
         break;
       case 9:
-        gridCols = "grid-cols-1 md:grid-cols-3";
+        // Max 2 columns for 9 items (enforced on all screen sizes)
+        gridCols = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2";
         containerClass = `grid ${gridCols}`;
         break;
       default:
-        gridCols = "grid-cols-1 lg:grid-cols-3";
+        // Default: max 2 columns (cleaner display for card-based layouts)
+        gridCols = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2";
         containerClass = `grid ${gridCols}`;
     }
 

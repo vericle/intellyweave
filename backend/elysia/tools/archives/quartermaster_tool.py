@@ -145,8 +145,16 @@ class QuartermasterTool(Tool):
         # Load archive config for prompts
         archive_config = get_archive_config_yaml()
 
-        # Provider retry loop
-        providers_to_try = ["searxng", "perplexity", "serper", "tavily"]
+        # Provider retry loop - dynamically get available providers from env vars
+        available_providers = self.sofia_service._get_available_providers()
+        providers_to_try = [name.lower() for name, _ in available_providers]
+        logger.info(f"Quartermaster: Available providers from env vars: {providers_to_try}")
+
+        if not providers_to_try:
+            logger.warning("Quartermaster: No search providers configured (check PERPLEXITY_API_KEY, SEARXNG_API_URL, etc.)")
+            yield Status("No search providers configured...")
+            providers_to_try = []  # Empty list - will skip the loop
+
         search_response = None
         quality_passed = False
 
@@ -155,23 +163,16 @@ class QuartermasterTool(Tool):
             logger.info(f"Quartermaster: Trying provider '{provider}'")
 
             try:
-                if provider == "searxng":
-                    # First attempt: default cascade
-                    search_response = await self.sofia_service.search_archives(
-                        query=query,
-                        archive_domains=domains,
-                        max_results=50,
-                    )
-                else:
-                    # Retry with specific provider + custom prompt
-                    research_prompt = self._get_research_prompt(query, archive_config)
-                    search_response = await self.sofia_service.advanced_search(
-                        query=query,
-                        include_domains=domains,
-                        max_results=50,
-                        preferred_provider=provider,
-                        system_prompt=research_prompt if provider == "perplexity" else None,
-                    )
+                # Search WITHOUT domain filtering - let all results through
+                # Domain classification happens in _classify_results() afterwards
+                research_prompt = self._get_research_prompt(query, archive_config)
+                search_response = await self.sofia_service.advanced_search(
+                    query=query,
+                    # NO include_domains - return ALL results, classify by domain later
+                    max_results=50,
+                    preferred_provider=provider if provider != "searxng" else None,
+                    system_prompt=research_prompt if provider == "perplexity" else None,
+                )
 
                 # Log the response
                 logger.info(f"Quartermaster: {provider} returned {search_response.number_of_results} results")
@@ -258,6 +259,9 @@ class QuartermasterTool(Tool):
                     "search_query": query,
                     "limit": 50,
                 },
+                # Include archive_sources for Case Officer to consume from environment
+                # This is an alternative to hidden_environment which gets cleared
+                "archive_sources_for_case_officer": [s.to_dict() for s in archive_sources],
             },
             name="archives",
             display=True,
@@ -368,17 +372,26 @@ class QuartermasterTool(Tool):
         logger.debug(f"Quality evaluation: Results payload:\n{results_json}")
 
         class EvaluateResultQuality(dspy.Signature):
-            """Evaluate if search results are relevant to the query subject.
+            """Evaluate if search results contain information relevant to the investigation.
 
-            Match the COMPLETE query subject, not partial words or homonyms.
-            Results from any domain are valid if they relate to the query subject.
+            ACCEPT results if they mention ANY of these from the query:
+            - Key persons, names, or identities
+            - Organizations, agencies, or institutions
+            - Locations, regions, or geographic areas
+            - Time periods, dates, or historical events
+
+            Partial matches ARE valuable - a result mentioning one person from the query
+            is relevant even if it doesn't mention every other person or detail.
+
+            REJECT only if results are completely unrelated (wrong topic entirely,
+            different person with same name in unrelated context, etc.)
             """
 
-            query: str = dspy.InputField(desc="The complete research query")
+            query: str = dspy.InputField(desc="The investigative research query")
             results_json: str = dspy.InputField(desc="Search results to evaluate")
-            institutional_domains: str = dspy.InputField(desc="Reference domains (higher priority)")
-            is_relevant: bool = dspy.OutputField(desc="True if results relate to the complete query subject")
-            reasoning: str = dspy.OutputField(desc="Explanation")
+            institutional_domains: str = dspy.InputField(desc="Reference institutional domains")
+            is_relevant: bool = dspy.OutputField(desc="True if ANY result mentions key entities from the query")
+            reasoning: str = dspy.OutputField(desc="Brief explanation of relevance assessment")
 
         with dspy.settings.context(lm=lm):
             evaluator = dspy.ChainOfThought(EvaluateResultQuality)
