@@ -229,3 +229,77 @@ export type NetworkPayload = DefaultResultPayload & {
   layout_direction?: string;
   layout_sort?: string;
 };
+
+// Archive source from Quartermaster tool
+export type ArchiveConstraint = {
+  type: "LEGAL" | "TECHNICAL" | "ACCESS_BLOCKED" | "LANGUAGE" | "OTHER";
+  severity: "low" | "medium" | "high";
+  description: string;
+};
+
+export type ArchivePayload = DefaultResultPayload & {
+  id: string;
+  name: string;
+  domain: string;
+  group: string;
+  summary: string;
+  access_level:
+    | "PUBLIC_OPEN"
+    | "PHYSICAL_ONLY"
+    | "RESTRICTED"
+    | "SUBSCRIPTION"
+    | "PHYSICAL_OR_SUBSCRIPTION";
+  digitization_status:
+    | "FULLY_DIGITIZED"
+    | "PARTIALLY_DIGITIZED"
+    | "NOT_DIGITIZED"
+    | "N_A";
+  protocol:
+    | "WEB_DIGITAL_REPOSITORY"
+    | "READING_ROOM_ONLY"
+    | "SEARCH_UI_ONLY"
+    | "WIKI_COLLABORATIVE"
+    | "HTML_CONTENT"
+    | "LIBRARY_CATALOGS"
+    | "API";
+  constraints: ArchiveConstraint[];
+  notes: string;
+  source_urls: string[];
+  // Classification and relevance fields
+  classification: "INSTITUTIONAL" | "DISCOVERED";
+  relevance_score?: number;  // 0.0-1.0, for DISCOVERED sources
+  relevance_reasoning?: string;
+};
+
+// Investigation report from Case Officer tool
+export type InvestigationHypothesis = {
+  id: string;
+  description: string;
+  status: "CONFIRMED" | "REFUTED" | "INDETERMINATE" | "PENDING";
+  confidence: number;
+  reasoning: string;
+  evidence?: Array<{
+    source_id: string;
+    content: string;
+    relevance_score: number;
+    is_positive: boolean;
+  }>;
+};
+
+export type InvestigationParagraph = {
+  text: string;
+  ref_ids: string[];
+};
+
+export type InvestigationPayload = DefaultResultPayload & {
+  title?: string;
+  text?: string;
+  ref_ids?: string[];
+  hypotheses?: InvestigationHypothesis[];
+  next_steps?: Array<{
+    text: string;
+    query: string;
+    reasoning: string;
+    priority: "high" | "medium" | "low";
+  }>;
+};

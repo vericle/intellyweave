@@ -1,0 +1,139 @@
+# Archive Domains Configuration for IntellyWeave
+# Used by Quartermaster to constrain searches to curated archive sources
+
+groups:
+  soviet_repression:
+    description: "Russian/Soviet archives and memorial databases for repression victims"
+    priority: 1
+    domains:
+      - domain: garf.ru
+        name: "GARF - State Archive of the Russian Federation"
+        default_access_level: PHYSICAL_ONLY
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: READING_ROOM_ONLY
+        notes: "Primary source for clemency petitions, military tribunal records"
+
+      - domain: stalin.memo.ru
+        name: "Memorial - Stalin Era Database"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Digitized Soviet archival documents, trial cards, execution lists"
+
+      - domain: base.memo.ru
+        name: "Memorial - Repression Victims Database"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Biographical data for rehabilitated/documented repression victims"
+
+      - domain: stopgulag.org
+        name: "StopGulag.org"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: HTML_CONTENT
+        notes: "Gulag documentation, repression cases, survivor testimonies"
+
+      - domain: openlist.wiki
+        name: "OpenList.wiki"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: WIKI_COLLABORATIVE
+        notes: "Collaborative project on Stalinist repression victims"
+
+      - domain: istmat.org
+        name: "Istmat.org - Historical Materials Project"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: FULLY_DIGITIZED
+        default_protocol: WEB_DIGITAL_REPOSITORY
+        notes: "Digitized Soviet-era documents including clemency petitions"
+
+  ukrainian_commemoration:
+    description: "Ukrainian memorial and commemoration databases"
+    priority: 2
+    domains:
+      - domain: upa.in.ua
+        name: "UPA Memorial Database"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Ukrainian Insurgent Army fighters database"
+
+      - domain: memory.gov.ua
+        name: "Ukrainian Institute of National Remembrance"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: HTML_CONTENT
+        notes: "Official Ukrainian commemoration and memory projects"
+
+  general_reference:
+    description: "General reference encyclopedias and databases"
+    priority: 3
+    domains:
+      - domain: wikipedia.org
+        name: "Wikipedia (multilingual)"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: N_A
+        default_protocol: WIKI_COLLABORATIVE
+        notes: "Proxy for public historical memory across languages"
+
+      - domain: wikidata.org
+        name: "Wikidata"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: N_A
+        default_protocol: API
+        notes: "Structured knowledge base with entity identifiers"
+
+  academic_projects:
+    description: "Academic research projects and university archives"
+    priority: 4
+    domains:
+      - domain: uni-graz.at
+        name: "University of Graz"
+        default_access_level: PHYSICAL_OR_SUBSCRIPTION
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: LIBRARY_CATALOGS
+        notes: "Austrian academic research on Soviet victims in Austria"
+
+      - domain: adbik.at
+        name: "AdBIK Graz - Archive Research Project"
+        default_access_level: PHYSICAL_OR_SUBSCRIPTION
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: LIBRARY_CATALOGS
+        notes: "Historians documenting Soviet operations in Austria 1945-1955"
+
+  us_government:
+    description: "US government archives and declassified documents"
+    priority: 5
+    domains:
+      - domain: archives.gov
+        name: "US National Archives"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: WEB_DIGITAL_REPOSITORY
+        notes: "Declassified CIA, CIC, and military intelligence documents"
+
+      - domain: cia.gov
+        name: "CIA Reading Room"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: WEB_DIGITAL_REPOSITORY
+        notes: "Declassified intelligence documents, FOIA releases"
+
+# Default query expansion patterns for archive searches
+query_expansion:
+  transliteration_variants:
+    - language: ru
+      pattern: "{name_cyrillic}"
+    - language: uk
+      pattern: "{name_ukrainian}"
+    - language: de
+      pattern: "{name_german}"
+    - language: en
+      pattern: "{name_english}"
+
+  time_context:
+    - "1945-1955"
+    - "Cold War"
+    - "Soviet occupation Austria"
+    - "CIC operations"

@@ -44,6 +44,8 @@ from elysia.tools.courthouse.courthouse_debate import CourthouseDebate
 from elysia.tools.domain.custom_agent_registry import CustomAgentRegistry
 from elysia.tools.domain.router import DomainRouter
 from elysia.tools.intelligence.intelligence_orchestrator import IntelligenceOrchestrator
+from elysia.tools.archives.quartermaster_tool import QuartermasterTool
+from elysia.tools.archives.case_officer_tool import CaseOfficerTool
 from elysia.tools.postprocessing.summarise_items import SummariseItems
 from elysia.tools.retrieval.aggregate import Aggregate
 from elysia.tools.retrieval.query import Query
@@ -270,6 +272,10 @@ class Tree:
         self.add_tool(branch_id="base", tool=Visualise)
         self.add_tool(SummariseItems, branch_id="search", from_tool_ids=["query"])
 
+        # Archive research tools (Quartermaster & Case Officer)
+        self.add_tool(branch_id="base", tool=QuartermasterTool)
+        self.add_tool(branch_id="base", tool=CaseOfficerTool)
+
     def one_branch_init(self) -> None:
         self.add_branch(
             root=True,
@@ -293,6 +299,10 @@ class Tree:
         self.add_tool(branch_id="base", tool=Query, summariser_in_tree=True)
         self.add_tool(branch_id="base", tool=Visualise)
         self.add_tool(SummariseItems, branch_id="base", from_tool_ids=["query"])
+
+        # Archive research tools (Quartermaster & Case Officer)
+        self.add_tool(branch_id="base", tool=QuartermasterTool)
+        self.add_tool(branch_id="base", tool=CaseOfficerTool)
 
     def empty_init(self) -> None:
         self.add_branch(

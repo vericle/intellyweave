@@ -22,6 +22,17 @@ specific_return_types = {
         "Geographic locations with coordinates for mapbox visualization. "
         "Contains location names, routes start and end points coordinates array, weights for heatmaps, latitude and longitude coordinates, descriptions (from primary_location_description), and metadata for displaying on interactive maps."
     ),
+    "archives": (
+        "Archive sources mapped by the Quartermaster for investigative queries. "
+        "Contains archive names, domains, access levels (public/restricted/physical-only), "
+        "digitization status, protocols, constraints, and notes about each source. "
+        "Used for OSINT intelligence analysis to identify where relevant information may exist."
+    ),
+    "investigation": (
+        "Investigation reports synthesized by the Case Officer from archive intelligence. "
+        "Contains structured analysis with paragraphs, citations, hypotheses, and next steps. "
+        "Used for presenting negative-proof analysis and 'documented ghost' case conclusions."
+    ),
 }
 
 all_return_types = {
@@ -118,6 +129,31 @@ mapbox = {
     "id": "unique identifier for the location. string",
 }
 
+archives = {
+    "id": "unique identifier for the archive source. string",
+    "name": "the name of the archive or database. string",
+    "domain": "the web domain of the archive (e.g., garf.ru, memo.ru). string",
+    "group": "the category group of the archive (e.g., soviet_repression, academic_projects). string",
+    "summary": "brief summary of what was found or the archive's contents. string",
+    "access_level": "access classification (PUBLIC_OPEN, PHYSICAL_ONLY, RESTRICTED, SUBSCRIPTION). string",
+    "digitization_status": "digitization status (FULLY_DIGITIZED, PARTIALLY_DIGITIZED, NOT_DIGITIZED). string",
+    "protocol": "access protocol (WEB_DIGITAL_REPOSITORY, READING_ROOM_ONLY, SEARCH_UI_ONLY, API). string",
+    "constraints": "list of access constraints with type, severity, and description. list[dict]",
+    "notes": "additional notes about the archive. string",
+    "source_urls": "URLs of sources with actual information. list[string]",
+    "classification": "source classification (INSTITUTIONAL from config, DISCOVERED from search). string",
+    "relevance_score": "LLM-assigned relevance score 0.0-1.0 for discovered sources. float",
+    "relevance_reasoning": "explanation of why this source is relevant. string",
+}
+
+investigation = {
+    "text": "the text content of a report paragraph. string",
+    "ref_ids": "list of source reference IDs for citations. list[string]",
+    "title": "the title of the investigation report. string",
+    "hypotheses": "list of investigative hypotheses with status and confidence. list[dict]",
+    "next_steps": "recommended next steps for investigation. list[dict]",
+}
+
 types_dict: dict[str, dict[str, str]] = {
     "conversation": conversation,
     "message": message,
@@ -126,5 +162,7 @@ types_dict: dict[str, dict[str, str]] = {
     "generic": generic,
     "document": document,
     "mapbox": mapbox,
+    "archives": archives,
+    "investigation": investigation,
     "table": {},
 }

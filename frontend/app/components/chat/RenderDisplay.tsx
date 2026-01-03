@@ -3,7 +3,9 @@ import { useContext, useMemo } from "react";
 import type { ResultPayload } from "@/app/types/chat";
 import type {
 	AggregationPayload,
+	ArchivePayload,
 	DocumentPayload,
+	InvestigationPayload,
 	MapPayload,
 	ProductPayload,
 	SingleMessagePayload,
@@ -18,6 +20,8 @@ import NetworkDisplay from "./displays/ChartTable/NetworkDisplay";
 import ScatterOrLineDisplay from "./displays/ChartTable/ScatterOrLineDisplay";
 import DocumentDisplay from "./displays/Document/DocumentDisplay";
 import BoringGenericDisplay from "./displays/Generic/BoringGeneric";
+import { ArchiveDisplay } from "./displays/Archive";
+import { InvestigationDisplay } from "./displays/Investigation";
 import MapView from "./displays/Map/MapView";
 import SingleMessageDisplay from "./displays/MessageThread/SingleMessageDisplay";
 import ThreadDisplay from "./displays/MessageThread/ThreadDisplay";
@@ -126,6 +130,27 @@ const RenderDisplay: React.FC<RenderDisplayProps> = ({
 			return <HistogramDisplay key={`${keyBase}-chart`} result={payload} />;
 		case "network_chart":
 			return <NetworkDisplay key={`${keyBase}-chart`} result={payload} />;
+		case "archives":
+			return (
+				<ArchiveDisplay
+					key={`${keyBase}-archives`}
+					archives={payload.objects as ArchivePayload[]}
+					handleResultPayloadChange={
+						handleResultPayloadChangeWithCollectionName
+					}
+				/>
+			);
+		case "investigation":
+		case "investigation_report":
+			return (
+				<InvestigationDisplay
+					key={`${keyBase}-investigation`}
+					paragraphs={payload.objects as InvestigationPayload[]}
+					title={payload.metadata?.title as string | undefined}
+					hypotheses={payload.metadata?.hypotheses}
+					nextSteps={payload.metadata?.next_steps}
+				/>
+			);
 		case "default":
 			return (
 				<BoringGenericDisplay

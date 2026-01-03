@@ -18,6 +18,8 @@ services:
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
       PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
       CLUSTER_HOSTNAME: 'node1'
+    networks:
+      - intellyweave-network
 
   # =====================================================================
   # Pipeline Watchdog — Monitors file ingestion and sends to Elysia API
@@ -35,5 +37,46 @@ services:
     # Use host network to reach Elysia backend running on bare metal
     network_mode: host
 
+  # =====================================================================
+  # Sofia Archive Search Services (Quartermaster & Case Officer support)
+  # =====================================================================
+
+  # Redis cache for SearXNG and Sofia
+  redis:
+    container_name: intellyweave-redis
+    image: redis:alpine
+    ports:
+      - '6379:6379'
+    command: redis-server --appendonly yes --bind 0.0.0.0
+    volumes:
+      - redis_data:/data
+    networks:
+      - intellyweave-network
+    restart: unless-stopped
+
+  # SearXNG meta-search engine (port 8081 to avoid Weaviate conflict)
+  searxng:
+    container_name: intellyweave-searxng
+    image: eudaimoniatech/sofia-ai-search-be
+    ports:
+      - '8081:8080'
+    volumes:
+      - ./config/searxng-limiter.toml:/etc/searxng/limiter.toml
+      - ./config/searxng-settings.yml:/etc/searxng/settings.yml
+      - searxng_data:/data
+    environment:
+      SEARXNG_REDIS_URL: redis://redis:6379/0
+    depends_on:
+      - redis
+    networks:
+      - intellyweave-network
+    restart: unless-stopped
+
 volumes:
   weaviate_data:
+  redis_data:
+  searxng_data:
+
+networks:
+  intellyweave-network:
+    driver: bridge

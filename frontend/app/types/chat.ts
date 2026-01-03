@@ -2,9 +2,11 @@
 import { TreeUpdatePayload } from "@/app/components/types";
 import {
 	AggregationPayload,
+	ArchivePayload,
 	BarPayload,
 	DocumentPayload,
 	HistogramPayload,
+	InvestigationPayload,
 	MapPayload,
 	NetworkPayload,
 	ProductPayload,
@@ -166,6 +168,9 @@ export type ResultPayload = {
 		| "network_chart"
 		| "mapbox"
 		| "mapbox_chart"
+		| "archives"
+		| "investigation"
+		| "investigation_report"
 		| "default";
 
 	/* eslint-disable @typescript-eslint/no-explicit-any */
@@ -184,7 +189,9 @@ export type ResultPayload = {
 		| ScatterOrLinePayload[]
 		| HistogramPayload[]
 		| NetworkPayload[]
-		| MapPayload[];
+		| MapPayload[]
+		| ArchivePayload[]
+		| InvestigationPayload[];
 };
 
 export type TextWithCitationsPayload = {
