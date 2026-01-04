@@ -1,126 +1,558 @@
 # Archive Domains Configuration for IntellyWeave
 # Used by Quartermaster to constrain searches to curated archive sources
+# Priority is dynamically assigned by Quartermaster based on user query intent
 
 groups:
-  soviet_repression:
-    description: "Russian/Soviet archives and memorial databases for repression victims"
-    priority: 1
+  russian_archives:
+    description: "Russian state archives and Soviet repression memorial databases"
     domains:
       - domain: garf.ru
         name: "GARF - State Archive of the Russian Federation"
-        default_access_level: PHYSICAL_ONLY
+        default_access_level: PUBLIC_OPEN
         default_digitization_status: PARTIALLY_DIGITIZED
-        default_protocol: READING_ROOM_ONLY
-        notes: "Primary source for clemency petitions, military tribunal records"
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Online catalog searchable at statearchive.ru. Some digitized collections available (Nicholas II, Soviet Military Admin). Most documents require physical visit to Moscow reading room."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "physical_archive"
+          steps:
+            - "Navigate to http://statearchive.ru/383 to search online catalog"
+            - "Identify relevant fonds and prepare research list"
+            - "Visit GARF at 119992 Moscow, ul. Bolshaia Pirogovskaia, 17"
+            - "Reading room hours: Mon/Wed 12:00-20:00, Tue/Thu 10:00-17:00"
+            - "Request documents by fond/opis/delo reference in reading room"
 
       - domain: stalin.memo.ru
         name: "Memorial - Stalin Era Database"
         default_access_level: PUBLIC_OPEN
-        default_digitization_status: PARTIALLY_DIGITIZED
+        default_digitization_status: FULLY_DIGITIZED
         default_protocol: SEARCH_UI_ONLY
-        notes: "Digitized Soviet archival documents, trial cards, execution lists"
+        notes: "44,500 names from 383 Stalin-era execution lists (1937-1954). Full records viewable online. Data exportable as MySQL/CSV via GitHub."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://stalin.memo.ru"
+            - "Use search functionality to query by name, region, or other fields"
+            - "Browse regional lists or view individual person records"
+            - "Optionally download datasets (MySQL, CSV) from linked GitHub repos for local analysis"
 
       - domain: base.memo.ru
         name: "Memorial - Repression Victims Database"
         default_access_level: PUBLIC_OPEN
-        default_digitization_status: PARTIALLY_DIGITIZED
+        default_digitization_status: FULLY_DIGITIZED
         default_protocol: SEARCH_UI_ONLY
-        notes: "Biographical data for rehabilitated/documented repression victims"
+        notes: "2.6+ million victims. Main database at lists.memo.ru. Full biographical records online. Data exportable as CSV/JSON/MySQL."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://lists.memo.ru (or base.memo.ru)"
+            - "Enter search terms (name, place of work, region) in web search fields"
+            - "Filter results by repression details or location"
+            - "Click on result to view full biographical record"
+            - "Optionally download datasets (CSV, JSON, MySQL) for local analysis"
 
       - domain: stopgulag.org
-        name: "StopGulag.org"
+        name: "StopGulag.org - Ryazan Martyrology"
         default_access_level: PUBLIC_OPEN
         default_digitization_status: PARTIALLY_DIGITIZED
-        default_protocol: HTML_CONTENT
-        notes: "Gulag documentation, repression cases, survivor testimonies"
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Ryazan regional Gulag archive. 25+ collections covering execution lists, camps (Butovo, Vyazemilag, Dubravlag), deportees. Includes memoirs, photos, monuments."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://stopgulag.org"
+            - "Use Names/Personalities section to search victim records"
+            - "Browse Topics/Themes for specific camps or categories"
+            - "Use Search function for targeted queries"
+            - "Access related materials (memoirs, diaries, letters, photographs)"
 
       - domain: openlist.wiki
-        name: "OpenList.wiki"
+        name: "OpenList.wiki - Открытый список"
         default_access_level: PUBLIC_OPEN
-        default_digitization_status: PARTIALLY_DIGITIZED
+        default_digitization_status: FULLY_DIGITIZED
         default_protocol: WIKI_COLLABORATIVE
-        notes: "Collaborative project on Stalinist repression victims"
+        notes: "3+ million USSR repression victims (1917-1991). Wikipedia-style collaborative wiki. Multi-language (RU/UK/GE/BY). Users can add/edit entries."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://ru.openlist.wiki (Russian) or https://openlist.wiki"
+            - "Use 'Найти человека' (Find a person) search tool"
+            - "Search by name, birth/death dates, residence"
+            - "To contribute: register and use 'Добавить информацию' (Add information)"
+            - "Can add photos, documents, biographical details"
 
       - domain: istmat.org
         name: "Istmat.org - Historical Materials Project"
         default_access_level: PUBLIC_OPEN
         default_digitization_status: FULLY_DIGITIZED
         default_protocol: WEB_DIGITAL_REPOSITORY
-        notes: "Digitized Soviet-era documents including clemency petitions"
+        notes: "Digitized Soviet-era documents. Marxist-Leninist theory journals, economic/statistical reports, historical periodicals. Direct PDF downloads."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://istmat.org"
+            - "Browse document categories or use search"
+            - "Access files directly via /files/uploads/ paths"
+            - "Download PDFs directly - no registration required"
 
-  ukrainian_commemoration:
-    description: "Ukrainian memorial and commemoration databases"
-    priority: 2
+  ukrainian_archives:
+    description: "Ukrainian state archives and commemoration databases"
     domains:
-      - domain: upa.in.ua
-        name: "UPA Memorial Database"
-        default_access_level: PUBLIC_OPEN
-        default_digitization_status: PARTIALLY_DIGITIZED
-        default_protocol: SEARCH_UI_ONLY
-        notes: "Ukrainian Insurgent Army fighters database"
-
       - domain: memory.gov.ua
-        name: "Ukrainian Institute of National Remembrance"
+        name: "Ukrainian Institute of National Remembrance (UINM)"
         default_access_level: PUBLIC_OPEN
         default_digitization_status: PARTIALLY_DIGITIZED
         default_protocol: HTML_CONTENT
-        notes: "Official Ukrainian commemoration and memory projects"
+        notes: "Official Ukrainian state archive. KGB/Soviet documents (1917-1991). Related archive at hdauinp.org.ua. Aiming to digitize 4M+ documents. CC licensed."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://uinp.gov.ua (main site) or https://hdauinp.org.ua (archive)"
+            - "Browse sections: About, Archives, News"
+            - "Submit inquiries via email uinp@memory.gov.ua for specific records"
+            - "Physical archive at Pukhovska St. 7, Kyiv (Desnianskyi district)"
 
-  general_reference:
-    description: "General reference encyclopedias and databases"
-    priority: 3
+  austrian_archives:
+    description: "Austrian state archives, national library, and academic collections"
     domains:
-      - domain: wikipedia.org
-        name: "Wikipedia (multilingual)"
+      - domain: oesta.gv.at
+        name: "Österreichisches Staatsarchiv (Austrian State Archives)"
         default_access_level: PUBLIC_OPEN
-        default_digitization_status: N_A
-        default_protocol: WIKI_COLLABORATIVE
-        notes: "Proxy for public historical memory across languages"
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Primary Austrian national archive. Civil records, military records, administrative documents. Online catalog Archivinformationssystem (AIS). Some digitized collections."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.oesta.gv.at"
+            - "Use Archivinformationssystem (AIS) for catalog search"
+            - "Browse digitized collections online"
+            - "Request documents for reading room access"
+            - "Physical: Nottendorfer Gasse 2, 1030 Vienna"
 
-      - domain: wikidata.org
-        name: "Wikidata"
+      - domain: bundesarchiv.at
+        name: "Österreichisches Bundesarchiv (Austrian Federal Archives)"
         default_access_level: PUBLIC_OPEN
-        default_digitization_status: N_A
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Federal administrative and military records. Part of Österreichisches Staatsarchiv. Historical government documents, personnel files."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.bundesarchiv.at"
+            - "Search online catalog for holdings"
+            - "Request documents for reading room access"
+            - "Contact for research assistance"
+
+      - domain: iiif.onb.ac.at
+        name: "Austrian National Library - IIIF API"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: FULLY_DIGITIZED
         default_protocol: API
-        notes: "Structured knowledge base with entity identifiers"
+        notes: "IIIF Image and Presentation API for digitized collections. Pre-1900 materials fully accessible via API. 1945-1954 content copyright-restricted to web interface only."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://iiif.onb.ac.at for API documentation"
+            - "Use IIIF Image API for high-resolution image access"
+            - "Use IIIF Presentation API for structured manifests"
+            - "Pre-1900 content: Full API access"
+            - "1945-1954 content: Web interface only (copyright restrictions)"
 
-  academic_projects:
-    description: "Academic research projects and university archives"
-    priority: 4
-    domains:
+      - domain: anno.onb.ac.at
+        name: "ANNO - Austrian Newspapers Online"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: FULLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Austrian historical newspapers 1689-present. Full-text search for 1689-1918 and 1938-1944. Web interface only for 1945-1954 (copyright). 20M+ newspaper pages."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://anno.onb.ac.at"
+            - "Use complex search at https://anno.onb.ac.at/anno-suche/complex?text={query}"
+            - "Filter by date range, newspaper title, or region"
+            - "1689-1918: Full-text searchable"
+            - "1938-1944: Full-text searchable"
+            - "1945-1954: Browse only (copyright restrictions)"
+
       - domain: uni-graz.at
         name: "University of Graz"
         default_access_level: PHYSICAL_OR_SUBSCRIPTION
         default_digitization_status: PARTIALLY_DIGITIZED
         default_protocol: LIBRARY_CATALOGS
-        notes: "Austrian academic research on Soviet victims in Austria"
+        notes: "Austrian academic research on Soviet victims in Austria. Library catalog access."
+        authentication:
+          type: "credentials"
+          username: ""
+          password: ""
+        access_instructions:
+          type: "subscription"
+          steps:
+            - "Navigate to https://uni-graz.at"
+            - "Access library catalog via Universitätsbibliothek"
+            - "Some resources require institutional login or guest registration"
+            - "Physical materials available at university library in Graz"
 
       - domain: adbik.at
-        name: "AdBIK Graz - Archive Research Project"
+        name: "AdBIK Graz - Ludwig Boltzmann Institute Archive"
         default_access_level: PHYSICAL_OR_SUBSCRIPTION
         default_digitization_status: PARTIALLY_DIGITIZED
         default_protocol: LIBRARY_CATALOGS
-        notes: "Historians documenting Soviet operations in Austria 1945-1955"
+        notes: "Soviet operations Austria 1945-1955. NKVD/KGB materials. Part of Ludwig Boltzmann Institute for War Consequences Research."
+        authentication:
+          type: "credentials"
+          username: ""
+          password: ""
+        access_instructions:
+          type: "subscription"
+          steps:
+            - "Contact Ludwig Boltzmann Institute for War Consequences Research"
+            - "Access via University of Graz or Boltzmann Gesellschaft network"
+            - "Some archival collections may require researcher credentials"
+            - "Physical archive access in Graz"
 
-  us_government:
-    description: "US government archives and declassified documents"
-    priority: 5
+  brazilian_archives:
+    description: "Brazilian national and state archives, immigration records"
     domains:
-      - domain: archives.gov
-        name: "US National Archives"
+      - domain: gov.br/arquivonacional
+        name: "Arquivo Nacional do Brasil (National Archives of Brazil)"
         default_access_level: PUBLIC_OPEN
         default_digitization_status: PARTIALLY_DIGITIZED
         default_protocol: WEB_DIGITAL_REPOSITORY
-        notes: "Declassified CIA, CIC, and military intelligence documents"
+        notes: "Digitized government records, immigration records (Hospedaria de imigrantes), ship arrival lists from 1875 onwards. SIAN online system for research requests."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.gov.br/arquivonacional"
+            - "Register at https://sian.an.gov.br/ for online searches"
+            - "Search digitized immigration records and passenger lists"
+            - "Request scans via email: consultas@arquivonacional.gov.br"
+            - "Physical: Rio de Janeiro or Brasília locations"
+
+      - domain: cpdoc.fgv.br
+        name: "CPDOC - Centro de Pesquisa e Documentação de História Contemporânea"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: FULLY_DIGITIZED
+        default_protocol: WEB_DIGITAL_REPOSITORY
+        notes: "Extensive digitized contemporary Brazilian history collections. Oral histories, photographs, documents. Free public access."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.cpdoc.fgv.br"
+            - "Browse digital collections and oral history archives"
+            - "Search by name, date, or theme"
+            - "Access documents and transcripts directly online"
+
+      - domain: bn.gov.br
+        name: "Biblioteca Nacional do Brasil (National Library)"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: WEB_DIGITAL_REPOSITORY
+        notes: "Digitized historical documents, newspapers (São Paulo 1950s+), books, manuscripts. Hemeroteca Digital for newspaper archives."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.bn.gov.br"
+            - "Use Hemeroteca Digital for historical newspapers"
+            - "Search BN Digital for digitized collections"
+            - "Access documents, newspapers, and manuscripts online"
+
+      - domain: camara.leg.br
+        name: "Câmara dos Deputados - Historical Archive"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: HTML_CONTENT
+        notes: "Brazilian Chamber of Deputies historical records. Lei de Acesso à Informação (FOIA equivalent) requests via e-Cidadania. 20-day response requirement."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www2.camara.leg.br/a-camara/conheca/historia"
+            - "Submit information requests via e-Cidadania platform"
+            - "Use Lei de Acesso à Informação for formal requests"
+            - "Standard response time: 20 days (extendable)"
+
+      - domain: museudaimigracao.org.br
+        name: "Museu da Imigração do Estado de São Paulo"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Hospedaria de Brás records, Porto de Santos passenger lists. Immigration manifests partially digitized. Research services available."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.museudaimigracao.org.br"
+            - "Search online catalog for immigration records"
+            - "Contact: museudaimigracao@museudaimigracao.org.br"
+            - "Request research assistance for specific records"
+            - "Physical visit for non-digitized materials"
+
+      - domain: tjsp.jus.br
+        name: "TJSP - Tribunal de Justiça de São Paulo"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "São Paulo State Court of Justice. Online public records searches. Some naturalization records digitized."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.tjsp.jus.br"
+            - "Use public records search for court documents"
+            - "Search naturalization proceedings by name"
+            - "Request certified copies for official use"
+
+      - domain: arquivoestado.sp.gov.br
+        name: "Arquivo Público do Estado de São Paulo"
+        default_access_level: PHYSICAL_OR_SUBSCRIPTION
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: LIBRARY_CATALOGS
+        notes: "São Paulo state archive. Limited online catalog. Most records require in-person research visits or formal document requests."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "physical_archive"
+          steps:
+            - "Navigate to https://www.arquivoestado.sp.gov.br"
+            - "Search online catalog for available holdings"
+            - "Submit formal document request for specific records"
+            - "Schedule in-person research visit"
+            - "Physical: Rua Voluntários da Pátria, 596 - Santana, São Paulo"
+
+  italian_archives:
+    description: "Italian state and regional archives"
+    domains:
+      - domain: archiviodistatogenova.it
+        name: "Archivio di Stato di Genova"
+        default_access_level: RESTRICTED
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: LIBRARY_CATALOGS
+        notes: "Genoa State Archive. Italian maritime manifests, port records. Requires formal research requests. Italian language. In-person or international research request."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "restricted"
+          steps:
+            - "Navigate to https://www.archiviodistatogenova.it"
+            - "Search online catalog (in Italian)"
+            - "Submit formal research request via email or post"
+            - "For international requests: include identification, research purpose"
+            - "Physical: Via S. Chiara 28R, 16124 Genova, Italy"
+
+  united_states_archives:
+    description: "United States government archives, declassified documents, and Holocaust research"
+    domains:
+      - domain: archives.gov
+        name: "US National Archives (NARA)"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: WEB_DIGITAL_REPOSITORY
+        notes: "13.5B pages textual records. 2-5% digitized. Declassified docs, military records, naturalization. Catalog API available."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://archives.gov/research or https://catalog.archives.gov"
+            - "Use free Catalog search for digitized records"
+            - "View/download available electronic or scanned items"
+            - "Request scans for non-digitized holdings via email or order form"
+            - "API at https://catalog.archives.gov/api/v1/ for programmatic access"
+            - "Physical: Washington DC (700 Pennsylvania Ave) or 17 regional archives"
 
       - domain: cia.gov
         name: "CIA Reading Room"
         default_access_level: PUBLIC_OPEN
         default_digitization_status: PARTIALLY_DIGITIZED
         default_protocol: WEB_DIGITAL_REPOSITORY
-        notes: "Declassified intelligence documents, FOIA releases"
+        notes: "CREST 25-Year Archive with 10M+ declassified pages. Full-text searchable. No registration required. PDF downloads available."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.cia.gov/readingroom/"
+            - "Use the search bar for keyword or full-text searches"
+            - "Use Advanced Search for specific date ranges, document types, or collections"
+            - "Browse Historical Collections for curated document sets (Bay of Pigs, Berlin Wall, etc.)"
+            - "Click document links to view PDF landing pages"
+            - "Download declassified documents directly as PDF"
 
-# Default query expansion patterns for archive searches
+      - domain: ushmm.org
+        name: "United States Holocaust Memorial Museum"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Holocaust documentation, survivor testimonies, historical photographs. Free account for research access. No public API."
+        authentication:
+          type: "credentials"
+          username: ""
+          password: ""
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.ushmm.org"
+            - "Register for research account"
+            - "Search Collections for documents and photographs"
+            - "Access Holocaust Survivors and Victims Database"
+            - "Request research assistance for specific queries"
+
+  european_archive_aggregator:
+    description: "European cultural heritage aggregator platform"
+    domains:
+      - domain: europeana.eu
+        name: "Europeana - European Cultural Heritage"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: FULLY_DIGITIZED
+        default_protocol: API
+        notes: "Aggregates 50M+ cultural heritage items from 4,000+ European institutions. Free API with 10 endpoints (Search, Record, Entity, IIIF). Requires free API key registration."
+        authentication:
+          type: "api_key"
+          api_key: ""
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.europeana.eu for web search"
+            - "Register for free API key at https://pro.europeana.eu/page/get-api"
+            - "API endpoint: https://api.europeana.eu/record/v2/search.json?query={query}&wskey={api_key}"
+            - "Supports Search API, Record API, Entity API, IIIF APIs"
+            - "Documentation at https://pro.europeana.eu/page/apis"
+
+  academic_projects:
+    description: "Academic research projects and university library collections"
+    domains:
+      - domain: guides.library.harvard.edu
+        name: "Harvard Library Research Guides"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: LIBRARY_CATALOGS
+        notes: "Harvard Library research guides and special collections. Holds 11,676 reels of GARF (Russian State Archive) microfilm. Access via HOLLIS catalog. Some materials require Harvard affiliation or on-site visit."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "physical_archive"
+          steps:
+            - "Navigate to https://guides.library.harvard.edu"
+            - "Search HOLLIS catalog for Russian/Soviet materials"
+            - "GARF microfilm collection: 11,676 reels available"
+            - "Request materials via HOLLIS Special Request"
+            - "On-site access at Widener Library, Cambridge MA"
+            - "Contact 'Ask a Librarian' for research assistance"
+
+  historical_research_services:
+    description: "Professional historical research services and commissioned archive research"
+    domains:
+      - domain: factsandfiles.com
+        name: "Facts & Files - Historical Research Services"
+        default_access_level: RESTRICTED
+        default_digitization_status: N_A
+        default_protocol: HTML_CONTENT
+        notes: "Berlin-based research company (est. 1999). Commissioned historical research, provenance research, archive indexing, digitization. WWII, East Germany (Stasi, DDR), Aryanization research. Project-based services, not public archive."
+        authentication:
+          type: "none"
+        access_instructions:
+          type: "restricted"
+          steps:
+            - "Navigate to https://www.factsandfiles.com/en/"
+            - "Review portfolio of services and past projects"
+            - "Contact via email for commissioned research requests"
+            - "Services include: archive research, digitization, provenance research"
+            - "Project-based pricing - inquire for quotes"
+
+      - domain: collections.arolsen-archives.org
+        name: "Arolsen Archives (International Tracing Service)"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "30M+ documents on WWII displaced persons, Holocaust victims, forced laborers, camp prisoners. Free account for online search. Web interface only (no public API)."
+        authentication:
+          type: "credentials"
+          username: ""
+          password: ""
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://collections.arolsen-archives.org"
+            - "Create free account for full search access"
+            - "Search by name, birthdate, nationality"
+            - "Access DP camp registration cards, concentration camp records"
+            - "Request copies via online form"
+            - "Tracing service: https://www.arolsen-archives.org"
+
+  genealogy_research_services:
+    description: "Genealogical research databases and vital records collections"
+    domains:
+      - domain: familysearch.org
+        name: "FamilySearch"
+        default_access_level: PUBLIC_OPEN
+        default_digitization_status: FULLY_DIGITIZED
+        default_protocol: API
+        notes: "Free genealogy database. Billions of records including Brazilian immigration, vital records, naturalization. Developer API available. Free account required for full access."
+        authentication:
+          type: "credentials"
+          username: ""
+          password: ""
+        access_instructions:
+          type: "general"
+          steps:
+            - "Navigate to https://www.familysearch.org"
+            - "Create free account for full access"
+            - "Search historical records by name, location, date"
+            - "Access Brazilian collections including immigration manifests"
+            - "Developer API at https://www.familysearch.org/developers"
+
+      - domain: ancestry.com
+        name: "Ancestry"
+        default_access_level: SUBSCRIPTION
+        default_digitization_status: FULLY_DIGITIZED
+        default_protocol: SEARCH_UI_ONLY
+        notes: "Commercial genealogy database. Brazilian immigration records, São Paulo census data (1950s), naturalization documents. Subscription required."
+        authentication:
+          type: "credentials"
+          username: ""
+          password: ""
+        access_instructions:
+          type: "subscription"
+          steps:
+            - "Navigate to https://www.ancestry.com"
+            - "Subscribe for database access"
+            - "Search Brazilian collections for immigration records"
+            - "Access São Paulo 1954 arrival records"
+            - "Download and save relevant documents"
+
+# Query expansion patterns for archive searches
+# Used by Quartermaster to generate multilingual search variants
 query_expansion:
   transliteration_variants:
     - language: ru
@@ -131,9 +563,7 @@ query_expansion:
       pattern: "{name_german}"
     - language: en
       pattern: "{name_english}"
-
-  time_context:
-    - "1945-1955"
-    - "Cold War"
-    - "Soviet occupation Austria"
-    - "CIC operations"
+    - language: pt
+      pattern: "{name_portuguese}"
+    - language: it
+      pattern: "{name_italian}"

@@ -1,74 +1,44 @@
-# Feature: Quartermaster and Case Officer — Archive Discovery and Investigative Reasoning (Backend + Frontend)
+# Feature: Quartermaster and Case Officer — Archive Discovery and Investigative Reasoning
 
 ## Summary
 
-Implement two decision-tree consumable tools for IntellyWeave (Elysia-based agentic RAG system):
+Two decision-tree consumable tools for IntellyWeave (Elysia-based agentic RAG system):
 
-- Quartermaster: a system tool/agent that maps the information landscape (archives, commemorative databases, academic projects) relevant to a query, classifying each source by access level, protocol, digitization status, and constraints. Outputs structured, machine-readable archive intelligence.
+- **Quartermaster**: Maps the information landscape (archives, databases, academic projects) relevant to a query, classifying each source by access level, protocol, digitization status, and constraints. Outputs structured, machine-readable archive intelligence with authentication parameters.
 
-- Case Officer: a system tool/agent that consumes Quartermaster intelligence to conduct the investigation itself—hypothesis generation, negative-proof validation, provenance reconstruction, and narrative synthesis—producing a documented report (with citations and next steps).
+- **Case Officer**: Consumes Quartermaster intelligence to conduct the investigation itself—hypothesis generation, evidence gathering, document reading, and narrative synthesis—producing a documented report with citations and actionable next steps.
 
-Both tools will leverage Sofia’s SearXNG advanced search backend via Docker Compose for curated, domain-constrained web/archives search, while remaining fully aligned with Elysia’s decision-tree best practices and IntellyWeave’s RAG architecture.
-
-## Motivation
-
-Recent investigations (e.g., documented “digital ghost” cases) require:
-
-- Gap-aware analysis that proves absence (negative proof) as rigorously as presence.
-- Structured mapping of archives (digitized vs physical-only; public vs restricted).
-- Reproducible investigative reasoning with provenance and operational next steps.
-
-Quartermaster and Case Officer together provide a complete loop:
-
-- Quartermaster maps “where the answers could exist.”
-- Case Officer reasons “what can be concluded and why,” including explaining gaps.
-
-## Goals
-
-- Backend:
-  - Add two decision-tree tools: QuartermasterTool and CaseOfficerTool (Python, Elysia).
-  - Integrate DSPy modules for query expansion, archive classification, hypothesis handling, and report synthesis.
-  - Call Sofia’s `/api/advanced-search` with includeDomains to restrict searches to curated archives.
-  - Provide stable API responses that serialize conversation messages in IntellyWeave’s display schema (e.g., `type: "result"` + `metadata.display_type`).
-
-- Frontend:
-  - Add two display types: `archives` (for Quartermaster output) and `investigation` (for Case Officer synthesis).
-  - Implement `ArchiveDisplay` (cards/list) and `InvestigationDisplay` (multi-section report + structured evidence/hypotheses).
-  - Ensure compatibility with existing conversation rendering (e.g., `productExample.ts` pattern), without introducing a separate “searchbar”.
-
-- Infra:
-  - Extend IntellyWeave `docker-compose.yaml` to add Sofia (and optionally SearXNG) services.
-  - Configure environment variables across backend/frontend for stable service discovery.
-
-## Non-Goals
-
-- Building a new search UI paradigm; IntellyWeave remains RAG-driven by queries routed through the decision tree.
-- Duplicating SearXNG logic inside IntellyWeave; we reuse Sofia’s advanced search façade.
-- Implementing headless crawling or SPARQL clients inside this issue (can be future enhancements).
+Both tools leverage a **multi-provider search cascade** (SearXNG → Perplexity → Serper → Tavily) and a **document reader cascade** (Jina → AgentQL → HTTP) for comprehensive archive discovery and content extraction.
 
 ---
 
 ## Architecture Overview
 
-### System Integration (IntellyWeave + Sofia + SearXNG)
+### System Integration
 
 ```mermaid
 flowchart LR
     subgraph IW[IntellyWeave]
-      FE[Frontend (Next.js)]
-      BE[Backend (FastAPI/Elysia)]
+      FE[Frontend - Next.js]
+      BE[Backend - FastAPI/Elysia]
       Tree[Elysia Decision Tree]
       QM[QuartermasterTool]
       CO[CaseOfficerTool]
       DSPy[DSPy Reasoning Modules]
       WVT[(Weaviate)]
-      REDIS[(Redis)]
     end
 
-    subgraph SOFIA[Sofia AI Search UI]
-      XUI[Next.js API (/api/advanced-search)]
+    subgraph SEARCH[Multi-Provider Search Cascade]
       SX[SearXNG]
-      SREDIS[(Redis)]
+      PX[Perplexity]
+      SP[Serper]
+      TV[Tavily]
+    end
+
+    subgraph READER[Document Reader Cascade]
+      JN[Jina Reader]
+      AQ[AgentQL]
+      HTTP[Simple HTTP]
     end
 
     FE --> BE
@@ -78,46 +48,10 @@ flowchart LR
     QM --> DSPy
     CO --> DSPy
     BE --> WVT
-    BE --> REDIS
 
-    QM -->|HTTP POST| XUI
-    CO -->|HTTP POST| XUI
-    XUI --> SX
-    XUI --> SREDIS
-```
-
-- IntellyWeave backend calls Sofia’s advanced search endpoint for archive-constrained queries.
-- Quartermaster emits structured `ArchiveSource[]` and conversation messages with `display_type: "archives"`.
-- Case Officer consumes `ArchiveSource[]`, runs hypotheses and control-group validation, and emits an `InvestigationReport` with `display_type: "investigation"`.
-
-### Decision Tree Integration
-
-```mermaid
-classDiagram
-    class Tree {
-        +tools: List[Tool]
-        +async_call()
-        +add_tool()
-    }
-
-    class Tool {
-        +name: str
-        +description: str
-        +is_tool_available()
-        +__call__()
-    }
-
-    class QuartermasterTool {
-        +__call__(query, context) -> QuartermasterResult
-    }
-
-    class CaseOfficerTool {
-        +__call__(query, archive_sources, context) -> CaseOfficerResult
-    }
-
-    Tool <|-- QuartermasterTool
-    Tool <|-- CaseOfficerTool
-    Tree *-- Tool
+    QM -->|Cascade| SEARCH
+    CO -->|Cascade| SEARCH
+    CO -->|Cascade| READER
 ```
 
 ### Investigative Sequence
@@ -130,303 +64,403 @@ sequenceDiagram
     participant Tree as Elysia Tree
     participant QM as QuartermasterTool
     participant CO as CaseOfficerTool
-    participant Sofia as Sofia /api/advanced-search
-    participant WVT as Weaviate (optional)
-    participant R as Redis
+    participant Search as Multi-Provider Search
+    participant Reader as Document Reader
 
     U->>FE: Submit query (research intent)
-    FE->>API: POST /query {prompt, mode="archive_research"}
+    FE->>API: POST /query {prompt}
     API->>Tree: tree.async_call(prompt, metadata)
 
     Tree->>QM: Select & call QuartermasterTool
-    QM->>Sofia: POST /api/advanced-search { includeDomains: archives }
-    Sofia-->>QM: SearchResults
-    QM-->>Tree: ArchiveSource[] + "archives" display payload
-    Tree-->>API: Message block (result + metadata.display_type="archives")
+    QM->>Search: Cascade search with quality check
+    Search-->>QM: SearchResults
+    QM-->>Tree: ArchiveSource[] + display_type="archives"
+    Tree-->>API: Message block
     API-->>FE: JSON
 
     Tree->>CO: Call CaseOfficerTool(query, ArchiveSource[])
-    CO->>Sofia: Multiple POSTs /api/advanced-search (hypotheses, control-groups)
-    Sofia-->>CO: SearchResults
-    CO->>WVT: Optional internal doc cross-check
-    CO->>R: Cache evidence
-    CO-->>Tree: InvestigationReport + display payload "investigation"
+    CO->>Search: Expanded investigation searches
+    Search-->>CO: SearchResults
+    CO->>Reader: Read accessible documents
+    Reader-->>CO: DocumentContent[]
+    CO-->>Tree: InvestigationReport + display_type="investigation"
     Tree-->>API: Message block
     API-->>FE: JSON
-    FE->>U: Render archives map & investigative synthesis
+    FE->>U: Render archives map & investigation synthesis
 ```
 
 ---
 
-## Backend Implementation Plan (FastAPI + Elysia + DSPy)
+## Backend Implementation
 
-### 1) Directory Structure & Files
+### Directory Structure
 
-- New tool module for archives:
-  - `backend/elysia/tools/archives/quartermaster_tool.py`
-  - `backend/elysia/tools/archives/case_officer_tool.py`
-  - `backend/elysia/tools/archives/types.py` (ArchiveSource, AccessLevel, Protocol, etc.)
-  - `backend/elysia/tools/archives/config_loader.py` (YAML loader)
-  - `backend/elysia/tools/archives/dspy_programs.py` (DSPy modules)
+```
+backend/elysia/tools/archives/
+├── __init__.py
+├── quartermaster_tool.py
+├── case_officer_tool.py
+├── types.py
+├── config_loader.py
+└── dspy_programs.py
 
-- Config:
-  - `backend/config/archive_domains.yaml` (curated archive domains and groups)
+backend/elysia/api/services/
+├── sofia_service.py          # Multi-provider search cascade
+└── document_reader_service.py # Multi-reader document extraction
 
-### 2) Config: `archive_domains.yaml`
+backend/config/
+└── archive_domains.yaml       # Curated archive configuration
+```
 
-- Structure (suggested):
+### Multi-Provider Search Cascade (SofiaService)
 
-  - `groups`: domain sets (e.g., `soviet_repression`, `national_archives`, `academic_projects`)
-  - `archives`: flat list of entries with `id`, `name`, `domain`, `group`, `priority`, `notes`
+Tries providers in order until results are found:
+1. SearXNG (if `SEARXNG_API_URL` is set)
+2. Perplexity (if `PERPLEXITY_API_KEY` is set)
+3. Serper (if `SERPER_API_KEY` is set)
+4. Tavily (if `TAVILY_API_KEY` is set)
 
-- Loader:
-  - Parse into a list of minimal `ArchiveSource` skeletons (`access_level=UNKNOWN`, etc.).
-  - Provide `archive_domains = [entry.domain for entry in archives]` for Sofia `includeDomains`.
+### Document Reader Cascade (DocumentReaderService)
 
-### 3) Sofia Advanced Search Integration
+Tries readers in order until content is extracted:
+1. Jina Reader (if `JINA_API_KEY` is set)
+2. AgentQL (if `AGENTQL_API_KEY` is set)
+3. Simple HTTP (always available)
 
-- Env var in backend:
-  - `SOFIA_ADV_SEARCH_URL=http://sofia:3000/api/advanced-search`
+### QuartermasterTool
 
-- HTTP client:
-  - Use async requests with retries/timeouts.
-  - JSON body:
-    - `query`, `maxResults`, `searchDepth` (basic/advanced), `includeDomains`, `excludeDomains`
+**Provider Retry with Quality Check:**
+1. Try default cascade (SearXNG first)
+2. Evaluate result quality using LLM
+3. If garbage, retry with next provider + custom research prompt
+4. Continue until quality results or all providers exhausted
 
-- Caching:
-  - Cache raw responses keyed by sanitized queries & domain filters in Redis.
+**Source Classification:**
+- `INSTITUTIONAL`: From archive_domains.yaml (vetted, high-quality)
+- `DISCOVERED`: Found during search, LLM determined as relevant with relevance_score
 
-### 4) DSPy Modules (Reasoning)
+### CaseOfficerTool
 
-- `ArchiveQueryVariants`: multilingual/multiscript expansion (e.g., ru/uk/de/en transliterations).
-- `ClassifyArchiveSource`: classify access level, protocol, digitization status, constraints from landing/about pages.
-- `GenerateHypotheses`: produce hypotheses (name variants, transliterations, codename, organizational links, temporal misclassification).
-- `EvaluateHypothesis`: assess evidence and control groups to set `status` (CONFIRMED/REFUTED/INDETERMINATE).
-- `SynthesizeInvestigationReport`: generate final narrative + structured findings.
+**Active Investigation Capabilities:**
+1. Consumes Quartermaster archive mapping
+2. Performs expanded searches beyond Quartermaster domains
+3. Reads publicly accessible documents via DocumentReaderService
+4. Context budget management (80K tokens, per-document limits)
+5. Generates hypotheses with status (CONFIRMED/REFUTED/INDETERMINATE/PENDING)
+6. Synthesizes investigation report with citations
+7. Generates next steps with structured access instructions
 
-### 5) QuartermasterTool (Elysia Tool)
+### DSPy Modules
 
-- `is_tool_available()`: ensure `SOFIA_ADV_SEARCH_URL` present.
-- `__call__(query, context)`:
-  1. `ArchiveQueryVariants` → produce robust variants.
-  2. For each variant: POST `SOFIA_ADV_SEARCH_URL` with `includeDomains=archive_domains`.
-  3. Cluster by domain; fetch landing/about pages; `ClassifyArchiveSource` → populate fields.
-  4. Return `QuartermasterResult` with:
-     - `archive_sources: list[ArchiveSource]`
-     - A conversation `result` message with `payload.type="archives"` and `metadata.display_type="archives"`.
-
-### 6) CaseOfficerTool (Elysia Tool)
-
-- `is_tool_available()`: ensure `SOFIA_ADV_SEARCH_URL` present.
-- `__call__(query, archive_sources, context)`:
-  1. If `archive_sources` missing, call QuartermasterTool or read from Tree state.
-  2. `GenerateHypotheses` from query + archive context.
-  3. For each hypothesis:
-     - Build archive-focused queries (plus transliterations).
-     - POST `SOFIA_ADV_SEARCH_URL` with relevant `includeDomains` subset.
-     - Transform results into `Evidence[]`.
-  4. Control-group searches for known-positive figures (same pipeline).
-  5. `EvaluateHypothesis` to set statuses.
-  6. Optional Weaviate cross-check (internal docs).
-  7. `SynthesizeInvestigationReport` for final narrative and recommendations.
-  8. Return `CaseOfficerResult` with messages:
-     - `text_with_citations` (synthesis)
-     - Optional `result` with structured hypotheses/evidence.
-
-### 7) Decision Tree & Routing
-
-- Ensure both tools are appended to `Tree.tools` for `branch_initialisation="default"`.
-- Extend DomainRouter or prompt-based decision nodes to select these tools when:
-  - `mode="archive_research"`, or
-  - Query intent matches archival/gap investigation patterns.
-
-### 8) API & Serialization
-
-- The backend `query` route should serialize conversation messages like in `frontend/app/types/display/*Example.ts`:
-  - `type: "User"`, `type: "text"`, `type: "result"`, `type: "text_with_citations"`, `type: "suggestion"`
-  - For Quartermaster: `payload.type="archives"`, `metadata.display_type="archives"`
-  - For Case Officer: `payload.type="investigation_report"`, `metadata.display_type="investigation"`
-
-### 9) Testing
-
-- Unit tests:
-  - DSPy modules (mock LLM; deterministic prompts).
-  - Archive classification parsing.
-  - Hypothesis evaluation logic with mock evidence.
-
-- Integration tests:
-  - Sofia search call (mock HTTP).
-  - Decision tree routing conditions (archive research intent).
-  - Frontend display payload shape validation.
+| Module | Purpose |
+|--------|---------|
+| `HypothesisGenerator` | Generate investigation hypotheses from evidence and gaps |
+| `InvestigationSynthesizer` | Synthesize findings into comprehensive report |
+| `EvidenceEvaluator` | Evaluate evidence against hypotheses |
+| `NextStepsGenerator` | Generate actionable next steps with access instructions |
 
 ---
 
-## Frontend Implementation Plan (Next.js)
+## Archive Configuration (archive_domains.yaml)
 
-### 1) New Display Types & Example Mocks
+### Current Structure
 
-- Add example mocks mirroring `productExample.ts` structure:
-  - `frontend/app/types/display/archiveExample.ts` (provided as draft earlier).
-  - Optional `frontend/app/types/display/investigationExample.ts` (for Case Officer synthesis).
+```yaml
+groups:
+  soviet_repression:
+    description: "Russian/Soviet archives and memorial databases"
+    priority: 1
+    domains:
+      - domain: garf.ru
+        name: "GARF - State Archive of the Russian Federation"
+        default_access_level: PHYSICAL_ONLY
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: READING_ROOM_ONLY
+        notes: "Primary source for clemency petitions"
+```
 
-### 2) Components
+### Required Enhancement: Authentication Parameters
 
-- `ArchiveDisplay`:
-  - Card/list view:
-    - `name`, `domain`, `summary`, badges for `access_level`, `digitization_status`, `protocol`, constraints indicator.
-  - Group filters (optional): `soviet_repression`, `national_archives`, etc. (simple client-side filters).
-  - Link out to external sources where appropriate.
+Each domain entry must support authentication credentials for automated access:
 
-- `InvestigationDisplay`:
-  - Sections:
-    - Summary (findings)
-    - Gap analysis & negative proof explanation
-    - Provenance reconstruction (physical archives, why not digitized)
-    - Next steps (suggestions list)
-    - Optional hypotheses & evidence table/cards
+```yaml
+groups:
+  soviet_repression:
+    description: "Russian/Soviet archives and memorial databases"
+    priority: 1
+    domains:
+      - domain: garf.ru
+        name: "GARF - State Archive of the Russian Federation"
+        default_access_level: PHYSICAL_ONLY
+        default_digitization_status: PARTIALLY_DIGITIZED
+        default_protocol: READING_ROOM_ONLY
+        notes: "Primary source for clemency petitions"
 
-- Central renderer:
-  - Extend the display resolver:
-    - If `metadata.display_type === "archives"` → render `ArchiveDisplay`
-    - If `metadata.display_type === "investigation"` → render `InvestigationDisplay`
+        # Authentication parameters (stored in clear text, encrypted externally)
+        authentication:
+          type: "credentials"  # or "api_key", "oauth", "none"
+          api_key: ""
+          username: ""
+          password: ""
+          client_id: ""
+          client_secret: ""
 
-### 3) UX Notes
+        # Access instructions (forwarded to Case Officer for automated/manual access)
+        access_instructions:
+          type: "physical_archive"  # physical_archive | subscription | restricted | general
+          steps:
+            - "Navigate to archives.gov.ru"
+            - "Find reading room access information"
+            - "Submit researcher access request"
+            - "Visit the physical location"
+            - "Request documents by fond/opis/delo reference"
 
-- Preserve RAG conversation flow (no separate “searchbar” paradigm).
-- Maintain consistency with existing display types (`ecommerce`, `tickets`, `intelligence`, `table`).
-- Provide minimal interactivity (expand/collapse; copy links; badges tooltips).
+      - domain: jstor.org
+        name: "JSTOR - Academic Database"
+        default_access_level: SUBSCRIPTION
+        default_digitization_status: FULLY_DIGITIZED
+        default_protocol: WEB_DIGITAL_REPOSITORY
+        notes: "Scholarly articles on Cold War intelligence"
 
-### 4) Accessibility
+        authentication:
+          type: "api_key"
+          api_key: "jstor_api_key_here"
+          username: ""
+          password: ""
+          client_id: ""
+          client_secret: ""
 
-- Ensure badges and constraint indicators have aria-labels.
-- Provide semantic headings and lists in `InvestigationDisplay`.
+        access_instructions:
+          type: "subscription"
+          steps:
+            - "Navigate to jstor.org"
+            - "Create an account if required"
+            - "Subscribe or request institutional access"
+            - "Search for relevant documents"
+            - "Download and upload to IntellyWeave"
+```
 
----
+### Authentication Types
 
-## Docker Compose Integration (Sofia + SearXNG)
+| Type | Required Fields | Use Case |
+|------|-----------------|----------|
+| `none` | - | Public open access |
+| `api_key` | `api_key` | Programmatic API access |
+| `credentials` | `username`, `password` | Web portal login |
+| `oauth` | `client_id`, `client_secret` | OAuth2 authentication |
 
-### 1) Services
+### Access Instruction Types
 
-- Add Sofia (Next.js) as a service, e.g.:
-
-  - `SOFIA_ADV_SEARCH_URL=http://sofia:3000/api/advanced-search`
-  - Env for Sofia:
-    - `SEARXNG_API_URL=http://searxng:8080`
-    - `SEARCH_API=searxng`
-    - `USE_LOCAL_REDIS=true`
-    - `LOCAL_REDIS_URL=redis://redis:6379`
-    - `SEARXNG_MAX_RESULTS`, `SEARXNG_DEFAULT_DEPTH`, `SEARXNG_ENGINES`, etc.
-
-- Optionally add SearXNG service (if not already deployed elsewhere).
-
-### 2) Networking
-
-- Place both Sofia and IntellyWeave backend on the same compose network.
-- Ensure stable hostnames (e.g., `sofia`, `searxng`, `redis`) for service discovery.
-
-### 3) Environment Variables
-
-- Backend:
-  - `SOFIA_ADV_SEARCH_URL=http://sofia:3000/api/advanced-search`
-- Frontend:
-  - No direct call to Sofia; all traffic goes via backend.
-
----
-
-## Environment Variables Reference
-
-- IntellyWeave Backend:
-  - `SOFIA_ADV_SEARCH_URL` (required)
-  - `REDIS_URL` (recommended for caching)
-  - Weaviate (`WCD_URL`, `WCD_API_KEY`, etc.) as already documented
-
-- Sofia:
-  - `SEARXNG_API_URL`
-  - `SEARXNG_DEFAULT_DEPTH`, `SEARXNG_MAX_RESULTS`, `SEARXNG_CRAWL_MULTIPLIER`, `SEARXNG_ENGINES`, `SEARXNG_TIME_RANGE`
-  - `USE_LOCAL_REDIS`, `LOCAL_REDIS_URL` or Upstash equivalents
-
----
-
-## Acceptance Criteria
-
-- Backend:
-  - [ ] QuartermasterTool returns `ArchiveSource[]` and emits a `result` message with `payload.type="archives"`, `metadata.display_type="archives"`.
-  - [ ] CaseOfficerTool consumes Quartermaster output and emits a `text_with_citations` message with `payload.type="investigation_report"`, `metadata.display_type="investigation"`.
-  - [ ] Calls to Sofia advanced search include `includeDomains` from `archive_domains.yaml`.
-  - [ ] DSPy modules produce deterministic structures (when mocked) for variants/classification/hypotheses/report.
-
-- Frontend:
-  - [ ] `ArchiveDisplay` renders archive cards with badges and summaries from the `archives` payload.
-  - [ ] `InvestigationDisplay` renders narrative sections, citations, and optional structured hypotheses/evidence.
-  - [ ] Central renderer correctly routes `display_type` to components, coexisting with existing display types.
-
-- Infra:
-  - [ ] `docker-compose` starts Sofia and makes `/api/advanced-search` reachable from IntellyWeave backend.
-  - [ ] Env variables documented and respected in both services.
+| Type | Description |
+|------|-------------|
+| `physical_archive` | Requires in-person visit to facility |
+| `subscription` | Paid database access required |
+| `restricted` | Government/institutional access requirements |
+| `general` | Open web resources, no special access |
 
 ---
 
-## Milestones
+## Frontend Implementation
 
-1. Config & DSPy scaffolding (Backend) — 3–4 days
-   - `archive_domains.yaml`, loader, `types.py`
-   - DSPy signatures/modules stubs
+### Display Components
 
-2. Sofia integration & Quartermaster — 5–7 days
-   - HTTP client with retries
-   - Aggregation/classification → `ArchiveSource[]`
-   - Serialization to `archives` payload
+```
+frontend/app/components/chat/displays/
+├── Archive/
+│   ├── index.ts
+│   ├── ArchiveDisplay.tsx
+│   ├── ArchiveCard.tsx
+│   └── ArchiveView.tsx
+└── Investigation/
+    ├── index.ts
+    ├── InvestigationDisplay.tsx
+    ├── NextStepCard.tsx
+    ├── NextStepView.tsx
+    └── HypothesisCard.tsx
+```
 
-3. Case Officer & synthesis — 7–10 days
-   - Hypotheses, control-group evaluation
-   - Report synthesis with citations/next steps
+### Type Definitions
 
-4. Frontend display components — 4–6 days
-   - `ArchiveDisplay`, `InvestigationDisplay`
-   - Renderer wiring; mock data tests
+```typescript
+// ArchivePayload
+type ArchivePayload = {
+  id: string;
+  name: string;
+  domain: string;
+  group: string;
+  summary: string;
+  access_level: "PUBLIC_OPEN" | "PHYSICAL_ONLY" | "RESTRICTED" | "SUBSCRIPTION" | "PHYSICAL_OR_SUBSCRIPTION";
+  digitization_status: "FULLY_DIGITIZED" | "PARTIALLY_DIGITIZED" | "NOT_DIGITIZED" | "N_A";
+  protocol: "WEB_DIGITAL_REPOSITORY" | "READING_ROOM_ONLY" | "SEARCH_UI_ONLY" | "WIKI_COLLABORATIVE" | "HTML_CONTENT" | "LIBRARY_CATALOGS" | "API";
+  constraints: ArchiveConstraint[];
+  notes: string;
+  source_urls: string[];
+  classification: "INSTITUTIONAL" | "DISCOVERED";
+  relevance_score?: number;
+  relevance_reasoning?: string;
+};
 
-5. Tests & docs — 3–5 days
-   - Unit & integration tests
-   - README/docs updates
+// InvestigationHypothesis
+type InvestigationHypothesis = {
+  id: string;
+  description: string;
+  status: "CONFIRMED" | "REFUTED" | "INDETERMINATE" | "PENDING";
+  confidence: number;
+  reasoning: string;
+  evidence?: Array<{
+    source_id: string;
+    content: string;
+    relevance_score: number;
+    is_positive: boolean;
+  }>;
+};
+
+// NextStep with access_instructions
+type NextStep = {
+  text: string;
+  query: string;
+  reasoning: string;
+  priority: "high" | "medium" | "low";
+  access_instructions: {
+    type: "physical_archive" | "subscription" | "restricted" | "general";
+    steps: string[];
+  };
+};
+```
+
+---
+
+## Environment Variables
+
+### Backend
+
+```bash
+# Multi-Provider Search (at least one required)
+SEARXNG_API_URL=http://localhost:8081
+PERPLEXITY_API_KEY=pplx-...
+SERPER_API_KEY=...
+TAVILY_API_KEY=tvly-...
+
+# Document Reader (optional, improves content extraction)
+JINA_API_KEY=jina_...
+AGENTQL_API_KEY=...
+
+# Weaviate
+WCD_URL=...
+WCD_API_KEY=...
+
+# LLM Provider
+OPENAI_API_KEY=...
+```
+
+---
+
+## Definition of Done
+
+### Backend - Core Tools
+
+- [x] QuartermasterTool returns `ArchiveSource[]` with `display_type="archives"`
+- [x] CaseOfficerTool consumes Quartermaster output and emits `display_type="investigation"`
+- [x] Multi-provider search cascade (SearXNG → Perplexity → Serper → Tavily)
+- [x] Provider retry with LLM quality evaluation
+- [x] Source classification (INSTITUTIONAL vs DISCOVERED) with relevance scoring
+- [x] Inter-tool communication via `hidden_environment`
+
+### Backend - Case Officer Capabilities
+
+- [x] Document reader cascade (Jina → AgentQL → HTTP)
+- [x] Expanded search beyond Quartermaster domains
+- [x] Context budget management (80K tokens total, per-document limits)
+- [x] Preflight content size checks
+- [x] Files for user review tracking (skipped large/binary files)
+- [x] Hypothesis generation with status/confidence
+- [x] Investigation report synthesis
+- [x] Next steps generation with access instructions
+- [x] Source URL mapping for clickable citations
+
+### Backend - DSPy Modules
+
+- [x] `HypothesisGenerator` - Generate hypotheses from evidence/gaps
+- [x] `InvestigationSynthesizer` - Synthesize investigation report
+- [x] `EvidenceEvaluator` - Evaluate evidence against hypotheses
+- [x] `NextStepsGenerator` - Generate actionable next steps
+- [ ] `ArchiveQueryVariants` - Multilingual/multiscript query expansion (transliterations)
+- [ ] `ClassifyArchiveSource` - DSPy-based source classification from landing pages
+
+### Backend - Configuration
+
+- [x] `archive_domains.yaml` with groups and domain entries
+- [x] Config loader for archive domains
+- [ ] Authentication parameters in archive_domains.yaml (api_key, username, password, client_id, client_secret)
+- [ ] Access instructions structure in archive_domains.yaml
+- [ ] Forward authentication parameters from Quartermaster to Case Officer
+
+### Backend - Infrastructure
+
+- [ ] Redis caching for search responses
+- [ ] Control-group validation (known-positive figures search)
+- [ ] Weaviate cross-check for internal documents
+- [ ] Docker Compose integration for Sofia + SearXNG services
+
+### Backend - Testing
+
+- [ ] Unit tests for DSPy modules (mocked LLM)
+- [ ] Unit tests for archive classification parsing
+- [ ] Unit tests for hypothesis evaluation logic
+- [ ] Integration tests for Sofia search cascade
+- [ ] Integration tests for decision tree routing
+
+### Frontend - Display Components
+
+- [x] `ArchiveDisplay` component with cards/list view
+- [x] `ArchiveCard` with access level badges
+- [x] `InvestigationDisplay` with sections for findings/gaps/next steps
+- [x] `NextStepCard` with access instructions
+- [x] `HypothesisCard` with status/confidence visualization
+- [x] Central renderer routing by `display_type`
+- [x] Source URL mapping for clickable citations
+- [x] Files for review display
+
+### Frontend - Type Definitions
+
+- [x] `ArchivePayload` type with classification/relevance fields
+- [x] `InvestigationHypothesis` type
+- [x] `InvestigationPayload` type
+- [x] `NextStep` type with access_instructions
+
+### Documentation
+
+- [ ] Environment variables reference in docs
+- [ ] Archive domains configuration guide
+- [ ] Authentication setup guide
 
 ---
 
 ## Risks & Mitigations
 
-- Risk: SearXNG rate-limiting or domain engine inconsistencies
-  - Mitigation: caching in Sofia; conservative `SEARXNG_MAX_RESULTS`; retries
-
-- Risk: DSPy outputs variability
-  - Mitigation: strict prompts; mocked LLM for unit tests; output schema validation
-
-- Risk: Archive domain changes / legal constraints
-  - Mitigation: `archive_domains.yaml` maintained as a versioned config; constraints surfaced in UI
+| Risk | Mitigation |
+|------|------------|
+| Search provider rate-limiting | Multi-provider cascade with fallback |
+| DSPy output variability | Strict prompts, mocked LLM for tests, schema validation |
+| Archive domain changes | `archive_domains.yaml` as versioned config |
+| Large document context saturation | Context budget management, preflight size checks |
+| Authentication credential security | External encryption mechanism (not in scope) |
 
 ---
 
 ## Dependencies
 
-- Sofia AI Search UI (advanced search route configured and reachable)
-- SearXNG (engines and domain filters tuned appropriately)
+- Multi-provider search (at least one: SearXNG, Perplexity, Serper, Tavily)
 - DSPy installed in backend
-- Redis (caching)
-- Weaviate (optional for internal doc cross-checks)
+- Weaviate for internal document cross-checks (optional)
+- Document reader APIs (Jina, AgentQL) for enhanced content extraction (optional)
 
 ---
 
 ## Out of Scope
 
-- Implementing headless browser automation or SPARQL integration in this issue.
-- Bulk ingest of external archive corpora.
-- End-to-end credential management for restricted archives.
-
----
-
-## Reference: Display Schema Compatibility
-
-Conform payloads to existing frontend display schema patterns (`productExample.ts`, `ticketsExample.ts`, `intelligenceAgentExample.ts`, `tableExample.ts`):
-- Conversation timeline with `messages[]`
-- Each content block with `payload.type` and `metadata.display_type`
-- Result objects array named `objects[]` with normalized fields
-
-This ensures `archives` and `investigation` display types plug in cleanly without UI paradigm changes.
+- Headless browser automation for complex JavaScript sites
+- SPARQL integration for structured data queries
+- Bulk ingest of external archive corpora
+- End-to-end credential management and encryption (handled by external system)
+- Real-time archive availability monitoring
