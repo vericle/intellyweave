@@ -102,6 +102,99 @@ class ArchiveConfigLoader:
                     return {"domain": domain, "group": group_name}
         return None
 
+    def get_access_instructions(self, domain: str) -> Optional[dict]:
+        """Get access instructions for a specific domain from config.
+
+        Returns the access_instructions block from archive_domains.yaml if present,
+        or None if not configured. For DISCOVERED sources (not in config), returns None
+        so the caller can use DSPy to generate instructions.
+
+        Args:
+            domain: The domain name to look up
+
+        Returns:
+            Dict with 'type' and 'steps' if configured, None otherwise
+        """
+        config = self.get_domain_config(domain)
+        if config is None:
+            return None
+
+        access_instructions = config.get("access_instructions")
+        if access_instructions is None:
+            return None
+
+        # Normalize the structure
+        return {
+            "type": access_instructions.get("type", "online_search"),
+            "steps": access_instructions.get("steps", []),
+        }
+
+    def get_group_descriptions(self) -> dict[str, str]:
+        """Get a mapping of group names to their descriptions.
+
+        This is used by QueryIntentAnalyzer to understand what each archive
+        group contains and select relevant groups for a query.
+
+        Returns:
+            Dict mapping group name to description string
+        """
+        descriptions = {}
+        for group_name in self.get_groups():
+            group = self.config.get("groups", {}).get(group_name, {})
+            descriptions[group_name] = group.get("description", f"Archives in {group_name}")
+        return descriptions
+
+    def get_archives_for_groups(self, group_names: list[str]) -> list[dict]:
+        """Get full archive metadata for specific groups.
+
+        Returns complete metadata for each archive (name, domain, access_level,
+        digitization_status, protocol, notes) for use by ArchivePrioritizer.
+
+        Args:
+            group_names: List of group names to fetch archives for
+
+        Returns:
+            List of archive dicts with full metadata
+        """
+        archives = []
+        for group_name in group_names:
+            if group_name not in self.get_groups():
+                continue
+
+            group = self.config.get("groups", {}).get(group_name, {})
+            for d in group.get("domains", []):
+                if isinstance(d, dict):
+                    archive = {
+                        "domain": d.get("domain", ""),
+                        "name": d.get("name", d.get("domain", "")),
+                        "access_level": d.get("default_access_level", "PUBLIC_OPEN"),
+                        "digitization_status": d.get("default_digitization_status", "N_A"),
+                        "protocol": d.get("default_protocol", "HTML_CONTENT"),
+                        "notes": d.get("notes", ""),
+                        "group": group_name,
+                    }
+                    archives.append(archive)
+                else:
+                    # Simple domain string
+                    archives.append({
+                        "domain": d,
+                        "name": d,
+                        "access_level": "PUBLIC_OPEN",
+                        "digitization_status": "N_A",
+                        "protocol": "HTML_CONTENT",
+                        "notes": "",
+                        "group": group_name,
+                    })
+        return archives
+
+    def get_all_archives_metadata(self) -> list[dict]:
+        """Get full metadata for all configured archives.
+
+        Returns:
+            List of archive dicts with full metadata from all groups
+        """
+        return self.get_archives_for_groups(self.get_groups())
+
     def create_archive_source_skeleton(
         self,
         domain: str,

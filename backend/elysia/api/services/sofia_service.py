@@ -611,17 +611,33 @@ class SofiaService:
                     logger.info(f"{provider_name}: returned 0 results, trying next")
                     continue
 
+                # LOG: Results BEFORE any filtering
+                logger.info(
+                    f"{provider_name}: received {len(results)} results BEFORE domain filtering"
+                )
+
                 # Apply domain filtering if specified
                 if include_domains or exclude_domains:
+                    pre_filter_count = len(results)
                     filtered_results = self._filter_by_domains(
                         results, include_domains, exclude_domains
                     )
+                    post_filter_count = len(filtered_results)
+
+                    # LOG: Domain filtering impact
+                    if pre_filter_count != post_filter_count:
+                        logger.info(
+                            f"{provider_name}: DOMAIN FILTER applied - "
+                            f"{pre_filter_count} results -> {post_filter_count} results "
+                            f"(filtered out {pre_filter_count - post_filter_count} non-matching domains)"
+                        )
 
                     # If domain filter specified and no results match, use unfiltered
                     # but mark filtered_search=False
                     if include_domains and not filtered_results:
                         logger.info(
-                            f"{provider_name}: {len(results)} results, none matched domains"
+                            f"{provider_name}: {len(results)} results, none matched domains - "
+                            f"returning ALL results with filtered_search=False"
                         )
                         return SofiaSearchResponse(
                             results=results[:max_results],
@@ -631,9 +647,13 @@ class SofiaService:
                         )
 
                     results = filtered_results if filtered_results else results
+                else:
+                    logger.info(
+                        f"{provider_name}: NO domain filter applied - returning all {len(results)} results"
+                    )
 
                 # Return results - let Quartermaster determine quality
-                logger.info(f"{provider_name}: returning {len(results)} results")
+                logger.info(f"{provider_name}: returning {len(results)} results (final)")
                 return SofiaSearchResponse(
                     results=results[:max_results],
                     query=query,
