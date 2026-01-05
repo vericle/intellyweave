@@ -4,11 +4,11 @@
 
 Diese Auswahl enthält die bedeutsamsten Kapitel, die die Schlüsselerkenntnisse der Untersuchung veranschaulichen:
 
-1. **Das Theater der Schatten** – Die Hypothese der Rekrutierung über den Vater
+1. **Das Schattentheater** – Die Hypothese der Rekrutierung über den Vater
 2. **Der Nagel in der Wand** – Die Entdeckung der unmöglichen Flucht und das Konzept des Backstopping
 3. **Die unerklärliche Übergabe** – Die Übergabe Achtyrskijs und die Zerstörung des CIC-Netzwerks
 
-# Das Theater der Schatten
+# Das Schattentheater
 
 Es ist der 19. Januar 1943. České Budějovice. Südböhmen.
 
