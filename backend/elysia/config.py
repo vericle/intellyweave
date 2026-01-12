@@ -1,0 +1,1092 @@
+import os
+import logging
+import litellm
+from litellm import (
+    AuthenticationError,
+    NotFoundError,
+    BadRequestError,
+    models_by_provider,
+)
+from litellm.utils import get_valid_models, check_valid_key
+from rich.logging import RichHandler
+from typing import Callable, Literal
+
+import spacy
+import random
+
+from dotenv import load_dotenv
+from dspy import LM
+from copy import deepcopy
+
+load_dotenv(override=True)
+
+try:
+    nlp = spacy.load("xx_ent_wiki_sm")
+except Exception:
+    spacy.cli.download("xx_ent_wiki_sm")  # type: ignore
+    nlp = spacy.load("xx_ent_wiki_sm")
+
+
+# Model-specific token limit configurations
+# Format: (context_window, max_output_tokens, safe_input_limit)
+model_token_limits = {
+    "gpt-4.1": (128000, 16384, 100000),
+    "gpt-4.1-mini": (128000, 16384, 100000),
+    "gpt-4.1-nano": (128000, 16384, 100000),
+    "gpt-4o": (128000, 16384, 100000),
+    "gpt-4o-mini": (128000, 16384, 100000),
+    # GPT-5 models with Responses API - 400K input context window, 16K+ output tokens
+    "gpt-5": (400000, 32768, 380000),
+    "gpt-5-mini": (400000, 32768, 380000),
+    "gpt-5-nano": (400000, 32768, 380000),
+    "claude-sonnet-4-20250514": (200000, 8192, 180000),
+    "claude-3-7-sonnet-20250219": (200000, 8192, 180000),
+    "claude-3-5-haiku-20241022": (200000, 8192, 180000),
+    "gemini-2.5-flash": (1000000, 8192, 900000),
+    "gemini-2.0-flash-001": (1000000, 8192, 900000),
+    "gemini-2.5-pro": (2000000, 8192, 1800000),
+    "gemini-2.5-flash-lite": (1000000, 8192, 900000),
+}
+
+
+api_key_to_provider = {
+    "openai_api_key": ["openai"],
+    "anthropic_api_key": ["anthropic"],
+    "openrouter_api_key": [
+        "openrouter/openai",
+        "openrouter/anthropic",
+        "openrouter/google",
+    ],
+    "gemini_api_key": ["gemini"],
+    "azure_api_key": ["azure"],
+}
+
+provider_to_models = {
+    "openai": [
+        "gpt-4.1",
+        "gpt-4.1-mini",
+        "gpt-4.1-nano",
+        "gpt-4o-mini",
+        "gpt-4o",
+        "gpt-5",
+        "gpt-5-mini",
+        "gpt-5-nano",
+    ],
+    "anthropic": [
+        "claude-sonnet-4-5",
+        "claude-sonnet-4",
+        "claude-haiku-4-5",
+    ],
+    "openrouter/openai": [
+        "gpt-4.1",
+        "gpt-4.1-mini",
+        "gpt-4.1-nano",
+        "gpt-4o-mini",
+        "gpt-4o",
+        "gpt-5",
+        "gpt-5-mini",
+        "gpt-5-nano",
+    ],
+    "openrouter/anthropic": [
+        "claude-sonnet-4-5",
+        "claude-sonnet-4",
+        "claude-haiku-4-5",
+    ],
+    "openrouter/google": [
+        "gemini-2.5-flash",
+        "gemini-2.0-flash-001",
+        "gemini-2.5-pro",
+        "gemini-2.5-flash-lite",
+    ],
+    "gemini": [
+        "gemini-2.5-flash",
+        "gemini-2.0-flash-001",
+        "gemini-2.5-pro",
+        "gemini-2.5-flash-lite",
+    ],
+}
+
+provider_to_api_keys = {
+    "openai": ["openai_api_key"],
+    "anthropic": ["anthropic_api_key"],
+    "openrouter/openai": ["openrouter_api_key"],
+    "openrouter/anthropic": ["openrouter_api_key"],
+    "openrouter/google": ["openrouter_api_key"],
+    "gemini": ["gemini_api_key"],
+    "groq": ["groq_api_key"],
+    "databricks": ["databricks_api_key", "databricks_api_base"],
+    "bedrock": [
+        "aws_access_key_id",
+        "aws_secret_access_key",
+        "aws_region_name",
+    ],
+    "snowflake": ["snowflake_jwt", "snowflake_account_id"],
+}
+
+
+def get_available_models(api_keys: list[str]):
+    available_models = []
+    for api_key in api_keys:
+        if api_key in api_key_to_provider:
+            for provider in api_key_to_provider[api_key]:
+                if provider in provider_to_models:
+                    available_models.extend(provider_to_models[provider])
+    return list(set(available_models))
+
+
+def get_available_providers(api_keys: list[str]) -> list[str]:
+    available_providers = []
+    for api_key in api_keys:
+        if api_key in api_key_to_provider:
+            available_providers.extend(api_key_to_provider[api_key])
+    return list(set(available_providers))
+
+
+def is_api_key(key: str) -> bool:
+    return (
+        key.lower().endswith("api_key")
+        or key.lower().endswith("apikey")
+        or key.lower().endswith("api_version")
+        or key.lower().endswith("api_base")
+        or key.lower().endswith("_account_id")
+        or key.lower().endswith("_jwt")
+        or key.lower().endswith("_access_key_id")
+        or key.lower().endswith("_secret_access_key")
+        or key.lower().endswith("_region_name")
+        or key.lower().endswith("_token")
+    )
+
+
+class Settings:
+    """
+    Settings for Elysia.
+    This class handles the configuration of various settings within Elysia.
+    This includes:
+    - The base and complex models to use.
+    - The providers for the base and complex models.
+    - The Weaviate cloud URL and API key.
+    - Whether the Weaviate cluster is local.
+    - The API keys for the providers.
+    - The logger and logging level.
+
+    The Settings object is set as at a default `settings` object if running Elysia as a package.
+    You can import this via `elysia.config.settings`.
+    This is initialised to default values from the environment variables.
+
+    Or, you can create your own Settings object, and configure it as you wish.
+    The Settings object can be passed to different Elysia classes and functions, such as `Tree` and `preprocess`.
+    These will not use the global `settings` object, but instead use the Settings object you passed to them.
+    """
+
+    def __init__(self):
+        """
+        Initialize the settings for Elysia.
+        These are all settings initialised to None, and should be set using the `configure` method.
+        """
+        # Default settings
+        self.SETTINGS_ID = str(random.randint(100000000000000, 999999999999999))
+
+        self.base_init()
+
+    def base_init(self):
+        self.BASE_MODEL: str | None = None
+        self.BASE_PROVIDER: str | None = None
+        self.COMPLEX_MODEL: str | None = None
+        self.COMPLEX_PROVIDER: str | None = None
+
+        self.WCD_URL: str = ""
+        self.WCD_API_KEY: str = ""
+        self.WEAVIATE_IS_LOCAL: bool = False
+        self.LOCAL_WEAVIATE_PORT: int = 8080
+        self.LOCAL_WEAVIATE_GRPC_PORT: int = 50051
+
+        # Custom connection settings
+        self.WEAVIATE_IS_CUSTOM: bool = False
+        self.CUSTOM_HTTP_HOST: str | None = None
+        self.CUSTOM_HTTP_PORT: int = 8080
+        self.CUSTOM_HTTP_SECURE: bool = False
+        self.CUSTOM_GRPC_HOST: str | None = None
+        self.CUSTOM_GRPC_PORT: int = 50051
+        self.CUSTOM_GRPC_SECURE: bool = False
+
+        self.MODEL_API_BASE: str | None = None
+
+        self.API_KEYS: dict[str, str] = {}
+
+        self.logger = logging.getLogger("rich")
+        self.logger.setLevel(logging.INFO)
+
+        # Remove any existing handlers before adding a new one
+        for handler in self.logger.handlers[:]:
+            self.logger.removeHandler(handler)
+        self.logger.addHandler(RichHandler(rich_tracebacks=True, markup=True))
+
+        self.logger.propagate = False
+        self.LOGGING_LEVEL = "INFO"
+        self.LOGGING_LEVEL_INT = 20
+
+        # Experimental features
+        self.USE_FEEDBACK = False
+        self.BASE_USE_REASONING = True
+        self.COMPLEX_USE_REASONING = True
+
+        # GPT-5 Responses API specific settings
+        self.GPT5_REASONING_EFFORT: str = "medium"  # minimal, low, medium, high
+        self.GPT5_TEXT_VERBOSITY: str = "low"  # low, medium, high
+
+        # Document Reader feature toggles (for disabling heavy/slow readers)
+        self.DISABLE_PERPLEXITY_READER: bool = False
+        self.DISABLE_ARYN_PDF_READER: bool = False
+
+    def setup_app_logger(self, logger: logging.Logger):
+        """
+        Override existing logger with the app-level logger.
+
+        Args:
+            logger (Logger): The logger to use.
+        """
+        self.logger = logger
+        self.LOGGING_LEVEL_INT = logger.level
+        inverted_logging_mapping = {
+            v: k for k, v in logging.getLevelNamesMapping().items()
+        }
+        self.LOGGING_LEVEL = inverted_logging_mapping[self.LOGGING_LEVEL_INT]
+
+    def configure_logger(
+        self,
+        level: Literal[
+            "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL", "NOTSET"
+        ] = "NOTSET",
+    ):
+        """
+        Configure the logger with a RichHandler.
+
+        Args:
+            level (Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL", "NOTSET"]): The logging level to use.
+        """
+        self.logger.setLevel(level)
+        self.LOGGING_LEVEL = level
+        self.LOGGING_LEVEL_INT = logging.getLevelNamesMapping()[level]
+
+    def set_api_key(self, api_key: str, api_key_name: str) -> None:
+        self.API_KEYS[api_key_name] = api_key
+
+    def get_api_key(self, api_key_name: str) -> str:
+        return self.API_KEYS[api_key_name]
+
+    def load_settings(self, settings: dict):
+        for item in settings:
+            setattr(self, item, settings[item])
+
+        # self.logger = logging.getLogger("rich")
+        # self.logger.setLevel(self.LOGGING_LEVEL)
+        # for handler in self.logger.handlers[:]:
+        #     self.logger.removeHandler(handler)
+        # self.logger.addHandler(RichHandler(rich_tracebacks=True, markup=True))
+
+    @classmethod
+    def from_smart_setup(cls):
+        settings = cls()
+        settings.set_from_env()
+        settings.smart_setup()
+        return settings
+
+    @classmethod
+    def from_env_vars(cls):
+        settings = cls()
+        settings.set_from_env()
+        return settings
+
+    def set_from_env(self):
+        self.BASE_MODEL = os.getenv("BASE_MODEL", None)
+        self.COMPLEX_MODEL = os.getenv("COMPLEX_MODEL", None)
+        self.BASE_PROVIDER = os.getenv("BASE_PROVIDER", None)
+        self.COMPLEX_PROVIDER = os.getenv("COMPLEX_PROVIDER", None)
+        self.MODEL_API_BASE = os.getenv("MODEL_API_BASE", None)
+        self.LOGGING_LEVEL = os.getenv("LOGGING_LEVEL", "NOTSET")
+        self.WEAVIATE_IS_LOCAL = os.getenv("WEAVIATE_IS_LOCAL", "False") == "True"
+        self.LOCAL_WEAVIATE_PORT = os.getenv("LOCAL_WEAVIATE_PORT", 8080)
+        self.LOCAL_WEAVIATE_GRPC_PORT = os.getenv("LOCAL_WEAVIATE_GRPC_PORT", 50051)
+
+        # Custom connection settings from environment
+        self.WEAVIATE_IS_CUSTOM = os.getenv("WEAVIATE_IS_CUSTOM", "False") == "True"
+        self.CUSTOM_HTTP_HOST = os.getenv("CUSTOM_HTTP_HOST", None)
+        self.CUSTOM_HTTP_PORT = int(os.getenv("CUSTOM_HTTP_PORT", 8080))
+        self.CUSTOM_HTTP_SECURE = os.getenv("CUSTOM_HTTP_SECURE", "False") == "True"
+        self.CUSTOM_GRPC_HOST = os.getenv("CUSTOM_GRPC_HOST", None)
+        self.CUSTOM_GRPC_PORT = int(os.getenv("CUSTOM_GRPC_PORT", 50051))
+        self.CUSTOM_GRPC_SECURE = os.getenv("CUSTOM_GRPC_SECURE", "False") == "True"
+
+        # Document Reader feature toggles
+        self.DISABLE_PERPLEXITY_READER = (
+            os.getenv("DISABLE_PERPLEXITY_READER", "False") == "True"
+        )
+        self.DISABLE_ARYN_PDF_READER = (
+            os.getenv("DISABLE_ARYN_PDF_READER", "False") == "True"
+        )
+
+        self.set_api_keys_from_env()
+
+    def set_api_keys_from_env(self):
+        self.WCD_URL = os.getenv(
+            "WEAVIATE_URL",
+            os.getenv("WCD_URL", ""),
+        )
+        self.WCD_API_KEY = os.getenv(
+            "WEAVIATE_API_KEY",
+            os.getenv("WCD_API_KEY", ""),
+        )
+        self.LOCAL_WEAVIATE_PORT = os.getenv("LOCAL_WEAVIATE_PORT", 8080)
+        self.LOCAL_WEAVIATE_GRPC_PORT = os.getenv("LOCAL_WEAVIATE_GRPC_PORT", 50051)
+
+        self.API_KEYS = {
+            env_var.lower(): os.getenv(env_var, "")
+            for env_var in os.environ
+            if is_api_key(env_var) and env_var.lower() != "wcd_api_key"
+        }
+        for api_key in self.API_KEYS:
+            self.set_api_key(self.API_KEYS[api_key], api_key)
+
+    def smart_setup(self):
+        # Check if the user has set the base model etc from the environment variables
+        if os.getenv("BASE_MODEL", None):
+            self.BASE_MODEL = os.getenv("BASE_MODEL")
+        if os.getenv("COMPLEX_MODEL", None):
+            self.COMPLEX_MODEL = os.getenv("COMPLEX_MODEL")
+        if os.getenv("BASE_PROVIDER", None):
+            self.BASE_PROVIDER = os.getenv("BASE_PROVIDER")
+        if os.getenv("COMPLEX_PROVIDER", None):
+            self.COMPLEX_PROVIDER = os.getenv("COMPLEX_PROVIDER")
+
+        self.MODEL_API_BASE = os.getenv("MODEL_API_BASE", None)
+        self.LOGGING_LEVEL = os.getenv("LOGGING_LEVEL", "NOTSET")
+
+        self.set_from_env()
+
+        # Infer providers from models if not set
+        if self.BASE_MODEL and not self.BASE_PROVIDER:
+            if self.BASE_MODEL.startswith("claude"):
+                self.BASE_PROVIDER = "anthropic"
+            elif self.BASE_MODEL.startswith("gpt"):
+                self.BASE_PROVIDER = "openai"
+            elif "gemini" in self.BASE_MODEL:
+                self.BASE_PROVIDER = "openrouter/google" if os.getenv("OPENROUTER_API_KEY") else "gemini"
+        if self.COMPLEX_MODEL and not self.COMPLEX_PROVIDER:
+            if self.COMPLEX_MODEL.startswith("claude"):
+                self.COMPLEX_PROVIDER = "anthropic"
+            elif self.COMPLEX_MODEL.startswith("gpt"):
+                self.COMPLEX_PROVIDER = "openai"
+            elif "gemini" in self.COMPLEX_MODEL:
+                self.COMPLEX_PROVIDER = "openrouter/google" if os.getenv("OPENROUTER_API_KEY") else "gemini"
+
+        # check what API keys are available and set defaults only if both model and provider are None
+        if (
+            (self.BASE_MODEL is None or self.BASE_PROVIDER is None) or
+            (self.COMPLEX_MODEL is None or self.COMPLEX_PROVIDER is None)
+        ):
+            if os.getenv("OPENROUTER_API_KEY", None):
+                # use gemini 2.0 flash
+                self.BASE_PROVIDER = "openrouter/google"
+                self.COMPLEX_PROVIDER = "openrouter/google"
+                self.BASE_MODEL = "gemini-2.0-flash-001"
+                self.COMPLEX_MODEL = "gemini-2.5-flash"
+            elif os.getenv("GEMINI_API_KEY", None):
+                # use gemini 2.0 flash
+                self.BASE_PROVIDER = "gemini"
+                self.COMPLEX_PROVIDER = "gemini"
+                self.BASE_MODEL = "gemini-2.0-flash-001"
+                self.COMPLEX_MODEL = "gemini-2.5-flash"
+            elif os.getenv("OPENAI_API_KEY", None):
+                # use gpt family
+                self.BASE_PROVIDER = "openai"
+                self.COMPLEX_PROVIDER = "openai"
+                self.BASE_MODEL = "gpt-5-mini"
+                self.COMPLEX_MODEL = "gpt-5"
+            elif os.getenv("ANTHROPIC_API_KEY", None):
+                # use claude family
+                self.BASE_PROVIDER = "anthropic"
+                self.COMPLEX_PROVIDER = "anthropic"
+                self.BASE_MODEL = "claude-haiku-4-5"
+                self.COMPLEX_MODEL = "claude-sonnet-4-5"
+
+    def configure(
+        self,
+        replace: bool = False,
+        **kwargs,
+    ):
+        """
+        Configure the settings for Elysia for the current Settings object.
+
+        Args:
+            replace (bool): Whether to override the current settings with the new settings.
+                When this is True, all existing settings are removed, and only the new settings are used.
+                Defaults to False.
+            **kwargs (str): One or more of the following:
+                - base_model (str): The base model to use. e.g. "gpt-5-mini"
+                - complex_model (str): The complex model to use. e.g. "gpt-5"
+                - base_provider (str): The provider to use for base_model. E.g. "openai" or "openrouter/openai"
+                - complex_provider (str): The provider to use for complex_model. E.g. "openai" or "openrouter/openai"
+                - model_api_base (str): The API base to use.
+                - wcd_url (str): The Weaviate cloud URL to use.
+                - wcd_api_key (str): The Weaviate cloud API key to use.
+                - weaviate_is_local (bool): Whether the Weaviate cluster is local.
+                - local_weaviate_port (int): The port to use for the local Weaviate cluster.
+                - local_weaviate_grpc_port (int): The gRPC port to use for the local Weaviate cluster.
+                - weaviate_is_custom (bool): Whether to use custom connection parameters.
+                - custom_http_host (str): HTTP host for custom Weaviate connection.
+                - custom_http_port (int): HTTP port for custom connection. Defaults to 8080.
+                - custom_http_secure (bool): Use HTTPS for custom connection. Defaults to False.
+                - custom_grpc_host (str): gRPC host for custom Weaviate connection.
+                - custom_grpc_port (int): gRPC port for custom connection. Defaults to 50051.
+                - custom_grpc_secure (bool): Use secure gRPC for custom connection. Defaults to False.
+                - logging_level (str): The logging level to use. e.g. "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+                - api_keys (dict): A dictionary of API keys to set. E.g. `{"openai_apikey": "..."}`.
+                - use_feedback (bool): EXPERIMENTAL. Whether to use feedback from previous runs of the tree.
+                    If True, the tree will use TrainingUpdate objects that have been saved in previous runs of the decision tree.
+                    These are implemented via few-shot examples for the decision node.
+                    They are collected in the 'feedback' collection (ELYSIA_FEEDBACK__).
+                    Relevant examples are retrieved from the collection based on searching the collection via the user's prompt.
+                - base_use_reasoning (bool): Whether to use reasoning output for the base model.
+                    If True, the model will generate reasoning before coming to its solution.
+                - complex_use_reasoning (bool): Whether to use reasoning output for the complex model.
+                    If True, the model will generate reasoning before coming to its solution.
+                - Additional API keys to set. E.g. `openai_apikey="..."`, if this argument ends with `apikey` or `api_key`,
+                    it will be added to the `API_KEYS` dictionary.
+
+        """
+        if replace:
+            self.base_init()
+
+        # convert all kwargs to lowercase for consistency
+        kwargs = {kwarg.lower(): kwargs[kwarg] for kwarg in kwargs}
+
+        if "base_model" in kwargs:
+            if "base_provider" not in kwargs:
+                raise ValueError(
+                    "Provider must be specified if base_model is set. "
+                    "E.g. `elysia.config.configure(base_model='gpt-5-mini', base_provider='openai')`"
+                )
+
+            if kwargs["base_provider"] == "ollama" and (
+                not kwargs["model_api_base"] or "MODEL_API_BASE" not in dir(self)
+            ):
+                raise ValueError(
+                    "Using local models via ollama requires MODEL_API_BASE to be set. "
+                    "This is likely to be http://localhost:11434. "
+                    "e.g. `elysia.config.configure(model_api_base='http://localhost:11434')`"
+                )
+
+            self.BASE_MODEL = kwargs["base_model"]
+            self.BASE_PROVIDER = kwargs["base_provider"]
+
+            kwargs.pop("base_model")
+            kwargs.pop("base_provider")
+
+            # self.load_base_dspy_model()
+
+        if "complex_model" in kwargs:
+            if "complex_provider" not in kwargs:
+                raise ValueError(
+                    "Provider must be specified if complex_model is set. "
+                    "E.g. `elysia.config.configure(complex_model='gpt-4o', complex_provider='openai')`"
+                )
+
+            if kwargs["complex_provider"] == "ollama" and (
+                not kwargs["model_api_base"] or "MODEL_API_BASE" not in dir(self)
+            ):
+                raise ValueError(
+                    "Using local models via ollama requires MODEL_API_BASE to be set. "
+                    "This is likely to be http://localhost:11434. "
+                    "e.g. `elysia.config.configure(model_api_base='http://localhost:11434')`"
+                )
+
+            self.COMPLEX_MODEL = kwargs["complex_model"]
+            self.COMPLEX_PROVIDER = kwargs["complex_provider"]
+
+            kwargs.pop("complex_model")
+            kwargs.pop("complex_provider")
+
+            # self.load_complex_dspy_model()
+
+        if "model_api_base" in kwargs:
+            self.MODEL_API_BASE = kwargs["model_api_base"]
+            kwargs.pop("model_api_base")
+
+        if "wcd_url" in kwargs:
+            self.WCD_URL = kwargs["wcd_url"]
+            kwargs.pop("wcd_url")
+
+        if "wcd_api_key" in kwargs:
+            self.WCD_API_KEY = kwargs["wcd_api_key"]
+            kwargs.pop("wcd_api_key")
+
+        if "weaviate_is_local" in kwargs:
+            self.WEAVIATE_IS_LOCAL = kwargs["weaviate_is_local"]
+            kwargs.pop("weaviate_is_local")
+
+        if "local_weaviate_port" in kwargs:
+            self.LOCAL_WEAVIATE_PORT = kwargs["local_weaviate_port"]
+            kwargs.pop("local_weaviate_port")
+
+        if "local_weaviate_grpc_port" in kwargs:
+            self.LOCAL_WEAVIATE_GRPC_PORT = kwargs["local_weaviate_grpc_port"]
+            kwargs.pop("local_weaviate_grpc_port")
+
+        # Custom connection settings
+        if "weaviate_is_custom" in kwargs:
+            self.WEAVIATE_IS_CUSTOM = kwargs["weaviate_is_custom"]
+            kwargs.pop("weaviate_is_custom")
+
+        if "custom_http_host" in kwargs:
+            self.CUSTOM_HTTP_HOST = kwargs["custom_http_host"]
+            kwargs.pop("custom_http_host")
+
+        if "custom_http_port" in kwargs:
+            self.CUSTOM_HTTP_PORT = kwargs["custom_http_port"]
+            kwargs.pop("custom_http_port")
+
+        if "custom_http_secure" in kwargs:
+            self.CUSTOM_HTTP_SECURE = kwargs["custom_http_secure"]
+            kwargs.pop("custom_http_secure")
+
+        if "custom_grpc_host" in kwargs:
+            self.CUSTOM_GRPC_HOST = kwargs["custom_grpc_host"]
+            kwargs.pop("custom_grpc_host")
+
+        if "custom_grpc_port" in kwargs:
+            self.CUSTOM_GRPC_PORT = kwargs["custom_grpc_port"]
+            kwargs.pop("custom_grpc_port")
+
+        if "custom_grpc_secure" in kwargs:
+            self.CUSTOM_GRPC_SECURE = kwargs["custom_grpc_secure"]
+            kwargs.pop("custom_grpc_secure")
+
+        # Document Reader feature toggles
+        if "disable_perplexity_reader" in kwargs:
+            self.DISABLE_PERPLEXITY_READER = kwargs["disable_perplexity_reader"]
+            kwargs.pop("disable_perplexity_reader")
+
+        if "disable_aryn_pdf_reader" in kwargs:
+            self.DISABLE_ARYN_PDF_READER = kwargs["disable_aryn_pdf_reader"]
+            kwargs.pop("disable_aryn_pdf_reader")
+
+        if "weaviate_url" in kwargs:
+            self.WCD_URL = kwargs["weaviate_url"]
+            kwargs.pop("weaviate_url")
+
+        if "weaviate_api_key" in kwargs:
+            self.WCD_API_KEY = kwargs["weaviate_api_key"]
+            kwargs.pop("weaviate_api_key")
+
+        if "logging_level" in kwargs or "logger_level" in kwargs:
+            self.LOGGING_LEVEL = (
+                kwargs["logging_level"]
+                if "logging_level" in kwargs
+                else kwargs["logger_level"]
+            )
+            self.LOGGING_LEVEL_INT = logging.getLevelNamesMapping()[self.LOGGING_LEVEL]
+            self.logger.setLevel(self.LOGGING_LEVEL)
+            if "logging_level" in kwargs:
+                kwargs.pop("logging_level")
+            if "logger_level" in kwargs:
+                kwargs.pop("logger_level")
+            if "logging_level_int" in kwargs:
+                kwargs.pop("logging_level_int")
+            if "logger_level_int" in kwargs:
+                kwargs.pop("logger_level_int")
+
+        if "logging_level_int" in kwargs or "logger_level_int" in kwargs:
+            self.LOGGING_LEVEL_INT = (
+                kwargs["logging_level_int"]
+                if "logging_level_int" in kwargs
+                else kwargs["logger_level_int"]
+            )
+            self.LOGGING_LEVEL = {
+                v: k for k, v in logging.getLevelNamesMapping().items()
+            }[self.LOGGING_LEVEL_INT]
+            self.logger.setLevel(self.LOGGING_LEVEL)
+
+        if "settings_id" in kwargs:
+            self.SETTINGS_ID = kwargs["settings_id"]
+            kwargs.pop("settings_id")
+
+        if "use_feedback" in kwargs:
+            self.USE_FEEDBACK = kwargs["use_feedback"]
+            kwargs.pop("use_feedback")
+
+        if "base_use_reasoning" in kwargs:
+            self.BASE_USE_REASONING = kwargs["base_use_reasoning"]
+            kwargs.pop("base_use_reasoning")
+
+        if "complex_use_reasoning" in kwargs:
+            self.COMPLEX_USE_REASONING = kwargs["complex_use_reasoning"]
+            kwargs.pop("complex_use_reasoning")
+
+        if "gpt5_reasoning_effort" in kwargs:
+            if kwargs["gpt5_reasoning_effort"] not in [
+                "minimal",
+                "low",
+                "medium",
+                "high",
+            ]:
+                raise ValueError(
+                    "gpt5_reasoning_effort must be one of: minimal, low, medium, high"
+                )
+            self.GPT5_REASONING_EFFORT = kwargs["gpt5_reasoning_effort"]
+            kwargs.pop("gpt5_reasoning_effort")
+
+        if "gpt5_text_verbosity" in kwargs:
+            if kwargs["gpt5_text_verbosity"] not in ["low", "medium", "high"]:
+                raise ValueError(
+                    "gpt5_text_verbosity must be one of: low, medium, high"
+                )
+            self.GPT5_TEXT_VERBOSITY = kwargs["gpt5_text_verbosity"]
+            kwargs.pop("gpt5_text_verbosity")
+
+        if "api_keys" in kwargs and isinstance(kwargs["api_keys"], dict):
+            for key, value in kwargs["api_keys"].items():
+                self.set_api_key(value, key)
+            kwargs.pop("api_keys")
+
+        # remainder of kwargs are API keys or saved there
+        removed_kwargs = []
+        for key, value in kwargs.items():
+            if is_api_key(key):
+                self.set_api_key(value, key)
+                removed_kwargs.append(key)
+
+        for key in removed_kwargs:
+            kwargs.pop(key)
+
+        # remaining kwargs are not API keys
+        if len(kwargs) > 0:
+            self.logger.warning(
+                "Unknown arguments to configure: " + ", ".join(kwargs.keys())
+            )
+
+    def __repr__(self) -> str:
+        out = ""
+        if "BASE_MODEL" in dir(self) and self.BASE_MODEL is not None:
+            out += f"Base model: {self.BASE_MODEL}\n"
+        else:
+            out += "Base model: not set\n"
+        if "COMPLEX_MODEL" in dir(self) and self.COMPLEX_MODEL is not None:
+            out += f"Complex model: {self.COMPLEX_MODEL}\n"
+        else:
+            out += "Complex model: not set\n"
+        if "BASE_PROVIDER" in dir(self) and self.BASE_PROVIDER is not None:
+            out += f"Base provider: {self.BASE_PROVIDER}\n"
+        else:
+            out += "Base provider: not set\n"
+        if "COMPLEX_PROVIDER" in dir(self) and self.COMPLEX_PROVIDER is not None:
+            out += f"Complex provider: {self.COMPLEX_PROVIDER}\n"
+        else:
+            out += "Complex provider: not set\n"
+        if "MODEL_API_BASE" in dir(self):
+            out += f"Model API base: {self.MODEL_API_BASE}\n"
+        else:
+            out += "Model API base: not set\n"
+        if "WEAVIATE_IS_CUSTOM" in dir(self):
+            out += f"Weaviate is custom: {self.WEAVIATE_IS_CUSTOM}\n"
+            if self.WEAVIATE_IS_CUSTOM:
+                out += f"Custom HTTP: {self.CUSTOM_HTTP_HOST}:{self.CUSTOM_HTTP_PORT} (secure: {self.CUSTOM_HTTP_SECURE})\n"
+                out += f"Custom gRPC: {self.CUSTOM_GRPC_HOST}:{self.CUSTOM_GRPC_PORT} (secure: {self.CUSTOM_GRPC_SECURE})\n"
+        return out
+
+    def to_json(self):
+        return {
+            item: getattr(self, item)
+            for item in dir(self)
+            if not item.startswith("_")
+            and not isinstance(getattr(self, item), Callable)
+            and item not in ["BASE_MODEL_LM", "COMPLEX_MODEL_LM", "logger"]
+        }
+
+    @classmethod
+    def from_json(cls, json_data: dict):
+        settings = cls()
+        for item in json_data:
+            if item not in ["logger"]:
+                setattr(settings, item, json_data[item])
+
+        settings.logger.setLevel(settings.LOGGING_LEVEL)
+
+        return settings
+
+    def check(self):
+        return {
+            "base_model": self.BASE_MODEL is not None and self.BASE_MODEL != "",
+            "base_provider": self.BASE_PROVIDER is not None
+            and self.BASE_PROVIDER != "",
+            "complex_model": self.COMPLEX_MODEL is not None
+            and self.COMPLEX_MODEL != "",
+            "complex_provider": self.COMPLEX_PROVIDER is not None
+            and self.COMPLEX_PROVIDER != "",
+            "wcd_url": self.WCD_URL != "",
+            "wcd_api_key": self.WCD_API_KEY != "",
+            "weaviate_is_local": self.WEAVIATE_IS_LOCAL,
+            "local_weaviate_port": self.LOCAL_WEAVIATE_PORT != 8080,
+            "local_weaviate_grpc_port": self.LOCAL_WEAVIATE_GRPC_PORT != 50051,
+            "weaviate_is_custom": self.WEAVIATE_IS_CUSTOM,
+            "custom_http_host": self.CUSTOM_HTTP_HOST is not None,
+            "custom_grpc_host": self.CUSTOM_GRPC_HOST is not None,
+        }
+
+
+class APIKeyError(Exception):
+    pass
+
+
+class IncorrectModelError(Exception):
+    pass
+
+
+class ElysiaKeyManager:
+    def __init__(self, settings: Settings):
+        self.settings = settings
+
+    def _check_model_availability(self, model: str, provider: str) -> bool:
+        if provider not in models_by_provider and not provider.startswith("openrouter"):
+            raise IncorrectModelError(
+                f"The provider {provider} is not available. "
+                f"Some example providers are: {', '.join(list(models_by_provider.keys())[:5])}. "
+                "Check the full model documentation (https://docs.litellm.ai/docs/providers)."
+            )
+
+        elif (
+            provider.startswith("openrouter/")
+            and f"{provider}/{model}" not in models_by_provider["openrouter"]
+        ):
+            example_models = [
+                model.split("/")[-1]
+                for model in models_by_provider["openrouter"]
+                if model.startswith(provider)
+            ]
+
+            raise IncorrectModelError(
+                f"The model {model} is not available for provider {provider}. "
+                f"Some example models for {provider} are: "
+                f"{', '.join(example_models[:5])}. "
+                "Check the full model documentation (https://docs.litellm.ai/docs/providers)."
+            )
+
+        elif (
+            provider in models_by_provider and model not in models_by_provider[provider]
+        ):
+            raise IncorrectModelError(
+                f"The model {model} is not available for provider {provider}. "
+                f"Some example models for {provider} are: "
+                f"{', '.join(models_by_provider[provider][:5])}. "
+                "Check the full model documentation (https://docs.litellm.ai/docs/providers)."
+            )
+
+        return False
+
+    def __enter__(self):
+        # save existing env
+        self.existing_env = deepcopy(os.environ)
+
+        items_to_remove = []
+        for key in os.environ:
+            if is_api_key(key):
+                items_to_remove.append(key)
+
+        for key in items_to_remove:
+            del os.environ[key]
+
+        if (
+            "MODEL_API_BASE" in dir(self.settings)
+            and self.settings.MODEL_API_BASE is not None
+        ):
+            os.environ["MODEL_API_BASE"] = self.settings.MODEL_API_BASE
+
+        if "WCD_URL" in dir(self.settings) and self.settings.WCD_URL is not None:
+            os.environ["WCD_URL"] = self.settings.WCD_URL
+        if (
+            "WCD_API_KEY" in dir(self.settings)
+            and self.settings.WCD_API_KEY is not None
+        ):
+            os.environ["WCD_API_KEY"] = self.settings.WCD_API_KEY
+        if (
+            "WEAVIATE_IS_LOCAL" in dir(self.settings)
+            and self.settings.WEAVIATE_IS_LOCAL is not None
+        ):
+            os.environ["WEAVIATE_IS_LOCAL"] = str(self.settings.WEAVIATE_IS_LOCAL)
+        if (
+            "LOCAL_WEAVIATE_PORT" in dir(self.settings)
+            and self.settings.LOCAL_WEAVIATE_PORT is not None
+        ):
+            os.environ["LOCAL_WEAVIATE_PORT"] = str(self.settings.LOCAL_WEAVIATE_PORT)
+        if (
+            "LOCAL_WEAVIATE_GRPC_PORT" in dir(self.settings)
+            and self.settings.LOCAL_WEAVIATE_GRPC_PORT is not None
+        ):
+            os.environ["LOCAL_WEAVIATE_GRPC_PORT"] = str(
+                self.settings.LOCAL_WEAVIATE_GRPC_PORT
+            )
+
+        # update all api keys in env
+        warning_api_keys = []
+        for api_key, value in self.settings.API_KEYS.items():
+            if isinstance(value, str):
+                os.environ[api_key.upper()] = value
+            else:
+                warning_api_keys.append(api_key)
+
+        if len(warning_api_keys) > 0:
+            self.settings.logger.warning(
+                f"The following API keys are either not found or not strings: {', '.join(warning_api_keys)}. "
+                "These have been ignored. Please ensure the API keys in the settings are available and strings."
+            )
+
+        pass
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        # reset env to original
+        os.environ = self.existing_env
+
+        if exc_type is NotFoundError or exc_type is BadRequestError:
+            self._check_model_availability(
+                self.settings.BASE_MODEL, self.settings.BASE_PROVIDER
+            )
+            self._check_model_availability(
+                self.settings.COMPLEX_MODEL, self.settings.COMPLEX_PROVIDER
+            )
+
+        if exc_type is AuthenticationError or exc_type is BadRequestError:
+            missing_base_api_keys = [
+                api_key
+                for api_key in provider_to_api_keys[self.settings.BASE_PROVIDER]
+                if api_key not in self.settings.API_KEYS
+            ]
+            missing_complex_api_keys = [
+                api_key
+                for api_key in provider_to_api_keys[self.settings.COMPLEX_PROVIDER]
+                if api_key not in self.settings.API_KEYS
+            ]
+            if len(missing_base_api_keys) > 0:
+                raise APIKeyError(
+                    f"You are trying to use the model '{self.settings.BASE_MODEL}' "
+                    f"but you do not have one of the following API keys: {', '.join(missing_base_api_keys)}. "
+                    f"Please update your API keys in the settings."
+                )
+            if len(missing_complex_api_keys) > 0:
+                raise APIKeyError(
+                    f"You are trying to use the model '{self.settings.COMPLEX_MODEL}' "
+                    f"but you do not have one of the following API keys: {', '.join(missing_complex_api_keys)}. "
+                    f"Please update your API keys in the settings."
+                )
+
+            raise APIKeyError(
+                f"One of your API keys is incorrect. "
+                f"Please update your API keys in the settings. "
+                f"The relevant API keys are: "
+                f"{set(provider_to_api_keys[self.settings.BASE_PROVIDER] + provider_to_api_keys[self.settings.COMPLEX_PROVIDER])}"
+            )
+
+        if (
+            exc_type is AuthenticationError
+            or exc_type is BadRequestError
+            or exc_type is NotFoundError
+        ):
+            raise IncorrectModelError(
+                f"Either one of the models or providers: '{self.settings.BASE_MODEL}' or '{self.settings.COMPLEX_MODEL}' "
+                f"({self.settings.BASE_PROVIDER} or {self.settings.COMPLEX_PROVIDER}) "
+                f"is incorrect, or you do not have the required API keys. "
+                f"Check the model documentation (https://docs.litellm.ai/docs/providers)."
+            )
+
+        pass
+
+
+def check_base_lm_settings(settings: Settings):
+    if "BASE_MODEL" not in dir(settings) or settings.BASE_MODEL is None:
+        available_models = get_available_models(list(settings.API_KEYS.keys()))
+        raise IncorrectModelError(
+            f"No base model specified. "
+            f"Available models based on your API keys: {', '.join(available_models)}"
+        )
+
+    if "BASE_PROVIDER" not in dir(settings) or settings.BASE_PROVIDER is None:
+        available_providers = get_available_providers(list(settings.API_KEYS.keys()))
+        raise IncorrectModelError(
+            f"No base provider specified. "
+            f"Available providers based on your API keys: {', '.join(available_providers)}"
+        )
+
+
+def check_complex_lm_settings(settings: Settings):
+    if "COMPLEX_MODEL" not in dir(settings) or settings.COMPLEX_MODEL is None:
+        available_models = get_available_models(list(settings.API_KEYS.keys()))
+        raise IncorrectModelError(
+            f"No complex model specified. "
+            f"Available models based on your API keys: {', '.join(available_models)}"
+        )
+
+    if "COMPLEX_PROVIDER" not in dir(settings) or settings.COMPLEX_PROVIDER is None:
+        available_providers = get_available_providers(list(settings.API_KEYS.keys()))
+        raise IncorrectModelError(
+            f"No complex provider specified. "
+            f"Available providers based on your API keys: {', '.join(available_providers)}"
+        )
+
+
+def load_base_lm(settings: Settings):
+    check_base_lm_settings(settings)
+
+    return load_lm(
+        settings.BASE_PROVIDER,
+        settings.BASE_MODEL,
+        settings.MODEL_API_BASE if "MODEL_API_BASE" in dir(settings) else None,
+        settings=settings,
+    )
+
+
+def load_complex_lm(settings: Settings):
+    check_complex_lm_settings(settings)
+
+    return load_lm(
+        settings.COMPLEX_PROVIDER,
+        settings.COMPLEX_MODEL,
+        settings.MODEL_API_BASE if "MODEL_API_BASE" in dir(settings) else None,
+        settings=settings,
+    )
+
+
+def get_model_token_limits(lm_name: str) -> tuple[int, int, int]:
+    """
+    Get token limits for a model.
+    Returns (context_window, max_output_tokens, safe_input_limit)
+    """
+    return model_token_limits.get(
+        lm_name,
+        (128000, 4096, 100000),  # Default safe limits
+    )
+
+
+def load_lm(
+    provider: str | None,
+    lm_name: str | None,
+    model_api_base: str | None = None,
+    settings: Settings | None = None,
+):
+    if provider is None or lm_name is None:
+        raise ValueError("Provider and LM name must be set")
+
+    # Check if this is a GPT-5 model - use Responses API client for direct OpenAI access
+    if lm_name in ["gpt-5", "gpt-5-mini", "gpt-5-nano"] and provider == "openai":
+        # Import here to avoid circular dependency
+        from elysia.util.gpt5_client import GPT5ResponsesClient
+
+        if settings is None:
+            raise ValueError("Settings must be provided for GPT-5 models")
+
+        # Get API key from settings
+        api_key = settings.API_KEYS.get(
+            "openai_api_key", None
+        ) or settings.API_KEYS.get("OPENAI_API_KEY", None)
+        if not api_key:
+            raise ValueError(
+                "OPENAI_API_KEY must be set in settings to use GPT-5 models"
+            )
+
+        # Get model-specific token limits
+        context_window, max_output_tokens, safe_input_limit = get_model_token_limits(
+            lm_name
+        )
+
+        # Use conservative max_tokens
+        safe_max_tokens = min(max_output_tokens, 4096)
+
+        # Return GPT5ResponsesClient with settings from Settings object
+        return GPT5ResponsesClient(
+            model=lm_name,
+            reasoning_effort=settings.GPT5_REASONING_EFFORT,
+            text_verbosity=settings.GPT5_TEXT_VERBOSITY,
+            max_tokens=safe_max_tokens,
+            api_key=api_key,
+            api_base=model_api_base,
+        )
+
+    # For all other models, use standard LiteLLM via dspy.LM
+    full_lm_name = f"{provider}/{lm_name}"
+
+    # Get model-specific token limits
+    context_window, max_output_tokens, safe_input_limit = get_model_token_limits(
+        lm_name
+    )
+
+    # Use conservative max_tokens to prevent exceeding rate limits
+    # Set to 4096 to ensure prompt + completion stays well under limits
+    safe_max_tokens = min(max_output_tokens, 4096)
+
+    # OpenAI's reasoning models (o1, o3, gpt-5 series) require specific parameters
+    if lm_name.startswith("gpt-5"):
+        # Reasoning models require temperature=1.0 and max_tokens >= 16000
+        reasoning_max_tokens = max(16000, safe_max_tokens)
+        return LM(
+            model=full_lm_name,
+            api_base=model_api_base,
+            max_tokens=reasoning_max_tokens,
+            temperature=1.0,
+        )
+
+    return LM(model=full_lm_name, api_base=model_api_base, max_tokens=safe_max_tokens)
+
+
+# global settings that should never be used by the frontend
+# but used when using Elysia as a package
+settings = Settings()
+settings.smart_setup()
+
+DEFAULT_SETTINGS = Settings()
+DEFAULT_SETTINGS.smart_setup()
+
+
+def smart_setup() -> None:
+    settings.smart_setup()
+
+
+def set_from_env() -> None:
+    settings.set_from_env()
+
+
+def reset_settings() -> None:
+    settings.base_init()
+    settings.smart_setup()
+
+
+def configure(**kwargs) -> None:
+    """
+    Configure the settings for Elysia for the global settings object.
+
+    Args:
+        **kwargs (str): One or more of the following:
+            - base_model (str): The base model to use. e.g. "gpt-5-mini"
+            - complex_model (str): The complex model to use. e.g. "gpt-5"
+            - base_provider (str): The provider to use for base_model. E.g. "openai" or "openrouter/openai"
+            - complex_provider (str): The provider to use for complex_model. E.g. "openai" or "openrouter/openai"
+            - model_api_base (str): The API base to use.
+            - wcd_url (str): The Weaviate cloud URL to use.
+            - wcd_api_key (str): The Weaviate cloud API key to use.
+            - weaviate_is_local (bool): Whether the Weaviate cluster is local.
+            - local_weaviate_port (int): The port to use for the local Weaviate cluster.
+            - local_weaviate_grpc_port (int): The gRPC port to use for the local Weaviate cluster.
+            - weaviate_is_custom (bool): Whether to use custom connection parameters.
+            - custom_http_host (str): HTTP host for custom Weaviate connection.
+            - custom_http_port (int): HTTP port for custom connection. Defaults to 8080.
+            - custom_http_secure (bool): Use HTTPS for custom connection. Defaults to False.
+            - custom_grpc_host (str): gRPC host for custom Weaviate connection.
+            - custom_grpc_port (int): gRPC port for custom connection. Defaults to 50051.
+            - custom_grpc_secure (bool): Use secure gRPC for custom connection. Defaults to False.
+            - logging_level (str): The logging level to use. e.g. "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+            - use_feedback (bool): EXPERIMENTAL. Whether to use feedback from previous runs of the tree.
+                If True, the tree will use TrainingUpdate objects that have been saved in previous runs of the decision tree.
+                These are implemented via few-shot examples for the decision node.
+                They are collected in the 'feedback' collection (ELYSIA_FEEDBACK__).
+                Relevant examples are retrieved from the collection based on searching the collection via the user's prompt.
+            - Additional API keys to set. E.g. `openai_apikey="..."`, if this argument ends with `apikey` or `api_key`,
+                it will be added to the `API_KEYS` dictionary.
+
+    """
+    settings.configure(**kwargs)

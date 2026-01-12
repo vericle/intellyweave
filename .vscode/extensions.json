@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "maciejdems.add-to-gitignore",
+        "tamasfe.even-better-toml",
+        "donjayamanne.githistory",
+        "davidanson.vscode-markdownlint",
+        "redhat.vscode-yaml",
+        "editorconfig.editorconfig",
+        "hbenl.vscode-test-explorer",
+        "qcz.text-power-tools"
+    ]
+}

@@ -1,0 +1,139 @@
+################################################################################
+# PROJECT-SPECIFIC
+################################################################################
+
+.claude/
+.mcp.json
+.gemini
+
+
+################################################################################
+# TEMPORARY FILES & DEBUGGING
+################################################################################
+
+/temp/
+debug-*
+test-debug.*
+*.debug
+
+################################################################################
+# DOCUMENTATION & LOGS
+################################################################################
+
+logs/
+log/
+
+################################################################################
+# TESTING & REPORTS
+################################################################################
+
+.playwright-mcp/
+
+
+################################################################################
+# PIPELINE INPUT FILES (keep .gitkeep, ignore documents)
+################################################################################
+
+backend/pipeline/input_files/**/processing/*.pdf
+backend/pipeline/input_files/**/processing/*.txt
+backend/pipeline/input_files/**/processing/*.md
+backend/pipeline/input_files/**/processing/*.html
+backend/pipeline/input_files/**/processing/*.docx
+backend/pipeline/input_files/**/processing/*.eml
+backend/pipeline/input_files/**/processing/*.mbox
+backend/pipeline/input_files/**/processed/*.pdf
+backend/pipeline/input_files/**/processed/*.txt
+backend/pipeline/input_files/**/processed/*.md
+backend/pipeline/input_files/**/processed/*.html
+backend/pipeline/input_files/**/processed/*.docx
+backend/pipeline/input_files/**/processed/*.eml
+backend/pipeline/input_files/**/processed/*.mbox
+
+################################################################################
+# FRONTEND-SPECIFIC
+################################################################################
+
+frontend/test-results/
+frontend/playwright-report/
+
+################################################################################
+# ENVIRONMENT
+################################################################################
+
+.venv
+.env
+.env.local
+
+################################################################################
+# OS & IDE
+################################################################################
+
+.DS_Store
+*.swp
+*.swo
+*~
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# Editor temporary files
+*.tmp
+*.bak
+stubs
+*.png
+
+
+.specify
+/backend/data
+.testdata/*
+/examples/*.html
+!/examples/sources/books/index.yaml
+examples/books-list.md
+/backend/resources.txt
+
+################################################################################
+# DATA DIRECTORY
+################################################################################
+
+/data/
+/backend/data/
+
+################################################################################
+# EXAMPLES DIRECTORY
+################################################################################
+
+# Multimedia content
+/examples/multimedia/gamefications/
+/examples/multimedia/images/screenshots/
+/examples/multimedia/ebook/
+
+# Podcast content
+/examples/cleaned/podcast/
+
+/examples/cleaned/**/*.txt
+
+
+# Audio files
+/examples/multimedia/audio/**/*.mp3
+/examples/multimedia/audio/**/*.m4a
+
+################################################################################
+# LARGE BINARY FILES
+################################################################################
+
+*.pdf
+*.mp3
+
+################################################################################
+# EXCEPTIONS (whitelist specific files)
+################################################################################
+
+!/docs/**/*.png
+!/examples/sources/books/index.yaml
+AGENTS.md
+CLAUDE.md
+/backend/elysia/api/static/_next
+/backend/elysia/api/static/assets
+/docs/guides/dot-ai

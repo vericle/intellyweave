@@ -1,0 +1,217 @@
+# ========================================
+# IntellyWeave - Root Docker Ignore
+# ========================================
+# For multi-stage builds from repository root
+# For backend-only builds, see backend/.dockerignore
+
+# ----------------------------------------
+# Root-level directories to exclude
+# ----------------------------------------
+.claude/
+.vscode/
+.github/
+config/
+data/
+docs/
+examples/
+scripts/
+
+# ----------------------------------------
+# Python artifacts
+# ----------------------------------------
+**/__pycache__
+**/__pycache__/
+**/.mypy_cache
+**/.mypy_cache/
+**/.pytest_cache
+**/.pytest_cache/
+**/.ruff_cache
+**/.ruff_cache/
+**/.deepeval
+**/.deepeval/
+__pycache__/
+.mypy_cache/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments (match anywhere in directory tree)
+**/.venv
+**/.venv/
+**/venv
+**/venv/
+**/env
+**/env/
+**/ENV
+**/ENV/
+.venv
+.venv/
+venv/
+env/
+ENV/
+
+# ----------------------------------------
+# Frontend directories to exclude
+# ----------------------------------------
+frontend/out/
+frontend/.next/
+frontend/node_modules/
+frontend/.vscode/
+frontend/.github/
+frontend/docs/
+frontend/tests/
+**/node_modules/
+
+# ----------------------------------------
+# Claude Code / AI assistant configs
+# ----------------------------------------
+.claude/
+**/.claude/
+
+# ----------------------------------------
+# IDE and editor files
+# ----------------------------------------
+.vscode/
+**/.vscode/
+.idea/
+**/.idea/
+*.swp
+*.swo
+*~
+
+# ----------------------------------------
+# Testing artifacts and directories
+# ----------------------------------------
+tests/
+**/tests/
+.pytest_cache/
+**/.pytest_cache/
+.coverage
+htmlcov/
+*.log
+**/playwright-report/
+**/test-results/
+
+# ----------------------------------------
+# Git and GitHub
+# ----------------------------------------
+.git/
+.gitignore
+.gitattributes
+.gitleaksignore
+.github/
+**/.github/
+
+# ----------------------------------------
+# Docker files (don't recursively include)
+# ----------------------------------------
+Dockerfile
+**/Dockerfile
+.dockerignore
+**/.dockerignore
+docker-compose*.yml
+docker-compose*.yaml
+**/docker-compose*.yml
+**/docker-compose*.yaml
+
+# ----------------------------------------
+# Configuration files not needed in container
+# ----------------------------------------
+.mcp.json
+.pre-commit-config.yaml
+renovate.json
+biome.json
+**/biome.json
+playwright.config.ts
+**/playwright.config.ts
+mkdocs.yml
+**/mkdocs.yml
+components.json
+
+# ----------------------------------------
+# OS files
+# ----------------------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------------------
+# Data directories (large, not needed in build)
+# ----------------------------------------
+app/volumes/
+volumes/
+collections/
+legacy/
+temp/
+reports/
+**/temp/
+data/
+
+# ----------------------------------------
+# Model caches and large files
+# ----------------------------------------
+**/.cache
+**/.cache/
+**/models
+**/models/
+**/*.pt
+**/*.bin
+**/*.safetensors
+**/*.onnx
+**/*.pkl
+
+# ----------------------------------------
+# Documentation and markdown files
+# ----------------------------------------
+docs/
+**/docs/
+*.md
+!README.md
+ADOPTERS.md
+AGENTS.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+SECURITY.md
+SUPPORT.md
+GOVERNANCE.md
+MAINTAINERS.md
+ROADMAP.md
+LICENSE
+
+# ----------------------------------------
+# Environment and secrets
+# ----------------------------------------
+.env
+**/.env
+.env.*
+**/.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+secrets/
+
+# ----------------------------------------
+# Backend-specific exclusions
+# ----------------------------------------
+backend/.claude/
+backend/.deepeval/
+backend/.github/
+backend/.pytest_cache/
+backend/.ruff_cache/
+backend/.venv/
+backend/.vscode/
+backend/docs/
+backend/pipeline/
+backend/scripts/
+backend/tests/
+backend/config/
+backend/img/
+backend/mkdocs.yml
+backend/activate_venv.sh
+backend/resources.txt
+backend/MANIFEST.in

@@ -1,0 +1,185 @@
+# Book Collection Data
+# Updated: 2025-12-11
+# Sources: Open Library API, Amazon US/DE/IT
+
+books:
+  - id: the-ratline-love-lies-and-justice-on-the-trail-of-a-nazi-fugitive
+    title: Ratline
+    subtitle: Love, Lies and Justice on the Trail of a Nazi Fugitive
+    name: "The Ratline: Love, Lies and Justice on the Trail of a Nazi Fugitive"
+    description: Ratline by Philippe Sands. Published by Orion Publishing Group, Limited.
+    author: Philippe Sands
+    isbn_10: "1474608124"
+    isbn_13: "9781474608121"
+    publisher: Orion Publishing Group, Limited
+    year: 2020
+    pages: 432
+    cover_url: /assets/books/the-ratline.jpg
+    buy_link: "https://www.amazon.com/dp/1474608124"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+
+  - id: dark-mysteries-of-the-vatican
+    title: Dark Mysteries of the Vatican
+    name: Dark Mysteries of the Vatican
+    description: "A riveting investigation into the controversial secrets and scandals hidden within Vatican walls, from Nazi gold to modern-day intrigue."
+    author: H. Paul Jeffers
+    isbn_10: "0806531320"
+    isbn_13: "978-0806531328"
+    publisher: Kensington
+    year: 2010
+    pages: 210
+    rating: 3.8
+    cover_url: /assets/books/dark-mysteries-of-the-vatican.jpg
+    buy_link: "https://www.amazon.com/dp/0806531320"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+
+  - id: rattenlinien-german-edition
+    title: Rattenlinien
+    name: Rattenlinien (German Edition)
+    description: "Ein packender Kriminalroman über die Fluchtrouten der Nazis nach dem Zweiten Weltkrieg - die sogenannten Rattenlinien."
+    author: Martin von Arndt
+    isbn_10: "386913724X"
+    isbn_13: "978-3548289676"
+    publisher: Ars Vivendi
+    pages: 304
+    rating: 4.0
+    cover_url: /assets/books/rattenlinien-german-edition.jpg
+    buy_link: "https://www.amazon.de/dp/386913724X"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+
+  - id: stalins-letzte-opfer
+    title: Stalins letzte Opfer
+    subtitle: Verschleppte und erschossene Österreicher in Moskau 1950–1953
+    name: "Stalins letzte Opfer: Verschleppte und erschossene Österreicher in Moskau 1950–1953"
+    description: "Stalins letzte Opfer dokumentiert das Schicksal österreichischer Zivilisten, die in der Nachkriegszeit von sowjetischen Behörden verschleppt und in Moskau hingerichtet wurden."
+    author: Stefan Karner, Barbara Stelzl-Marx
+    isbn_10: "320578281X"
+    isbn_13: "978-3205782810"
+    publisher: Oldenbourg Böhlau
+    year: 2009
+    pages: 676
+    cover_url: /assets/books/stalins-letzte-opfer.jpg
+    buy_link: "https://www.abebooks.com/servlet/BookDetailsPL?bi=31763489925"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+
+  - id: smersh-stalins-secret-weapon
+    title: "SMERSH: Stalin's Secret Weapon"
+    subtitle: Soviet Military Counterintelligence in WWII
+    name: "SMERSH: Stalin's Secret Weapon"
+    description: "A gripping history of Stalin's military intelligence service filled with new details on previously unknown operations and the brutal characters of the Soviet secret world."
+    author: Vadim J. Birstein
+    isbn_10: "1849545677"
+    isbn_13: "978-1849545679"
+    publisher: Biteback Publishing
+    year: 2013
+    pages: 528
+    rating: 4.3
+    cover_url: /assets/books/smersh-stalin-s-secret-weapon.jpg
+    buy_link: "https://www.amazon.com/SMERSH-Stalins-Secret-Military-Counterintelligence/dp/1849545677"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+
+  - id: nkvd-kgb-activities
+    title: NKVD/KGB Activities and Their Cooperation with Other Secret Services in Central and Eastern Europe 1945–1989
+    name: NKVD/KGB Activities and Their Cooperation with Other Secret Services in Central and Eastern Europe 1945–1989
+    description: "Academic study of NKVD/KGB operations and cooperation with secret services across Central and Eastern Europe during the Cold War period."
+    author: Alexandra Grúňová (Editor)
+    isbn_10: "8089335055"
+    isbn_13: "978-8089335053"
+    publisher: Nation's Memory Institute
+    cover_url: /assets/books/nkvd-kgb-activities.jpg
+    buy_link: "https://books.google.it/books/about/NKVD_KGB_Activities_and_Its_Cooperation.html?id=cvFdQwAACAAJ&redir_esc=y"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+
+  - id: oesterreich-zwischen-den-maechten
+    title: Österreich zwischen den Mächten
+    subtitle: Die politische Berichterstattung der schweizerischen Vertretung in Wien 1938–1955 (Quaderni di Dodis, Bd. 4)
+    name: "Österreich zwischen den Mächten: Schweizer Berichte aus Wien 1938–1955"
+    description: "Die politische Berichterstattung der schweizerischen Vertretung in Wien während des Anschlusses, des Zweiten Weltkriegs und der alliierten Besatzung."
+    author: Bernd Haunfelder
+    isbn_10: "3906051161"
+    isbn_13: "978-3906051161"
+    publisher: DDS
+    pages: 652
+    rating: 5.0
+    cover_url: /assets/books/oesterreich-zwischen-den-maechten.jpg
+    buy_link: "https://www.amazon.de/dp/3906051161"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+
+  - id: americas-secret-army
+    title: "America's Secret Army"
+    subtitle: The Untold Story of the Counterintelligence Corps
+    name: "America's Secret Army: The Untold Story of the Counterintelligence Corps"
+    description: "By the authors of 'Nazi Gold,' this book describes the exploits of the secret American Counter Intelligence Corps, both during and after World War II. It recounts their work against enemy espionage, their role in hunting down Nazi war criminals, and their spy network behind the Iron Curtain."
+    author: Douglas Botting, Ian Sayer
+    isbn_10: "1984349848"
+    isbn_13: "978-1984349842"
+    publisher: CreateSpace Independent Publishing Platform
+    year: 1990
+    pages: 430
+    rating: 5.0
+    cover_url: /assets/books/america-s-secret-army.jpg
+    buy_link: "https://www.amazon.com/Americas-Secret-Army-Untold-Counterintelligence/dp/1984349848"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+
+  - id: the-red-army-in-austria
+    title: The Red Army in Austria
+    subtitle: The Soviet Occupation, 1945–1955
+    name: "The Red Army in Austria: The Soviet Occupation, 1945–1955"
+    description: "Based on a broad array of sources from Russian and Austrian archives, this collection provides a comprehensive analysis of the Soviet occupation of Austria from 1945 to 1955. The contributors cover a wide range of topics, including the Soviet Secret Services, the military kommandaturas, Soviet occupation policies, the withdrawal of troops in 1955, everyday life, the image of 'the Russians,' violence against women, arrests, deportations, Soviet aid provisions, as well as children of occupation."
+    author: Stefan Karner, Barbara Stelzl-Marx (Editors)
+    isbn_10: "1793626588"
+    isbn_13: "978-1793626585"
+    publisher: Lexington Books
+    year: 2020
+    pages: 286
+    rating: 4.0
+    series: Harvard Cold War Studies
+    cover_url: /assets/books/the-red-army-in-austria.jpg
+    buy_link: "https://www.amazon.it/Red-Army-Austria-Occupation-1945-1955/dp/1793626588"
+    category: History & Intelligence
+    tags:
+      - WWII
+      - Cold War
+      - Intelligence History
+      - OSINT Research
+

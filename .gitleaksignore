@@ -1,0 +1,30 @@
+# ============================================================
+# Gitleaks Ignore File (.gitleaksignore)
+# ============================================================
+# This file contains fingerprints of false positive secrets
+# that should not trigger gitleaks alerts.
+#
+# Format: Each line contains a SECRET FINGERPRINT, not a pattern.
+# Fingerprints are obtained from gitleaks output when it detects
+# a false positive secret.
+#
+# When gitleaks detects a secret, it outputs:
+#   Fingerprint: <filename>:<ruleid>:<line-number>
+#
+# Copy the entire fingerprint line here to ignore that specific secret.
+#
+# Reference: https://github.com/gitleaks/gitleaks
+# Docs: https://github.com/gitleaks/gitleaks#gitleaksignore
+
+# ============================================================
+# Example Format (replace with actual fingerprints)
+# ============================================================
+
+# Example fingerprint format:
+# backend/elysia/api/utils/config.py:generic-api-key:127
+
+# To add a false positive:
+# 1. Run: gitleaks protect --verbose --staged
+# 2. Copy the "Fingerprint:" line from the output
+# 3. Paste it below
+# 4. Commit and try again

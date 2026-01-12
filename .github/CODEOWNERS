@@ -1,0 +1,9 @@
+# CODEOWNERS
+#
+# Code owners are automatically requested for review when someone opens a pull request
+# that modifies code that they own.
+#
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owner - all files
+* @vericle

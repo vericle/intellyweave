@@ -1,0 +1,14 @@
+blank_issues_enabled: no
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/vericle/intellyweave/discussions
+    about: Ask questions, share ideas, and discuss with the community
+  - name: 📚 Documentation
+    url: https://github.com/vericle/intellyweave#documentation
+    about: Read the documentation before reporting issues
+  - name: ❓ Support Resources
+    url: https://github.com/vericle/intellyweave/blob/main/SUPPORT.md
+    about: Learn how to get help and where to ask questions
+  - name: 🔒 Security Vulnerabilities
+    url: https://github.com/vericle/intellyweave/blob/main/SECURITY.md
+    about: Report security vulnerabilities privately following our security policy

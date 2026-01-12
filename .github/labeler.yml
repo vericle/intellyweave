@@ -1,0 +1,52 @@
+# This configuration automatically labels pull requests based on file paths.
+# Learn more: https://github.com/actions/labeler
+
+# Documentation changes
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**/*"
+          - "*.md"
+          - "README*"
+
+# Backend changes
+backend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "backend/**/*"
+
+# Frontend changes
+frontend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "frontend/**/*"
+
+# CI/CD changes
+ci-cd:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/**/*"
+          - ".github/actions/**/*"
+          - "Dockerfile*"
+          - "docker-compose*.yml"
+          - "docker-compose*.yaml"
+
+# Dependencies
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "package.json"
+          - "pnpm-lock.yaml"
+          - "pyproject.toml"
+          - "requirements*.txt"
+
+# Configuration changes
+config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "*.json"
+          - "*.yaml"
+          - "*.yml"
+          - "*.toml"
+          - ".env*"
+          - "renovate.json"

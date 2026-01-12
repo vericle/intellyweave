@@ -1,0 +1,79 @@
+use_default_settings:
+  engines:
+    keep_only:
+      - duckduckgo
+      - bing
+      - wikidata
+      - wikipedia
+
+general:
+  debug: true
+  instance_name: 'IntellyWeave Archive Search'
+  enable_metrics: true
+
+server:
+  bind_address: '0.0.0.0'
+  port: 8080
+  request_timeout: 15.0
+  base_url: false
+  secret_key: 'intellyweave_archive_secret'
+
+redis:
+  url: redis://redis:6379/0
+
+outgoing:
+  request_timeout: 10.0
+  max_request_timeout: 15.0
+
+search:
+  safe_search: 0
+  formats:
+    - json
+  languages:
+    - ru-RU
+    - uk-UA
+    - en-US
+    - de-DE
+
+engines:
+  - name: duckduckgo
+    engine: duckduckgo
+    disabled: false
+  - name: bing
+    engine: bing
+    disabled: false
+  - name: wikidata
+    engine: wikidata
+    disabled: false
+  - name: wikipedia
+    engine: wikipedia
+    disabled: false
+
+enabled_plugins:
+  - 'Hostnames plugin'
+  - 'Tracker URL remover'
+
+hostnames:
+  high_priority:
+    # Soviet repression archives (curated primary sources)
+    - (.*\.)?garf\.ru$
+    - (.*\.)?memo\.ru$
+    - (.*\.)?stalin\.memo\.ru$
+    - (.*\.)?base\.memo\.ru$
+    - (.*\.)?stopgulag\.org$
+    - (.*\.)?openlist\.wiki$
+    - (.*\.)?istmat\.org$
+    # Academic projects
+    - (.*\.)?uni-graz\.at$
+    - (.*\.)?adbik\.at$
+    # National archives
+    - (.*\.)?archives\.gov$
+    - (.*\.)?cia\.gov$
+    # Ukrainian sources
+    - (.*\.)?upa\.in\.ua$
+    - (.*\.)?memory\.gov\.ua$
+
+  low_priority:
+    # Encyclopedia sources - useful but archive sources should rank higher
+    - (.*\.)?wikipedia\.org$
+    - (.*\.)?wikidata\.org$

@@ -1,0 +1,51 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+
+		{
+			"name": "Python CLI Debug",
+			"type": "debugpy",
+			"request": "launch",
+			"module": "elysia.api.cli",
+			"args": ["start", "--port", "8000", "--host", "localhost", "--reload", "false"],
+			"python": "${workspaceFolder}/.venv/bin/python",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"envFile": "${workspaceFolder}/.env"
+		},
+		{
+			"name": "Next.js Frontend Debug",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${workspaceFolder}/elysia-frontend",
+			"runtimeExecutable": "pnpm",
+			"runtimeArgs": ["dev", "--turbo"],
+			"console": "integratedTerminal",
+			"env": {
+				"NODE_ENV": "development",
+				"NEXTJS_DEV_URL": "http://localhost:3000"
+			}
+		},
+		{
+			"name": "Debug: Ingest OCR file",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "${workspaceFolder}/scripts/ingest.py",
+			"console": "integratedTerminal",
+			"args": [
+				"examples/cleaned/coldwar/Rattenlinien_cleaned.txt"
+			],
+			"cwd": "${workspaceFolder}"
+		}
+	],
+	"compounds": [
+		{
+			"name": "Debug: Full Elysia Development",
+			"configurations": ["Python CLI Debug", "Next.js Frontend Debug"],
+			"presentation": {
+				"group": "full-stack",
+				"order": 1
+			}
+		}
+	]
+}

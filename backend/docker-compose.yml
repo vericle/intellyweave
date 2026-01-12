@@ -1,0 +1,68 @@
+# ========================================
+# IntellyWeave - Docker Compose
+# ========================================
+#
+# OSINT Analysis Platform with mandatory GLiNER entity extraction
+#
+# Usage:
+#   1. Copy .env.example to .env and fill in your API keys
+#   2. Build frontend: cd ../frontend && pnpm run assemble
+#   3. Run: docker compose up -d
+#
+# Features included:
+#   - GLiNER entity extraction (pre-downloaded model)
+#   - Anthropic Claude as default LLM
+#   - FastAPI backend serving static frontend
+#
+# ========================================
+
+services:
+  intellyweave:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: intellyweave
+    ports:
+      - "8000:8000"
+    environment:
+      # HuggingFace cache (GLiNER model is pre-downloaded in image)
+      - HF_HOME=/app/.cache/huggingface
+
+      # Weaviate Connection (required)
+      - WCD_URL=${WCD_URL}
+      - WCD_API_KEY=${WCD_API_KEY}
+      # Or for local Weaviate (uncomment below, comment above)
+      # - WEAVIATE_IS_LOCAL=True
+      # - LOCAL_WEAVIATE_PORT=8080
+      # - LOCAL_WEAVIATE_GRPC_PORT=50051
+
+      # IntellyWeave API Keys (required)
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - VOYAGE_API_KEY=${VOYAGE_API_KEY}
+      - PERPLEXITY_API_KEY=${PERPLEXITY_API_KEY}
+      - ARYN_API_KEY=${ARYN_API_KEY}
+      - MAPBOX_ACCESS_TOKEN=${MAPBOX_ACCESS_TOKEN}
+
+      # Model Configuration (defaults set in Dockerfile, override here if needed)
+      - BASE_MODEL=${BASE_MODEL:-claude-haiku-4-5}
+      - COMPLEX_MODEL=${COMPLEX_MODEL:-claude-haiku-4-5}
+      - BASE_PROVIDER=${BASE_PROVIDER:-anthropic}
+      - COMPLEX_PROVIDER=${COMPLEX_PROVIDER:-anthropic}
+
+      # Optional: Additional API keys for other providers
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+    volumes:
+      # Persist user configurations across container restarts
+      - intellyweave-configs:/app/elysia/api/user_configs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      start_period: 10s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  intellyweave-configs:
+    name: intellyweave-configs
